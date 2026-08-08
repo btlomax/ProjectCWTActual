@@ -7,6 +7,16 @@ python dev_scripts/delete_frlg_maps.py
 ```
 It will take care of all the map constants in the c files but you will need to fix mention the to fuschia city entrance in the `safari_zone.inc` script.
 
+## Deleting all Emerald maps
+
+To remove maps that use Emerald layouts while retaining FRLG maps, run:
+
+```shell
+python dev_scripts/delete_emerald_maps.py
+```
+
+This deletes the Emerald map and layout directories, their event script includes, and their entries in `map_groups.json`. It identifies maps by the `layout_version` in `data/layouts/layouts.json`, rather than their directory names.
+
 ### Disclaimer: The following is a work-in-progess and the processes described here are not fully tested and will likely break your game! Use at your own risk.
 
 # Deleting vanilla maps
