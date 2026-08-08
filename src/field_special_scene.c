@@ -23,6 +23,11 @@
 // exception of three boxes that are map events that jostle around
 // while the truck is driving. In addition, their sprite's placement
 // is slightly offset to make them look less perfectly stacked.
+// StarterTown no longer declares these legacy truck events.
+#define LOCALID_TRUCK_BOX_TOP      1
+#define LOCALID_TRUCK_BOX_BOTTOM_L 2
+#define LOCALID_TRUCK_BOX_BOTTOM_R 3
+
 // Box 1 (LOCALID_TRUCK_BOX_TOP)
 #define BOX1_X_OFFSET  3
 #define BOX1_Y_OFFSET  3
