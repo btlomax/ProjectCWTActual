@@ -3,7 +3,6 @@
   "name": "StarterTown",
   "layout": "LAYOUT_STARTER_TOWN",
   "music": "MUS_NONE",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_NONE",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -17,5 +16,6 @@
   "object_events": [],
   "warp_events": [],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [],
+  "region": "REGION_HOENN"
 }

@@ -483,6 +483,7 @@ gStdScripts_End::
 	.include "data/maps/BattleColosseum_4P/scripts.inc"
 	.include "data/maps/ContestHall/scripts.inc"
 	.include "data/maps/StarterTown/scripts.inc"
+	.include "data/maps/Alderbrook_Town/scripts.inc"
 	.include "data/maps/SSTidalCorridor/scripts.inc"
 	.include "data/maps/SSTidalLowerDeck/scripts.inc"
 	.include "data/maps/SSTidalRooms/scripts.inc"

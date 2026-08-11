@@ -138,7 +138,7 @@ static void WarpToStarterTown(void)
     if (IS_FRLG)
         SetWarpDestination(MAP_GROUP(MAP_PALLET_TOWN_PLAYERS_HOUSE_2F), MAP_NUM(MAP_PALLET_TOWN_PLAYERS_HOUSE_2F), WARP_ID_NONE, 6, 6);
     else
-        SetWarpDestination(MAP_GROUP(MAP_STARTER_TOWN), MAP_NUM(MAP_STARTER_TOWN), WARP_ID_NONE, 2, 2);
+        SetWarpDestination(MAP_GROUP(MAP_ALDERBROOK_TOWN_2), MAP_NUM(MAP_ALDERBROOK_TOWN_2), WARP_ID_NONE, 2, 2);
     WarpIntoMap();
 }
 
