@@ -1,7 +1,7 @@
 {
-  "id": "MAP_PLAYER_HOUSE_INSIDE",
-  "name": "PlayerHouse_Inside",
-  "layout": "LAYOUT_PLAYER_HOUSE_INSIDE",
+  "id": "MAP_NPC_HOUSE_INSIDE",
+  "name": "NPC_House_Inside",
+  "layout": "LAYOUT_NPC_HOUSE_INSIDE",
   "music": "MUS_DUMMY",
   "region_map_section": "MAPSEC_NONE",
   "requires_flash": false,
@@ -16,25 +16,18 @@
   "object_events": [],
   "warp_events": [
     {
+      "x": 8,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_ALDERBROOK_TOWN_2",
+      "dest_warp_id": "2"
+    },
+    {
       "x": 9,
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_ALDERBROOK_TOWN_2",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 8,
-      "y": 8,
-      "elevation": 0,
-      "dest_map": "MAP_ALDERBROOK_TOWN_2",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 8,
-      "y": 2,
-      "elevation": 0,
-      "dest_map": "MAP_PLAYER_HOUSE_INSIDE_UPSTAIRS",
-      "dest_warp_id": "0"
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [],

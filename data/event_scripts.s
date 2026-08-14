@@ -1323,3 +1323,9 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/wild_encounter.inc"
 
 	.include "data/maps/PlayerHouse_Inside/scripts.inc"
+
+	.include "data/maps/LarchLab_Inside/scripts.inc"
+
+	.include "data/maps/NPC_House_Inside/scripts.inc"
+
+	.include "data/maps/PlayerHouse_Inside_Upstairs/scripts.inc"

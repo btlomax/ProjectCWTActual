@@ -624,6 +624,9 @@
   ],
   "gMapGroup_ProjectCWT": [
     "Alderbrook_Town",
-    "PlayerHouse_Inside"
+    "PlayerHouse_Inside",
+    "LarchLab_Inside",
+    "NPC_House_Inside",
+    "PlayerHouse_Inside_Upstairs"
   ]
 }

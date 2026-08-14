@@ -1,12 +1,12 @@
 {
-  "id": "MAP_PLAYER_HOUSE_INSIDE",
-  "name": "PlayerHouse_Inside",
-  "layout": "LAYOUT_PLAYER_HOUSE_INSIDE",
+  "id": "MAP_LARCH_LAB_INSIDE",
+  "name": "LarchLab_Inside",
+  "layout": "LAYOUT_LARCH_LAB_INSIDE",
   "music": "MUS_DUMMY",
   "region_map_section": "MAPSEC_NONE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_INDOOR",
+  "map_type": "MAP_TYPE_NONE",
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": false,
@@ -16,27 +16,29 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 9,
-      "y": 8,
+      "x": 4,
+      "y": 13,
       "elevation": 0,
       "dest_map": "MAP_ALDERBROOK_TOWN_2",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     },
     {
-      "x": 8,
-      "y": 8,
+      "x": 5,
+      "y": 13,
       "elevation": 0,
       "dest_map": "MAP_ALDERBROOK_TOWN_2",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 8,
-      "y": 2,
-      "elevation": 0,
-      "dest_map": "MAP_PLAYER_HOUSE_INSIDE_UPSTAIRS",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 7,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "LarchLab_Inside_MapScripts_WallNote"
+    }
+  ]
 }

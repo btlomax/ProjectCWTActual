@@ -1,0 +1,6 @@
+mapscripts LarchLab_Inside_MapScripts {}
+
+script LarchLab_Inside_MapScripts_WallNote {
+    msgbox("Out of office\nReplace with real message!", MSGBOX_SIGN)
+    end
+}
