@@ -1,2 +1,3 @@
 PlayerHouse_Inside_Upstairs_MapScripts::
-            .byte 0
+	.byte 0
+

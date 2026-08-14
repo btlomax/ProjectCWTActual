@@ -1,6 +1,19 @@
 mapscripts LarchLab_Inside_MapScripts {}
 
 script LarchLab_Inside_MapScripts_WallNote {
-    msgbox("Out of office\nReplace with real message!", MSGBOX_SIGN)
+    msgbox("On important errand, will be back tomorrow.\nAL", MSGBOX_SIGN)
+    end
+}
+
+script LarchLab_Inside_MapScripts_ProfessorAide {
+    lock
+    faceplayer
+    msgbox("Are you looking for the Professor?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        msgbox("I'm afraid he's not here right now.\pHe has been acting a \nbit strange recently...\pI'm not sure when he'll be back,\nbut you can check the log for updates.", MSGBOX_DEFAULT)
+    } else {
+        msgbox("Ah, well enjoy your visit to the lab then!", MSGBOX_DEFAULT)
+    }
+    release
     end
 }
