@@ -85,7 +85,7 @@ This prevents the trigger from running again after the player leaves and returns
 
 ## Poryscript
 
-Poryscript 3.6.1 is included as the `tools/poryscript` submodule. Poryscript map source files use `data/maps/<MapName>/scripts.pory`; add each map name to `PORYSCRIPT_MAPS` in the root `Makefile`. `make` compiles those source files into adjacent `.inc` files before assembling `data/event_scripts.s`. Commit both files: edit only the `.pory` source and let the build regenerate the `.inc` output.
+Poryscript 3.6.1 is included as the `tools/poryscript` submodule. Poryscript map source files use `data/maps/<MapName>/scripts.pory`. `make` automatically discovers those files and compiles them into adjacent `.inc` files before assembling `data/event_scripts.s`. Commit both files: edit only the `.pory` source and let the build regenerate the `.inc` output.
 
 Existing maps may continue using hand-written `scripts.inc` files. Do not add a `scripts.pory` file to a map that still has a hand-written `scripts.inc`, because the generated output would replace it.
 

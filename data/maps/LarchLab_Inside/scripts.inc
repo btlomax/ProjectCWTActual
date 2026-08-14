@@ -33,7 +33,7 @@ LarchLab_Inside_MapScripts_ProfessorAide_2:
 
 LarchLab_Inside_MapScripts_WallNote_Text_0:
 # 4 "data/maps/LarchLab_Inside/scripts.pory"
-	.string "On important errand, will be back tomorrow.\nAL$"
+	.string "On important errand, will be back tomorrow.\nAOPL$"
 
 LarchLab_Inside_MapScripts_ProfessorAide_Text_0:
 # 11 "data/maps/LarchLab_Inside/scripts.pory"

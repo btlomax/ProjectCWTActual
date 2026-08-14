@@ -210,10 +210,9 @@ endif
 # Variable filled out in other make files
 AUTO_GEN_TARGETS :=
 
-# Poryscript source files compile to assembly includes consumed by event_scripts.s.
-# Add map names here as they are migrated; legacy .inc maps remain untouched.
-PORYSCRIPT_MAPS := PlayerHouse_Inside
-PORYSCRIPT_SOURCES := $(foreach map,$(PORYSCRIPT_MAPS),$(DATA_ASM_SUBDIR)/maps/$(map)/scripts.pory)
+# Poryscript map sources compile to assembly includes consumed by event_scripts.s.
+# Maps without a scripts.pory retain their hand-written scripts.inc files.
+PORYSCRIPT_SOURCES := $(shell find $(DATA_ASM_SUBDIR)/maps -type f -name 'scripts.pory')
 PORYSCRIPT_OUTPUTS := $(patsubst %.pory,%.inc,$(PORYSCRIPT_SOURCES))
 AUTO_GEN_TARGETS += $(PORYSCRIPT_OUTPUTS)
 include make_tools.mk

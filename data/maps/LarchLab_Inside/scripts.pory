@@ -1,7 +1,7 @@
 mapscripts LarchLab_Inside_MapScripts {}
 
 script LarchLab_Inside_MapScripts_WallNote {
-    msgbox("On important errand, will be back tomorrow.\nAL", MSGBOX_SIGN)
+    msgbox("On important errand, will be back tomorrow.\nAOPL", MSGBOX_SIGN)
     end
 }
 
