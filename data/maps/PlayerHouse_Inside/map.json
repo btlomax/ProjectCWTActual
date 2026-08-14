@@ -1,0 +1,35 @@
+{
+  "id": "MAP_PLAYER_HOUSE_INSIDE",
+  "name": "PlayerHouse_Inside",
+  "layout": "LAYOUT_PLAYER_HOUSE_INSIDE",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_ALDERBROOK_TOWN_2",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_PLAYER_HOUSE_INSIDE",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

@@ -209,6 +209,13 @@ endif
 
 # Variable filled out in other make files
 AUTO_GEN_TARGETS :=
+
+# Poryscript source files compile to assembly includes consumed by event_scripts.s.
+# Add map names here as they are migrated; legacy .inc maps remain untouched.
+PORYSCRIPT_MAPS := PlayerHouse_Inside
+PORYSCRIPT_SOURCES := $(foreach map,$(PORYSCRIPT_MAPS),$(DATA_ASM_SUBDIR)/maps/$(map)/scripts.pory)
+PORYSCRIPT_OUTPUTS := $(patsubst %.pory,%.inc,$(PORYSCRIPT_SOURCES))
+AUTO_GEN_TARGETS += $(PORYSCRIPT_OUTPUTS)
 include make_tools.mk
 # Tool executables
 SMOLTM       := $(TOOLS_DIR)/compresSmol/compresSmolTilemap$(EXE)
@@ -224,6 +231,7 @@ MAPJSON      := $(TOOLS_DIR)/mapjson/mapjson$(EXE)
 JSONPROC     := $(TOOLS_DIR)/jsonproc/jsonproc$(EXE)
 TRAINERPROC  := $(TOOLS_DIR)/trainerproc/trainerproc$(EXE)
 PATCHELF     := $(TOOLS_DIR)/patchelf/patchelf$(EXE)
+PORYSCRIPT   := $(TOOLS_DIR)/poryscript/poryscript$(EXE)
 ifeq ($(shell uname),Darwin)
     ROMTEST ?= $(shell command -v mgba-rom-test-mac 2>/dev/null || echo $(TOOLS_DIR)/mgba/mgba-rom-test-mac)
     ROMTESTHYDRA := $(shell command -v mgba-rom-test-hydra 2>/dev/null || echo $(TOOLS_DIR)/mgba-rom-test-hydra/mgba-rom-test-hydra)
@@ -416,7 +424,7 @@ include trainer_rules.mk
 
 # NOTE: Tools must have been built prior (FIXME)
 # so you can't really call this rule directly
-generated: $(AUTO_GEN_TARGETS)
+generated: tools $(AUTO_GEN_TARGETS)
 	@: # Silence the "Nothing to be done for `generated'" message, which some people were confusing for an error.
 
 
@@ -435,6 +443,11 @@ generated: $(AUTO_GEN_TARGETS)
 %.fastSmol: %      ; $(SMOL) -w $< $@ false false false
 %.smol:     %      ; $(SMOL) -w $< $@
 %.rl:       %      ; $(GFX) $< $@
+
+data/%.inc: data/%.pory
+	$(PORYSCRIPT) -i $< -o $@ -fc $(TOOLS_DIR)/poryscript/font_config.json -cc $(TOOLS_DIR)/poryscript/command_config.json
+
+$(PORYSCRIPT_OUTPUTS): $(PORYSCRIPT)
 
 clean-teachables_intermediates:
 	rm -f $(DATA_SRC_SUBDIR)/tutor_moves.h

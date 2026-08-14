@@ -623,6 +623,7 @@
     "Route124_DivingTreasureHuntersHouse"
   ],
   "gMapGroup_ProjectCWT": [
-    "Alderbrook_Town"
+    "Alderbrook_Town",
+    "PlayerHouse_Inside"
   ]
 }
