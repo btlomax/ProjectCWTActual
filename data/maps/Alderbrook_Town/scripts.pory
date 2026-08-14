@@ -1,1 +1,11 @@
 mapscripts Alderbrook_Town_MapScripts {}
+
+script Alderbrook_Town_MapScripts_PathSign {
+    msgbox("<- Alderbrook Town\nRoute 1 ->", MSGBOX_SIGN)
+    end
+}
+
+script Alderbrook_Town_MapScripts_LabSign {
+    msgbox("Alderbrook Pokemon Research Lab\nProfessor Larch's Lab", MSGBOX_SIGN)
+    end
+}
