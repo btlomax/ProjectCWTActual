@@ -9327,8 +9327,8 @@
     {
       "id": "LAYOUT_ALDERBROOK_TOWN",
       "name": "AlderbrookTown_Layout",
-      "width": 35,
-      "height": 20,
+      "width": 36,
+      "height": 24,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/AlderbrookTown/border.bin",
