@@ -9373,6 +9373,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/PlayerHouse_Inside_Upstairs/border.bin",
       "blockdata_filepath": "data/layouts/PlayerHouse_Inside_Upstairs/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE1_WILLBEND_CANAL",
+      "name": "Route1_WillbendCanal_Layout",
+      "width": 35,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/Route1_WillbendCanal/border.bin",
+      "blockdata_filepath": "data/layouts/Route1_WillbendCanal/map.bin"
     }
   ]
 }

@@ -34,7 +34,8 @@
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
     "gMapGroup_IndoorRoute124",
-    "gMapGroup_ProjectCWT"
+    "gMapGroup_ProjectCWT",
+    "gMapGroup_Route1_WillowBendCanal"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -628,5 +629,8 @@
     "LarchLab_Inside",
     "NPC_House_Inside",
     "PlayerHouse_Inside_Upstairs"
+  ],
+  "gMapGroup_Route1_WillowBendCanal": [
+    "Route1_WillbendCanal"
   ]
 }

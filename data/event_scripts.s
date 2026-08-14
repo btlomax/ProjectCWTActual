@@ -1329,3 +1329,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/NPC_House_Inside/scripts.inc"
 
 	.include "data/maps/PlayerHouse_Inside_Upstairs/scripts.inc"
+
+	.include "data/maps/Route1_WillbendCanal/scripts.inc"

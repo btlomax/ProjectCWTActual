@@ -12,7 +12,13 @@
   "allow_running": false,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": [
+    {
+      "map": "MAP_ROUTE1_WILLBEND_CANAL",
+      "offset": -8,
+      "direction": "right"
+    }
+  ],
   "object_events": [],
   "warp_events": [
     {
@@ -34,6 +40,13 @@
       "y": 15,
       "elevation": 0,
       "dest_map": "MAP_NPC_HOUSE_INSIDE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 35,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_ALDERBROOK_TOWN_2",
       "dest_warp_id": "0"
     }
   ],

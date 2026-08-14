@@ -1,0 +1,6 @@
+mapscripts Route1_WillbendCanal_MapScripts {}
+
+script Route1_WillbendCanal_MapScripts_PathSign {
+    msgbox("<- Alderbrook Town\nWestlock Village ->", MSGBOX_SIGN)
+    end
+}
