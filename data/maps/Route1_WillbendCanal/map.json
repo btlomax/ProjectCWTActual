@@ -32,6 +32,34 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_CutTree",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_BRIDGE_NPC_ROUTE1",
+      "graphics_id": "OBJ_EVENT_GFX_MG_DELIVERYMAN",
+      "x": 12,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_BRIDGE_NPC_ROUTE1"
+    },
+    {
+      "local_id": "LOCALID_STARTER_DROP",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 6,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route1_EventScript_StarterDrop",
+      "flag": "FLAG_HIDE_STARTER_ITEM"
     }
   ],
   "warp_events": [
@@ -43,7 +71,26 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_ROUTE1_STATE",
+      "var_value": "0",
+      "script": "Route1_WillbendCanal_MapScripts_LarchTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_ROUTE1_STATE",
+      "var_value": "0",
+      "script": "Route1_WillbendCanal_MapScripts_LarchTrigger"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",
