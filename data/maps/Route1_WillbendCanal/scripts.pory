@@ -6,18 +6,14 @@ script Route1_WillbendCanal_OnTransition {
     // Hide the bag when first entering the map if state is 0
     if (var(VAR_ROUTE1_STATE) == 0) {
         setflag(FLAG_HIDE_STARTER_ITEM)
-        setflag(FLAG_HIDE_BRIDGE_NPC_ROUTE1)
     }
 }
 
-const LOCALID_BRIDGE_NPC_ROUTE1 = 2
-const LOCALID_STARTER_DROP = 3
+const LOCALID_BRIDGE_NPC_ROUTE1 = 1
+const LOCALID_STARTER_DROP = 2
 
 script Route1_WillbendCanal_MapScripts_LarchTrigger {
     lock
-
-    clearflag(FLAG_HIDE_BRIDGE_NPC_ROUTE1)
-    addobject(LOCALID_BRIDGE_NPC_ROUTE1)
 
     // 1. Pan Camera Up
     special(SpawnCameraObject)
@@ -28,8 +24,8 @@ script Route1_WillbendCanal_MapScripts_LarchTrigger {
     closemessage
 
     // 2. Spawn NPC and Run In
-    applymovement(LOCALID_BRIDGE_NPC_ROUTE1, Movement_NPCRuns)
-    waitmovement(LOCALID_BRIDGE_NPC_ROUTE1)
+    //applymovement(LOCALID_BRIDGE_NPC_ROUTE1, Movement_NPCRuns)
+   // waitmovement(LOCALID_BRIDGE_NPC_ROUTE1)
 
     // 3. Dialogue
     msgbox("Test message!")
@@ -40,11 +36,11 @@ script Route1_WillbendCanal_MapScripts_LarchTrigger {
     addobject(LOCALID_STARTER_DROP)
 
     // 5. NPC Flees & Despawns
-    applymovement(LOCALID_BRIDGE_NPC_ROUTE1, Movement_NPCRunsAway)
-    waitmovement(LOCALID_BRIDGE_NPC_ROUTE1)
+   // applymovement(LOCALID_BRIDGE_NPC_ROUTE1, Movement_NPCRunsAway)
+  // waitmovement(LOCALID_BRIDGE_NPC_ROUTE1)
 
-    removeobject(LOCALID_BRIDGE_NPC_ROUTE1)
-    setflag(FLAG_HIDE_BRIDGE_NPC_ROUTE1)
+   // removeobject(LOCALID_BRIDGE_NPC_ROUTE1)
+  //  setflag(FLAG_HIDE_BRIDGE_NPC_ROUTE1)
 
     // 6. Reset Camera Safely
     applymovement(OBJ_EVENT_ID_CAMERA, Movement_CameraDown)
