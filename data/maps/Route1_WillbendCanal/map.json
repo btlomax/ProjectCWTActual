@@ -23,9 +23,9 @@
     {
       "local_id": "LOCALID_STARTER_DROP",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 6,
+      "x": 5,
       "y": 10,
-      "elevation": 0,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -35,17 +35,18 @@
       "flag": "FLAG_HIDE_STARTER_ITEM"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAN",
-      "x": 3,
-      "y": 19,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "local_id": "LOCALID_BRIDGE_NPC_ROUTE1",
+      "graphics_id": "OBJ_EVENT_GFX_BOY_1",
+      "x": 14,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_BRIDGE_NPC_ROUTE1"
     }
   ],
   "warp_events": [

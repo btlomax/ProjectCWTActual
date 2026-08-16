@@ -13,24 +13,26 @@ Route1_WillbendCanal_OnTransition::
 Route1_WillbendCanal_OnTransition_1:
 # 8 "data/maps/Route1_WillbendCanal/scripts.pory"
 	setflag FLAG_HIDE_STARTER_ITEM
+# 9 "data/maps/Route1_WillbendCanal/scripts.pory"
+	setflag FLAG_HIDE_BRIDGE_NPC_ROUTE1
 	return
 
 
 Route1_WillbendCanal_MapScripts_LarchTrigger::
 # 16 "data/maps/Route1_WillbendCanal/scripts.pory"
 	lock
+# 18 "data/maps/Route1_WillbendCanal/scripts.pory"
+	clearflag FLAG_HIDE_BRIDGE_NPC_ROUTE1
 # 19 "data/maps/Route1_WillbendCanal/scripts.pory"
+	addobject LOCALID_BRIDGE_NPC_ROUTE1
+# 22 "data/maps/Route1_WillbendCanal/scripts.pory"
 	special SpawnCameraObject
-# 20 "data/maps/Route1_WillbendCanal/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, Movement_CameraUp
-# 21 "data/maps/Route1_WillbendCanal/scripts.pory"
-	waitmovement 0
 # 23 "data/maps/Route1_WillbendCanal/scripts.pory"
-	msgbox Route1_WillbendCanal_MapScripts_LarchTrigger_Text_0
+	applymovement OBJ_EVENT_ID_CAMERA, Movement_CameraUp
 # 24 "data/maps/Route1_WillbendCanal/scripts.pory"
-	closemessage
+	waitmovement 0
 # 31 "data/maps/Route1_WillbendCanal/scripts.pory"
-	msgbox Route1_WillbendCanal_MapScripts_LarchTrigger_Text_1
+	msgbox Route1_WillbendCanal_MapScripts_LarchTrigger_Text_0
 # 32 "data/maps/Route1_WillbendCanal/scripts.pory"
 	closemessage
 # 35 "data/maps/Route1_WillbendCanal/scripts.pory"
@@ -137,10 +139,6 @@ Movement_NPCRunsAway:
 	step_end
 
 Route1_WillbendCanal_MapScripts_LarchTrigger_Text_0:
-# 23 "data/maps/Route1_WillbendCanal/scripts.pory"
-	.string "Camera has stopped moving.$"
-
-Route1_WillbendCanal_MapScripts_LarchTrigger_Text_1:
 # 31 "data/maps/Route1_WillbendCanal/scripts.pory"
 	.string "Test message!$"
 
