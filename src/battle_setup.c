@@ -6,6 +6,7 @@
 #include "battle_transition.h"
 #include "main.h"
 #include "task.h"
+#include "palette.h"
 #include "safari_zone.h"
 #include "script.h"
 #include "event_data.h"
@@ -55,6 +56,7 @@
 #include "constants/trainers.h"
 #include "constants/trainer_hill.h"
 #include "constants/weather.h"
+#include "constants/rgb.h"
 #include "fishing.h"
 
 enum TransitionType
@@ -76,6 +78,7 @@ static void CB2_EndMarowakBattle(void);
 static void TryUpdateGymLeaderRematchFromWild(void);
 static void TryUpdateGymLeaderRematchFromTrainer(void);
 static void CB2_GiveStarter(void);
+static void CB2_FadeOutStarterChoice(void);
 static void CB2_StartFirstBattle(void);
 static void CB2_EndFirstBattle(void);
 static void SaveChangesToPlayerParty(void);
@@ -966,9 +969,21 @@ static void CB2_GiveStarter(void)
     starterMon = GetStarterPokemon(gSpecialVar_Result);
     ScriptGiveMon(starterMon, 5, ITEM_NONE);
     ResetTasks();
-    PlayBattleBGM();
-    SetMainCallback2(CB2_StartFirstBattle);
-    BattleTransition_Start(B_TRANSITION_BLUR);
+
+    BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+    SetMainCallback2(CB2_FadeOutStarterChoice);
+}
+
+static void CB2_FadeOutStarterChoice(void)
+{
+    UpdatePaletteFade();
+
+    if (!gPaletteFade.active)
+    {
+        Overworld_ClearSavedMusic();
+        DowngradeBadPoison();
+        SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
+    }
 }
 
 static void CB2_StartFirstBattle(void)

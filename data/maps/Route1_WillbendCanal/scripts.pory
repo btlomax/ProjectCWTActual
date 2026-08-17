@@ -65,10 +65,35 @@ script Route1_WillbendCanal_MapScripts_LarchTrigger {
 script Route1_EventScript_StarterDrop {
     lock
     faceplayer
-    msgbox("It's a discarded bag... There are Pokeballs inside!", MSGBOX_DEFAULT)
+    msgbox("He dropped his bag...", MSGBOX_DEFAULT)
     closemessage
 
+    msgbox("Take a look inside?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == NO) {
+        msgbox("You decided not to take a look.", MSGBOX_DEFAULT)
+        release
+        end
+    }   
+    else {
+        msgbox("Just a quick peek...", MSGBOX_DEFAULT)
+        fadescreen(FADE_TO_BLACK)
+    }
+
+    setflag(FLAG_SYS_POKEMON_GET)
+    special(ChooseStarter)
+    bufferleadmonspeciesname(STR_VAR_1)
+    msgbox("You received a {STR_VAR_1}!", MSGBOX_DEFAULT)
+
+    msgbox("Do you want to give a nickname\nto your POKéMON?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        setvar(VAR_0x8004, 0)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+
+    removeobject(LOCALID_STARTER_DROP)
+    setflag(FLAG_HIDE_STARTER_ITEM)
     release
+    end
 }
 
 script Route1_WillbendCanal_MapScripts_PathSign {
