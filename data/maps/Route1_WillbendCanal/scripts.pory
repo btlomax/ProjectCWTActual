@@ -96,12 +96,25 @@ script Route1_EventScript_StarterDrop {
     end
 }
 
+script Route1_EventScript_TurnAround { // If the player tries to go too far, they get a message telling them they can't go that way
+   
+   if(var(VAR_ALDERBROOK_TOWN_STATE) == 0) {
+        lock
+        bufferstring(STR_VAR_1, "{PLAYER}")
+        msgbox("{STR_VAR_1}, don't go too far please!", MSGBOX_DEFAULT)
+        applymovement(OBJ_EVENT_ID_PLAYER, Movement_WalkLeftTwoSteps)
+        waitmovement(OBJ_EVENT_ID_PLAYER)
+        release
+        end
+    }
+}
+
 script Route1_WillbendCanal_MapScripts_PathSign {
     msgbox("<- Alderbrook Town\nWestlock Village ->", MSGBOX_SIGN)
     end
 }
 
-// --- Movement Data ---
+#region Movement Data
 
 movement Movement_CameraUp {
     walk_up
@@ -145,3 +158,10 @@ movement Movement_NPCLookAround {
     delay_8
     step_end
 }
+
+movement Movement_WalkLeftTwoSteps {
+    walk_left
+    walk_left
+    step_end
+}
+#endregion

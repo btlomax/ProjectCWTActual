@@ -9327,7 +9327,7 @@
     {
       "id": "LAYOUT_ALDERBROOK_TOWN",
       "name": "AlderbrookTown_Layout",
-      "width": 36,
+      "width": 38,
       "height": 24,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
@@ -9377,7 +9377,7 @@
     {
       "id": "LAYOUT_ROUTE1_WILLBEND_CANAL",
       "name": "Route1_WillbendCanal_Layout",
-      "width": 35,
+      "width": 33,
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fortree",

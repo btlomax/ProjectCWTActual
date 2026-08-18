@@ -3,7 +3,7 @@
   "name": "Route1_WillbendCanal",
   "layout": "LAYOUT_ROUTE1_WILLBEND_CANAL",
   "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_ROUTE1_WILLOWBEND_CANAL",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
@@ -23,7 +23,7 @@
     {
       "local_id": "LOCALID_STARTER_DROP",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 5,
+      "x": 3,
       "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -37,7 +37,7 @@
     {
       "local_id": "LOCALID_BRIDGE_NPC_ROUTE1",
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 13,
+      "x": 11,
       "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -50,7 +50,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
-      "x": 5,
+      "x": 3,
       "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -64,7 +64,7 @@
   ],
   "warp_events": [
     {
-      "x": 16,
+      "x": 14,
       "y": 3,
       "elevation": 0,
       "dest_map": "MAP_ALDERBROOK_TOWN_2",
@@ -74,7 +74,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 4,
+      "x": 2,
       "y": 16,
       "elevation": 0,
       "var": "VAR_ROUTE1_STATE",
@@ -83,19 +83,37 @@
     },
     {
       "type": "trigger",
-      "x": 5,
+      "x": 3,
       "y": 16,
       "elevation": 0,
       "var": "VAR_ROUTE1_STATE",
       "var_value": "0",
       "script": "Route1_WillbendCanal_MapScripts_LarchTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route1_EventScript_TurnAround"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route1_EventScript_TurnAround"
     }
   ],
   "bg_events": [
     {
       "type": "sign",
-      "x": 7,
-      "y": 15,
+      "x": 1,
+      "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route1_WillbendCanal_MapScripts_PathSign"
