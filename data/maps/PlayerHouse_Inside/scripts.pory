@@ -1,1 +1,21 @@
 mapscripts PlayerHouse_Inside_MapScripts {}
+
+script PlayerHouse_Inside_MapScripts_GrandmotherNPC {
+    lock
+    faceplayer
+    switch (var(VAR_ALDERBROOK_TOWN_STATE)) {
+        case 0:
+            msgbox("{PLAYER}, you're back early!\pYour dinner won't be ready for a while.", MSGBOX_DEFAULT)
+            break
+        case 1:
+            msgbox("{PLAYER}, just in time for dinner!\pCome and sit down.", MSGBOX_DEFAULT)
+            // Script for dinner interaction where you get told to go see Professor Larch in Westlock Village
+            setvar(VAR_ALDERBROOK_TOWN_STATE, 2)
+            break
+        default:
+            msgbox("{PLAYER}, you're back early!\pYour dinner won't be ready for a while.", MSGBOX_DEFAULT)
+    }
+
+    release
+    end
+}

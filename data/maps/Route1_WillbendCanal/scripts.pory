@@ -92,13 +92,14 @@ script Route1_EventScript_StarterDrop {
 
     removeobject(LOCALID_STARTER_DROP)
     setflag(FLAG_HIDE_STARTER_ITEM)
+    setvar(VAR_ALDERBROOK_TOWN_STATE, 1)
     release
     end
 }
 
 script Route1_EventScript_TurnAround { // If the player tries to go too far, they get a message telling them they can't go that way
    
-   if(var(VAR_ALDERBROOK_TOWN_STATE) == 0) {
+   if(var(VAR_ALDERBROOK_TOWN_STATE) != 2) {
         lock
         bufferstring(STR_VAR_1, "{PLAYER}")
         msgbox("{STR_VAR_1}, don't go too far please!", MSGBOX_DEFAULT)
