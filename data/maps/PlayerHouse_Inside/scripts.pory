@@ -1,21 +1,64 @@
 mapscripts PlayerHouse_Inside_MapScripts {}
 
-script PlayerHouse_Inside_MapScripts_GrandmotherNPC {
-    lock
+script PlayerHouse_Inside_Dinner {
+    lockall
+    faceplayer
+    msgbox("{PLAYER}, just in time for dinner!\pCome and sit down.", MSGBOX_DEFAULT)
+
+    hideobjectat(OBJ_EVENT_ID_PLAYER, MAP_PLAYER_HOUSE_INSIDE)
+    hideobjectat(LOCALID_GRANDMOTHER, MAP_PLAYER_HOUSE_INSIDE)
+    fadescreen(FADE_TO_BLACK)
+
+    setobjectxy(OBJ_EVENT_ID_PLAYER, 5, 4)    // chair coords
+    setobjectxy(LOCALID_GRANDMOTHER, 2, 4)                  // opposite side of table
+    applymovement(OBJ_EVENT_ID_PLAYER, Player_Face_Left)
+    applymovement(LOCALID_GRANDMOTHER, NPC_Face_Right)
+    waitmovement(0)
+
+
+    showobjectat(OBJ_EVENT_ID_PLAYER, MAP_PLAYER_HOUSE_INSIDE)
+    showobjectat(LOCALID_GRANDMOTHER, MAP_PLAYER_HOUSE_INSIDE)
+    fadescreen(FADE_FROM_BLACK)
+
+    msgbox("{PLAYER}, I made your favorite dish!\nI hope you're hungry!\pNow, tell me about your day.", MSGBOX_DEFAULT)
+    msgbox("...\p...\pYou found a what?\p...\p...\pYou found a Pokemon?\p...\pIt suits you dear child.\pHmmmm I wonder...", MSGBOX_DEFAULT)
+    msgbox("I think you should go and see\nProfessor Larch.\pIf he's not at his lab he'll be in\nWestlock Village.\npast Route 1.", MSGBOX_DEFAULT)
+    msgbox("He'll be able to tell you\nmore about Pokemon.\pBe careful in the tall grass.\nWild pokemon are sure to jump out at you!", MSGBOX_DEFAULT)
+    msgbox("Come and see me when you've\nspoken to the Professor, and,\pdo be careful dear.", MSGBOX_DEFAULT)
+
+    setvar(VAR_ALDERBROOK_TOWN_STATE, 2)
+    releaseall
+    end
+}
+
+script PlayerHouse_Inside_GrandmotherNPC {
+    lockall
     faceplayer
     switch (var(VAR_ALDERBROOK_TOWN_STATE)) {
         case 0:
             msgbox("{PLAYER}, you're back early!\pYour dinner won't be ready for a while.", MSGBOX_DEFAULT)
+            setvar(VAR_ALDERBROOK_TOWN_STATE, 1) // Temp flag for testing
             break
         case 1:
-            msgbox("{PLAYER}, just in time for dinner!\pCome and sit down.", MSGBOX_DEFAULT)
-            // Script for dinner interaction where you get told to go see Professor Larch in Westlock Village
-            setvar(VAR_ALDERBROOK_TOWN_STATE, 2)
+            goto(PlayerHouse_Inside_Dinner)
+            break
+        case 2:
+            msgbox("{PLAYER}, go and see Professor Larch in Westlock Village.\pI'm sure he will want to see your new Pokemon!", MSGBOX_DEFAULT)
             break
         default:
-            msgbox("{PLAYER}, you're back early!\pYour dinner won't be ready for a while.", MSGBOX_DEFAULT)
+            msgbox("You know, I used to be quite the Pokemon trainer in my youth!", MSGBOX_DEFAULT)
     }
 
-    release
+    releaseall
     end
+}
+
+movement Player_Face_Left{
+    face_left
+    step_end
+}
+
+movement NPC_Face_Right{
+    face_right
+    step_end
 }
