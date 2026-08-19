@@ -14,6 +14,7 @@
 #include "decoration_inventory.h"
 #include "event_data.h"
 #include "field_door.h"
+#include "field_camera.h"
 #include "field_effect.h"
 #include "field_move.h"
 #include "event_object_lock.h"
@@ -1444,7 +1445,15 @@ bool8 ScrCmd_setobjectxy(struct ScriptContext *ctx)
     if (localId == OBJ_EVENT_ID_NPC_FOLLOWER)
         SetFollowerNPCData(FNPC_DATA_COME_OUT_DOOR, FNPC_DOOR_NO_POS_SET);
 
+    if (localId == OBJ_EVENT_ID_PLAYER)
+        SetCameraFocusCoords(x + MAP_OFFSET, y + MAP_OFFSET);
+
     TryMoveObjectEventToMapCoords(localId, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup, x, y);
+    if (localId == OBJ_EVENT_ID_PLAYER)
+    {
+        // Redraw after the player sprite is positioned against its new camera focus.
+        DrawWholeMapView();
+    }
     return FALSE;
 }
 
