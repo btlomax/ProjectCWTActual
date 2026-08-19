@@ -55,31 +55,29 @@ PlayerHouse_Inside_GrandmotherNPC::
 	switch VAR_ALDERBROOK_TOWN_STATE
 # 36 "data/maps/PlayerHouse_Inside/scripts.pory"
 	case 0, PlayerHouse_Inside_GrandmotherNPC_3
-# 40 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 39 "data/maps/PlayerHouse_Inside/scripts.pory"
 	case 1, PlayerHouse_Inside_GrandmotherNPC_4
-# 43 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 42 "data/maps/PlayerHouse_Inside/scripts.pory"
 	case 2, PlayerHouse_Inside_GrandmotherNPC_5
-# 47 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 46 "data/maps/PlayerHouse_Inside/scripts.pory"
 	msgbox PlayerHouse_Inside_GrandmotherNPC_Text_2, MSGBOX_DEFAULT
 PlayerHouse_Inside_GrandmotherNPC_1:
-# 50 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 49 "data/maps/PlayerHouse_Inside/scripts.pory"
 	releaseall
 	end
 
 PlayerHouse_Inside_GrandmotherNPC_3:
 # 37 "data/maps/PlayerHouse_Inside/scripts.pory"
 	msgbox PlayerHouse_Inside_GrandmotherNPC_Text_0, MSGBOX_DEFAULT
-# 38 "data/maps/PlayerHouse_Inside/scripts.pory"
-	setvar VAR_ALDERBROOK_TOWN_STATE, 1
 	goto PlayerHouse_Inside_GrandmotherNPC_1
 
 PlayerHouse_Inside_GrandmotherNPC_4:
-# 41 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 40 "data/maps/PlayerHouse_Inside/scripts.pory"
 	goto PlayerHouse_Inside_Dinner
 	goto PlayerHouse_Inside_GrandmotherNPC_1
 
 PlayerHouse_Inside_GrandmotherNPC_5:
-# 44 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 43 "data/maps/PlayerHouse_Inside/scripts.pory"
 	msgbox PlayerHouse_Inside_GrandmotherNPC_Text_1, MSGBOX_DEFAULT
 	goto PlayerHouse_Inside_GrandmotherNPC_1
 
@@ -113,9 +111,9 @@ PlayerHouse_Inside_GrandmotherNPC_Text_0:
 	.string "{PLAYER}, you're back early!\pYour dinner won't be ready for a while.$"
 
 PlayerHouse_Inside_GrandmotherNPC_Text_1:
-# 44 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 43 "data/maps/PlayerHouse_Inside/scripts.pory"
 	.string "{PLAYER}, go and see Professor Larch in Westlock Village.\pI'm sure he will want to see your new Pokemon!$"
 
 PlayerHouse_Inside_GrandmotherNPC_Text_2:
-# 47 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 46 "data/maps/PlayerHouse_Inside/scripts.pory"
 	.string "You know, I used to be quite the Pokemon trainer in my youth!$"
