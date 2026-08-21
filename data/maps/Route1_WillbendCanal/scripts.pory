@@ -7,6 +7,7 @@ script Route1_WillbendCanal_OnTransition {
     if (var(VAR_ROUTE1_STATE) == 0) {
         setflag(FLAG_HIDE_STARTER_ITEM)
         setflag(FLAG_HIDE_BRIDGE_NPC_ROUTE1)
+        //setflag(FLAG_HIDE_ROUTE1_TUTOR)
     }
 }
 
@@ -110,6 +111,64 @@ script Route1_EventScript_TurnAround { // If the player tries to go too far, the
     }
 }
 
+script Route1_EventScript_Trigger_Tutorial {
+    setvar(VAR_ALDERBROOK_TOWN_STATE, 2)
+    setvar(VAR_ROUTE1_STATE, 1)
+
+    if(var(VAR_ALDERBROOK_TOWN_STATE) == 2 && var(VAR_ROUTE1_STATE) == 1) {
+       goto(Route1_EventScript_Catch_Pokemon_Tutorial)
+    }
+}
+
+script Route1_EventScript_Catch_Pokemon_Tutorial{
+    lock
+    faceplayer
+
+    special(SpawnCameraObject)
+
+    msgbox("Hey kid! You look like a new trainer!\pI can see you have a POKéMON with you.", MSGBOX_DEFAULT)
+    msgbox("Do you know how to catch wild POKéMON?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == NO) {
+        msgbox("OK no problem, let me show you how!", MSGBOX_DEFAULT)
+    }
+    else {
+        msgbox("Well I'll show you anyway, a refresh\nwon't do any harm!", MSGBOX_DEFAULT)
+    }
+
+    msgbox("First, you need to find a wild POKéMON.\nYou can find them in tall grass.", MSGBOX_DEFAULT)
+
+    applymovement(LOCALID_ROUTE1_TUTOR, Movement_TutorWalkGrassDown)
+    applymovement(OBJ_EVENT_ID_CAMERA, Movement_CameraMoveWithTutorDown)
+    waitmovement(OBJ_EVENT_ID_CAMERA)
+    waitmovement(LOCALID_ROUTE1_TUTOR)
+    
+    playmoncry(SPECIES_POLIWAG, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox("WOOOOAH!", MSGBOX_DEFAULT)
+
+    // Start battle_controller_tutor or whatever it's called
+
+    applymovement(LOCALID_ROUTE1_TUTOR, Movement_TutorWalkGrassUp)
+    applymovement(OBJ_EVENT_ID_CAMERA, Movement_CameraMoveWithTutorUp)
+    waitmovement(OBJ_EVENT_ID_CAMERA)
+    waitmovement(LOCALID_ROUTE1_TUTOR)
+
+    msgbox("See, that wasn't so hard!\pYou can catch wild POKéMON by weakening\nthem in battle and then throwing a\lPOKéBALL at them.", MSGBOX_DEFAULT)
+    msgbox("Some Pokémon are hard to find, but they\nare out there!\pListen out for the cries\nof wild POKéMON, you never know what you\lmight find!", MSGBOX_DEFAULT)
+    msgbox("Come to the mart in Westlock Village,\nI'll have a gift ready for you!", MSGBOX_DEFAULT)
+
+    applymovement(LOCALID_ROUTE1_TUTOR, Movement_TutorLeaveScreenRight)
+    waitmovement(LOCALID_ROUTE1_TUTOR)
+
+    setflag(FLAG_HIDE_ROUTE1_TUTOR)
+    removeobject(LOCALID_ROUTE1_TUTOR)
+
+    special(RemoveCameraObject)
+    setvar(VAR_ROUTE1_STATE, 2)
+    release
+    end
+}
+
 script Route1_WillbendCanal_MapScripts_PathSign {
     msgbox("<- Alderbrook Town\nWestlock Village ->", MSGBOX_SIGN)
     end
@@ -165,4 +224,39 @@ movement Movement_WalkLeftTwoSteps {
     walk_left
     step_end
 }
+
+movement Movement_TutorWalkGrassDown{
+    walk_right * 2
+    walk_down * 4
+    delay_16
+    walk_in_place_left
+    delay_16
+    walk_in_place_right * 2
+    delay_16
+    walk_in_place_left
+    step_end
+}
+
+movement Movement_TutorWalkGrassUp{
+    walk_up * 3
+    walk_left * 1
+    step_end
+}
+
+movement Movement_CameraMoveWithTutorDown{
+    walk_down * 4
+    step_end
+}
+
+movement Movement_CameraMoveWithTutorUp{
+    walk_up * 4
+    step_end
+}
+
+movement Movement_TutorLeaveScreenRight{
+    delay_16
+    walk_right * 8
+    step_end
+}
 #endregion
+

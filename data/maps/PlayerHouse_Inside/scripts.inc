@@ -42,42 +42,46 @@ PlayerHouse_Inside_Dinner::
 # 27 "data/maps/PlayerHouse_Inside/scripts.pory"
 	setvar VAR_ALDERBROOK_TOWN_STATE, 2
 # 28 "data/maps/PlayerHouse_Inside/scripts.pory"
+	clearflag FLAG_HIDE_ROUTE1_TUTOR
+# 29 "data/maps/PlayerHouse_Inside/scripts.pory"
+	addobject LOCALID_ROUTE1_TUTOR, MAP_ROUTE1_WILLBEND_CANAL
+# 30 "data/maps/PlayerHouse_Inside/scripts.pory"
 	releaseall
 	end
 
 
 PlayerHouse_Inside_GrandmotherNPC::
-# 33 "data/maps/PlayerHouse_Inside/scripts.pory"
-	lockall
-# 34 "data/maps/PlayerHouse_Inside/scripts.pory"
-	faceplayer
 # 35 "data/maps/PlayerHouse_Inside/scripts.pory"
-	switch VAR_ALDERBROOK_TOWN_STATE
+	lockall
 # 36 "data/maps/PlayerHouse_Inside/scripts.pory"
+	faceplayer
+# 37 "data/maps/PlayerHouse_Inside/scripts.pory"
+	switch VAR_ALDERBROOK_TOWN_STATE
+# 38 "data/maps/PlayerHouse_Inside/scripts.pory"
 	case 0, PlayerHouse_Inside_GrandmotherNPC_3
-# 39 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 41 "data/maps/PlayerHouse_Inside/scripts.pory"
 	case 1, PlayerHouse_Inside_GrandmotherNPC_4
-# 42 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 44 "data/maps/PlayerHouse_Inside/scripts.pory"
 	case 2, PlayerHouse_Inside_GrandmotherNPC_5
-# 46 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 48 "data/maps/PlayerHouse_Inside/scripts.pory"
 	msgbox PlayerHouse_Inside_GrandmotherNPC_Text_2, MSGBOX_DEFAULT
 PlayerHouse_Inside_GrandmotherNPC_1:
-# 49 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 51 "data/maps/PlayerHouse_Inside/scripts.pory"
 	releaseall
 	end
 
 PlayerHouse_Inside_GrandmotherNPC_3:
-# 37 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 39 "data/maps/PlayerHouse_Inside/scripts.pory"
 	msgbox PlayerHouse_Inside_GrandmotherNPC_Text_0, MSGBOX_DEFAULT
 	goto PlayerHouse_Inside_GrandmotherNPC_1
 
 PlayerHouse_Inside_GrandmotherNPC_4:
-# 40 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 42 "data/maps/PlayerHouse_Inside/scripts.pory"
 	goto PlayerHouse_Inside_Dinner
 	goto PlayerHouse_Inside_GrandmotherNPC_1
 
 PlayerHouse_Inside_GrandmotherNPC_5:
-# 43 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 45 "data/maps/PlayerHouse_Inside/scripts.pory"
 	msgbox PlayerHouse_Inside_GrandmotherNPC_Text_1, MSGBOX_DEFAULT
 	goto PlayerHouse_Inside_GrandmotherNPC_1
 
@@ -107,13 +111,13 @@ PlayerHouse_Inside_Dinner_Text_5:
 	.string "Come and see me when you've\nspoken to the Professor, and please,\pdo be careful dear.$"
 
 PlayerHouse_Inside_GrandmotherNPC_Text_0:
-# 37 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 39 "data/maps/PlayerHouse_Inside/scripts.pory"
 	.string "{PLAYER}, you're back early!\pYour dinner won't be ready for a while.$"
 
 PlayerHouse_Inside_GrandmotherNPC_Text_1:
-# 43 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 45 "data/maps/PlayerHouse_Inside/scripts.pory"
 	.string "{PLAYER}, go and see Professor Larch in Westlock Village.\pI'm sure he will want to see your new Pokemon!$"
 
 PlayerHouse_Inside_GrandmotherNPC_Text_2:
-# 46 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 48 "data/maps/PlayerHouse_Inside/scripts.pory"
 	.string "You know, I used to be quite the Pokemon trainer in my youth!$"

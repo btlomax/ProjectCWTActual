@@ -25,6 +25,8 @@ script PlayerHouse_Inside_Dinner {
     msgbox("Come and see me when you've\nspoken to the Professor, and please,\pdo be careful dear.", MSGBOX_DEFAULT)
 
     setvar(VAR_ALDERBROOK_TOWN_STATE, 2)
+    clearflag(FLAG_HIDE_ROUTE1_TUTOR)
+    addobject(LOCALID_ROUTE1_TUTOR, MAP_ROUTE1_WILLBEND_CANAL)
     releaseall
     end
 }
