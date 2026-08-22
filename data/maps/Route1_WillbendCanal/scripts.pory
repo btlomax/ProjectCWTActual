@@ -7,7 +7,6 @@ script Route1_WillbendCanal_OnTransition {
     if (var(VAR_ROUTE1_STATE) == 0) {
         setflag(FLAG_HIDE_STARTER_ITEM)
         setflag(FLAG_HIDE_BRIDGE_NPC_ROUTE1)
-        //setflag(FLAG_HIDE_ROUTE1_TUTOR)
     }
 }
 
@@ -112,8 +111,6 @@ script Route1_EventScript_TurnAround { // If the player tries to go too far, the
 }
 
 script Route1_EventScript_Trigger_Tutorial {
-    setvar(VAR_ALDERBROOK_TOWN_STATE, 2)
-    setvar(VAR_ROUTE1_STATE, 1)
 
     if(var(VAR_ALDERBROOK_TOWN_STATE) == 2 && var(VAR_ROUTE1_STATE) == 1) {
        goto(Route1_EventScript_Catch_Pokemon_Tutorial)

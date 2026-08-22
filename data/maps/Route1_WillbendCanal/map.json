@@ -111,7 +111,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "NULL"
+      "script": "Route1_EventScript_TurnAround"
     },
     {
       "type": "trigger",
@@ -120,7 +120,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "NULL"
+      "script": "Route1_EventScript_TurnAround"
     },
     {
       "type": "trigger",
