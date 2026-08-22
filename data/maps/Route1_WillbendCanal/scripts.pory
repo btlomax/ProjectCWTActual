@@ -90,6 +90,8 @@ script Route1_EventScript_StarterDrop {
         call(Common_EventScript_NameReceivedPartyMon)
     }
 
+    msgbox("Dinner will be ready soon, so don't be late!", MSGBOX_DEFAULT)
+
     removeobject(LOCALID_STARTER_DROP)
     setflag(FLAG_HIDE_STARTER_ITEM)
     setvar(VAR_ALDERBROOK_TOWN_STATE, 1)
