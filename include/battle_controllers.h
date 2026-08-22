@@ -76,6 +76,7 @@ enum BattleController
     BATTLE_CONTROLLER_LINK_OPPONENT,
     BATTLE_CONTROLLER_SAFARI,
     BATTLE_CONTROLLER_WALLY,
+    BATTLE_CONTROLLER_WILLOWBEND_TUTOR,
     BATTLE_CONTROLLER_RECORDED_PLAYER,
     BATTLE_CONTROLLER_RECORDED_PARTNER,
     BATTLE_CONTROLLER_RECORDED_OPPONENT,
@@ -315,6 +316,7 @@ bool32 BattlerIsOpponent(enum BattlerId battlerId);
 bool32 BattlerIsRecorded(enum BattlerId battlerId);
 bool32 BattlerIsLink(enum BattlerId battlerId);
 bool32 BattlerIsWally(enum BattlerId battlerId);
+bool32 BattlerIsWillowbendTutor(enum BattlerId battlerId);
 bool32 BattlerHasAi(enum BattlerId battlerId);
 
 // emitters
@@ -448,6 +450,7 @@ void SafariBufferExecCompleted(enum BattlerId battler);
 
 // wally controller
 void SetControllerToWally(enum BattlerId battler);
+void SetControllerToWillowbendTutor(enum BattlerId battler);
 void WallyBufferExecCompleted(enum BattlerId battler);
 
 // recorded opponent controller

@@ -124,6 +124,9 @@ script Route1_EventScript_Catch_Pokemon_Tutorial{
     lock
     faceplayer
 
+    applymovement(LOCALID_ROUTE1_TUTOR, Common_Movement_ExclamationMark)
+    waitmovement(LOCALID_ROUTE1_TUTOR)
+
     special(SpawnCameraObject)
 
     msgbox("Hey kid! You look like a new trainer!\pI can see you have a POKéMON with you.", MSGBOX_DEFAULT)
@@ -145,9 +148,14 @@ script Route1_EventScript_Catch_Pokemon_Tutorial{
     playmoncry(SPECIES_POLIWAG, CRY_MODE_NORMAL)
     waitmoncry
     msgbox("WOOOOAH!", MSGBOX_DEFAULT)
+    special(RemoveCameraObject)
 
-    // Start battle_controller_tutor or whatever it's called
+    special(SavePlayerParty)
+    special(LoadWallyZigzagoon)
+    special(StartWillowbendTutorBattle)
+    special(LoadPlayerParty)
 
+    special(SpawnCameraObject)
     applymovement(LOCALID_ROUTE1_TUTOR, Movement_TutorWalkGrassUp)
     applymovement(OBJ_EVENT_ID_CAMERA, Movement_CameraMoveWithTutorUp)
     waitmovement(OBJ_EVENT_ID_CAMERA)
@@ -155,7 +163,7 @@ script Route1_EventScript_Catch_Pokemon_Tutorial{
 
     msgbox("See, that wasn't so hard!\pYou can catch wild POKéMON by weakening\nthem in battle and then throwing a\lPOKéBALL at them.", MSGBOX_DEFAULT)
     msgbox("Some Pokémon are hard to find, but they\nare out there!\pListen out for the cries\nof wild POKéMON, you never know what you\lmight find!", MSGBOX_DEFAULT)
-    msgbox("Come to the mart in Westlock Village,\nI'll have a gift ready for you!", MSGBOX_DEFAULT)
+    msgbox("Come to my house on this route after\nyou've caught 15 Pokemon,\lI'll have a gift ready for you!", MSGBOX_DEFAULT)
 
     applymovement(LOCALID_ROUTE1_TUTOR, Movement_TutorLeaveScreenRight)
     waitmovement(LOCALID_ROUTE1_TUTOR)
@@ -259,4 +267,3 @@ movement Movement_TutorLeaveScreenRight{
     step_end
 }
 #endregion
-

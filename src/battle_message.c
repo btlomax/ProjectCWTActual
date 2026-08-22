@@ -2553,7 +2553,7 @@ void BufferStringBattle(enum StringID stringID, enum BattlerId battler)
     case STRINGID_RETURNMON: // sending poke to ball msg
         if ((GetBattlerPosition(battler) & BIT_FLANK) == B_FLANK_LEFT) // battler 0 and 1
         {
-            if (BattlerIsPlayer(battler) || BattlerIsWally(battler)) // Player
+            if (BattlerIsPlayer(battler) || BattlerIsWally(battler) || BattlerIsWillowbendTutor(battler)) // Player
             {
                 if (*(&gBattleStruct->hpScale) == 0)
                     stringPtr = sText_PkmnThatsEnough;
@@ -3525,7 +3525,7 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst, u32 dstSize)
                     if (IS_FRLG)
                         textStart = StringCopy(textStart, COMPOUND_STRING("The old man"));
                     else
-                        textStart = StringCopy(textStart, COMPOUND_STRING("WALLY"));
+                        textStart = StringCopy(textStart, COMPOUND_STRING("TUTOR"));
                 }
                 else if (GetBattlerPosition(gBattlerAttacker) == B_POSITION_PLAYER_LEFT)
                 {

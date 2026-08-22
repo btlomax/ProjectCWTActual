@@ -1013,6 +1013,15 @@ static void CB2_EndFirstBattle(void)
     SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
 }
 
+void StartWillowbendTutorBattle(void)
+{
+    CreateMaleMon(&gParties[B_TRAINER_OPPONENT_A][0], SPECIES_POLIWAG, 5);
+    LockPlayerFieldControls();
+    gMain.savedCallback = CB2_ReturnToFieldContinueScriptPlayMapMusic;
+    gBattleTypeFlags = BATTLE_TYPE_CATCH_TUTORIAL;
+    CreateBattleStartTask(B_TRANSITION_SLICE, 0);
+}
+
 static void TryUpdateGymLeaderRematchFromWild(void)
 {
     if (GetGameStat(GAME_STAT_WILD_BATTLES) % 60 == 0)
