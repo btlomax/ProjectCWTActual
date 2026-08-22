@@ -276,6 +276,17 @@ BattleScript_ActionWallyThrow:
 	waitmessage B_WAIT_TIME_LONG
 	end2
 
+BattleScript_ActionWillowbendTutorThrow::
+	printstring STRINGID_RETURNMON
+	waitmessage B_WAIT_TIME_LONG
+	returnatktoball
+	waitstate
+	trainerslidein BS_PLAYER1
+	waitstate
+	printstring STRINGID_WILLOWBENDTUTORTHROWBALL
+	waitmessage B_WAIT_TIME_LONG
+	end2
+
 BattleScript_TrainerASlideMsgRet::
 	trainerslidein BS_OPPONENT1
 	handletrainerslidemsg BS_SCRIPTING, PRINT_SLIDE_MESSAGE

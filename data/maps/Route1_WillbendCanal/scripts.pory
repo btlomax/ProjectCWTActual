@@ -131,37 +131,38 @@ script Route1_EventScript_Catch_Pokemon_Tutorial{
 
     msgbox("Hey kid! You look like a new trainer!\pI can see you have a POKéMON with you.", MSGBOX_DEFAULT)
     msgbox("Do you know how to catch wild POKéMON?", MSGBOX_YESNO)
+
     if (var(VAR_RESULT) == NO) {
         msgbox("OK no problem, let me show you how!", MSGBOX_DEFAULT)
-    }
-    else {
-        msgbox("Well I'll show you anyway, a refresh\nwon't do any harm!", MSGBOX_DEFAULT)
-    }
+        msgbox("First, you need to find a wild POKéMON.\nYou can find them in tall grass.", MSGBOX_DEFAULT)
 
-    msgbox("First, you need to find a wild POKéMON.\nYou can find them in tall grass.", MSGBOX_DEFAULT)
-
-    applymovement(LOCALID_ROUTE1_TUTOR, Movement_TutorWalkGrassDown)
-    applymovement(OBJ_EVENT_ID_CAMERA, Movement_CameraMoveWithTutorDown)
-    waitmovement(OBJ_EVENT_ID_CAMERA)
-    waitmovement(LOCALID_ROUTE1_TUTOR)
+        applymovement(LOCALID_ROUTE1_TUTOR, Movement_TutorWalkGrassDown)
+        applymovement(OBJ_EVENT_ID_CAMERA, Movement_CameraMoveWithTutorDown)
+        waitmovement(OBJ_EVENT_ID_CAMERA)
+        waitmovement(LOCALID_ROUTE1_TUTOR)
     
-    playmoncry(SPECIES_POLIWAG, CRY_MODE_NORMAL)
-    waitmoncry
-    msgbox("WOOOOAH!", MSGBOX_DEFAULT)
-    special(RemoveCameraObject)
+        playmoncry(SPECIES_POLIWAG, CRY_MODE_NORMAL)
+        waitmoncry
+        msgbox("WOOOOAH!", MSGBOX_DEFAULT)
+        special(RemoveCameraObject)
 
-    special(SavePlayerParty)
-    special(LoadWallyZigzagoon)
-    special(StartWillowbendTutorBattle)
-    special(LoadPlayerParty)
+        special(SavePlayerParty)
+        special(LoadWallyZigzagoon)
+        special(StartWillowbendTutorBattle)
+        special(LoadPlayerParty)
 
-    special(SpawnCameraObject)
-    applymovement(LOCALID_ROUTE1_TUTOR, Movement_TutorWalkGrassUp)
-    applymovement(OBJ_EVENT_ID_CAMERA, Movement_CameraMoveWithTutorUp)
-    waitmovement(OBJ_EVENT_ID_CAMERA)
-    waitmovement(LOCALID_ROUTE1_TUTOR)
+        special(SpawnCameraObject)
+        applymovement(LOCALID_ROUTE1_TUTOR, Movement_TutorWalkGrassUp)
+        applymovement(OBJ_EVENT_ID_CAMERA, Movement_CameraMoveWithTutorUp)
+        waitmovement(OBJ_EVENT_ID_CAMERA)
+        waitmovement(LOCALID_ROUTE1_TUTOR)
 
     msgbox("See, that wasn't so hard!\pYou can catch wild POKéMON by weakening\nthem in battle and then throwing a\lPOKéBALL at them.", MSGBOX_DEFAULT)
+    }
+    else {
+        msgbox("No problem, but let me give you\nsome tips at least.", MSGBOX_DEFAULT)
+    }
+   
     msgbox("Some Pokémon are hard to find, but they\nare out there!\pListen out for the cries\nof wild POKéMON, you never know what you\lmight find!", MSGBOX_DEFAULT)
     msgbox("Come to my house on this route after\nyou've caught 15 Pokemon,\lI'll have a gift ready for you!", MSGBOX_DEFAULT)
 

@@ -196,78 +196,84 @@ Route1_EventScript_Catch_Pokemon_Tutorial::
 	msgbox Route1_EventScript_Catch_Pokemon_Tutorial_Text_0, MSGBOX_DEFAULT
 # 133 "data/maps/Route1_WillbendCanal/scripts.pory"
 	msgbox Route1_EventScript_Catch_Pokemon_Tutorial_Text_1, MSGBOX_YESNO
-# 134 "data/maps/Route1_WillbendCanal/scripts.pory"
+# 135 "data/maps/Route1_WillbendCanal/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq Route1_EventScript_Catch_Pokemon_Tutorial_2
-# 138 "data/maps/Route1_WillbendCanal/scripts.pory"
-	msgbox Route1_EventScript_Catch_Pokemon_Tutorial_Text_3, MSGBOX_DEFAULT
-Route1_EventScript_Catch_Pokemon_Tutorial_1:
-# 141 "data/maps/Route1_WillbendCanal/scripts.pory"
-	msgbox Route1_EventScript_Catch_Pokemon_Tutorial_Text_4, MSGBOX_DEFAULT
-# 143 "data/maps/Route1_WillbendCanal/scripts.pory"
-	applymovement LOCALID_ROUTE1_TUTOR, Movement_TutorWalkGrassDown
-# 144 "data/maps/Route1_WillbendCanal/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, Movement_CameraMoveWithTutorDown
-# 145 "data/maps/Route1_WillbendCanal/scripts.pory"
-	waitmovement OBJ_EVENT_ID_CAMERA
-# 146 "data/maps/Route1_WillbendCanal/scripts.pory"
-	waitmovement LOCALID_ROUTE1_TUTOR
-# 148 "data/maps/Route1_WillbendCanal/scripts.pory"
-	playmoncry SPECIES_POLIWAG, CRY_MODE_NORMAL
-# 149 "data/maps/Route1_WillbendCanal/scripts.pory"
-	waitmoncry
-# 150 "data/maps/Route1_WillbendCanal/scripts.pory"
-	msgbox Route1_EventScript_Catch_Pokemon_Tutorial_Text_5, MSGBOX_DEFAULT
-# 151 "data/maps/Route1_WillbendCanal/scripts.pory"
-	special RemoveCameraObject
-# 158 "data/maps/Route1_WillbendCanal/scripts.pory"
-	special SpawnCameraObject
-# 159 "data/maps/Route1_WillbendCanal/scripts.pory"
-	applymovement LOCALID_ROUTE1_TUTOR, Movement_TutorWalkGrassUp
-# 160 "data/maps/Route1_WillbendCanal/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, Movement_CameraMoveWithTutorUp
-# 161 "data/maps/Route1_WillbendCanal/scripts.pory"
-	waitmovement OBJ_EVENT_ID_CAMERA
-# 162 "data/maps/Route1_WillbendCanal/scripts.pory"
-	waitmovement LOCALID_ROUTE1_TUTOR
-# 164 "data/maps/Route1_WillbendCanal/scripts.pory"
+# 163 "data/maps/Route1_WillbendCanal/scripts.pory"
 	msgbox Route1_EventScript_Catch_Pokemon_Tutorial_Text_6, MSGBOX_DEFAULT
-# 165 "data/maps/Route1_WillbendCanal/scripts.pory"
-	msgbox Route1_EventScript_Catch_Pokemon_Tutorial_Text_7, MSGBOX_DEFAULT
+Route1_EventScript_Catch_Pokemon_Tutorial_1:
 # 166 "data/maps/Route1_WillbendCanal/scripts.pory"
+	msgbox Route1_EventScript_Catch_Pokemon_Tutorial_Text_7, MSGBOX_DEFAULT
+# 167 "data/maps/Route1_WillbendCanal/scripts.pory"
 	msgbox Route1_EventScript_Catch_Pokemon_Tutorial_Text_8, MSGBOX_DEFAULT
-# 168 "data/maps/Route1_WillbendCanal/scripts.pory"
-	applymovement LOCALID_ROUTE1_TUTOR, Movement_TutorLeaveScreenRight
 # 169 "data/maps/Route1_WillbendCanal/scripts.pory"
+	applymovement LOCALID_ROUTE1_TUTOR, Movement_TutorLeaveScreenRight
+# 170 "data/maps/Route1_WillbendCanal/scripts.pory"
 	waitmovement LOCALID_ROUTE1_TUTOR
-# 171 "data/maps/Route1_WillbendCanal/scripts.pory"
-	setflag FLAG_HIDE_ROUTE1_TUTOR
 # 172 "data/maps/Route1_WillbendCanal/scripts.pory"
+	setflag FLAG_HIDE_ROUTE1_TUTOR
+# 173 "data/maps/Route1_WillbendCanal/scripts.pory"
 	removeobject LOCALID_ROUTE1_TUTOR
-# 174 "data/maps/Route1_WillbendCanal/scripts.pory"
-	special RemoveCameraObject
 # 175 "data/maps/Route1_WillbendCanal/scripts.pory"
-	setvar VAR_ROUTE1_STATE, 2
+	special RemoveCameraObject
 # 176 "data/maps/Route1_WillbendCanal/scripts.pory"
+	setvar VAR_ROUTE1_STATE, 2
+# 177 "data/maps/Route1_WillbendCanal/scripts.pory"
 	release
 	end
 
 Route1_EventScript_Catch_Pokemon_Tutorial_2:
-# 135 "data/maps/Route1_WillbendCanal/scripts.pory"
+# 136 "data/maps/Route1_WillbendCanal/scripts.pory"
 	msgbox Route1_EventScript_Catch_Pokemon_Tutorial_Text_2, MSGBOX_DEFAULT
+# 137 "data/maps/Route1_WillbendCanal/scripts.pory"
+	msgbox Route1_EventScript_Catch_Pokemon_Tutorial_Text_3, MSGBOX_DEFAULT
+# 139 "data/maps/Route1_WillbendCanal/scripts.pory"
+	applymovement LOCALID_ROUTE1_TUTOR, Movement_TutorWalkGrassDown
+# 140 "data/maps/Route1_WillbendCanal/scripts.pory"
+	applymovement OBJ_EVENT_ID_CAMERA, Movement_CameraMoveWithTutorDown
+# 141 "data/maps/Route1_WillbendCanal/scripts.pory"
+	waitmovement OBJ_EVENT_ID_CAMERA
+# 142 "data/maps/Route1_WillbendCanal/scripts.pory"
+	waitmovement LOCALID_ROUTE1_TUTOR
+# 144 "data/maps/Route1_WillbendCanal/scripts.pory"
+	playmoncry SPECIES_POLIWAG, CRY_MODE_NORMAL
+# 145 "data/maps/Route1_WillbendCanal/scripts.pory"
+	waitmoncry
+# 146 "data/maps/Route1_WillbendCanal/scripts.pory"
+	msgbox Route1_EventScript_Catch_Pokemon_Tutorial_Text_4, MSGBOX_DEFAULT
+# 147 "data/maps/Route1_WillbendCanal/scripts.pory"
+	special RemoveCameraObject
+# 149 "data/maps/Route1_WillbendCanal/scripts.pory"
+	special SavePlayerParty
+# 150 "data/maps/Route1_WillbendCanal/scripts.pory"
+	special LoadWallyZigzagoon
+# 151 "data/maps/Route1_WillbendCanal/scripts.pory"
+	special StartWillowbendTutorBattle
+# 152 "data/maps/Route1_WillbendCanal/scripts.pory"
+	special LoadPlayerParty
+# 154 "data/maps/Route1_WillbendCanal/scripts.pory"
+	special SpawnCameraObject
+# 155 "data/maps/Route1_WillbendCanal/scripts.pory"
+	applymovement LOCALID_ROUTE1_TUTOR, Movement_TutorWalkGrassUp
+# 156 "data/maps/Route1_WillbendCanal/scripts.pory"
+	applymovement OBJ_EVENT_ID_CAMERA, Movement_CameraMoveWithTutorUp
+# 157 "data/maps/Route1_WillbendCanal/scripts.pory"
+	waitmovement OBJ_EVENT_ID_CAMERA
+# 158 "data/maps/Route1_WillbendCanal/scripts.pory"
+	waitmovement LOCALID_ROUTE1_TUTOR
+# 160 "data/maps/Route1_WillbendCanal/scripts.pory"
+	msgbox Route1_EventScript_Catch_Pokemon_Tutorial_Text_5, MSGBOX_DEFAULT
 	goto Route1_EventScript_Catch_Pokemon_Tutorial_1
 
 
 Route1_WillbendCanal_MapScripts_PathSign::
-# 181 "data/maps/Route1_WillbendCanal/scripts.pory"
+# 182 "data/maps/Route1_WillbendCanal/scripts.pory"
 	msgbox Route1_WillbendCanal_MapScripts_PathSign_Text_0, MSGBOX_SIGN
 	end
 
 
-# 187 "data/maps/Route1_WillbendCanal/scripts.pory"
-Movement_CameraUp:
 # 188 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_up
+Movement_CameraUp:
 # 189 "data/maps/Route1_WillbendCanal/scripts.pory"
 	walk_up
 # 190 "data/maps/Route1_WillbendCanal/scripts.pory"
@@ -277,12 +283,12 @@ Movement_CameraUp:
 # 192 "data/maps/Route1_WillbendCanal/scripts.pory"
 	walk_up
 # 193 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_up
+# 194 "data/maps/Route1_WillbendCanal/scripts.pory"
 	step_end
 
-# 196 "data/maps/Route1_WillbendCanal/scripts.pory"
-Movement_CameraDown:
 # 197 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_down
+Movement_CameraDown:
 # 198 "data/maps/Route1_WillbendCanal/scripts.pory"
 	walk_down
 # 199 "data/maps/Route1_WillbendCanal/scripts.pory"
@@ -292,175 +298,177 @@ Movement_CameraDown:
 # 201 "data/maps/Route1_WillbendCanal/scripts.pory"
 	walk_down
 # 202 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_down
+# 203 "data/maps/Route1_WillbendCanal/scripts.pory"
 	step_end
 
-# 205 "data/maps/Route1_WillbendCanal/scripts.pory"
+# 206 "data/maps/Route1_WillbendCanal/scripts.pory"
 Movement_NPCRuns:
-# 206 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_fast_left
-# 206 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_fast_left
-# 206 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_fast_left
-# 206 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_fast_left
-# 206 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_fast_left
-# 206 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_fast_left
-# 206 "data/maps/Route1_WillbendCanal/scripts.pory"
+# 207 "data/maps/Route1_WillbendCanal/scripts.pory"
 	walk_fast_left
 # 207 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_fast_left
+# 207 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_fast_left
+# 207 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_fast_left
+# 207 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_fast_left
+# 207 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_fast_left
+# 207 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_fast_left
+# 208 "data/maps/Route1_WillbendCanal/scripts.pory"
 	step_end
 
-# 210 "data/maps/Route1_WillbendCanal/scripts.pory"
+# 211 "data/maps/Route1_WillbendCanal/scripts.pory"
 Movement_NPCRunsAway:
-# 211 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_fast_right
-# 211 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_fast_right
-# 211 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_fast_right
-# 211 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_fast_right
-# 211 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_fast_right
-# 211 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_fast_right
-# 211 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_fast_right
-# 211 "data/maps/Route1_WillbendCanal/scripts.pory"
+# 212 "data/maps/Route1_WillbendCanal/scripts.pory"
 	walk_fast_right
 # 212 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_fast_right
+# 212 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_fast_right
+# 212 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_fast_right
+# 212 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_fast_right
+# 212 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_fast_right
+# 212 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_fast_right
+# 212 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_fast_right
+# 213 "data/maps/Route1_WillbendCanal/scripts.pory"
 	step_end
 
-# 215 "data/maps/Route1_WillbendCanal/scripts.pory"
-Movement_NPCLookAround:
 # 216 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_in_place_faster_up
+Movement_NPCLookAround:
 # 217 "data/maps/Route1_WillbendCanal/scripts.pory"
-	delay_16
+	walk_in_place_faster_up
 # 218 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_in_place_faster_left
-# 219 "data/maps/Route1_WillbendCanal/scripts.pory"
 	delay_16
+# 219 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_in_place_faster_left
 # 220 "data/maps/Route1_WillbendCanal/scripts.pory"
 	delay_16
 # 221 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_in_place_faster_right
+	delay_16
 # 222 "data/maps/Route1_WillbendCanal/scripts.pory"
-	delay_16
+	walk_in_place_faster_right
 # 223 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_in_place_faster_up
-# 224 "data/maps/Route1_WillbendCanal/scripts.pory"
 	delay_16
+# 224 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_in_place_faster_up
 # 225 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_in_place_faster_left
+	delay_16
 # 226 "data/maps/Route1_WillbendCanal/scripts.pory"
-	delay_8
+	walk_in_place_faster_left
 # 227 "data/maps/Route1_WillbendCanal/scripts.pory"
+	delay_8
+# 228 "data/maps/Route1_WillbendCanal/scripts.pory"
 	step_end
 
-# 230 "data/maps/Route1_WillbendCanal/scripts.pory"
-Movement_WalkLeftTwoSteps:
 # 231 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_left
+Movement_WalkLeftTwoSteps:
 # 232 "data/maps/Route1_WillbendCanal/scripts.pory"
 	walk_left
 # 233 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_left
+# 234 "data/maps/Route1_WillbendCanal/scripts.pory"
 	step_end
 
-# 236 "data/maps/Route1_WillbendCanal/scripts.pory"
+# 237 "data/maps/Route1_WillbendCanal/scripts.pory"
 Movement_TutorWalkGrassDown:
-# 237 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_right
-# 237 "data/maps/Route1_WillbendCanal/scripts.pory"
+# 238 "data/maps/Route1_WillbendCanal/scripts.pory"
 	walk_right
 # 238 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_down
-# 238 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_down
-# 238 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_down
-# 238 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_right
+# 239 "data/maps/Route1_WillbendCanal/scripts.pory"
 	walk_down
 # 239 "data/maps/Route1_WillbendCanal/scripts.pory"
-	delay_16
+	walk_down
+# 239 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_down
+# 239 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_down
 # 240 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_in_place_left
-# 241 "data/maps/Route1_WillbendCanal/scripts.pory"
 	delay_16
+# 241 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_in_place_left
 # 242 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_in_place_right
-# 242 "data/maps/Route1_WillbendCanal/scripts.pory"
+	delay_16
+# 243 "data/maps/Route1_WillbendCanal/scripts.pory"
 	walk_in_place_right
 # 243 "data/maps/Route1_WillbendCanal/scripts.pory"
-	delay_16
+	walk_in_place_right
 # 244 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_in_place_left
+	delay_16
 # 245 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_in_place_left
+# 246 "data/maps/Route1_WillbendCanal/scripts.pory"
 	step_end
 
-# 248 "data/maps/Route1_WillbendCanal/scripts.pory"
+# 249 "data/maps/Route1_WillbendCanal/scripts.pory"
 Movement_TutorWalkGrassUp:
-# 249 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_up
-# 249 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_up
-# 249 "data/maps/Route1_WillbendCanal/scripts.pory"
+# 250 "data/maps/Route1_WillbendCanal/scripts.pory"
 	walk_up
 # 250 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_left
+	walk_up
+# 250 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_up
 # 251 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_left
+# 252 "data/maps/Route1_WillbendCanal/scripts.pory"
 	step_end
 
-# 254 "data/maps/Route1_WillbendCanal/scripts.pory"
+# 255 "data/maps/Route1_WillbendCanal/scripts.pory"
 Movement_CameraMoveWithTutorDown:
-# 255 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_down
-# 255 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_down
-# 255 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_down
-# 255 "data/maps/Route1_WillbendCanal/scripts.pory"
+# 256 "data/maps/Route1_WillbendCanal/scripts.pory"
 	walk_down
 # 256 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_down
+# 256 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_down
+# 256 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_down
+# 257 "data/maps/Route1_WillbendCanal/scripts.pory"
 	step_end
 
-# 259 "data/maps/Route1_WillbendCanal/scripts.pory"
+# 260 "data/maps/Route1_WillbendCanal/scripts.pory"
 Movement_CameraMoveWithTutorUp:
-# 260 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_up
-# 260 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_up
-# 260 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_up
-# 260 "data/maps/Route1_WillbendCanal/scripts.pory"
+# 261 "data/maps/Route1_WillbendCanal/scripts.pory"
 	walk_up
 # 261 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_up
+# 261 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_up
+# 261 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_up
+# 262 "data/maps/Route1_WillbendCanal/scripts.pory"
 	step_end
 
-# 264 "data/maps/Route1_WillbendCanal/scripts.pory"
-Movement_TutorLeaveScreenRight:
 # 265 "data/maps/Route1_WillbendCanal/scripts.pory"
+Movement_TutorLeaveScreenRight:
+# 266 "data/maps/Route1_WillbendCanal/scripts.pory"
 	delay_16
-# 266 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_right
-# 266 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_right
-# 266 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_right
-# 266 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_right
-# 266 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_right
-# 266 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_right
-# 266 "data/maps/Route1_WillbendCanal/scripts.pory"
-	walk_right
-# 266 "data/maps/Route1_WillbendCanal/scripts.pory"
+# 267 "data/maps/Route1_WillbendCanal/scripts.pory"
 	walk_right
 # 267 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_right
+# 267 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_right
+# 267 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_right
+# 267 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_right
+# 267 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_right
+# 267 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_right
+# 267 "data/maps/Route1_WillbendCanal/scripts.pory"
+	walk_right
+# 268 "data/maps/Route1_WillbendCanal/scripts.pory"
 	step_end
 
 Route1_WillbendCanal_MapScripts_LarchTrigger_Text_0:
@@ -516,33 +524,33 @@ Route1_EventScript_Catch_Pokemon_Tutorial_Text_1:
 	.string "Do you know how to catch wild POKéMON?$"
 
 Route1_EventScript_Catch_Pokemon_Tutorial_Text_2:
-# 135 "data/maps/Route1_WillbendCanal/scripts.pory"
+# 136 "data/maps/Route1_WillbendCanal/scripts.pory"
 	.string "OK no problem, let me show you how!$"
 
 Route1_EventScript_Catch_Pokemon_Tutorial_Text_3:
-# 138 "data/maps/Route1_WillbendCanal/scripts.pory"
-	.string "Well I'll show you anyway, a refresh\nwon't do any harm!$"
-
-Route1_EventScript_Catch_Pokemon_Tutorial_Text_4:
-# 141 "data/maps/Route1_WillbendCanal/scripts.pory"
+# 137 "data/maps/Route1_WillbendCanal/scripts.pory"
 	.string "First, you need to find a wild POKéMON.\nYou can find them in tall grass.$"
 
-Route1_EventScript_Catch_Pokemon_Tutorial_Text_5:
-# 150 "data/maps/Route1_WillbendCanal/scripts.pory"
+Route1_EventScript_Catch_Pokemon_Tutorial_Text_4:
+# 146 "data/maps/Route1_WillbendCanal/scripts.pory"
 	.string "WOOOOAH!$"
 
-Route1_EventScript_Catch_Pokemon_Tutorial_Text_6:
-# 164 "data/maps/Route1_WillbendCanal/scripts.pory"
+Route1_EventScript_Catch_Pokemon_Tutorial_Text_5:
+# 160 "data/maps/Route1_WillbendCanal/scripts.pory"
 	.string "See, that wasn't so hard!\pYou can catch wild POKéMON by weakening\nthem in battle and then throwing a\lPOKéBALL at them.$"
 
+Route1_EventScript_Catch_Pokemon_Tutorial_Text_6:
+# 163 "data/maps/Route1_WillbendCanal/scripts.pory"
+	.string "No problem, but let me give you\nsome tips at least.$"
+
 Route1_EventScript_Catch_Pokemon_Tutorial_Text_7:
-# 165 "data/maps/Route1_WillbendCanal/scripts.pory"
+# 166 "data/maps/Route1_WillbendCanal/scripts.pory"
 	.string "Some Pokémon are hard to find, but they\nare out there!\pListen out for the cries\nof wild POKéMON, you never know what you\lmight find!$"
 
 Route1_EventScript_Catch_Pokemon_Tutorial_Text_8:
-# 166 "data/maps/Route1_WillbendCanal/scripts.pory"
+# 167 "data/maps/Route1_WillbendCanal/scripts.pory"
 	.string "Come to my house on this route after\nyou've caught 15 Pokemon,\lI'll have a gift ready for you!$"
 
 Route1_WillbendCanal_MapScripts_PathSign_Text_0:
-# 181 "data/maps/Route1_WillbendCanal/scripts.pory"
+# 182 "data/maps/Route1_WillbendCanal/scripts.pory"
 	.string "<- Alderbrook Town\nWestlock Village ->$"

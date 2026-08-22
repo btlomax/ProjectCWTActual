@@ -920,7 +920,10 @@ void HandleAction_WallyBallThrow(void)
 
     PREPARE_MON_NICK_BUFFER(gBattleTextBuff1, gBattlerAttacker, gBattlerPartyIndexes[gBattlerAttacker])
 
-    gBattlescriptCurrInstr = gBattlescriptsForSafariActions[3];
+    if (BattlerIsWillowbendTutor(gBattlerAttacker))
+        gBattlescriptCurrInstr = BattleScript_ActionWillowbendTutorThrow;
+    else
+        gBattlescriptCurrInstr = gBattlescriptsForSafariActions[3];
     gCurrentActionFuncId = B_ACTION_EXEC_SCRIPT;
     gActionsByTurnOrder[1] = B_ACTION_FINISHED;
 }

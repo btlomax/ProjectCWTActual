@@ -35,7 +35,6 @@
 #define WILLOWBEND_TUTOR_PIC TRAINER_PIC_WALLY
 
 static const u8 sText_WhatWillWillowbendTutorDo[] = _("What will the\nTUTOR do?");
-static const u8 sText_ThrowPokeBall[] = _("Watch, now you throw\na POKé BALL!");
 
 static void WillowbendTutorHandleDrawTrainerPic(enum BattlerId battler);
 static void WillowbendTutorHandleTrainerSlide(enum BattlerId battler);
@@ -165,7 +164,6 @@ static void WillowbendTutorHandleActions(enum BattlerId battler)
     case 3:
         if (--gBattleStruct->wallyWaitFrames == 0)
         {
-            BattlePutTextOnWindow(sText_ThrowPokeBall, B_WIN_MSG);
             gBattleStruct->wallyBattleState++;
             gBattleStruct->wallyWaitFrames = B_WAIT_TIME_LONG;
         }
