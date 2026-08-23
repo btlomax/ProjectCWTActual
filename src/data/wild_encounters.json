@@ -36586,7 +36586,7 @@
             "mons": [
               {
                 "min_level": 2,
-                "max_level": 5,
+                "max_level": 4,
                 "species": "SPECIES_RATTATA"
               },
               {
@@ -36595,7 +36595,7 @@
                 "species": "SPECIES_PIDGEY"
               },
               {
-                "min_level": 3,
+                "min_level": 2,
                 "max_level": 5,
                 "species": "SPECIES_LILLIPUP"
               },
@@ -36605,12 +36605,12 @@
                 "species": "SPECIES_ROOKIDEE"
               },
               {
-                "min_level": 5,
+                "min_level": 2,
                 "max_level": 5,
                 "species": "SPECIES_LILLIPUP"
               },
               {
-                "min_level": 5,
+                "min_level": 3,
                 "max_level": 5,
                 "species": "SPECIES_RATTATA_ALOLA"
               },
@@ -36625,18 +36625,18 @@
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 5,
+                "min_level": 4,
                 "max_level": 6,
                 "species": "SPECIES_GROWLITHE"
               },
               {
-                "min_level": 5,
-                "max_level": 7,
+                "min_level": 2,
+                "max_level": 5,
                 "species": "SPECIES_LILLIPUP"
               },
               {
-                "min_level": 5,
-                "max_level": 7,
+                "min_level": 4,
+                "max_level": 6,
                 "species": "SPECIES_FLABEBE"
               },
               {

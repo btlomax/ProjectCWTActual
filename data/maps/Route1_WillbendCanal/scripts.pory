@@ -83,14 +83,15 @@ script Route1_EventScript_StarterDrop {
     special(ChooseStarter)
     bufferleadmonspeciesname(STR_VAR_1)
     msgbox("You received a {STR_VAR_1}!", MSGBOX_DEFAULT)
-
+    playfanfare(MUS_OBTAIN_ITEM)
+    waitfanfare
     msgbox("Do you want to give a nickname\nto your POKéMON?", MSGBOX_YESNO)
     if (var(VAR_RESULT) == YES) {
         setvar(VAR_0x8004, 0)
         call(Common_EventScript_NameReceivedPartyMon)
     }
 
-    msgbox("Dinner will be ready soon, so don't be late!", MSGBOX_DEFAULT)
+    msgbox("Dinner will be ready soon, so\ndon't be late!", MSGBOX_DEFAULT)
 
     removeobject(LOCALID_STARTER_DROP)
     setflag(FLAG_HIDE_STARTER_ITEM)
@@ -123,6 +124,7 @@ script Route1_EventScript_Catch_Pokemon_Tutorial{
     lock
     faceplayer
 
+    playse(SE_PIN)
     applymovement(LOCALID_ROUTE1_TUTOR, Common_Movement_ExclamationMark)
     waitmovement(LOCALID_ROUTE1_TUTOR)
 
@@ -163,7 +165,7 @@ script Route1_EventScript_Catch_Pokemon_Tutorial{
     }
    
     msgbox("Some Pokémon are hard to find, but they\nare out there!\pListen out for the cries\nof wild POKéMON, you never know what you\lmight find!", MSGBOX_DEFAULT)
-    msgbox("Come to my house on this route after\nyou've caught 15 Pokemon,\lI'll have a gift ready for you!", MSGBOX_DEFAULT)
+    msgbox("Come to my house on this route after\nyou've caught 15 Pokemon,\lI'll have a gift ready for you.\p", MSGBOX_DEFAULT)
 
     applymovement(LOCALID_ROUTE1_TUTOR, Movement_TutorLeaveScreenRight)
     waitmovement(LOCALID_ROUTE1_TUTOR)
