@@ -17,6 +17,11 @@
       "map": "MAP_ALDERBROOK_TOWN_2",
       "offset": 8,
       "direction": "left"
+    },
+    {
+      "map": "MAP_WESTLOCK_VILLAGE",
+      "offset": 26,
+      "direction": "down"
     }
   ],
   "object_events": [

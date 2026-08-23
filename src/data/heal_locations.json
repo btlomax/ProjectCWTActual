@@ -355,6 +355,12 @@
       "map": "MAP_STARTER_TOWN",
       "x": 2,
       "y": 2
+    },
+    {
+      "id": "HEAL_LOCATION_ROUTE1_WILLBEND_CANAL",
+      "map": "MAP_ROUTE1_WILLBEND_CANAL",
+      "x": 16,
+      "y": 10
     }
   ]
 }

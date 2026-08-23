@@ -35,7 +35,8 @@
     "gMapGroup_IndoorRoute119",
     "gMapGroup_IndoorRoute124",
     "gMapGroup_ProjectCWT",
-    "gMapGroup_Route1_WillowBendCanal"
+    "gMapGroup_Route1_WillowBendCanal",
+    "gMapGroup_WestlockVillage"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -632,5 +633,8 @@
   ],
   "gMapGroup_Route1_WillowBendCanal": [
     "Route1_WillbendCanal"
+  ],
+  "gMapGroup_WestlockVillage": [
+    "Westlock_Village"
   ]
 }
