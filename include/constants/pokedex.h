@@ -1230,6 +1230,7 @@ enum NationalDexOrder
     F(IGGLYBUFF) \
     F(JIGGLYPUFF) \
     F(WIGGLYTUFF) \
+    F(FLABEBE) \
     F(FEEBAS) \
     F(MILOTIC) \
     HOENN_DEX_IF(P_GEN_4_CROSS_EVOS, F(DRIFLOON)) \
