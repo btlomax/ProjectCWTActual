@@ -636,6 +636,8 @@
   ],
   "gMapGroup_WestlockVillage": [
     "Westlock_Village",
-    "Westlock_Library_Inside"
+    "Westlock_Library_Inside",
+    "Westlock_PokeCentre",
+    "Westlock_PokeMart"
   ]
 }

@@ -1,0 +1,27 @@
+mapscripts Westlock_PokeMart_MapScripts {}
+
+script Westlock_PokeMart_EventScript_MartEmployee
+{
+    lock
+    faceplayer
+    message("How may I help you?$")
+    waitmessage
+    pokemart(Westlock_PokeMart_Items)
+    msgbox("Thank you, please come again!", MSGBOX_DEFAULT)
+    release
+    end
+}
+
+raw `
+.align 2
+Westlock_PokeMart_Items::
+    .2byte ITEM_POKE_BALL
+    .2byte ITEM_POTION
+    .2byte ITEM_ANTIDOTE
+    .2byte ITEM_PARALYZE_HEAL
+    .2byte ITEM_REPEL
+    .2byte ITEM_ESCAPE_ROPE
+    .2byte ITEM_NONE
+    release
+    end
+`

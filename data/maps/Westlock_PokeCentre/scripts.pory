@@ -1,0 +1,7 @@
+mapscripts Westlock_PokeCentre_MapScripts {}
+
+script Westlock_PokeCentre_EventScript_Nurse
+{
+    call(Common_EventScript_PkmnCenterNurse)
+    end
+}

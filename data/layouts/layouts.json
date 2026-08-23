@@ -9403,6 +9403,26 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Westlock_Library_Inside/border.bin",
       "blockdata_filepath": "data/layouts/Westlock_Library_Inside/map.bin"
+    },
+    {
+      "id": "LAYOUT_WESTLOCK_POKE_CENTRE",
+      "name": "Westlock_PokeCentre_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Westlock_PokeCentre/border.bin",
+      "blockdata_filepath": "data/layouts/Westlock_PokeCentre/map.bin"
+    },
+    {
+      "id": "LAYOUT_WESTLOCK_POKE_MART",
+      "name": "Westlock_PokeMart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/Westlock_PokeMart/border.bin",
+      "blockdata_filepath": "data/layouts/Westlock_PokeMart/map.bin"
     }
   ]
 }
