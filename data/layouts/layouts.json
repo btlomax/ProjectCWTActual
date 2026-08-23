@@ -9393,6 +9393,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Westlock_Village/border.bin",
       "blockdata_filepath": "data/layouts/Westlock_Village/map.bin"
+    },
+    {
+      "id": "LAYOUT_WESTLOCK_LIBRARY_INSIDE",
+      "name": "Westlock_Library_Inside_Layout",
+      "width": 12,
+      "height": 15,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Westlock_Library_Inside/border.bin",
+      "blockdata_filepath": "data/layouts/Westlock_Library_Inside/map.bin"
     }
   ]
 }

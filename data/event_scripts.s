@@ -1333,3 +1333,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Route1_WillbendCanal/scripts.inc"
 
 	.include "data/maps/Westlock_Village/scripts.inc"
+
+	.include "data/maps/Westlock_Library_Inside/scripts.inc"
