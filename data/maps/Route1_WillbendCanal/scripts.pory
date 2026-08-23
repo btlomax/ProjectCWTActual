@@ -140,7 +140,7 @@ script Route1_EventScript_Catch_Pokemon_Tutorial{
         waitmovement(OBJ_EVENT_ID_CAMERA)
         waitmovement(LOCALID_ROUTE1_TUTOR)
     
-        playmoncry(SPECIES_POLIWAG, CRY_MODE_NORMAL)
+        playmoncry(SPECIES_GROWLITHE, CRY_MODE_NORMAL)
         waitmoncry
         msgbox("WOOOOAH!", MSGBOX_DEFAULT)
         special(RemoveCameraObject)

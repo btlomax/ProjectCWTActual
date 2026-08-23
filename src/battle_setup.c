@@ -1015,7 +1015,7 @@ static void CB2_EndFirstBattle(void)
 
 void StartWillowbendTutorBattle(void)
 {
-    CreateMaleMon(&gParties[B_TRAINER_OPPONENT_A][0], SPECIES_POLIWAG, 5);
+    CreateMaleMon(&gParties[B_TRAINER_OPPONENT_A][0], SPECIES_GROWLITHE, 5);
     LockPlayerFieldControls();
     gMain.savedCallback = CB2_ReturnToFieldContinueScriptPlayMapMusic;
     gBattleTypeFlags = BATTLE_TYPE_CATCH_TUTORIAL;

@@ -234,7 +234,7 @@ Route1_EventScript_Catch_Pokemon_Tutorial_2:
 # 141 "data/maps/Route1_WillbendCanal/scripts.pory"
 	waitmovement LOCALID_ROUTE1_TUTOR
 # 143 "data/maps/Route1_WillbendCanal/scripts.pory"
-	playmoncry SPECIES_POLIWAG, CRY_MODE_NORMAL
+	playmoncry SPECIES_GROWLITHE, CRY_MODE_NORMAL
 # 144 "data/maps/Route1_WillbendCanal/scripts.pory"
 	waitmoncry
 # 145 "data/maps/Route1_WillbendCanal/scripts.pory"
