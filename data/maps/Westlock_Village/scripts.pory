@@ -1,11 +1,13 @@
 mapscripts Westlock_Village_MapScripts {}
 
-script Westlock_Village_EventScript_MainSign {
-    msgbox ("Welcome to Westlock Village!\nThis is a peaceful place where trainers come to rest and prepare for their journeys.", MSGBOX_SIGN)
+script Westlock_Village_EventScript_MainSign
+{
+    msgbox ("Welcome to Westlock Village!", MSGBOX_SIGN)
     end
 }
 
-script Westlock_Village_EventScript_LibrarySign {
-    msgbox ("Westlock Village Library\nA place of knowledge and learning.", MSGBOX_SIGN)
+script Westlock_Village_EventScript_LibrarySign 
+{
+    msgbox ("Westlock Library\nRoute 2 ->", MSGBOX_SIGN)
     end
 }
