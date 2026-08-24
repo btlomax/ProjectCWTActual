@@ -1,1 +1,13 @@
 mapscripts Westlock_Library_Inside_MapScripts {}
+
+script Westlock_Library_Inside_EventScripts_MeetProfLarch
+{
+    msgbox("This room is far too humid for\nthese books.\sI can barely make out the text...", MSGBOX_DEFAULT)
+    msgbox("... 'And when the great storm broke...\nthe amber force grew so intense that th-", MSGBOX_DEFAULT)
+
+    playse(SE_PIN)
+    applymovement(LOCALID_PROF_LARCH, Common_Movement_ExclamationMark)
+    waitmovement(LOCALID_PROF_LARCH)
+    delay(30)
+    faceplayer
+}

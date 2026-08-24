@@ -16,7 +16,7 @@
   "object_events": [
     {
       "local_id": "LOCALID_PROF_LARCH",
-      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+      "graphics_id": "OBJ_EVENT_GFX_CONTEST_JUDGE",
       "x": 1,
       "y": 2,
       "elevation": 0,
@@ -25,7 +25,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Westlock_Library_Inside_EventScripts_MeetProfLarch",
       "flag": "0"
     }
   ],
