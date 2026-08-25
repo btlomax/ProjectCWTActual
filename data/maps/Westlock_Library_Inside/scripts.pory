@@ -2,12 +2,79 @@ mapscripts Westlock_Library_Inside_MapScripts {}
 
 script Westlock_Library_Inside_EventScripts_MeetProfLarch
 {
-    msgbox("This room is far too humid for\nthese books.\sI can barely make out the text...", MSGBOX_DEFAULT)
-    msgbox("... 'And when the great storm broke...\nthe amber force grew so intense that th-", MSGBOX_DEFAULT)
+    msgbox("This room is far too humid for these\nbooks. I can barely make out the text...", MSGBOX_DEFAULT)
+    msgbox("...'And when the great storm broke,the\namber force grew so intense that th-", MSGBOX_DEFAULT)
 
     playse(SE_PIN)
     applymovement(LOCALID_PROF_LARCH, Common_Movement_ExclamationMark)
     waitmovement(LOCALID_PROF_LARCH)
     delay(30)
     faceplayer
+    checkplayergender
+
+    switch(var(VAR_RESULT))
+    {
+        case 0:
+            msgbox(Westlock_Library_Inside_EventScripts_MeetProfLarch_Male, MSGBOX_DEFAULT)
+        case 1:
+            msgbox(Westlock_Library_Inside_EventScripts_MeetProfLarch_Female, MSGBOX_DEFAULT)
+    }
+
+    msgbox("Old age catching up to me I suppose,\nnot as sharp as I used to be.\p"
+           "Now, before I forget my manners,\nI should introduce myself.\pI am Professor Larch, the regional\nPokémon Professor.\p", MSGBOX_DEFAULT)
+    msgbox("...", MSGBOX_DEFAULT)
+    msgbox("{PLAYER}, wonderful to meet you.", MSGBOX_DEFAULT)
+    msgbox("I have been studying the Pokemon of this\nregion for many years.\pWonderous creatures, aren't they?", MSGBOX_YESNO)
+
+    if(var(VAR_RESULT) == 1)
+    {
+        msgbox("Correct answer, you and I will get on\nfamously, I'm sure.", MSGBOX_DEFAULT)
+        setflag(FLAG_AGREE_WITH_PROF_LIBRARY)
+    }
+    else
+    {
+        msgbox("I see. Well, I am sure you will come to\nappreciate them, given time.", MSGBOX_DEFAULT)
+    }
+
+    msgbox("Will you allow me to see your Pokemon?", MSGBOX_YESNO)
+        while(var(VAR_RESULT) == 0)
+        {
+            msgbox("I assure you, I have your best interests\nin mind.\pNow please, show me your Pokemon.", MSGBOX_DEFAULT)
+            msgbox("Will you allow me to see your Pokemon?", MSGBOX_YESNO)
+        }
+
+    msgbox("Gah!", MSGBOX_DEFAULT)
+    msgbox("A r-rarer species, uh, in these p-parts,\nindeed y-yes!", MSGBOX_DEFAULT)
+    msgbox("Hmmmm...", MSGBOX_DEFAULT)
+    msgbox("You said you found this on the canal?\pI should go and uh, look myself, yes!", MSGBOX_DEFAULT)
+    msgbox("Who knows what other, uh, rare species\nmay be in the area, heh...", MSGBOX_DEFAULT)
+    msgbox("...", MSGBOX_DEFAULT)
+
+    playse(SE_PIN)
+    applymovement(LOCALID_PROF_LARCH, Common_Movement_ExclamationMark)
+    waitmovement(LOCALID_PROF_LARCH)
+    delay(30)
+
+    msgbox("GOODNESS ME, would you look at the time!\nI must be off, yes, yes,\lI must be off!", MSGBOX_DEFAULT)
+    msgbox("Nocturnal Pokemon are much too\nunpredictable for an old scholar like\lmyself, heh...", MSGBOX_DEFAULT)
+    msgbox("Come and visit me at the lab\nin Alderbrook Town.", MSGBOX_DEFAULT)
+    msgbox("We have much to discuss, and I would like\nto see your Pokemon again.", MSGBOX_DEFAULT)
+    msgbox("Until then, {PLAYER}, I bid you adieu.", MSGBOX_DEFAULT)
+}
+
+script Westlock_Library_Inside_EventScripts_ProfLarchExit
+{}
+
+text Westlock_Library_Inside_EventScripts_MeetProfLarch_Male{
+    "Oh! Hello there young man!\nYou snuck up on me, didn't you?\pMy head was buried in that book."
+   
+}
+
+text Westlock_Library_Inside_EventScripts_MeetProfLarch_Female{
+    "Oh! Hello there young lady!\nYou snuck up on me, didn't you?\pMy head was buried in that book."
+}
+
+movement Movement_Larch_Exit
+{
+
 }

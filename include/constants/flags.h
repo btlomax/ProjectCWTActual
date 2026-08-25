@@ -1049,6 +1049,7 @@
 #define FLAG_HIDE_SOOTOPOLIS_CITY_GROUDON                           0x3E6
 #define FLAG_HIDE_RUSTBORO_CITY_POKEMON_SCHOOL_SCOTT                0x3E7
 #define FLAG_HIDE_ROUTE1_TUTOR                                      0x3E8
+#define FLAG_AGREE_WITH_PROF_LIBRARY                                0x3E9
 
 // Item Ball Flags
 #define FLAG_ITEM_ROUTE_102_POTION                                  0x3E8
