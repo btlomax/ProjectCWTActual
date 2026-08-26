@@ -1,4 +1,18 @@
-mapscripts LarchLab_Inside_MapScripts {}
+mapscripts LarchLab_Inside_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: LarchLab_Inside_MapScripts_Transition
+}
+
+script LarchLab_Inside_MapScripts_Transition {
+   if(var(VAR_WESTLOCK_LIBRARY_STATE) == 0)
+   {
+        setflag(FLAG_HIDE_PROF_LARCH)
+   }
+   else
+   {
+        clearflag(FLAG_HIDE_PROF_LARCH)
+        addobject(LOCALID_PROF_LARCH)
+   }
+}
 
 script LarchLab_Inside_MapScripts_WallNote {
     msgbox("Gone to Westlock Village - AOPL", MSGBOX_SIGN)
@@ -8,12 +22,29 @@ script LarchLab_Inside_MapScripts_WallNote {
 script LarchLab_Inside_MapScripts_ProfessorAide {
     lock
     faceplayer
-    msgbox("Are you looking for the Professor?", MSGBOX_YESNO)
-    if (var(VAR_RESULT) == YES) {
+
+    if(var(VAR_WESTLOCK_LIBRARY_STATE) == 0) 
+    {
+        msgbox("Are you looking for the Professor?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) 
+        {
         msgbox("I'm afraid he's not here right now.\pHe has been acting a bit strange recently...\pI'm not sure when he'll be back,but you\ncan check the log for updates.", MSGBOX_DEFAULT)
-    } else {
+        }
+        else
+        {
         msgbox("Ah, well enjoy your visit to the lab then!", MSGBOX_DEFAULT)
+        }
     }
+    else 
+    {
+        msgbox(
+            "Hello, I'm the Professor's aide!\p"
+            "I mostly help with research, but he\n"
+            "has been sending me on a lot of errands\l"
+            "lately...I should talk to him about that...\p"
+        )
+    }
+   
     release
     end
 }

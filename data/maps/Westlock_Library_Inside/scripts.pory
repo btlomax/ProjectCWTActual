@@ -6,6 +6,11 @@ script Westlock_Library_Inside_MapScripts_OnTransition {
     if (var(VAR_WESTLOCK_LIBRARY_STATE) == 1) {
         setflag(FLAG_HIDE_PROF_LARCH)
     }
+    else
+    {
+        clearflag(FLAG_HIDE_PROF_LARCH)
+        addobject(LOCALID_PROF_LARCH)
+    }
 
     end
 }
@@ -54,7 +59,7 @@ script Westlock_Library_Inside_EventScripts_MeetProfLarch
        "this region for nearly five decades,\l"
        "and still they surprise me.", MSGBOX_DEFAULT)
 
-    applymovement(LOCALID_PROF_LARCH, Movement_Larch_LookDown)
+    faceplayer
     waitmovement(LOCALID_PROF_LARCH)
 
     msgbox("Wondrous creatures, aren't they?", MSGBOX_YESNO)
@@ -107,16 +112,16 @@ script Westlock_Library_Inside_EventScripts_MeetProfLarch
            "Nocturnal Pokémon are much too\n"
            "unpredictable for an old scholar\l"
            "like myself, heh...\p"
-           "I was not expecting your arrival,\n"
-           "but...even chaotic events can be\n"
+           "..."\n
+           "I was not expecting your arrival,\l"
+           "but...even chaotic events can be\l"
            "fortuitous, yes, yes...\p"
            "Come and visit me at the lab\n"
            "in Alderbrook Town.\p"
            "We have much to discuss, and I\n"
-           "would like to see your Pokémon again.\n"
+           "would like to see your Pokémon again.\l"
            "In a more, controlled environment...\p"
-           "Until then, {PLAYER},\n"
-           "I bid you adieu!", MSGBOX_DEFAULT)
+           "Until then, {PLAYER}, I bid you adieu!", MSGBOX_DEFAULT)
 
     call(Westlock_Library_Inside_EventScripts_ProfLarchExit)
     setflag(FLAG_HIDE_PROF_LARCH)
@@ -144,11 +149,11 @@ script Westlock_Library_Inside_EventScripts_ProfLarchExit
 }
 
 text Westlock_Library_Inside_EventScripts_MeetProfLarch_Male{
-    "Oh! Hello there young man!\nYou snuck up on me, didn't you?\pMy head was buried in that book."
+    "Oh! Hello there young man! You snuck up\non me, didn't you?\pMy head was buried in that book."
 }
 
 text Westlock_Library_Inside_EventScripts_MeetProfLarch_Female{
-    "Oh! Hello there young lady!\nYou snuck up on me, didn't you?\pMy head was buried in that book."
+    "Oh! Hello there young lady! You snuck up\non me, didn't you?\pMy head was buried in that book."
 }
 
 movement Movement_Larch_Exit_PlayerNorth

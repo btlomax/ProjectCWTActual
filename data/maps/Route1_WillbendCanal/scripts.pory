@@ -2,12 +2,22 @@ mapscripts Route1_WillbendCanal_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: Route1_WillbendCanal_OnTransition
 }
 
-script Route1_WillbendCanal_OnTransition {
-    // Hide the bag when first entering the map if state is 0
-    if (var(VAR_ROUTE1_STATE) == 0) {
-        setflag(FLAG_HIDE_STARTER_ITEM)
-        setflag(FLAG_HIDE_BRIDGE_NPC_ROUTE1)
+script Route1_WillbendCanal_OnTransition 
+{
+    setflag(FLAG_HIDE_STARTER_ITEM)
+
+    switch (var(VAR_ROUTE1_STATE))
+    {
+        case 1:
+            clearflag(FLAG_HIDE_ROUTE1_TUTOR)
+            addobject(LOCALID_ROUTE1_TUTOR)
+            setflag(FLAG_HIDE_BRIDGE_NPC_ROUTE1)
+        default:
+            setflag(FLAG_HIDE_ROUTE1_TUTOR)
+            setflag(FLAG_HIDE_BRIDGE_NPC_ROUTE1)
     }
+
+    end
 }
 
 script Route1_WillbendCanal_MapScripts_LarchTrigger {
@@ -32,7 +42,7 @@ script Route1_WillbendCanal_MapScripts_LarchTrigger {
     applymovement(LOCALID_BRIDGE_NPC_ROUTE1, Movement_NPCLookAround)
     waitmovement(LOCALID_BRIDGE_NPC_ROUTE1)
 
-    msgbox("I could have sworn the entrance\nwas on this route!\nI need to have a word with my crew...", MSGBOX_DEFAULT)
+    msgbox("I could have sworn the entrance was on\nthis route! I need to deliver the\lpackage!", MSGBOX_DEFAULT)
     closemessage
 
     applymovement(LOCALID_BRIDGE_NPC_ROUTE1, Movement_NPCLookAround)
@@ -65,7 +75,7 @@ script Route1_WillbendCanal_MapScripts_LarchTrigger {
 script Route1_EventScript_StarterDrop {
     lock
     faceplayer
-    msgbox("He dropped his bag...", MSGBOX_DEFAULT)
+    msgbox("He dropped the package...", MSGBOX_DEFAULT)
     closemessage
 
     msgbox("Take a look inside?", MSGBOX_YESNO)
