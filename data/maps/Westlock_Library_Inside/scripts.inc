@@ -52,7 +52,7 @@ Westlock_Library_Inside_EventScripts_MeetProfLarch_1:
 # 53 "data/maps/Westlock_Library_Inside/scripts.pory"
 	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_4, MSGBOX_DEFAULT
 # 57 "data/maps/Westlock_Library_Inside/scripts.pory"
-	applymovement LOCALID_PROF_LARCH, Movement_Larch_LookRight
+	applymovement LOCALID_PROF_LARCH, Movement_Larch_LookDown
 # 58 "data/maps/Westlock_Library_Inside/scripts.pory"
 	waitmovement LOCALID_PROF_LARCH
 # 60 "data/maps/Westlock_Library_Inside/scripts.pory"
