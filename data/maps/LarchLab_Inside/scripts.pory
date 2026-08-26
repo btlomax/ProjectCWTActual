@@ -10,7 +10,7 @@ script LarchLab_Inside_MapScripts_ProfessorAide {
     faceplayer
     msgbox("Are you looking for the Professor?", MSGBOX_YESNO)
     if (var(VAR_RESULT) == YES) {
-        msgbox("I'm afraid he's not here right now.\pHe has been acting a \nbit strange recently...\pI'm not sure when he'll be back,\nbut you can check the log for updates.", MSGBOX_DEFAULT)
+        msgbox("I'm afraid he's not here right now.\pHe has been acting a bit strange recently...\pI'm not sure when he'll be back,but you\ncan check the log for updates.", MSGBOX_DEFAULT)
     } else {
         msgbox("Ah, well enjoy your visit to the lab then!", MSGBOX_DEFAULT)
     }

@@ -91,7 +91,7 @@ script Route1_EventScript_StarterDrop {
         call(Common_EventScript_NameReceivedPartyMon)
     }
 
-    msgbox("Dinner will be ready soon, so\ndon't be late!", MSGBOX_DEFAULT)
+    msgbox("Dinner will be ready soon, so don't be late!", MSGBOX_DEFAULT)
 
     removeobject(LOCALID_STARTER_DROP)
     setflag(FLAG_HIDE_STARTER_ITEM)
@@ -161,11 +161,11 @@ script Route1_EventScript_Catch_Pokemon_Tutorial{
     msgbox("See, that wasn't so hard!\pYou can catch wild POKéMON by weakening\nthem in battle and then throwing a\lPOKéBALL at them.", MSGBOX_DEFAULT)
     }
     else {
-        msgbox("No problem, but let me give you\nsome tips at least.", MSGBOX_DEFAULT)
+        msgbox("No problem, but let me give you some\ntips at least.", MSGBOX_DEFAULT)
     }
    
     msgbox("Some Pokémon are hard to find, but they\nare out there!\pListen out for the cries\nof wild POKéMON, you never know what you\lmight find!", MSGBOX_DEFAULT)
-    msgbox("Come to my house on this route after\nyou've caught 15 Pokemon,\lI'll have a gift ready for you.\p", MSGBOX_DEFAULT)
+    msgbox("Come to my house on this route after\nyou've caught 15 Pokemon, I'll have a\lgift ready for you.\p", MSGBOX_DEFAULT)
 
     applymovement(LOCALID_ROUTE1_TUTOR, Movement_TutorLeaveScreenRight)
     waitmovement(LOCALID_ROUTE1_TUTOR)

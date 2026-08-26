@@ -41,7 +41,7 @@ LarchLab_Inside_MapScripts_ProfessorAide_Text_0:
 
 LarchLab_Inside_MapScripts_ProfessorAide_Text_1:
 # 13 "data/maps/LarchLab_Inside/scripts.pory"
-	.string "I'm afraid he's not here right now.\pHe has been acting a \nbit strange recently...\pI'm not sure when he'll be back,\nbut you can check the log for updates.$"
+	.string "I'm afraid he's not here right now.\pHe has been acting a bit strange recently...\pI'm not sure when he'll be back,but you\ncan check the log for updates.$"
 
 LarchLab_Inside_MapScripts_ProfessorAide_Text_2:
 # 15 "data/maps/LarchLab_Inside/scripts.pory"

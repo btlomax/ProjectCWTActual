@@ -14,20 +14,109 @@ script Westlock_Library_Inside_EventScripts_MeetProfLarch
 {   
     lock
 
-    msgbox("You do seem familiar... A passing\n"
-       "resemblance to...\p"
-       "...Erm...\p"
-       "Alas, the thought has deserted me.\p"
-       "Old age catching up to me, I suppose.\n"
-       "Not quite as sharp as I used to be!\p"
-       "Now, before I forget my manners,\n"
-       "allow me to introduce myself.\p"
-       "I am Professor Larch, the regional\n"
-       "Pokémon Professor.\p"
-       "...\p"
-       "Ah! {PLAYER}! Wonderful to meet you!\p"
-       "I do recognize you now, your grandmother \n"
-       "and I go back many years.", MSGBOX_DEFAULT)
+    msgbox("This room is far too humid for these\nbooks. I can barely make out the text...", MSGBOX_DEFAULT)
+    msgbox("...'And when the great storm broke,the\namber force grew so intense that th-", MSGBOX_DEFAULT)
+
+    playse(SE_PIN)
+    applymovement(LOCALID_PROF_LARCH, Common_Movement_ExclamationMark)
+    waitmovement(LOCALID_PROF_LARCH)
+    delay(60)
+    faceplayer
+    checkplayergender
+
+    switch(var(VAR_RESULT))
+    {
+        case 0:
+            msgbox(Westlock_Library_Inside_EventScripts_MeetProfLarch_Male, MSGBOX_DEFAULT)
+        case 1:
+            msgbox(Westlock_Library_Inside_EventScripts_MeetProfLarch_Female, MSGBOX_DEFAULT)
+    }
+    
+    msgbox("You do seem familiar..."\p
+           "A passing resemblance to...\n"
+           "...Erm...\p"
+           "Alas, the thought has deserted me.\p"
+           "Old age catching up to me, I suppose.\n"
+           "Not quite as sharp as I used to be!\p"
+           "Now, before I forget my manners, allow\n"
+           "me to introduce myself.\p"
+           "I am Professor Larch, the regional\n"
+           "Pokémon Professor.\p"
+           "...\p"
+           "Ah! {PLAYER}! Wonderful to meet you!\p"
+           "I do recognize you now, your\n"
+           "grandmother and I go back many years.", MSGBOX_DEFAULT)
+
+    applymovement(LOCALID_PROF_LARCH, Movement_Larch_LookLeft)
+    waitmovement(LOCALID_PROF_LARCH)
+
+    msgbox("I have been studying the Pokémon of\n"
+       "this region for nearly five decades,\l"
+       "and still they surprise me.", MSGBOX_DEFAULT)
+
+    applymovement(LOCALID_PROF_LARCH, Movement_Larch_LookDown)
+    waitmovement(LOCALID_PROF_LARCH)
+
+    msgbox("Wondrous creatures, aren't they?", MSGBOX_YESNO)
+
+    if (var(VAR_RESULT) == 1)
+    {
+        msgbox("Correct answer! You and I will get\n"
+               "on famously, I'm sure.", MSGBOX_DEFAULT)
+        setflag(FLAG_AGREE_WITH_PROF_LIBRARY)
+    }
+    else
+    {
+        msgbox("I see. Well, I am sure you will\n"
+               "come to appreciate them in time.", MSGBOX_DEFAULT)
+    }
+
+    msgbox("Will you allow me to see\n"
+           "your Pokémon?", MSGBOX_YESNO)
+
+    while (var(VAR_RESULT) == 0)
+    {
+        msgbox("I assure you, I have your best\n"
+               "interests in mind.\p"
+               "Now please, show me your Pokémon.", MSGBOX_DEFAULT)
+
+        msgbox("Will you allow me to see\n"
+               "your Pokémon?", MSGBOX_YESNO)
+    }
+
+    msgbox("Gah!", MSGBOX_DEFAULT)
+
+    msgbox("A r-rarer species, uh, in these\n"
+           "p-parts, indeed y-yes!\p"
+           "Where, did you, erm, f-find it?\p"
+           "On the c-canal, y-you say!\p"
+           "I should go and, uh, look myself,\n"
+           "yes!\p"
+           "Who knows what other, uh, rare\n"
+           "species may be in the area, heh...\p"
+           "...", MSGBOX_DEFAULT)
+
+    playse(SE_PIN)
+    applymovement(LOCALID_PROF_LARCH, Common_Movement_ExclamationMark)
+    waitmovement(LOCALID_PROF_LARCH)
+    delay(30)
+
+    msgbox("GOODNESS ME, would you look at the\n"
+           "time! I must be off, yes, yes,\l"
+           "I must be off!\p"
+           "Nocturnal Pokémon are much too\n"
+           "unpredictable for an old scholar\l"
+           "like myself, heh...\p"
+           "I was not expecting your arrival,\n"
+           "but...even chaotic events can be\n"
+           "fortuitous, yes, yes...\p"
+           "Come and visit me at the lab\n"
+           "in Alderbrook Town.\p"
+           "We have much to discuss, and I\n"
+           "would like to see your Pokémon again.\n"
+           "In a more, controlled environment...\p"
+           "Until then, {PLAYER},\n"
+           "I bid you adieu!", MSGBOX_DEFAULT)
 
     call(Westlock_Library_Inside_EventScripts_ProfLarchExit)
     setflag(FLAG_HIDE_PROF_LARCH)
@@ -79,4 +168,12 @@ movement Movement_Larch_Exit_PlayerEastOrWest
     walk_down * 4
     walk_left
     walk_down * 3
+}
+
+movement Movement_Larch_LookLeft {
+    walk_in_place_left
+}
+
+movement Movement_Larch_LookDown {
+    walk_in_place_down
 }

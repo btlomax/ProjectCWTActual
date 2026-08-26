@@ -513,7 +513,7 @@ Route1_EventScript_StarterDrop_Text_5:
 
 Route1_EventScript_StarterDrop_Text_6:
 # 94 "data/maps/Route1_WillbendCanal/scripts.pory"
-	.string "Dinner will be ready soon, so\ndon't be late!$"
+	.string "Dinner will be ready soon, so don't be late!$"
 
 Route1_EventScript_TurnAround_Text_0:
 # 107 "data/maps/Route1_WillbendCanal/scripts.pory"
@@ -549,7 +549,7 @@ Route1_EventScript_Catch_Pokemon_Tutorial_Text_5:
 
 Route1_EventScript_Catch_Pokemon_Tutorial_Text_6:
 # 164 "data/maps/Route1_WillbendCanal/scripts.pory"
-	.string "No problem, but let me give you\nsome tips at least.$"
+	.string "No problem, but let me give you some\ntips at least.$"
 
 Route1_EventScript_Catch_Pokemon_Tutorial_Text_7:
 # 167 "data/maps/Route1_WillbendCanal/scripts.pory"
@@ -557,7 +557,7 @@ Route1_EventScript_Catch_Pokemon_Tutorial_Text_7:
 
 Route1_EventScript_Catch_Pokemon_Tutorial_Text_8:
 # 168 "data/maps/Route1_WillbendCanal/scripts.pory"
-	.string "Come to my house on this route after\nyou've caught 15 Pokemon,\lI'll have a gift ready for you.\p$"
+	.string "Come to my house on this route after\nyou've caught 15 Pokemon, I'll have a\lgift ready for you.\p$"
 
 Route1_WillbendCanal_MapScripts_PathSign_Text_0:
 # 183 "data/maps/Route1_WillbendCanal/scripts.pory"
