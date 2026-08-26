@@ -1,80 +1,82 @@
-mapscripts Westlock_Library_Inside_MapScripts {}
+mapscripts Westlock_Library_Inside_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Westlock_Library_Inside_MapScripts_OnTransition
+}
+
+script Westlock_Library_Inside_MapScripts_OnTransition {
+    if (var(VAR_WESTLOCK_LIBRARY_STATE) == 1) {
+        setflag(FLAG_HIDE_PROF_LARCH)
+    }
+
+    end
+}
 
 script Westlock_Library_Inside_EventScripts_MeetProfLarch
-{
-    msgbox("This room is far too humid for these\nbooks. I can barely make out the text...", MSGBOX_DEFAULT)
-    msgbox("...'And when the great storm broke,the\namber force grew so intense that th-", MSGBOX_DEFAULT)
+{   
+    lock
 
-    playse(SE_PIN)
-    applymovement(LOCALID_PROF_LARCH, Common_Movement_ExclamationMark)
-    waitmovement(LOCALID_PROF_LARCH)
-    delay(30)
-    faceplayer
-    checkplayergender
+    msgbox("You do seem familiar... A passing\n"
+       "resemblance to...\p"
+       "...Erm...\p"
+       "Alas, the thought has deserted me.\p"
+       "Old age catching up to me, I suppose.\n"
+       "Not quite as sharp as I used to be!\p"
+       "Now, before I forget my manners,\n"
+       "allow me to introduce myself.\p"
+       "I am Professor Larch, the regional\n"
+       "Pokémon Professor.\p"
+       "...\p"
+       "Ah! {PLAYER}! Wonderful to meet you!\p"
+       "I do recognize you now, your grandmother \n"
+       "and I go back many years.", MSGBOX_DEFAULT)
 
-    switch(var(VAR_RESULT))
-    {
-        case 0:
-            msgbox(Westlock_Library_Inside_EventScripts_MeetProfLarch_Male, MSGBOX_DEFAULT)
-        case 1:
-            msgbox(Westlock_Library_Inside_EventScripts_MeetProfLarch_Female, MSGBOX_DEFAULT)
-    }
-
-    msgbox("Old age catching up to me I suppose,\nnot as sharp as I used to be.\p"
-           "Now, before I forget my manners,\nI should introduce myself.\pI am Professor Larch, the regional\nPokémon Professor.\p", MSGBOX_DEFAULT)
-    msgbox("...", MSGBOX_DEFAULT)
-    msgbox("{PLAYER}, wonderful to meet you.", MSGBOX_DEFAULT)
-    msgbox("I have been studying the Pokemon of this\nregion for many years.\pWonderous creatures, aren't they?", MSGBOX_YESNO)
-
-    if(var(VAR_RESULT) == 1)
-    {
-        msgbox("Correct answer, you and I will get on\nfamously, I'm sure.", MSGBOX_DEFAULT)
-        setflag(FLAG_AGREE_WITH_PROF_LIBRARY)
-    }
-    else
-    {
-        msgbox("I see. Well, I am sure you will come to\nappreciate them, given time.", MSGBOX_DEFAULT)
-    }
-
-    msgbox("Will you allow me to see your Pokemon?", MSGBOX_YESNO)
-        while(var(VAR_RESULT) == 0)
-        {
-            msgbox("I assure you, I have your best interests\nin mind.\pNow please, show me your Pokemon.", MSGBOX_DEFAULT)
-            msgbox("Will you allow me to see your Pokemon?", MSGBOX_YESNO)
-        }
-
-    msgbox("Gah!", MSGBOX_DEFAULT)
-    msgbox("A r-rarer species, uh, in these p-parts,\nindeed y-yes!", MSGBOX_DEFAULT)
-    msgbox("Hmmmm...", MSGBOX_DEFAULT)
-    msgbox("You said you found this on the canal?\pI should go and uh, look myself, yes!", MSGBOX_DEFAULT)
-    msgbox("Who knows what other, uh, rare species\nmay be in the area, heh...", MSGBOX_DEFAULT)
-    msgbox("...", MSGBOX_DEFAULT)
-
-    playse(SE_PIN)
-    applymovement(LOCALID_PROF_LARCH, Common_Movement_ExclamationMark)
-    waitmovement(LOCALID_PROF_LARCH)
-    delay(30)
-
-    msgbox("GOODNESS ME, would you look at the time!\nI must be off, yes, yes,\lI must be off!", MSGBOX_DEFAULT)
-    msgbox("Nocturnal Pokemon are much too\nunpredictable for an old scholar like\lmyself, heh...", MSGBOX_DEFAULT)
-    msgbox("Come and visit me at the lab\nin Alderbrook Town.", MSGBOX_DEFAULT)
-    msgbox("We have much to discuss, and I would like\nto see your Pokemon again.", MSGBOX_DEFAULT)
-    msgbox("Until then, {PLAYER}, I bid you adieu.", MSGBOX_DEFAULT)
+    call(Westlock_Library_Inside_EventScripts_ProfLarchExit)
+    setflag(FLAG_HIDE_PROF_LARCH)
+    removeobject(LOCALID_PROF_LARCH)
+    setvar(VAR_WESTLOCK_LIBRARY_STATE, 1)
+    release
 }
 
 script Westlock_Library_Inside_EventScripts_ProfLarchExit
-{}
+{
+    specialvar(VAR_RESULT, GetPlayerFacingDirection)
+
+    if(var(VAR_RESULT) == DIR_NORTH)
+    {
+        applymovement(LOCALID_PROF_LARCH, Movement_Larch_Exit_PlayerNorth)
+        waitmovement(LOCALID_PROF_LARCH)
+    }
+    else
+    {
+        applymovement(LOCALID_PROF_LARCH, Movement_Larch_Exit_PlayerEastOrWest)
+        waitmovement(LOCALID_PROF_LARCH)
+    }
+
+    return
+}
 
 text Westlock_Library_Inside_EventScripts_MeetProfLarch_Male{
     "Oh! Hello there young man!\nYou snuck up on me, didn't you?\pMy head was buried in that book."
-   
 }
 
 text Westlock_Library_Inside_EventScripts_MeetProfLarch_Female{
     "Oh! Hello there young lady!\nYou snuck up on me, didn't you?\pMy head was buried in that book."
 }
 
-movement Movement_Larch_Exit
+movement Movement_Larch_Exit_PlayerNorth
 {
+    walk_right * 2
+    walk_down
+    walk_right * 3
+    walk_down * 4
+    walk_left
+    walk_down * 3
+}
 
+movement Movement_Larch_Exit_PlayerEastOrWest
+{
+    walk_down
+    walk_right * 5
+    walk_down * 4
+    walk_left
+    walk_down * 3
 }
