@@ -86,7 +86,7 @@ Westlock_Library_Inside_EventScripts_MeetProfLarch_10:
 # 107 "data/maps/Westlock_Library_Inside/scripts.pory"
 	delay 30
 # 109 "data/maps/Westlock_Library_Inside/scripts.pory"
-	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_12, MSGBOX_DEFAULT
+	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_13, MSGBOX_DEFAULT
 # 126 "data/maps/Westlock_Library_Inside/scripts.pory"
 	call Westlock_Library_Inside_EventScripts_ProfLarchExit
 # 127 "data/maps/Westlock_Library_Inside/scripts.pory"
@@ -304,21 +304,24 @@ Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_12:
 	.string "Nocturnal Pokémon are much too\n"
 	.string "unpredictable for an old scholar\l"
 	.string "like myself, heh...\p"
-	.string "I was not expecting your arrival,\n"
-	.string "but...even chaotic events can be\n"
+	.string "...$"
+
+Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_13:
+# 116 "data/maps/Westlock_Library_Inside/scripts.pory"
+	.string "I was not expecting your arrival,\l"
+	.string "but...even chaotic events can be\l"
 	.string "fortuitous, yes, yes...\p"
 	.string "Come and visit me at the lab\n"
 	.string "in Alderbrook Town.\p"
 	.string "We have much to discuss, and I\n"
-	.string "would like to see your Pokémon again.\n"
+	.string "would like to see your Pokémon again.\l"
 	.string "In a more, controlled environment...\p"
-	.string "Until then, {PLAYER},\n"
-	.string "I bid you adieu!$"
+	.string "Until then, {PLAYER}, I bid you adieu!$"
 
 Westlock_Library_Inside_EventScripts_MeetProfLarch_Male::
 # 151 "data/maps/Westlock_Library_Inside/scripts.pory"
-	.string "Oh! Hello there young man!\nYou snuck up on me, didn't you?\pMy head was buried in that book.$"
+	.string "Oh! Hello there young man! You snuck up\non me, didn't you?\pMy head was buried in that book.$"
 
 Westlock_Library_Inside_EventScripts_MeetProfLarch_Female::
 # 155 "data/maps/Westlock_Library_Inside/scripts.pory"
-	.string "Oh! Hello there young lady!\nYou snuck up on me, didn't you?\pMy head was buried in that book.$"
+	.string "Oh! Hello there young lady! You snuck up\non me, didn't you?\pMy head was buried in that book.$"

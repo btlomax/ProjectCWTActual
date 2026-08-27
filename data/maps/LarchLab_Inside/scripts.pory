@@ -10,8 +10,32 @@ script LarchLab_Inside_MapScripts_Transition {
    else
    {
         clearflag(FLAG_HIDE_PROF_LARCH)
-        addobject(LOCALID_PROF_LARCH)
+        addobject(LOCALID_PROF_LARCH_LAB)
    }
+}
+
+script LarchLab_Inside_MapScripts_ProfessorLarch {
+    lock
+    faceplayer
+
+    msgbox(
+        "Ah! {PLAYER}, welcome to my humble laboratory!\p"
+        "That's Derek over there, he's my assistant.\n"
+        "Say hello Derek!\p"
+        "Derek: Hello!\p"
+        "We're over here, Derek.\p"
+        "Derek: Oh...\p"
+        "...\p"
+        "Ah. Deep in thought, as ever. He is very dedicated.\p"
+        "...\p"
+        "Now, first and foremost—congratulations on your first Pokémon.\p"
+        "Welcome to the world of Pokemon, and the beginning of a journey\n"
+        "that will forever alter you as a person.\p"
+        ""
+    , MSGBOX_DEFAULT)
+   
+    release
+    end
 }
 
 script LarchLab_Inside_MapScripts_WallNote {
@@ -28,7 +52,7 @@ script LarchLab_Inside_MapScripts_ProfessorAide {
         msgbox("Are you looking for the Professor?", MSGBOX_YESNO)
         if (var(VAR_RESULT) == YES) 
         {
-        msgbox("I'm afraid he's not here right now.\pHe has been acting a bit strange recently...\pI'm not sure when he'll be back,but you\ncan check the log for updates.", MSGBOX_DEFAULT)
+        msgbox("I'm afraid he's not here right now.\pHe has been acting a bit strange recently...\nI'm not sure when he'll be back.", MSGBOX_DEFAULT)
         }
         else
         {

@@ -4,15 +4,20 @@ mapscripts Route1_WillbendCanal_MapScripts {
 
 script Route1_WillbendCanal_OnTransition 
 {
-    setflag(FLAG_HIDE_STARTER_ITEM)
-
     switch (var(VAR_ROUTE1_STATE))
     {
         case 1:
+            setflag(FLAG_HIDE_BRIDGE_NPC_ROUTE1)
+            setflag(FLAG_HIDE_ROUTE1_TUTOR)
+
+        case 3:
+            setflag(FLAG_HIDE_STARTER_ITEM)
             clearflag(FLAG_HIDE_ROUTE1_TUTOR)
             addobject(LOCALID_ROUTE1_TUTOR)
             setflag(FLAG_HIDE_BRIDGE_NPC_ROUTE1)
+
         default:
+            setflag(FLAG_HIDE_STARTER_ITEM)
             setflag(FLAG_HIDE_ROUTE1_TUTOR)
             setflag(FLAG_HIDE_BRIDGE_NPC_ROUTE1)
     }
@@ -106,6 +111,7 @@ script Route1_EventScript_StarterDrop {
     removeobject(LOCALID_STARTER_DROP)
     setflag(FLAG_HIDE_STARTER_ITEM)
     setvar(VAR_ALDERBROOK_TOWN_STATE, 1)
+    setvar(VAR_ROUTE1_STATE, 2)
     release
     end
 }
@@ -125,7 +131,7 @@ script Route1_EventScript_TurnAround { // If the player tries to go too far, the
 
 script Route1_EventScript_Trigger_Tutorial {
 
-    if(var(VAR_ALDERBROOK_TOWN_STATE) == 2 && var(VAR_ROUTE1_STATE) == 1) {
+    if(var(VAR_ALDERBROOK_TOWN_STATE) == 2 && var(VAR_ROUTE1_STATE) == 3) {
        goto(Route1_EventScript_Catch_Pokemon_Tutorial)
     }
 }
@@ -184,7 +190,7 @@ script Route1_EventScript_Catch_Pokemon_Tutorial{
     removeobject(LOCALID_ROUTE1_TUTOR)
 
     special(RemoveCameraObject)
-    setvar(VAR_ROUTE1_STATE, 2)
+    setvar(VAR_ROUTE1_STATE, 4)
     release
     end
 }

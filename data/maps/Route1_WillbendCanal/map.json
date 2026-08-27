@@ -41,7 +41,7 @@
     },
     {
       "local_id": "LOCALID_BRIDGE_NPC_ROUTE1",
-      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN",
       "x": 11,
       "y": 10,
       "elevation": 3,
@@ -114,7 +114,25 @@
       "x": 9,
       "y": 9,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_ALDERBROOK_TOWN_STATE",
+      "var_value": "0",
+      "script": "Route1_EventScript_TurnAround"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_ALDERBROOK_TOWN_STATE",
+      "var_value": "1",
+      "script": "Route1_EventScript_TurnAround"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_ALDERBROOK_TOWN_STATE",
       "var_value": "0",
       "script": "Route1_EventScript_TurnAround"
     },
@@ -123,8 +141,8 @@
       "x": 9,
       "y": 10,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
+      "var": "VAR_ALDERBROOK_TOWN_STATE",
+      "var_value": "1",
       "script": "Route1_EventScript_TurnAround"
     },
     {
@@ -132,8 +150,8 @@
       "x": 12,
       "y": 10,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
+      "var": "VAR_ROUTE1_STATE",
+      "var_value": "3",
       "script": "Route1_EventScript_Trigger_Tutorial"
     }
   ],
