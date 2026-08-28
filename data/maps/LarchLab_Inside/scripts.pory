@@ -18,21 +18,69 @@ script LarchLab_Inside_MapScripts_ProfessorLarch {
     lock
     faceplayer
 
+    if(flag(FLAG_SYS_POKEDEX_GET))
+    {
+        msgbox("", MSGBOX_DEFAULT)
+        release
+        end
+    }
+
     msgbox(
         "Ah! {PLAYER}, welcome to my humble laboratory!\p"
-        "That's Derek over there, he's my assistant.\n"
+        "That's Derek over there, he's my\n"
+        "assistant.\p"
         "Say hello Derek!\p"
         "Derek: Hello!\p"
         "We're over here, Derek.\p"
         "Derek: Oh...\p"
         "...\p"
-        "Ah. Deep in thought, as ever. He is very dedicated.\p"
+        "Ah, he's a good lad.\p"
         "...\p"
-        "Now, first and foremost—congratulations on your first Pokémon.\p"
-        "Welcome to the world of Pokemon, and the beginning of a journey\n"
-        "that will forever alter you as a person.\p"
-        ""
-    , MSGBOX_DEFAULT)
+        "Now, {PLAYER}. Congratulations on\n"
+        "your first Pokémon!\p"
+        "A rather unusual first Pokémon, too.\n"
+        "You certainly have a talent for finding\l"
+        "interesting things.\p"
+        "Pokémon are full of surprises. The more\n"
+        "you travel, the more you will meet.\p"
+        "And unless you have a truly remarkable\n"
+        "memory, you will eventually lose track\l"
+        "of which one had the ALARMING teeth.\p"
+        "That is where this comes in.\p"
+        "It is a Pokédex: a small device that\n"
+        "records information about the Pokémon\l"
+        "you see and catch.\p"
+        "Think of it as a field notebook that\n"
+        "does all the writing for you.\p",
+    MSGBOX_DEFAULT)
+
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox("{PLAYER} received the POKéDEX!", MSGBOX_DEFAULT)
+    waitfanfare
+    setflag(FLAG_SYS_POKEDEX_GET)
+
+    msgbox(
+        "Use it well, {PLAYER}. And do let me\n"
+        "know if you find anything else unusual\l"
+        "along that canal.",
+    MSGBOX_DEFAULT)
+
+    msgbox(
+        "Before you go, take these POKé BALLS.\n"
+        "You will need them for your journey.",
+    MSGBOX_DEFAULT)
+    additem(ITEM_POKE_BALL, 5)
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox("{PLAYER} received 5 POKé BALLS!", MSGBOX_DEFAULT)
+    waitfanfare
+
+    msgbox(
+        "Now, go and see your grandmother.\p"
+        "Tell Rhona that... hmm.\p"
+        "Tell her the sun and the moon will soon\n"
+        "cross paths.\p"
+        "She will know what I mean.\p",
+    MSGBOX_DEFAULT)
    
     release
     end

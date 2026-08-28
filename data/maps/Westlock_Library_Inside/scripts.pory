@@ -37,8 +37,8 @@ script Westlock_Library_Inside_EventScripts_MeetProfLarch
             msgbox(Westlock_Library_Inside_EventScripts_MeetProfLarch_Female, MSGBOX_DEFAULT)
     }
     
-    msgbox("You do seem familiar..."\p
-           "A passing resemblance to...\n"
+    msgbox("You do seem familiar...\p"
+           "Perhaps a passing resemblance to...\n"
            "...Erm...\p"
            "Alas, the thought has deserted me.\p"
            "Old age catching up to me, I suppose.\n"
@@ -112,7 +112,7 @@ script Westlock_Library_Inside_EventScripts_MeetProfLarch
            "Nocturnal Pokémon are much too\n"
            "unpredictable for an old scholar\l"
            "like myself, heh...\p"
-           "..."\n
+           "...\n"
            "I was not expecting your arrival,\l"
            "but...even chaotic events can be\l"
            "fortuitous, yes, yes...\p"

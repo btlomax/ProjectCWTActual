@@ -180,7 +180,7 @@ script Route1_EventScript_Catch_Pokemon_Tutorial{
         msgbox("No problem, but let me give you some\ntips at least.", MSGBOX_DEFAULT)
     }
    
-    msgbox("Some Pokémon are hard to find, but they\nare out there!\pListen out for the cries\nof wild POKéMON, you never know what you\lmight find!", MSGBOX_DEFAULT)
+    msgbox("Some Pokémon are hard to find, but they\nare out there!\pListen out for the cries of wild POKéMON,\nyou never know what you might find!", MSGBOX_DEFAULT)
     msgbox("Come to my house on this route after\nyou've caught 15 Pokemon, I'll have a\lgift ready for you.\p", MSGBOX_DEFAULT)
 
     applymovement(LOCALID_ROUTE1_TUTOR, Movement_TutorLeaveScreenRight)
@@ -196,7 +196,7 @@ script Route1_EventScript_Catch_Pokemon_Tutorial{
 }
 
 script Route1_WillbendCanal_MapScripts_PathSign {
-    msgbox("<- Alderbrook Town\nWestlock Village ->", MSGBOX_SIGN)
+    msgbox("Alderbrook Town\nV Westlock Village -->", MSGBOX_SIGN)
     end
 }
 

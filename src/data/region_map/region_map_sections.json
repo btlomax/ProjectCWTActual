@@ -1634,6 +1634,14 @@
     {
       "id": "MAPSEC_ROUTE1_WILLOWBEND_CANAL",
       "name": "WILLOWBEND CANAL"
+    },
+    {
+      "id": "MAPSEC_STARTER_TOWN",
+      "name": "STARTER TOWN"
+    },
+    {
+      "id": "MAPSEC_WESTLOCK_VILLAGE",
+      "name": "WESTLOCK VILLAGE"
     }
   ]
 }

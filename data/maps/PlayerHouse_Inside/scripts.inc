@@ -90,7 +90,7 @@ PlayerHouse_Inside_Dinner_Text_0:
 
 PlayerHouse_Inside_Dinner_Text_1:
 # 21 "data/maps/PlayerHouse_Inside/scripts.pory"
-	.string "I made your favorite food,\nso I hope you're hungry!\pNow, tell me about your day.$"
+	.string "I made your favorite food, so I hope\nyou're hungry!\pNow, tell me about your day.$"
 
 PlayerHouse_Inside_Dinner_Text_2:
 # 22 "data/maps/PlayerHouse_Inside/scripts.pory"
@@ -102,11 +102,11 @@ PlayerHouse_Inside_Dinner_Text_3:
 
 PlayerHouse_Inside_Dinner_Text_4:
 # 24 "data/maps/PlayerHouse_Inside/scripts.pory"
-	.string "He'll be able to tell you\nmore about Pokemon.\pBe careful in the tall grass,\nwild pokemon are sure to jump out at you!$"
+	.string "He'll be able to tell you more about\nPokemon.\pBe careful in the tall grass,\nwild pokemon are sure to jump out at you!$"
 
 PlayerHouse_Inside_Dinner_Text_5:
 # 25 "data/maps/PlayerHouse_Inside/scripts.pory"
-	.string "Come and see me when you've\nspoken to the Professor, and please,\pdo be careful dear.$"
+	.string "Come and see me when you've spoken to\nthe Professor, and please,\pdo be careful dear.$"
 
 PlayerHouse_Inside_GrandmotherNPC_Text_0:
 # 38 "data/maps/PlayerHouse_Inside/scripts.pory"

@@ -1,7 +1,19 @@
-mapscripts Westlock_PokeCentre_MapScripts {}
+mapscripts Westlock_PokeCentre_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Westlock_PokeCentre_MapScripts_OnTransition
+    MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script Westlock_PokeCentre_MapScripts_OnTransition {
+    setrespawn(HEAL_LOCATION_WESTLOCK_POKE_CENTRE)
+    end
+}
 
 script Westlock_PokeCentre_EventScript_Nurse
 {
+    setvar(VAR_0x800B, LOCALID_WESTLOCK_NURSE)
     call(Common_EventScript_PkmnCenterNurse)
+    waitmessage
+    waitbuttonpress
+    release
     end
 }

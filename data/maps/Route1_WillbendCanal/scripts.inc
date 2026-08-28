@@ -576,7 +576,7 @@ Route1_EventScript_Catch_Pokemon_Tutorial_Text_6:
 
 Route1_EventScript_Catch_Pokemon_Tutorial_Text_7:
 # 183 "data/maps/Route1_WillbendCanal/scripts.pory"
-	.string "Some Pokémon are hard to find, but they\nare out there!\pListen out for the cries\nof wild POKéMON, you never know what you\lmight find!$"
+	.string "Some Pokémon are hard to find, but they\nare out there!\pListen out for the cries of wild POKéMON,\nyou never know what you might find!$"
 
 Route1_EventScript_Catch_Pokemon_Tutorial_Text_8:
 # 184 "data/maps/Route1_WillbendCanal/scripts.pory"
@@ -584,4 +584,4 @@ Route1_EventScript_Catch_Pokemon_Tutorial_Text_8:
 
 Route1_WillbendCanal_MapScripts_PathSign_Text_0:
 # 199 "data/maps/Route1_WillbendCanal/scripts.pory"
-	.string "<- Alderbrook Town\nWestlock Village ->$"
+	.string "Alderbrook Town\nV Westlock Village -->$"

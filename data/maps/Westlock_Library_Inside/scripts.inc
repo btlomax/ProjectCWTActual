@@ -48,35 +48,35 @@ Westlock_Library_Inside_EventScripts_MeetProfLarch::
 	case 1, Westlock_Library_Inside_EventScripts_MeetProfLarch_4
 Westlock_Library_Inside_EventScripts_MeetProfLarch_1:
 # 40 "data/maps/Westlock_Library_Inside/scripts.pory"
-	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_3, MSGBOX_DEFAULT
+	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_2, MSGBOX_DEFAULT
 # 55 "data/maps/Westlock_Library_Inside/scripts.pory"
 	applymovement LOCALID_PROF_LARCH, Movement_Larch_LookLeft
 # 56 "data/maps/Westlock_Library_Inside/scripts.pory"
 	waitmovement LOCALID_PROF_LARCH
 # 58 "data/maps/Westlock_Library_Inside/scripts.pory"
-	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_4, MSGBOX_DEFAULT
+	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_3, MSGBOX_DEFAULT
 # 62 "data/maps/Westlock_Library_Inside/scripts.pory"
 	faceplayer
 # 63 "data/maps/Westlock_Library_Inside/scripts.pory"
 	waitmovement LOCALID_PROF_LARCH
 # 65 "data/maps/Westlock_Library_Inside/scripts.pory"
-	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_5, MSGBOX_YESNO
+	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_4, MSGBOX_YESNO
 # 67 "data/maps/Westlock_Library_Inside/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq Westlock_Library_Inside_EventScripts_MeetProfLarch_6
 # 75 "data/maps/Westlock_Library_Inside/scripts.pory"
-	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_7, MSGBOX_DEFAULT
+	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_6, MSGBOX_DEFAULT
 Westlock_Library_Inside_EventScripts_MeetProfLarch_5:
 # 79 "data/maps/Westlock_Library_Inside/scripts.pory"
-	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_8, MSGBOX_YESNO
+	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_7, MSGBOX_YESNO
 Westlock_Library_Inside_EventScripts_MeetProfLarch_10:
 # 82 "data/maps/Westlock_Library_Inside/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq Westlock_Library_Inside_EventScripts_MeetProfLarch_11
 # 92 "data/maps/Westlock_Library_Inside/scripts.pory"
-	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_10, MSGBOX_DEFAULT
+	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_9, MSGBOX_DEFAULT
 # 94 "data/maps/Westlock_Library_Inside/scripts.pory"
-	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_11, MSGBOX_DEFAULT
+	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_10, MSGBOX_DEFAULT
 # 104 "data/maps/Westlock_Library_Inside/scripts.pory"
 	playse SE_PIN
 # 105 "data/maps/Westlock_Library_Inside/scripts.pory"
@@ -86,7 +86,7 @@ Westlock_Library_Inside_EventScripts_MeetProfLarch_10:
 # 107 "data/maps/Westlock_Library_Inside/scripts.pory"
 	delay 30
 # 109 "data/maps/Westlock_Library_Inside/scripts.pory"
-	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_13, MSGBOX_DEFAULT
+	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_11, MSGBOX_DEFAULT
 # 126 "data/maps/Westlock_Library_Inside/scripts.pory"
 	call Westlock_Library_Inside_EventScripts_ProfLarchExit
 # 127 "data/maps/Westlock_Library_Inside/scripts.pory"
@@ -111,16 +111,16 @@ Westlock_Library_Inside_EventScripts_MeetProfLarch_4:
 
 Westlock_Library_Inside_EventScripts_MeetProfLarch_6:
 # 69 "data/maps/Westlock_Library_Inside/scripts.pory"
-	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_6, MSGBOX_DEFAULT
+	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_5, MSGBOX_DEFAULT
 # 71 "data/maps/Westlock_Library_Inside/scripts.pory"
 	setflag FLAG_AGREE_WITH_PROF_LIBRARY
 	goto Westlock_Library_Inside_EventScripts_MeetProfLarch_5
 
 Westlock_Library_Inside_EventScripts_MeetProfLarch_11:
 # 84 "data/maps/Westlock_Library_Inside/scripts.pory"
-	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_9, MSGBOX_DEFAULT
+	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_8, MSGBOX_DEFAULT
 # 88 "data/maps/Westlock_Library_Inside/scripts.pory"
-	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_8, MSGBOX_YESNO
+	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_7, MSGBOX_YESNO
 	goto Westlock_Library_Inside_EventScripts_MeetProfLarch_10
 
 
@@ -231,11 +231,8 @@ Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_1:
 
 Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_2:
 # 40 "data/maps/Westlock_Library_Inside/scripts.pory"
-	.string "You do seem familiar...$"
-
-Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_3:
-# 41 "data/maps/Westlock_Library_Inside/scripts.pory"
-	.string "A passing resemblance to...\n"
+	.string "You do seem familiar...\p"
+	.string "Perhaps a passing resemblance to...\n"
 	.string "...Erm...\p"
 	.string "Alas, the thought has deserted me.\p"
 	.string "Old age catching up to me, I suppose.\n"
@@ -249,42 +246,42 @@ Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_3:
 	.string "I do recognize you now, your\n"
 	.string "grandmother and I go back many years.$"
 
-Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_4:
+Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_3:
 # 58 "data/maps/Westlock_Library_Inside/scripts.pory"
 	.string "I have been studying the Pokémon of\n"
 	.string "this region for nearly five decades,\l"
 	.string "and still they surprise me.$"
 
-Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_5:
+Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_4:
 # 65 "data/maps/Westlock_Library_Inside/scripts.pory"
 	.string "Wondrous creatures, aren't they?$"
 
-Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_6:
+Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_5:
 # 69 "data/maps/Westlock_Library_Inside/scripts.pory"
 	.string "Correct answer! You and I will get\n"
 	.string "on famously, I'm sure.$"
 
-Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_7:
+Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_6:
 # 75 "data/maps/Westlock_Library_Inside/scripts.pory"
 	.string "I see. Well, I am sure you will\n"
 	.string "come to appreciate them in time.$"
 
-Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_8:
+Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_7:
 # 79 "data/maps/Westlock_Library_Inside/scripts.pory"
 	.string "Will you allow me to see\n"
 	.string "your Pokémon?$"
 
-Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_9:
+Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_8:
 # 84 "data/maps/Westlock_Library_Inside/scripts.pory"
 	.string "I assure you, I have your best\n"
 	.string "interests in mind.\p"
 	.string "Now please, show me your Pokémon.$"
 
-Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_10:
+Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_9:
 # 92 "data/maps/Westlock_Library_Inside/scripts.pory"
 	.string "Gah!$"
 
-Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_11:
+Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_10:
 # 94 "data/maps/Westlock_Library_Inside/scripts.pory"
 	.string "A r-rarer species, uh, in these\n"
 	.string "p-parts, indeed y-yes!\p"
@@ -296,7 +293,7 @@ Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_11:
 	.string "species may be in the area, heh...\p"
 	.string "...$"
 
-Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_12:
+Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_11:
 # 109 "data/maps/Westlock_Library_Inside/scripts.pory"
 	.string "GOODNESS ME, would you look at the\n"
 	.string "time! I must be off, yes, yes,\l"
@@ -304,10 +301,7 @@ Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_12:
 	.string "Nocturnal Pokémon are much too\n"
 	.string "unpredictable for an old scholar\l"
 	.string "like myself, heh...\p"
-	.string "...$"
-
-Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_13:
-# 116 "data/maps/Westlock_Library_Inside/scripts.pory"
+	.string "...\n"
 	.string "I was not expecting your arrival,\l"
 	.string "but...even chaotic events can be\l"
 	.string "fortuitous, yes, yes...\p"

@@ -18,11 +18,11 @@ script PlayerHouse_Inside_Dinner {
     showobjectat(LOCALID_GRANDMOTHER, MAP_PLAYER_HOUSE_INSIDE)
     fadescreen(FADE_FROM_BLACK)
 
-    msgbox("I made your favorite food,\nso I hope you're hungry!\pNow, tell me about your day.", MSGBOX_DEFAULT)
+    msgbox("I made your favorite food, so I hope\nyou're hungry!\pNow, tell me about your day.", MSGBOX_DEFAULT)
     msgbox("...\p...\pYou found a what?\p...\p...\pYou found a Pokemon?\pLet me see...\p...\pIt suits you dear child.\pHmmmm I wonder...", MSGBOX_DEFAULT)
     msgbox("I think you should go and see\nProfessor Larch, he's an old friend.\pIf he's not at his lab he'll be in\nWestlock Village.\npast Route 1.", MSGBOX_DEFAULT)
-    msgbox("He'll be able to tell you\nmore about Pokemon.\pBe careful in the tall grass,\nwild pokemon are sure to jump out at you!", MSGBOX_DEFAULT)
-    msgbox("Come and see me when you've\nspoken to the Professor, and please,\pdo be careful dear.", MSGBOX_DEFAULT)
+    msgbox("He'll be able to tell you more about\nPokemon.\pBe careful in the tall grass,\nwild pokemon are sure to jump out at you!", MSGBOX_DEFAULT)
+    msgbox("Come and see me when you've spoken to\nthe Professor, and please,\pdo be careful dear.", MSGBOX_DEFAULT)
 
     setvar(VAR_ALDERBROOK_TOWN_STATE, 2)
     setvar(VAR_ROUTE1_STATE, 3)
