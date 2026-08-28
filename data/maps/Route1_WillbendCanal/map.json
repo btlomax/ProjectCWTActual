@@ -147,6 +147,24 @@
     },
     {
       "type": "trigger",
+      "x": 9,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_ALDERBROOK_TOWN_STATE",
+      "var_value": "3",
+      "script": "Route1_EventScript_TurnAround"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_ALDERBROOK_TOWN_STATE",
+      "var_value": "3",
+      "script": "Route1_EventScript_TurnAround"
+    },
+    {
+      "type": "trigger",
       "x": 12,
       "y": 10,
       "elevation": 0,

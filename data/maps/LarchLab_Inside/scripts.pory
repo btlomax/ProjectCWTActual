@@ -20,7 +20,7 @@ script LarchLab_Inside_MapScripts_ProfessorLarch {
 
     if(flag(FLAG_SYS_POKEDEX_GET))
     {
-        msgbox("", MSGBOX_DEFAULT)
+        msgbox("Good luck on your journey, {PLAYER}.", MSGBOX_DEFAULT)
         release
         end
     }
@@ -81,6 +81,8 @@ script LarchLab_Inside_MapScripts_ProfessorLarch {
         "cross paths.\p"
         "She will know what I mean.\p",
     MSGBOX_DEFAULT)
+
+    setvar(VAR_ALDERBROOK_TOWN_STATE, 3)
    
     release
     end

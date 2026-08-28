@@ -52,6 +52,8 @@ LarchLab_Inside_MapScripts_ProfessorLarch::
 # 77 "data/maps/LarchLab_Inside/scripts.pory"
 	msgbox LarchLab_Inside_MapScripts_ProfessorLarch_Text_6, MSGBOX_DEFAULT
 # 85 "data/maps/LarchLab_Inside/scripts.pory"
+	setvar VAR_ALDERBROOK_TOWN_STATE, 3
+# 87 "data/maps/LarchLab_Inside/scripts.pory"
 	release
 	end
 
@@ -64,45 +66,45 @@ LarchLab_Inside_MapScripts_ProfessorLarch_2:
 
 
 LarchLab_Inside_MapScripts_WallNote::
-# 90 "data/maps/LarchLab_Inside/scripts.pory"
+# 92 "data/maps/LarchLab_Inside/scripts.pory"
 	msgbox LarchLab_Inside_MapScripts_WallNote_Text_0, MSGBOX_SIGN
 	end
 
 
 LarchLab_Inside_MapScripts_ProfessorAide::
-# 95 "data/maps/LarchLab_Inside/scripts.pory"
+# 97 "data/maps/LarchLab_Inside/scripts.pory"
 	lock
-# 96 "data/maps/LarchLab_Inside/scripts.pory"
-	faceplayer
 # 98 "data/maps/LarchLab_Inside/scripts.pory"
+	faceplayer
+# 100 "data/maps/LarchLab_Inside/scripts.pory"
 	compare VAR_WESTLOCK_LIBRARY_STATE, 0
 	goto_if_eq LarchLab_Inside_MapScripts_ProfessorAide_2
-# 112 "data/maps/LarchLab_Inside/scripts.pory"
+# 114 "data/maps/LarchLab_Inside/scripts.pory"
 	msgbox LarchLab_Inside_MapScripts_ProfessorAide_Text_3
 LarchLab_Inside_MapScripts_ProfessorAide_1:
-# 120 "data/maps/LarchLab_Inside/scripts.pory"
+# 122 "data/maps/LarchLab_Inside/scripts.pory"
 	release
 	end
 
 LarchLab_Inside_MapScripts_ProfessorAide_2:
-# 100 "data/maps/LarchLab_Inside/scripts.pory"
+# 102 "data/maps/LarchLab_Inside/scripts.pory"
 	msgbox LarchLab_Inside_MapScripts_ProfessorAide_Text_0, MSGBOX_YESNO
-# 101 "data/maps/LarchLab_Inside/scripts.pory"
+# 103 "data/maps/LarchLab_Inside/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LarchLab_Inside_MapScripts_ProfessorAide_5
-# 107 "data/maps/LarchLab_Inside/scripts.pory"
+# 109 "data/maps/LarchLab_Inside/scripts.pory"
 	msgbox LarchLab_Inside_MapScripts_ProfessorAide_Text_2, MSGBOX_DEFAULT
 	goto LarchLab_Inside_MapScripts_ProfessorAide_1
 
 LarchLab_Inside_MapScripts_ProfessorAide_5:
-# 103 "data/maps/LarchLab_Inside/scripts.pory"
+# 105 "data/maps/LarchLab_Inside/scripts.pory"
 	msgbox LarchLab_Inside_MapScripts_ProfessorAide_Text_1, MSGBOX_DEFAULT
 	goto LarchLab_Inside_MapScripts_ProfessorAide_1
 
 
 LarchLab_Inside_MapScripts_ProfessorLarch_Text_0:
 # 23 "data/maps/LarchLab_Inside/scripts.pory"
-	.string "$"
+	.string "Good luck on your journey, {PLAYER}.$"
 
 LarchLab_Inside_MapScripts_ProfessorLarch_Text_1:
 # 29 "data/maps/LarchLab_Inside/scripts.pory"
@@ -156,28 +158,28 @@ LarchLab_Inside_MapScripts_ProfessorLarch_Text_6:
 # 78 "data/maps/LarchLab_Inside/scripts.pory"
 	.string "Now, go and see your grandmother.\p"
 	.string "Tell Rhona that... hmm.\p"
-	.string "Tell her the sun and the moon will\n"
-	.string "soon cross paths.\p"
+	.string "Tell her the sun and the moon will soon\n"
+	.string "cross paths.\p"
 	.string "She will know what I mean.\p$"
 
 LarchLab_Inside_MapScripts_WallNote_Text_0:
-# 90 "data/maps/LarchLab_Inside/scripts.pory"
+# 92 "data/maps/LarchLab_Inside/scripts.pory"
 	.string "Gone to Westlock Village - AOPL$"
 
 LarchLab_Inside_MapScripts_ProfessorAide_Text_0:
-# 100 "data/maps/LarchLab_Inside/scripts.pory"
+# 102 "data/maps/LarchLab_Inside/scripts.pory"
 	.string "Are you looking for the Professor?$"
 
 LarchLab_Inside_MapScripts_ProfessorAide_Text_1:
-# 103 "data/maps/LarchLab_Inside/scripts.pory"
+# 105 "data/maps/LarchLab_Inside/scripts.pory"
 	.string "I'm afraid he's not here right now.\pHe has been acting a bit strange recently...\nI'm not sure when he'll be back.$"
 
 LarchLab_Inside_MapScripts_ProfessorAide_Text_2:
-# 107 "data/maps/LarchLab_Inside/scripts.pory"
+# 109 "data/maps/LarchLab_Inside/scripts.pory"
 	.string "Ah, well enjoy your visit to the lab then!$"
 
 LarchLab_Inside_MapScripts_ProfessorAide_Text_3:
-# 113 "data/maps/LarchLab_Inside/scripts.pory"
+# 115 "data/maps/LarchLab_Inside/scripts.pory"
 	.string "Hello, I'm the Professor's aide!\p"
 	.string "I mostly help with research, but he\n"
 	.string "has been sending me on a lot of errands\l"

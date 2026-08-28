@@ -20,7 +20,7 @@ script PlayerHouse_Inside_Dinner {
 
     msgbox("I made your favorite food, so I hope\nyou're hungry!\pNow, tell me about your day.", MSGBOX_DEFAULT)
     msgbox("...\p...\pYou found a what?\p...\p...\pYou found a Pokemon?\pLet me see...\p...\pIt suits you dear child.\pHmmmm I wonder...", MSGBOX_DEFAULT)
-    msgbox("I think you should go and see\nProfessor Larch, he's an old friend.\pIf he's not at his lab he'll be in\nWestlock Village.\npast Route 1.", MSGBOX_DEFAULT)
+    msgbox("I think you should go and see\nProfessor Larch, he's an old friend.\pIf he's not at his lab he'll be in\nWestlock Village library.\npast Route 1.", MSGBOX_DEFAULT)
     msgbox("He'll be able to tell you more about\nPokemon.\pBe careful in the tall grass,\nwild pokemon are sure to jump out at you!", MSGBOX_DEFAULT)
     msgbox("Come and see me when you've spoken to\nthe Professor, and please,\pdo be careful dear.", MSGBOX_DEFAULT)
 
@@ -43,8 +43,64 @@ script PlayerHouse_Inside_GrandmotherNPC {
         case 2:
             msgbox("{PLAYER}, go and see Professor Larch in Westlock Village.\pI'm sure he will want to see your new Pokemon!", MSGBOX_DEFAULT)
             break
+        case 3:
+            goto(PlayerHouse_Inside_GrandmotherAfterPokedex)
         default:
-            msgbox("You know, I used to be quite the Pokemon trainer in my youth!", MSGBOX_DEFAULT)
+            goto(PlayerHouse_Inside_GrandmotherOfferRest)
+    }
+
+    releaseall
+    end
+}
+
+script PlayerHouse_Inside_GrandmotherAfterPokedex {
+    msgbox("{PLAYER}, you're back, good!", MSGBOX_DEFAULT)
+    msgbox("...\p", MSGBOX_DEFAULT)
+
+    msgbox(
+    "The sun and moon will cross paths...\p"
+    "Larch said that to you?\p"
+    "...\p"
+    "Come here, {PLAYER}. Let me have a look\n"
+    "at you.\p"
+    "Hm.\p"
+    "Perhaps I am only seeing what I want to\n"
+    "see after all these years.\p"
+    "Still... there is a strength in you.\n"
+    "A feeling that you are meant to go\l"
+    "farther than this little town.\p"
+    "...\p"
+    "You should take on the League challenge.\n"
+    "See the region. Meet its people.\p"
+    "Learn what kind of trainer you want to be.\p"
+    "And if Professor Larch asks you to do\n"
+    "something strange... trust your instincts.",
+    MSGBOX_DEFAULT)
+
+    msgbox("Before you leave, I have something\nfor you.", MSGBOX_DEFAULT)
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox("{PLAYER} received the RUNNING SHOES!", MSGBOX_DEFAULT)
+    waitfanfare
+    setflag(FLAG_RECEIVED_RUNNING_SHOES)
+    msgbox("These will allow you to get around quicker.\nHold B to run!\p", MSGBOX_DEFAULT)
+    msgbox("Take care of yourself my dear, and\nremember to come back and see me.", MSGBOX_DEFAULT)
+
+    setvar(VAR_ALDERBROOK_TOWN_STATE, 4)
+    releaseall
+    end
+}
+
+script PlayerHouse_Inside_GrandmotherOfferRest {
+    msgbox("Hello dear, do you and your POKéMON\nneed a rest?", MSGBOX_YESNO)
+
+    if (var(VAR_RESULT) == YES) {
+        msgbox("Of course. Make yourselves at home.", MSGBOX_DEFAULT)
+        special(HealPlayerParty)
+        msgbox("There we are. You and your POKéMON\nlook much better already.", MSGBOX_DEFAULT)
+    }
+    else {
+        msgbox("All right, dear. Take care of\n"
+               "yourselves out there.", MSGBOX_DEFAULT)
     }
 
     releaseall
