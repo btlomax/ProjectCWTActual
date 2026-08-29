@@ -1091,6 +1091,15 @@ enum NationalDexOrder
 #endif
 
 #define FOREACH_SPECIES_IN_HOENN_DEX_ORDER(F) \
+    F(HORSEA) \
+    F(SEADRA) \
+    F(KINGDRA) \
+    F(GASTLY) \
+    F(HAUNTER) \
+    F(GENGAR) \
+    F(ARON) \
+    F(LAIRON) \
+    F(AGGRON) \
     F(PIDGEY) \
     F(PIDGEOTTO) \
     F(PIDGEOT) \
@@ -1102,6 +1111,11 @@ enum NationalDexOrder
     HOENN_DEX_IF(P_GEN_8_POKEMON, F(ROOKIDEE)) \
     HOENN_DEX_IF(P_GEN_8_POKEMON, F(CORVISQUIRE)) \
     HOENN_DEX_IF(P_GEN_8_POKEMON, F(CORVIKNIGHT)) \
+    F(FLABEBE) \
+    HOENN_DEX_IF(P_GEN_6_POKEMON, F(FLOETTE)) \
+    HOENN_DEX_IF(P_GEN_6_POKEMON, F(FLORGES)) \
+    F(GROWLITHE) \
+    F(ARCANINE) \
     F(ZIGZAGOON) \
     F(LINOONE) \
     HOENN_DEX_IF(P_GALARIAN_FORMS, F(OBSTAGOON)) \
@@ -1134,9 +1148,6 @@ enum NationalDexOrder
     F(TENTACRUEL) \
     F(SABLEYE) \
     F(MAWILE) \
-    F(ARON) \
-    F(LAIRON) \
-    F(AGGRON) \
     F(MACHOP) \
     F(MACHOKE) \
     F(MACHAMP) \
@@ -1159,8 +1170,6 @@ enum NationalDexOrder
     HOENN_DEX_IF(P_GEN_4_CROSS_EVOS, F(MAGNEZONE)) \
     F(VOLTORB) \
     F(ELECTRODE) \
-    F(VOLBEAT) \
-    F(ILLUMISE) \
     F(ODDISH) \
     F(GLOOM) \
     F(VILEPLUME) \
@@ -1204,8 +1213,6 @@ enum NationalDexOrder
     HOENN_DEX_IF(P_GEN_5_POKEMON, F(KROOKODILE)) \
     F(VULPIX) \
     F(NINETALES) \
-    F(GROWLITHE) \
-    F(ARCANINE) \
     F(SKARMORY) \
     F(TRAPINCH) \
     F(VIBRAVA) \
@@ -1241,16 +1248,10 @@ enum NationalDexOrder
     F(IGGLYBUFF) \
     F(JIGGLYPUFF) \
     F(WIGGLYTUFF) \
-    F(FLABEBE) \
-    HOENN_DEX_IF(P_GEN_6_POKEMON, F(FLOETTE)) \
-    HOENN_DEX_IF(P_GEN_6_POKEMON, F(FLORGES)) \
     F(FEEBAS) \
     F(MILOTIC) \
     HOENN_DEX_IF(P_GEN_4_CROSS_EVOS, F(DRIFLOON)) \
     HOENN_DEX_IF(P_GEN_4_CROSS_EVOS, F(DRIFBLIM)) \
-    F(GASTLY) \
-    F(HAUNTER) \
-    F(GENGAR) \
     HOENN_DEX_IF(P_GEN_4_CROSS_EVOS, F(DUSKNOIR)) \
     F(TROPIUS) \
     F(ABSOL) \
@@ -1296,9 +1297,6 @@ enum NationalDexOrder
     F(SPHEAL) \
     F(SEALEO) \
     F(WALREIN) \
-    F(HORSEA) \
-    F(SEADRA) \
-    F(KINGDRA) \
     HOENN_DEX_IF(P_GEN_5_POKEMON, F(AXEW)) \
     HOENN_DEX_IF(P_GEN_5_POKEMON, F(FRAXURE)) \
     HOENN_DEX_IF(P_GEN_5_POKEMON, F(HAXORUS)) \
@@ -1318,7 +1316,12 @@ enum NationalDexOrder
     F(METAGROSS) \
     F(PORYGON) \
     HOENN_DEX_IF(P_GEN_2_CROSS_EVOS, F(PORYGON2)) \
-    HOENN_DEX_IF(P_GEN_4_CROSS_EVOS, F(PORYGON_Z))
+    HOENN_DEX_IF(P_GEN_4_CROSS_EVOS, F(PORYGON_Z)) \
+    F(HO_OH) \
+    F(LUGIA) \
+    F(REGIROCK) \
+    F(REGICE) \
+    F(REGISTEEL)
 
 // Hoenn Pokédex order
 enum HoennDexOrder
