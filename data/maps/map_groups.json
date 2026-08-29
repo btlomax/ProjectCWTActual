@@ -37,7 +37,8 @@
     "gMapGroup_ProjectCWT",
     "gMapGroup_Route1_WillowBendCanal",
     "gMapGroup_WestlockVillage",
-    "gMapGroup_Route2_Meadowvale_Farm"
+    "gMapGroup_Route2_Meadowvale_Farm",
+    "gMapGroup_Weirford_Forest"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -643,5 +644,8 @@
   ],
   "gMapGroup_Route2_Meadowvale_Farm": [
     "Route2_Meadowvale_Farm"
+  ],
+  "gMapGroup_Weirford_Forest": [
+    "Weirford_Forest"
   ]
 }

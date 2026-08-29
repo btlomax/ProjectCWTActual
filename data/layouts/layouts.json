@@ -9428,11 +9428,21 @@
       "id": "LAYOUT_ROUTE2_MEADOWVALE_FARM",
       "name": "Route2_Meadowvale_Farm_Layout",
       "width": 36,
-      "height": 60,
+      "height": 66,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route2_Meadowvale_Farm/border.bin",
       "blockdata_filepath": "data/layouts/Route2_Meadowvale_Farm/map.bin"
+    },
+    {
+      "id": "LAYOUT_WEIRFORD_FOREST",
+      "name": "Weirford_Forest_Layout",
+      "width": 40,
+      "height": 44,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/Weirford_Forest/border.bin",
+      "blockdata_filepath": "data/layouts/Weirford_Forest/map.bin"
     }
   ]
 }
