@@ -1052,6 +1052,7 @@
 #define FLAG_AGREE_WITH_PROF_LIBRARY                                0x3E9
 #define FLAG_HIDE_PROF_LARCH                                        0x3EA
 #define FLAG_HIDE_PROFESSOR_AIDE                                    0x3EB
+#define FLAG_PLAYER_WOKE_UP                                         0x3EC
 
 // Item Ball Flags
 #define FLAG_ITEM_ROUTE_102_POTION                                  0x3E8

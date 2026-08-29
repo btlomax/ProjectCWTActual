@@ -536,7 +536,7 @@ Route1_EventScript_StarterDrop_Text_5:
 
 Route1_EventScript_StarterDrop_Text_6:
 # 109 "data/maps/Route1_WillbendCanal/scripts.pory"
-	.string "Dinner will be ready soon, so don't be late!$"
+	.string "Time to go home, your grandmother\nis waiting.$"
 
 Route1_EventScript_TurnAround_Text_0:
 # 123 "data/maps/Route1_WillbendCanal/scripts.pory"

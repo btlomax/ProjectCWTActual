@@ -57,16 +57,16 @@ PlayerHouse_Inside_GrandmotherNPC::
 	switch VAR_ALDERBROOK_TOWN_STATE
 # 37 "data/maps/PlayerHouse_Inside/scripts.pory"
 	case 0, PlayerHouse_Inside_GrandmotherNPC_3
-# 40 "data/maps/PlayerHouse_Inside/scripts.pory"
-	case 1, PlayerHouse_Inside_GrandmotherNPC_4
-# 43 "data/maps/PlayerHouse_Inside/scripts.pory"
-	case 2, PlayerHouse_Inside_GrandmotherNPC_5
-# 46 "data/maps/PlayerHouse_Inside/scripts.pory"
-	case 3, PlayerHouse_Inside_GrandmotherNPC_6
 # 49 "data/maps/PlayerHouse_Inside/scripts.pory"
+	case 1, PlayerHouse_Inside_GrandmotherNPC_4
+# 52 "data/maps/PlayerHouse_Inside/scripts.pory"
+	case 2, PlayerHouse_Inside_GrandmotherNPC_5
+# 55 "data/maps/PlayerHouse_Inside/scripts.pory"
+	case 3, PlayerHouse_Inside_GrandmotherNPC_6
+# 58 "data/maps/PlayerHouse_Inside/scripts.pory"
 	goto PlayerHouse_Inside_GrandmotherOfferRest
 PlayerHouse_Inside_GrandmotherNPC_1:
-# 52 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 61 "data/maps/PlayerHouse_Inside/scripts.pory"
 	releaseall
 	end
 
@@ -76,83 +76,83 @@ PlayerHouse_Inside_GrandmotherNPC_3:
 	goto PlayerHouse_Inside_GrandmotherNPC_1
 
 PlayerHouse_Inside_GrandmotherNPC_4:
-# 41 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 50 "data/maps/PlayerHouse_Inside/scripts.pory"
 	goto PlayerHouse_Inside_Dinner
 	goto PlayerHouse_Inside_GrandmotherNPC_1
 
 PlayerHouse_Inside_GrandmotherNPC_5:
-# 44 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 53 "data/maps/PlayerHouse_Inside/scripts.pory"
 	msgbox PlayerHouse_Inside_GrandmotherNPC_Text_1, MSGBOX_DEFAULT
 	goto PlayerHouse_Inside_GrandmotherNPC_1
 
 PlayerHouse_Inside_GrandmotherNPC_6:
-# 47 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 56 "data/maps/PlayerHouse_Inside/scripts.pory"
 	goto PlayerHouse_Inside_GrandmotherAfterPokedex
 	goto PlayerHouse_Inside_GrandmotherNPC_1
 
 
 PlayerHouse_Inside_GrandmotherAfterPokedex::
-# 57 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 66 "data/maps/PlayerHouse_Inside/scripts.pory"
 	msgbox PlayerHouse_Inside_GrandmotherAfterPokedex_Text_0, MSGBOX_DEFAULT
-# 58 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 67 "data/maps/PlayerHouse_Inside/scripts.pory"
 	msgbox PlayerHouse_Inside_GrandmotherAfterPokedex_Text_1, MSGBOX_DEFAULT
-# 60 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 69 "data/maps/PlayerHouse_Inside/scripts.pory"
 	msgbox PlayerHouse_Inside_GrandmotherAfterPokedex_Text_2, MSGBOX_DEFAULT
-# 80 "data/maps/PlayerHouse_Inside/scripts.pory"
-	msgbox PlayerHouse_Inside_GrandmotherAfterPokedex_Text_3, MSGBOX_DEFAULT
-# 81 "data/maps/PlayerHouse_Inside/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 82 "data/maps/PlayerHouse_Inside/scripts.pory"
-	msgbox PlayerHouse_Inside_GrandmotherAfterPokedex_Text_4, MSGBOX_DEFAULT
-# 83 "data/maps/PlayerHouse_Inside/scripts.pory"
-	waitfanfare
-# 84 "data/maps/PlayerHouse_Inside/scripts.pory"
-	setflag FLAG_RECEIVED_RUNNING_SHOES
-# 85 "data/maps/PlayerHouse_Inside/scripts.pory"
-	msgbox PlayerHouse_Inside_GrandmotherAfterPokedex_Text_5, MSGBOX_DEFAULT
-# 86 "data/maps/PlayerHouse_Inside/scripts.pory"
-	msgbox PlayerHouse_Inside_GrandmotherAfterPokedex_Text_6, MSGBOX_DEFAULT
-# 88 "data/maps/PlayerHouse_Inside/scripts.pory"
-	setvar VAR_ALDERBROOK_TOWN_STATE, 4
 # 89 "data/maps/PlayerHouse_Inside/scripts.pory"
+	msgbox PlayerHouse_Inside_GrandmotherAfterPokedex_Text_3, MSGBOX_DEFAULT
+# 90 "data/maps/PlayerHouse_Inside/scripts.pory"
+	playfanfare MUS_OBTAIN_ITEM
+# 91 "data/maps/PlayerHouse_Inside/scripts.pory"
+	msgbox PlayerHouse_Inside_GrandmotherAfterPokedex_Text_4, MSGBOX_DEFAULT
+# 92 "data/maps/PlayerHouse_Inside/scripts.pory"
+	waitfanfare
+# 93 "data/maps/PlayerHouse_Inside/scripts.pory"
+	setflag FLAG_RECEIVED_RUNNING_SHOES
+# 94 "data/maps/PlayerHouse_Inside/scripts.pory"
+	msgbox PlayerHouse_Inside_GrandmotherAfterPokedex_Text_5, MSGBOX_DEFAULT
+# 95 "data/maps/PlayerHouse_Inside/scripts.pory"
+	msgbox PlayerHouse_Inside_GrandmotherAfterPokedex_Text_6, MSGBOX_DEFAULT
+# 97 "data/maps/PlayerHouse_Inside/scripts.pory"
+	setvar VAR_ALDERBROOK_TOWN_STATE, 4
+# 98 "data/maps/PlayerHouse_Inside/scripts.pory"
 	releaseall
 	end
 
 
 PlayerHouse_Inside_GrandmotherOfferRest::
-# 94 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 103 "data/maps/PlayerHouse_Inside/scripts.pory"
 	msgbox PlayerHouse_Inside_GrandmotherOfferRest_Text_0, MSGBOX_YESNO
-# 96 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 105 "data/maps/PlayerHouse_Inside/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq PlayerHouse_Inside_GrandmotherOfferRest_2
-# 102 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 111 "data/maps/PlayerHouse_Inside/scripts.pory"
 	msgbox PlayerHouse_Inside_GrandmotherOfferRest_Text_3, MSGBOX_DEFAULT
 PlayerHouse_Inside_GrandmotherOfferRest_1:
-# 106 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 115 "data/maps/PlayerHouse_Inside/scripts.pory"
 	releaseall
 	end
 
 PlayerHouse_Inside_GrandmotherOfferRest_2:
-# 97 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 106 "data/maps/PlayerHouse_Inside/scripts.pory"
 	msgbox PlayerHouse_Inside_GrandmotherOfferRest_Text_1, MSGBOX_DEFAULT
-# 98 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 107 "data/maps/PlayerHouse_Inside/scripts.pory"
 	special HealPlayerParty
-# 99 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 108 "data/maps/PlayerHouse_Inside/scripts.pory"
 	msgbox PlayerHouse_Inside_GrandmotherOfferRest_Text_2, MSGBOX_DEFAULT
 	goto PlayerHouse_Inside_GrandmotherOfferRest_1
 
 
 PlayerHouse_Inside_Dinner_Text_0:
 # 6 "data/maps/PlayerHouse_Inside/scripts.pory"
-	.string "{PLAYER}, just in time for dinner!\pCome and sit down.$"
+	.string "{PLAYER}, just in time!\pCome and sit down.$"
 
 PlayerHouse_Inside_Dinner_Text_1:
 # 21 "data/maps/PlayerHouse_Inside/scripts.pory"
-	.string "I made your favorite food, so I hope\nyou're hungry!\pNow, tell me about your day.$"
+	.string "Happy birthday {PLAYER}!\nMake a wish!\pNow, what have you been up to?$"
 
 PlayerHouse_Inside_Dinner_Text_2:
 # 22 "data/maps/PlayerHouse_Inside/scripts.pory"
-	.string "...\p...\pYou found a what?\p...\p...\pYou found a Pokemon?\pLet me see...\p...\pIt suits you dear child.\pHmmmm I wonder...$"
+	.string "...\p...\pYou found a what?\p...\p...\pYou found a Pokemon?\pLet me see...\p...\pA surprise gift on your\nbirthday no less...\pHmmmm I wonder...$"
 
 PlayerHouse_Inside_Dinner_Text_3:
 # 23 "data/maps/PlayerHouse_Inside/scripts.pory"
@@ -167,23 +167,30 @@ PlayerHouse_Inside_Dinner_Text_5:
 	.string "Come and see me when you've spoken to\nthe Professor, and please,\pdo be careful dear.$"
 
 PlayerHouse_Inside_GrandmotherNPC_Text_0:
-# 38 "data/maps/PlayerHouse_Inside/scripts.pory"
-	.string "{PLAYER}, you're back early!\pYour dinner won't be ready for a while.$"
+# 39 "data/maps/PlayerHouse_Inside/scripts.pory"
+	.string "You're finally up! I was starting to think\n"
+	.string "you'd sleep through your own birthday.\p"
+	.string "Happy birthday {PLAYER}!\p"
+	.string "I'm just adding the finishing touches\n"
+	.string "to your birthday cake, no peeking!\p"
+	.string "Why don't you go and get some fresh air\n"
+	.string "whilst I finish up in here.\p"
+	.string "Just don't wander too far, okay?$"
 
 PlayerHouse_Inside_GrandmotherNPC_Text_1:
-# 44 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 53 "data/maps/PlayerHouse_Inside/scripts.pory"
 	.string "{PLAYER}, go and see Professor Larch in Westlock Village.\pI'm sure he will want to see your new Pokemon!$"
 
 PlayerHouse_Inside_GrandmotherAfterPokedex_Text_0:
-# 57 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 66 "data/maps/PlayerHouse_Inside/scripts.pory"
 	.string "{PLAYER}, you're back, good!$"
 
 PlayerHouse_Inside_GrandmotherAfterPokedex_Text_1:
-# 58 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 67 "data/maps/PlayerHouse_Inside/scripts.pory"
 	.string "...\p$"
 
 PlayerHouse_Inside_GrandmotherAfterPokedex_Text_2:
-# 61 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 70 "data/maps/PlayerHouse_Inside/scripts.pory"
 	.string "The sun and moon will cross paths...\p"
 	.string "Larch said that to you?\p"
 	.string "...\p"
@@ -203,34 +210,34 @@ PlayerHouse_Inside_GrandmotherAfterPokedex_Text_2:
 	.string "something strange... trust your instincts.$"
 
 PlayerHouse_Inside_GrandmotherAfterPokedex_Text_3:
-# 80 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 89 "data/maps/PlayerHouse_Inside/scripts.pory"
 	.string "Before you leave, I have something\nfor you.$"
 
 PlayerHouse_Inside_GrandmotherAfterPokedex_Text_4:
-# 82 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 91 "data/maps/PlayerHouse_Inside/scripts.pory"
 	.string "{PLAYER} received the RUNNING SHOES!$"
 
 PlayerHouse_Inside_GrandmotherAfterPokedex_Text_5:
-# 85 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 94 "data/maps/PlayerHouse_Inside/scripts.pory"
 	.string "These will allow you to get around quicker.\nHold B to run!\p$"
 
 PlayerHouse_Inside_GrandmotherAfterPokedex_Text_6:
-# 86 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 95 "data/maps/PlayerHouse_Inside/scripts.pory"
 	.string "Take care of yourself my dear, and\nremember to come back and see me.$"
 
 PlayerHouse_Inside_GrandmotherOfferRest_Text_0:
-# 94 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 103 "data/maps/PlayerHouse_Inside/scripts.pory"
 	.string "Hello dear, do you and your POKéMON\nneed a rest?$"
 
 PlayerHouse_Inside_GrandmotherOfferRest_Text_1:
-# 97 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 106 "data/maps/PlayerHouse_Inside/scripts.pory"
 	.string "Of course. Make yourselves at home.$"
 
 PlayerHouse_Inside_GrandmotherOfferRest_Text_2:
-# 99 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 108 "data/maps/PlayerHouse_Inside/scripts.pory"
 	.string "There we are. You and your POKéMON\nlook much better already.$"
 
 PlayerHouse_Inside_GrandmotherOfferRest_Text_3:
-# 102 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 111 "data/maps/PlayerHouse_Inside/scripts.pory"
 	.string "All right, dear. Take care of\n"
 	.string "yourselves out there.$"

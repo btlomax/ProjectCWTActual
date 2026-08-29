@@ -3,7 +3,7 @@ mapscripts PlayerHouse_Inside_MapScripts {}
 script PlayerHouse_Inside_Dinner {
     lockall
     faceplayer
-    msgbox("{PLAYER}, just in time for dinner!\pCome and sit down.", MSGBOX_DEFAULT)
+    msgbox("{PLAYER}, just in time!\pCome and sit down.", MSGBOX_DEFAULT)
 
     hideobjectat(OBJ_EVENT_ID_PLAYER, MAP_PLAYER_HOUSE_INSIDE)
     hideobjectat(LOCALID_GRANDMOTHER, MAP_PLAYER_HOUSE_INSIDE)
@@ -18,8 +18,8 @@ script PlayerHouse_Inside_Dinner {
     showobjectat(LOCALID_GRANDMOTHER, MAP_PLAYER_HOUSE_INSIDE)
     fadescreen(FADE_FROM_BLACK)
 
-    msgbox("I made your favorite food, so I hope\nyou're hungry!\pNow, tell me about your day.", MSGBOX_DEFAULT)
-    msgbox("...\p...\pYou found a what?\p...\p...\pYou found a Pokemon?\pLet me see...\p...\pIt suits you dear child.\pHmmmm I wonder...", MSGBOX_DEFAULT)
+    msgbox("Happy birthday {PLAYER}!\nMake a wish!\pNow, what have you been up to?", MSGBOX_DEFAULT)
+    msgbox("...\p...\pYou found a what?\p...\p...\pYou found a Pokemon?\pLet me see...\p...\pA surprise gift on your\nbirthday no less...\pHmmmm I wonder...", MSGBOX_DEFAULT)
     msgbox("I think you should go and see\nProfessor Larch, he's an old friend.\pIf he's not at his lab he'll be in\nWestlock Village library.\npast Route 1.", MSGBOX_DEFAULT)
     msgbox("He'll be able to tell you more about\nPokemon.\pBe careful in the tall grass,\nwild pokemon are sure to jump out at you!", MSGBOX_DEFAULT)
     msgbox("Come and see me when you've spoken to\nthe Professor, and please,\pdo be careful dear.", MSGBOX_DEFAULT)
@@ -35,7 +35,16 @@ script PlayerHouse_Inside_GrandmotherNPC {
     faceplayer
     switch (var(VAR_ALDERBROOK_TOWN_STATE)) {
         case 0:
-            msgbox("{PLAYER}, you're back early!\pYour dinner won't be ready for a while.", MSGBOX_DEFAULT)
+            msgbox(
+                "You're finally up! I was starting to think\n"
+                "you'd sleep through your own birthday.\p"
+                "Happy birthday {PLAYER}!\p"
+                "I'm just adding the finishing touches\n"
+                "to your birthday cake, no peeking!\p"
+                "Why don't you go and get some fresh air\n"
+                "whilst I finish up in here.\p"
+                "Just don't wander too far, okay?",
+                MSGBOX_DEFAULT)
             break
         case 1:
             goto(PlayerHouse_Inside_Dinner)

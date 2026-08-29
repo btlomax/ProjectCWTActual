@@ -1,1 +1,23 @@
-mapscripts PlayerHouse_Inside_Upstairs_MapScripts {}
+mapscripts PlayerHouse_Inside_Upstairs_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: PlayerHouse_Inside_Upstairs_OnFrame
+    ]
+}
+
+script PlayerHouse_Inside_Upstairs_OnFrame {
+    if (!flag(FLAG_PLAYER_WOKE_UP)) {
+        goto(PlayerHouse_Inside_WakeUp)
+    }
+
+    setvar(VAR_TEMP_0, 1)
+    end
+}
+
+script PlayerHouse_Inside_WakeUp {
+    lock
+    msgbox("It's your birthday…\p", MSGBOX_DEFAULT)
+    setflag(FLAG_PLAYER_WOKE_UP)
+    setvar(VAR_TEMP_0, 1)
+    release
+    end
+}
