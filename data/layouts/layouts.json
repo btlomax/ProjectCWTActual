@@ -9387,7 +9387,7 @@
     {
       "id": "LAYOUT_WESTLOCK_VILLAGE",
       "name": "Westlock_Village_Layout",
-      "width": 30,
+      "width": 36,
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
@@ -9423,6 +9423,16 @@
       "secondary_tileset": "gTileset_Shop",
       "border_filepath": "data/layouts/Westlock_PokeMart/border.bin",
       "blockdata_filepath": "data/layouts/Westlock_PokeMart/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE2_MEADOWVALE_FARM",
+      "name": "Route2_Meadowvale_Farm_Layout",
+      "width": 36,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route2_Meadowvale_Farm/border.bin",
+      "blockdata_filepath": "data/layouts/Route2_Meadowvale_Farm/map.bin"
     }
   ]
 }

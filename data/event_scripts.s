@@ -1331,3 +1331,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Westlock_Library_Inside/scripts.inc"
 	.include "data/maps/Westlock_PokeCentre/scripts.inc"
 	.include "data/maps/Westlock_PokeMart/scripts.inc"
+
+	.include "data/maps/Route2_Meadowvale_Farm/scripts.inc"

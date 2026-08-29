@@ -17,6 +17,11 @@
       "map": "MAP_ROUTE1_WILLBEND_CANAL",
       "offset": -26,
       "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE2_MEADOWVALE_FARM",
+      "offset": -40,
+      "direction": "right"
     }
   ],
   "object_events": [

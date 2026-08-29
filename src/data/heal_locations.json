@@ -369,6 +369,12 @@
       "map": "MAP_ROUTE1_WILLBEND_CANAL",
       "x": 16,
       "y": 10
+    },
+    {
+      "id": "HEAL_LOCATION_PLAYER_HOUSE_INSIDE_UPSTAIRS",
+      "map": "MAP_PLAYER_HOUSE_INSIDE_UPSTAIRS",
+      "x": 4,
+      "y": 4
     }
   ]
 }
