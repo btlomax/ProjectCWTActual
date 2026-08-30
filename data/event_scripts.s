@@ -1335,3 +1335,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Route2_Meadowvale_Farm/scripts.inc"
 
 	.include "data/maps/Weirford_Forest/scripts.inc"
+
+	.include "data/maps/Meadowvale_Farm_Inside/scripts.inc"

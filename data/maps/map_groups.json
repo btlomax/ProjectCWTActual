@@ -643,7 +643,8 @@
     "Westlock_PokeMart"
   ],
   "gMapGroup_Route2_Meadowvale_Farm": [
-    "Route2_Meadowvale_Farm"
+    "Route2_Meadowvale_Farm",
+    "Meadowvale_Farm_Inside"
   ],
   "gMapGroup_Weirford_Forest": [
     "Weirford_Forest"

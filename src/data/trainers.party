@@ -16894,7 +16894,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Poochyena
-Level: 4
+Level: 3
 
 Rattata
 Level: 4
@@ -16910,3 +16910,51 @@ AI: Basic Trainer
 
 Rattata Alola
 Level: 5
+
+=== TRAINER_ROUTE2_MEADOWVALE_JENNY ===
+Name: JENNY
+Class: Farmhand
+Pic: Tuber F
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Basic Trainer
+
+Pidgey
+Level: 4
+
+Oddish
+Level: 4
+
+Lillipup
+Level: 4
+
+=== TRAINER_ROUTE2_MEADOWVALE_LUCY ===
+Name: LUCY
+Class: Farmhand
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+Flabebe
+Level: 6
+
+=== TRAINER_ROUTE2_MEADOWVALEFARM_INSIDE_MAX ===
+Name: MAX
+Class: Farm Champ
+Pic: Cooltrainer M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+Rattata Alola
+Level: 5
+
+Poochyena
+Level: 5
+
+Tauros
+Level: 6

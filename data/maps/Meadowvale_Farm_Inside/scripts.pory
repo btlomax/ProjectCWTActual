@@ -1,0 +1,102 @@
+mapscripts Meadowvale_Farm_Inside_MapScripts {}
+
+script Meadowvale_Farm_Inside_MapScripts_FarmbossMax {
+    lock
+    faceplayer
+
+    if (!flag(FLAG_MEADOWVALE_FARM_MAXINTRODUCTION)) {
+        msgbox(Meadowvale_Farm_Inside_MapScripts_FarmbossMax_Intro, MSGBOX_DEFAULT)
+        setflag(FLAG_MEADOWVALE_FARM_MAXINTRODUCTION)
+    }
+
+    if (var(VAR_ROUTE2_MEADOWVALE_FARM_STATE) < 4) {
+        msgbox(Meadowvale_Farm_Inside_Text_MaxNeedToDefeatChildren, MSGBOX_DEFAULT)
+        release
+        end
+    }
+
+    trainerbattle_single(
+        TRAINER_ROUTE2_MEADOWVALEFARM_INSIDE_MAX,
+        Meadowvale_Farm_Inside_Text_MaxPreBattle,
+        Meadowvale_Farm_Inside_Text_MaxDefeated,
+        Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut
+    )
+
+    msgbox(Meadowvale_Farm_Inside_Text_MaxPostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut {
+    msgbox(
+        "WOOO I'M PUMPED NOW!\n"
+        "I'm gonna work up a sweat in the fields!\p"
+        "Take this HM, my kids can do it\n"
+        "the old fashioned way! HAHAHAHA!\p"
+        MSGBOX_DEFAULT
+    )
+    giveitem(ITEM_HM_CUT)
+    setflag(FLAG_RECEIVED_HM_CUT)
+    msgbox(
+        "{PLAYER} received HM01 CUT!",
+        MSGBOX_DEFAULT
+    )
+    msgbox("You can use CUT to remove small\n"
+        "medium sized trees that block your path.\p"
+        "BUT, you will need the Weirford Gym badge to\n"
+        "use it outside of battle...\p"
+        MSGBOX_DEFAULT
+    )
+    release
+    end
+}
+
+text Meadowvale_Farm_Inside_MapScripts_FarmbossMax_Intro {
+    "Welcome to Meadowvale Farm, where we\n"
+    "grow crops, raise POKéMON, and apparently\n"
+    "collect children.\p"
+    "Turns out 'sowing wild oats' is not\n"
+    "just a farming expression.\p"
+    "FOUR kids!\p"
+    "FOUR!\p"
+    "So what do I do?\n"
+    "I PUT THEM TO WORK!\p"
+    "I have them plow the fields, I have them\n"
+    "weed the crops, feed the animals,\n"
+    "and I have them chase\l"
+    "off trespassers!\p"
+    "They have 'fun' and my farm prospers.\p"
+    "Everyone wins! Mostly me.\p"
+    "Anyway, you need to defeat all FOUR of my\n"
+    "farmhands if you wanna take a shot at\l"
+    "the CHAMP!\p"
+    
+}
+
+text Meadowvale_Farm_Inside_Text_MaxNeedToDefeatChildren {
+    "You need to defeat all FOUR of my farmhands\n"
+    "if you wanna take a shot at the CHAMP!\p"
+}
+
+text Meadowvale_Farm_Inside_Text_MaxPreBattle {
+    "You've beaten all FOUR of them?\n"
+    "...HELL YEAH!\p"
+    "Alright, the CHAMP is here!\n"
+    "Let's goooooo!\p"
+    "Take me down if you can, BUB!\p"
+}
+
+text Meadowvale_Farm_Inside_Text_MaxDefeated {
+    "You beat me?\n"
+    "I can't believe it!\p"
+    "...HELL YEAH!\p"
+    "You've got some BEANS, kid!\n"
+    "You took me down no sweat!"
+}
+
+text Meadowvale_Farm_Inside_Text_MaxPostBattle {
+    "My kids will be all over me for losing now, UH!\n"
+    "They're gonna be behind the plow for a week!\l"
+    "HAHAHAHAHAHA!\p"
+}
+
+

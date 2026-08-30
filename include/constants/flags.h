@@ -1053,6 +1053,7 @@
 #define FLAG_HIDE_PROF_LARCH                                        0x3EA
 #define FLAG_HIDE_PROFESSOR_AIDE                                    0x3EB
 #define FLAG_PLAYER_WOKE_UP                                         0x3EC
+#define FLAG_MEADOWVALE_FARM_MAXINTRODUCTION                        0x3ED
 
 // Item Ball Flags
 #define FLAG_ITEM_ROUTE_102_POTION                                  0x3E8

@@ -9443,6 +9443,16 @@
       "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/Weirford_Forest/border.bin",
       "blockdata_filepath": "data/layouts/Weirford_Forest/map.bin"
+    },
+    {
+      "id": "LAYOUT_MEADOWVALE_FARM_INSIDE",
+      "name": "Meadowvale_Farm_Inside_Layout",
+      "width": 15,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PrettyPetalFlowerShop",
+      "border_filepath": "data/layouts/Meadowvale_Farm_Inside/border.bin",
+      "blockdata_filepath": "data/layouts/Meadowvale_Farm_Inside/map.bin"
     }
   ]
 }

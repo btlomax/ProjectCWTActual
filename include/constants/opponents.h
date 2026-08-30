@@ -861,12 +861,15 @@
 #define TRAINER_MAY_PLACEHOLDER             854
 #define TRAINER_ROUTE2_MEADOWVALE_TOMMY     855
 #define TRAINER_ROUTE2_MEADOWVALE_GEORGE    856
+#define TRAINER_ROUTE2_MEADOWVALE_JENNY     857
+#define TRAINER_ROUTE2_MEADOWVALE_LUCY      858
+#define TRAINER_ROUTE2_MEADOWVALEFARM_INSIDE_MAX 859
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT_EMERALD     857
+#define TRAINERS_COUNT_EMERALD     860
 #define MAX_TRAINERS_COUNT_EMERALD 864
 
 #if IS_FRLG
