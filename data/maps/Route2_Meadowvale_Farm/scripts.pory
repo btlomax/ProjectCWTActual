@@ -20,6 +20,16 @@ script Route2_Meadowvale_Farm_MapScripts_FarmhandTommy {
     end
 }
 
+script Route2_Meadowvale_Farm_MapScripts_FarmhandGeorge {
+    trainerbattle_single(TRAINER_ROUTE2_MEADOWVALE_GEORGE,
+    Route2_Meadowvale_Farm_MapScripts_FarmhandGeorge_TrainerPreBattle,
+    Route2_Meadowvale_Farm_MapScripts_FarmhandGeorge_TrainerDefeated
+    )
+
+    msgbox(Route2_Meadowvale_Farm_MapScripts_FarmhandGeorge_TrainerPostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
 text Route2_Meadowvale_Farm_MapScripts_FarmhandTommy_TrainerPreBattle {
     "H-hey! You look like a trainer!\nI-I challenge you to a b-battle!"
 }
@@ -30,4 +40,16 @@ text Route2_Meadowvale_Farm_MapScripts_FarmhandTommy_TrainerDefeated {
 
 text Route2_Meadowvale_Farm_MapScripts_FarmhandTommy_TrainerPostBattle {
     "The farm is up the route, past the fields.\nYou should go check it out!"
+}
+
+text Route2_Meadowvale_Farm_MapScripts_FarmhandGeorge_TrainerPreBattle {
+    "Hey! You! I'm bored, let's battle!"
+}
+
+text Route2_Meadowvale_Farm_MapScripts_FarmhandGeorge_TrainerDefeated {
+    "Ugh, now and I'm bored AND I have to go/\nback to work..."
+}
+
+text Route2_Meadowvale_Farm_MapScripts_FarmhandGeorge_TrainerPostBattle {
+    "Farms are so boring, at least there are\nPokemon to find."
 }

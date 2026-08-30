@@ -16898,3 +16898,15 @@ Level: 4
 
 Rattata
 Level: 4
+
+=== TRAINER_ROUTE2_MEADOWVALE_GEORGE ===
+Name: GEORGE
+Class: Farmhand
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Rattata Alola
+Level: 5

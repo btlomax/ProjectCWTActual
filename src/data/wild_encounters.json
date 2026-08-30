@@ -15758,6 +15758,26 @@
                 "min_level": 5,
                 "max_level": 5,
                 "species": "SPECIES_GROWLITHE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_POOCHYENA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_FLABEBE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_GROWLITHE"
               }
             ]
           }
@@ -15811,6 +15831,26 @@
                 "min_level": 5,
                 "max_level": 5,
                 "species": "SPECIES_TAUROS"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 3,
+                "max_level": 4,
+                "species": "SPECIES_LILLIPUP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_FLABEBE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_TAUROS"
               }
             ]
           }
@@ -15840,6 +15880,26 @@
                 "min_level": 3,
                 "max_level": 5,
                 "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 2,
+                "max_level": 5,
+                "species": "SPECIES_VENIPEDE"
+              },
+              {
+                "min_level": 3,
+                "max_level": 5,
+                "species": "SPECIES_SILCOON"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_KRICKETOT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SCRAGGY"
               },
               {
                 "min_level": 2,
