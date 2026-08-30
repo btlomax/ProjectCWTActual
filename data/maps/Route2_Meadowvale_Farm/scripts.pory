@@ -1,1 +1,33 @@
 mapscripts Route2_Meadowvale_Farm_MapScripts {}
+
+script Route2_Meadowvale_Farm_MapScripts_Route2Sign {
+    msgbox("Meadowvale Farm -> Weirford Forest", MSGBOX_SIGN)
+    end
+}
+
+script Route2_Meadowvale_Farm_MapScripts_FarmSign {
+    msgbox("Meadowvale Farm\nPlease come in!", MSGBOX_SIGN)
+    end
+}
+
+script Route2_Meadowvale_Farm_MapScripts_FarmhandTommy {
+    trainerbattle_single(TRAINER_ROUTE2_MEADOWVALE_TOMMY,
+    Route2_Meadowvale_Farm_MapScripts_FarmhandTommy_TrainerPreBattle,
+    Route2_Meadowvale_Farm_MapScripts_FarmhandTommy_TrainerDefeated
+    )
+
+    msgbox(Route2_Meadowvale_Farm_MapScripts_FarmhandTommy_TrainerPostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+text Route2_Meadowvale_Farm_MapScripts_FarmhandTommy_TrainerPreBattle {
+    "H-hey! You look like a trainer!\nI-I challenge you to a b-battle!"
+}
+
+text Route2_Meadowvale_Farm_MapScripts_FarmhandTommy_TrainerDefeated {
+    "Dad told us to battle trainers if we\nsaw any..."
+}
+
+text Route2_Meadowvale_Farm_MapScripts_FarmhandTommy_TrainerPostBattle {
+    "The farm is up the route, past the fields.\nYou should go check it out!"
+}

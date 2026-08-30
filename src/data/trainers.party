@@ -16877,3 +16877,24 @@ Double Battle: No
 Kyogre
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+/*
+* PROJECT CWT TRAINERS
+*/
+
+/* ROUTE 2 - MEADOWVALE FARM */
+
+=== TRAINER_ROUTE2_MEADOWVALE_TOMMY ===
+Name: TOMMY
+Class: Farmhand
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Poochyena
+Level: 4
+
+Rattata
+Level: 4
