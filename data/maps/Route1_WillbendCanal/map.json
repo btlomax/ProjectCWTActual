@@ -86,7 +86,7 @@
       "x": 14,
       "y": 3,
       "elevation": 0,
-      "dest_map": "MAP_ALDERBROOK_TOWN_2",
+      "dest_map": "MAP_POKEMON_TUTOR_INSIDE",
       "dest_warp_id": "0"
     }
   ],

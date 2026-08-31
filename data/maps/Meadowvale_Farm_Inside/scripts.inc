@@ -77,12 +77,13 @@ Meadowvale_Farm_Inside_MapScripts_FarmbossMax_Intro::
 	.string "just a farming expression.\p"
 	.string "FOUR kids!\p"
 	.string "FOUR!\p"
+	.string "Their mothers have left them with me\n"
+	.string "and swanned off to parts unknown!\p"
 	.string "So what do I do?\n"
 	.string "I PUT THEM TO WORK!\p"
 	.string "I have them plow the fields, I have them\n"
 	.string "weed the crops, feed the animals,\l"
-	.string "and I have them chase\l"
-	.string "off trespassers!\p"
+	.string "and I have them chase off trespassers!\p"
 	.string "They have 'fun' and my farm prospers!\p"
 	.string "Everyone wins! Mostly me.\p"
 	.string "Anyway, you need to defeat all FOUR of my\n"
@@ -92,12 +93,12 @@ Meadowvale_Farm_Inside_MapScripts_FarmbossMax_Intro::
 	.string "can take me down!\p$"
 
 Meadowvale_Farm_Inside_Text_MaxNeedToDefeatChildren::
-# 77 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
-	.string "You need to defeat all FOUR of my farmhands\n"
+# 78 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+	.string "You need to defeat all FOUR of my kids\n"
 	.string "if you wanna take a shot at the CHAMP!\p$"
 
 Meadowvale_Farm_Inside_Text_MaxPreBattle::
-# 82 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 83 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	.string "You've beaten all FOUR of them?\n"
 	.string "...HELL YEAH!\p"
 	.string "Alright, the CHAMP is here!\n"
@@ -105,7 +106,7 @@ Meadowvale_Farm_Inside_Text_MaxPreBattle::
 	.string "Take me down if you can, BUB!\p$"
 
 Meadowvale_Farm_Inside_Text_MaxDefeated::
-# 90 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 91 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	.string "You beat me?\n"
 	.string "I can't believe it!\p"
 	.string "...HELL YEAH!\p"
@@ -113,7 +114,7 @@ Meadowvale_Farm_Inside_Text_MaxDefeated::
 	.string "You took me down no sweat!$"
 
 Meadowvale_Farm_Inside_Text_MaxPostBattle::
-# 98 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 99 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	.string "My kids will be all over me for losing now.\p"
 	.string "URRRH!\p"
 	.string "They're gonna be behind the plow for a\n"

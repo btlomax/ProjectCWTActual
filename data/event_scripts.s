@@ -1337,3 +1337,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Weirford_Forest/scripts.inc"
 
 	.include "data/maps/Meadowvale_Farm_Inside/scripts.inc"
+
+	.include "data/maps/Pokemon_Tutor_Inside/scripts.inc"

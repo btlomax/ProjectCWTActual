@@ -634,7 +634,8 @@
     "PlayerHouse_Inside_Upstairs"
   ],
   "gMapGroup_Route1_WillowBendCanal": [
-    "Route1_WillbendCanal"
+    "Route1_WillbendCanal",
+    "Pokemon_Tutor_Inside"
   ],
   "gMapGroup_WestlockVillage": [
     "Westlock_Village",

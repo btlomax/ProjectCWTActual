@@ -1236,7 +1236,9 @@
 #define FLAG_ITEM_ROUTE2_MEADOWVALE_FARM_POTION                     0x496
 #define FLAG_ITEM_ROUTE2_MEADOWVALE_FARM_ANTIDOTE                   0x497
 #define FLAG_ITEM_ROUTE2_MEADOWVALE_FARM_POKE_BALL                  0x498
-#define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
+#define FLAG_RECEIVED_TUTOR_REWARD_15                               0x499
+#define FLAG_RECEIVED_TUTOR_REWARD_35                               0x49A
+#define FLAG_RECEIVED_TUTOR_REWARD_60                               0x49B
 #define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
 #define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
 #define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag

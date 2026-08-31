@@ -9453,6 +9453,16 @@
       "secondary_tileset": "gTileset_PrettyPetalFlowerShop",
       "border_filepath": "data/layouts/Meadowvale_Farm_Inside/border.bin",
       "blockdata_filepath": "data/layouts/Meadowvale_Farm_Inside/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMON_TUTOR_INSIDE",
+      "name": "Pokemon_Tutor_Inside_Layout",
+      "width": 8,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/Pokemon_Tutor_Inside/border.bin",
+      "blockdata_filepath": "data/layouts/Pokemon_Tutor_Inside/map.bin"
     }
   ]
 }
