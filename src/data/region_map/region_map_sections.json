@@ -1642,6 +1642,10 @@
     {
       "id": "MAPSEC_WESTLOCK_VILLAGE",
       "name": "WESTLOCK VILLAGE"
+    },
+    {
+      "id": "MAPSEC_ROUTE2_MEADOWVALE_FARM",
+      "name": "MEADOWVALE FARM"
     }
   ]
 }

@@ -41,16 +41,28 @@
 #include "pokemon_jump.h"
 #include "decoration_inventory.h"
 #include "secret_base.h"
+#include "script_pokemon_util.h"
 #include "string_util.h"
 #include "player_pc.h"
 #include "field_specials.h"
 #include "berry_powder.h"
 #include "mystery_gift.h"
 #include "union_room_chat.h"
+#include "constants/maps.h"
 #include "constants/map_groups.h"
 #include "constants/items.h"
 #include "difficulty.h"
 #include "follower_npc.h"
+
+#ifdef DEBUG_START_MAP
+STATIC_ASSERT(DEBUG_START_X >= 0 && DEBUG_START_X <= 127, DebugStartXOutOfRange)
+STATIC_ASSERT(DEBUG_START_Y >= 0 && DEBUG_START_Y <= 127, DebugStartYOutOfRange)
+STATIC_ASSERT(DEBUG_START_LEVEL >= 1 && DEBUG_START_LEVEL <= MAX_LEVEL, DebugStartLevelOutOfRange)
+STATIC_ASSERT(MAP_GROUP(DEBUG_START_MAP) < MAP_GROUPS_COUNT, DebugStartMapGroupOutOfRange)
+#ifdef DEBUG_START_SPECIES
+STATIC_ASSERT(DEBUG_START_SPECIES > SPECIES_NONE && DEBUG_START_SPECIES < NUM_SPECIES, DebugStartSpeciesOutOfRange)
+#endif
+#endif
 
 extern const u8 EventScript_ResetAllMapFlags[];
 extern const u8 EventScript_ResetAllMapFlagsFrlg[];
@@ -135,10 +147,14 @@ static void ClearFrontierRecord(void)
 
 static void WarpToStarterTown(void)
 {
+#ifdef DEBUG_START_MAP
+    SetWarpDestination(MAP_GROUP(DEBUG_START_MAP), MAP_NUM(DEBUG_START_MAP), WARP_ID_NONE, DEBUG_START_X, DEBUG_START_Y);
+#else
     if (IS_FRLG)
         SetWarpDestination(MAP_GROUP(MAP_PALLET_TOWN_PLAYERS_HOUSE_2F), MAP_NUM(MAP_PALLET_TOWN_PLAYERS_HOUSE_2F), WARP_ID_NONE, 6, 6);
     else
-        SetWarpDestination(MAP_GROUP(MAP_ROUTE2_MEADOWVALE_FARM), MAP_NUM(MAP_ROUTE2_MEADOWVALE_FARM), WARP_ID_NONE, 15, 55);
+        SetWarpDestination(MAP_GROUP(MAP_PLAYER_HOUSE_INSIDE_UPSTAIRS), MAP_NUM(MAP_PLAYER_HOUSE_INSIDE_UPSTAIRS), WARP_ID_NONE, 1, 6);
+#endif
     WarpIntoMap();
 }
 
@@ -211,6 +227,10 @@ void NewGameInitData(void)
     ResetFanClub();
     ResetLotteryCorner();
     UpdateDailySeed();
+#ifdef DEBUG_START_SPECIES
+    ScriptGiveMon(DEBUG_START_SPECIES, DEBUG_START_LEVEL, ITEM_NONE);
+    FlagSet(FLAG_SYS_POKEMON_GET);
+#endif
     WarpToStarterTown();
     if (IS_FRLG)
         RunScriptImmediately(EventScript_ResetAllMapFlagsFrlg);

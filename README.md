@@ -34,6 +34,31 @@ This repository also includes the build tools, data, and documentation
 required by pokeemerald-expansion. See [INSTALL.md](INSTALL.md) for setup and
 build instructions.
 
+## Debug starts
+
+Build a debug ROM that begins a new game at a chosen map coordinate:
+
+```sh
+make -j29 debug-start MAP_ALDERBROOK_TOWN_2 10 8
+```
+
+Add a fourth argument to give the player a level-5 Pokemon:
+
+```sh
+make -j29 debug-start MAP_ROUTE2_MEADOWVALE_FARM 15 55 SPECIES_GROWLITHE
+```
+
+Add a fifth argument to set that Pokemon's level:
+
+```sh
+make -j29 debug-start MAP_ROUTE2_MEADOWVALE_FARM 15 55 SPECIES_GROWLITHE 9
+```
+
+Use `MAP_*` identifiers from `include/constants/map_groups.h` and `SPECIES_*`
+identifiers from `include/constants/species.h`. Coordinates must be between
+0 and 127, and levels between 1 and 100; coordinates should refer to a
+walkable tile on the selected map.
+
 ## Credits
 
 This project uses `pokeemerald-expansion`; please credit the

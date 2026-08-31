@@ -16894,7 +16894,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Poochyena
-Level: 3
+Level: 4
 
 Rattata
 Level: 4
@@ -16924,7 +16924,7 @@ Pidgey
 Level: 4
 
 Oddish
-Level: 4
+Level: 5
 
 Lillipup
 Level: 4
@@ -16951,10 +16951,13 @@ Double Battle: No
 AI: Basic Trainer
 
 Rattata Alola
-Level: 5
+Level: 6
 
 Poochyena
-Level: 5
+Level: 6
 
 Tauros
-Level: 6
+Level: 7
+- Tackle
+- Work Up
+- Rage

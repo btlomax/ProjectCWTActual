@@ -56,6 +56,33 @@ endif
 ifeq (debug,$(MAKECMDGOALS))
   DEBUG := 1
 endif
+ifneq (,$(filter debug-start,$(MAKECMDGOALS)))
+  DEBUG_START_ARGS := $(filter-out debug-start,$(MAKECMDGOALS))
+  ifneq ($(filter 3 4 5,$(words $(DEBUG_START_ARGS))),$(words $(DEBUG_START_ARGS)))
+    $(error Usage: make -j29 debug-start MAP_* X Y [SPECIES_* [LEVEL]])
+  endif
+  DEBUG_START_MAP := $(word 1,$(DEBUG_START_ARGS))
+  DEBUG_START_X := $(word 2,$(DEBUG_START_ARGS))
+  DEBUG_START_Y := $(word 3,$(DEBUG_START_ARGS))
+  DEBUG_START_SPECIES := $(word 4,$(DEBUG_START_ARGS))
+  DEBUG_START_LEVEL := $(or $(word 5,$(DEBUG_START_ARGS)),5)
+  ifneq ($(filter MAP_%,$(DEBUG_START_MAP)),$(DEBUG_START_MAP))
+    $(error Debug start map must be a MAP_* identifier)
+  endif
+  ifneq ($(DEBUG_START_SPECIES),)
+    ifneq ($(filter SPECIES_%,$(DEBUG_START_SPECIES)),$(DEBUG_START_SPECIES))
+      $(error Debug start Pokemon must be a SPECIES_* identifier)
+    endif
+  endif
+  $(info LOCATION: $(DEBUG_START_MAP))
+  $(info X: $(DEBUG_START_X))
+  $(info Y: $(DEBUG_START_Y))
+  ifneq ($(DEBUG_START_SPECIES),)
+    $(info SPECIES: $(DEBUG_START_SPECIES))
+    $(info LEVEL: $(DEBUG_START_LEVEL))
+  endif
+  DEBUG := 1
+endif
 ifneq (,$(filter release tidyrelease,$(MAKECMDGOALS)))
   RELEASE := 1
 endif
@@ -100,6 +127,7 @@ ROM_NAME := $(FILE_NAME).gba
 OBJ_DIR_NAME := $(BUILD_DIR)/$(BUILD_NAME)
 OBJ_DIR_NAME_TEST := $(BUILD_DIR)/$(BUILD_NAME)-test
 OBJ_DIR_NAME_DEBUG := $(BUILD_DIR)/$(BUILD_NAME)-debug
+OBJ_DIR_NAME_DEBUG_START := $(BUILD_DIR)/$(BUILD_NAME)-debug-start-$(DEBUG_START_MAP)-$(DEBUG_START_X)-$(DEBUG_START_Y)-$(DEBUG_START_SPECIES)-$(DEBUG_START_LEVEL)
 OBJ_DIR_NAME_RELEASE := $(BUILD_DIR)/$(BUILD_NAME)-release
 ASSETS_DIR_NAME := $(BUILD_DIR)/assets
 
@@ -120,6 +148,9 @@ else
 endif
 ifeq ($(DEBUG),1)
   OBJ_DIR := $(OBJ_DIR_NAME_DEBUG)
+endif
+ifneq ($(DEBUG_START_MAP),)
+  OBJ_DIR := $(OBJ_DIR_NAME_DEBUG_START)
 endif
 ifeq ($(RELEASE),1)
   OBJ_DIR := $(OBJ_DIR_NAME_RELEASE)
@@ -157,6 +188,12 @@ else
 O_LEVEL ?= 2
 endif
 CPPFLAGS := $(INCLUDE_CPP_ARGS) -Wno-trigraphs -DMODERN=1 -DTESTING=$(TEST) -D$(GAME_VERSION) -std=gnu17
+ifneq ($(DEBUG_START_MAP),)
+  override CPPFLAGS += -DDEBUG_START_MAP=$(DEBUG_START_MAP) -DDEBUG_START_X=$(DEBUG_START_X) -DDEBUG_START_Y=$(DEBUG_START_Y) -DDEBUG_START_LEVEL=$(DEBUG_START_LEVEL)
+  ifneq ($(DEBUG_START_SPECIES),)
+    override CPPFLAGS += -DDEBUG_START_SPECIES=$(DEBUG_START_SPECIES)
+  endif
+endif
 ifeq ($(RELEASE),1)
 	override CPPFLAGS += -DRELEASE
 	ifeq ($(USE_LTO_ON_RELEASE),1)
@@ -276,8 +313,12 @@ MAKEFLAGS += --no-print-directory
 .DELETE_ON_ERROR:
 
 RULES_NO_SCAN += libagbsyscall clean clean-assets tidy tidymodern tidycheck tidyrelease generated clean-generated clean-teachables clean-teachables_intermediates
-.PHONY: all rom agbcc modern compare check debug release
+.PHONY: all rom agbcc modern compare check debug debug-start release
 .PHONY: $(RULES_NO_SCAN)
+ifneq ($(DEBUG_START_MAP),)
+.PHONY: $(DEBUG_START_ARGS)
+$(DEBUG_START_ARGS): ; @:
+endif
 
 infoshell = $(foreach line, $(shell $1 | sed "s/ /__SPACE__/g"), $(info $(subst __SPACE__, ,$(line))))
 
@@ -341,6 +382,7 @@ $(shell mkdir -p $(SUBDIRS))
 modern: all
 compare: all
 debug: all
+debug-start: all
 release: all
 # Uncomment the next line, and then comment the 4 lines after it to reenable agbcc.
 #agbcc: all

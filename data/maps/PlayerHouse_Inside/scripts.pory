@@ -1,4 +1,31 @@
-mapscripts PlayerHouse_Inside_MapScripts {}
+mapscripts PlayerHouse_Inside_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: PlayerHouse_Inside_OnTransition
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: PlayerHouse_Inside_BirthdayIntro
+    ]
+}
+
+script PlayerHouse_Inside_OnTransition {
+    if (!flag(FLAG_DOWNSTAIRS_FIRST_TIME)) {
+        setvar(VAR_TEMP_0, 0)
+    }
+    else {
+        setvar(VAR_TEMP_0, 1)
+    }
+
+    end
+}
+
+script PlayerHouse_Inside_BirthdayIntro {
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, PlayerHouse_Inside_MoveDown)
+    waitmovement
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_WEST)
+    turnobject(LOCALID_GRANDMOTHER, DIR_EAST)
+    setflag(FLAG_DOWNSTAIRS_FIRST_TIME)
+    setvar(VAR_TEMP_0, 1)
+    goto(PlayerHouse_Inside_Birthday)
+}
 
 script PlayerHouse_Inside_Dinner {
     lockall
@@ -19,8 +46,8 @@ script PlayerHouse_Inside_Dinner {
     fadescreen(FADE_FROM_BLACK)
 
     msgbox("Happy birthday {PLAYER}!\nMake a wish!\pNow, what have you been up to?", MSGBOX_DEFAULT)
-    msgbox("...\p...\pYou found a what?\p...\p...\pYou found a Pokemon?\pLet me see...\p...\pA surprise gift on your\nbirthday no less...\pHmmmm I wonder...", MSGBOX_DEFAULT)
-    msgbox("I think you should go and see\nProfessor Larch, he's an old friend.\pIf he's not at his lab he'll be in\nWestlock Village library.\npast Route 1.", MSGBOX_DEFAULT)
+    msgbox("...\p...\pYou found a what?\p...\p...\pYou found a Pokemon?\pLet me see...\p...\pA surprise gift on your birthday no less...\pHmmmm I wonder...", MSGBOX_DEFAULT)
+    msgbox("...\pI think you should go and see Professor\nLarch, he's an old friend.\pIf he's not at his lab he'll be in Westlock\nVillage library.\npast Route 1.", MSGBOX_DEFAULT)
     msgbox("He'll be able to tell you more about\nPokemon.\pBe careful in the tall grass,\nwild pokemon are sure to jump out at you!", MSGBOX_DEFAULT)
     msgbox("Come and see me when you've spoken to\nthe Professor, and please,\pdo be careful dear.", MSGBOX_DEFAULT)
 
@@ -30,14 +57,18 @@ script PlayerHouse_Inside_Dinner {
     end
 }
 
-script PlayerHouse_Inside_GrandmotherNPC {
-    lockall
+script PlayerHouse_Inside_Rhona {
+    lock
     faceplayer
+    goto(PlayerHouse_Inside_Birthday)
+}
+
+script PlayerHouse_Inside_Birthday {
     switch (var(VAR_ALDERBROOK_TOWN_STATE)) {
         case 0:
             msgbox(
                 "You're finally up! I was starting to think\n"
-                "you'd sleep through your own birthday.\p"
+                "you'd sleep through your special day!\p"
                 "Happy birthday {PLAYER}!\p"
                 "I'm just adding the finishing touches\n"
                 "to your birthday cake, no peeking!\p"
@@ -70,9 +101,8 @@ script PlayerHouse_Inside_GrandmotherAfterPokedex {
     "The sun and moon will cross paths...\p"
     "Larch said that to you?\p"
     "...\p"
-    "Come here, {PLAYER}. Let me have a look\n"
-    "at you.\p"
-    "Hm.\p"
+    "Come here, {PLAYER}. Let me have a look at you.\p"
+    "Hmmm...\p"
     "Perhaps I am only seeing what I want to\n"
     "see after all these years.\p"
     "Still... there is a strength in you.\n"
@@ -82,17 +112,32 @@ script PlayerHouse_Inside_GrandmotherAfterPokedex {
     "You should take on the League challenge.\n"
     "See the region. Meet its people.\p"
     "Learn what kind of trainer you want to be.\p"
-    "And if Professor Larch asks you to do\n"
-    "something strange... trust your instincts.",
+    "...\p"
+    "Be careful, {PLAYER}. There are people out\n"
+    "there who mean ill to those who are,\n"
+    "different.\p"
+    "Trust your Pokemon, and trust yourself,\n"
+    "and I know you will live up to your\l"
+    "potential.\p"
+    "You can always come and see me, and tell\n"
+    "me ofyour adventures!\p",
     MSGBOX_DEFAULT)
 
-    msgbox("Before you leave, I have something\nfor you.", MSGBOX_DEFAULT)
+    msgbox("Before you leave, I have something for\n you.", MSGBOX_DEFAULT)
     playfanfare(MUS_OBTAIN_ITEM)
     msgbox("{PLAYER} received the RUNNING SHOES!", MSGBOX_DEFAULT)
     waitfanfare
     setflag(FLAG_RECEIVED_RUNNING_SHOES)
-    msgbox("These will allow you to get around quicker.\nHold B to run!\p", MSGBOX_DEFAULT)
-    msgbox("Take care of yourself my dear, and\nremember to come back and see me.", MSGBOX_DEFAULT)
+    msgbox("These will allow you to get around\nquicker. Hold B to run!\p", MSGBOX_DEFAULT)
+    msgbox("And take these POTIONS, too.\p", MSGBOX_DEFAULT)
+    additem(ITEM_POTION, 3)
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox("{PLAYER} received 3 POTIONS!", MSGBOX_DEFAULT)
+    waitfanfare
+    msgbox("I see it now, the glint in the eyes...\n", MSGBOX_DEFAULT)
+    msgbox("So it begins again.\p Walk worthy, {PLAYER}.\p", MSGBOX_DEFAULT)
+    msgbox("You can always come home if you need to.\n"
+           "I'd be happy to see you and your Pokemon!\p", MSGBOX_DEFAULT)
 
     setvar(VAR_ALDERBROOK_TOWN_STATE, 4)
     releaseall
@@ -108,10 +153,16 @@ script PlayerHouse_Inside_GrandmotherOfferRest {
         msgbox("There we are. You and your POKéMON\nlook much better already.", MSGBOX_DEFAULT)
     }
     else {
-        msgbox("All right, dear. Take care of\n"
-               "yourselves out there.", MSGBOX_DEFAULT)
+        msgbox("All right, dear. Take care of yourselves.\n"
+               "out there.", MSGBOX_DEFAULT)
     }
 
     releaseall
     end
+}
+
+movement PlayerHouse_Inside_MoveDown {
+    walk_down * 2
+    face_left
+    step_end
 }

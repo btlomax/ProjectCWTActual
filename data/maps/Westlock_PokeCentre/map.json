@@ -2,7 +2,7 @@
   "id": "MAP_WESTLOCK_POKE_CENTRE",
   "name": "Westlock_PokeCentre",
   "layout": "LAYOUT_WESTLOCK_POKE_CENTRE",
-  "music": "MUS_DUMMY",
+  "music": "MUS_POKE_CENTER",
   "region_map_section": "MAPSEC_WESTLOCK_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

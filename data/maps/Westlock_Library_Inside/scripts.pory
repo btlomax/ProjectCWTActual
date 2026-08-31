@@ -57,7 +57,8 @@ script Westlock_Library_Inside_EventScripts_MeetProfLarch
 
     msgbox("I have been studying the Pokémon of\n"
        "this region for nearly five decades,\l"
-       "and still they surprise me.", MSGBOX_DEFAULT)
+       "there are always new mysteries to be\n"
+       "solved...", MSGBOX_DEFAULT)
 
     faceplayer
     waitmovement(LOCALID_PROF_LARCH)
@@ -72,12 +73,11 @@ script Westlock_Library_Inside_EventScripts_MeetProfLarch
     }
     else
     {
-        msgbox("I see. Well, I am sure you will\n"
-               "come to appreciate them in time.", MSGBOX_DEFAULT)
+        msgbox("I see. Well, I am sure you will come to\n"
+               "appreciate them in time.", MSGBOX_DEFAULT)
     }
 
-    msgbox("Will you allow me to see\n"
-           "your Pokémon?", MSGBOX_YESNO)
+    msgbox("Will you allow me to see your Pokémon?", MSGBOX_YESNO)
 
     while (var(VAR_RESULT) == 0)
     {
@@ -91,12 +91,11 @@ script Westlock_Library_Inside_EventScripts_MeetProfLarch
 
     msgbox("Gah!", MSGBOX_DEFAULT)
 
-    msgbox("A r-rarer species, uh, in these\n"
-           "p-parts, indeed y-yes!\p"
+    msgbox("A r-rarer species, uh, in these p-parts,\n"
+           "indeed y-yes!\p"
            "Where, did you, erm, f-find it?\p"
            "On the c-canal, y-you say!\p"
-           "I should go and, uh, look myself,\n"
-           "yes!\p"
+           "I should go and, uh, look myself, yes, yes!\p"
            "Who knows what other, uh, rare\n"
            "species may be in the area, heh...\p"
            "...", MSGBOX_DEFAULT)
@@ -107,19 +106,18 @@ script Westlock_Library_Inside_EventScripts_MeetProfLarch
     delay(30)
 
     msgbox("GOODNESS ME, would you look at the\n"
-           "time! I must be off, yes, yes,\l"
-           "I must be off!\p"
+           "time! I must be off, yes, yes, I must be off!\p"
            "Nocturnal Pokémon are much too\n"
-           "unpredictable for an old scholar\l"
-           "like myself, heh...\p"
+           "unpredictable for an old scholar like\l"
+           "myself, heh...\p"
            "...\p"
-           "I was not expecting your arrival,\n"
-           "but...even chaotic events can be\l"
+           "I was not expecting your arrival, but...\n"
+           "Even chaotic events can be\l"
            "fortuitous, yes, yes...\p"
-           "Come and visit me at the lab\n"
-           "in Alderbrook Town.\p"
-           "We have much to discuss, and I\n"
-           "would like to see your Pokémon again.\l"
+           "Come and visit me at the lab in\n"
+           "Alderbrook Town.\p"
+           "We have much to discuss, and I would\n"
+           "like to see your Pokémon again.\l"
            "In a more, controlled environment...\p"
            "Until then, {PLAYER}, I bid you adieu!", MSGBOX_DEFAULT)
 

@@ -1,5 +1,14 @@
 mapscripts Route2_Meadowvale_Farm_MapScripts {}
 
+script Route2_Meadowvale_Farm_EventScript_ReturnToAlderbrook {
+    lock
+    msgbox("You should return to Alderbrook Town.\nRhona is waiting for you.", MSGBOX_DEFAULT)
+    applymovement(OBJ_EVENT_ID_PLAYER, Route2_Meadowvale_Farm_Movement_ReturnToWestlock)
+    waitmovement
+    release
+    end
+}
+
 script Route2_Meadowvale_Farm_MapScripts_Route2Sign {
     msgbox("Meadowvale Farm -> Weirford Forest", MSGBOX_SIGN)
     end
@@ -78,6 +87,11 @@ script Route2_Meadowvale_Farm_MapScripts_FarmhandLucy_Beaten {
     end
 }
 
+movement Route2_Meadowvale_Farm_Movement_ReturnToWestlock {
+    walk_left * 2
+    step_end
+}
+
 text Route2_Meadowvale_Farm_MapScripts_FarmhandTommy_TrainerPreBattle {
     "H-hey! You look like a trainer!\nI-I challenge you to a b-battle!"
 }
@@ -111,7 +125,7 @@ text Route2_Meadowvale_Farm_MapScripts_FarmhandJenny_TrainerDefeated {
 }
 
 text Route2_Meadowvale_Farm_MapScripts_FarmhandJenny_TrainerPostBattle {
-    "I don't like you anymore! I'm going to tell my dad about you!"
+    "I don't like you anymore!\nI'm going to tell my dad about you!"
 }
 
 text Route2_Meadowvale_Farm_MapScripts_FarmhandLucy_TrainerPreBattle {

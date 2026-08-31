@@ -6,7 +6,12 @@ script Westlock_PokeMart_EventScript_MartEmployee
     faceplayer
     message("How may I help you?$")
     waitmessage
-    pokemart(Westlock_PokeMart_Items)
+    if (flag(FLAG_SYS_POKEDEX_GET)) {
+        pokemart(Westlock_PokeMart_ItemsWithPokeBalls)
+    }
+    else {
+        pokemart(Westlock_PokeMart_Items)
+    }
     msgbox("Thank you, please come again!", MSGBOX_DEFAULT)
     release
     end
@@ -15,6 +20,15 @@ script Westlock_PokeMart_EventScript_MartEmployee
 raw `
 .align 2
 Westlock_PokeMart_Items::
+    .2byte ITEM_POTION
+    .2byte ITEM_ANTIDOTE
+    .2byte ITEM_PARALYZE_HEAL
+    .2byte ITEM_REPEL
+    .2byte ITEM_ESCAPE_ROPE
+    .2byte ITEM_NONE
+
+.align 2
+Westlock_PokeMart_ItemsWithPokeBalls::
     .2byte ITEM_POKE_BALL
     .2byte ITEM_POTION
     .2byte ITEM_ANTIDOTE
@@ -22,6 +36,4 @@ Westlock_PokeMart_Items::
     .2byte ITEM_REPEL
     .2byte ITEM_ESCAPE_ROPE
     .2byte ITEM_NONE
-    release
-    end
 `

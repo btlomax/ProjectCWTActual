@@ -63,15 +63,15 @@ Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut_Text_1:
 
 Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut_Text_2:
 # 43 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
-	.string "You can use CUT to remove small\n"
-	.string "medium sized trees that block your path.\p"
-	.string "BUT, you will need the Weirford Gym badge to\n"
-	.string "use it outside of battle...\p$"
+	.string "You can use CUT to remove small trees\n"
+	.string "that block your path.\p"
+	.string "BUT, you will need the Weirford Gym badge\n"
+	.string "to use it outside of battle...\p$"
 
 Meadowvale_Farm_Inside_MapScripts_FarmbossMax_Intro::
 # 53 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	.string "Welcome to Meadowvale Farm, where we\n"
-	.string "grow crops, raise POKéMON, and apparently\n"
+	.string "grow crops, raise POKéMON, and apparently\l"
 	.string "collect children.\p"
 	.string "Turns out 'sowing wild oats' is not\n"
 	.string "just a farming expression.\p"
@@ -79,20 +79,23 @@ Meadowvale_Farm_Inside_MapScripts_FarmbossMax_Intro::
 	.string "FOUR!\p"
 	.string "So what do I do?\n"
 	.string "I PUT THEM TO WORK!\p"
-	.string "I have them plow the fields, I have them/\n"
-	.string "weed the crops, feed the animals, and I have them chase\n"
-	.string "off trespassers! They have 'fun' and my farm prospers.\n"
+	.string "I have them plow the fields, I have them\n"
+	.string "weed the crops, feed the animals,\l"
+	.string "and I have them chase\l"
+	.string "off trespassers!\p"
+	.string "They have 'fun' and my farm prospers.\p"
 	.string "Everyone wins! Mostly me.\p"
-	.string "Anyway, you need to defeat all FOUR of my farmhands\n"
-	.string "if you wanna take a shot at the CHAMP!\p$"
+	.string "Anyway, you need to defeat all FOUR of my\n"
+	.string "farmhands if you wanna take a shot at\l"
+	.string "the CHAMP!\p$"
 
 Meadowvale_Farm_Inside_Text_MaxNeedToDefeatChildren::
-# 71 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 75 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	.string "You need to defeat all FOUR of my farmhands\n"
 	.string "if you wanna take a shot at the CHAMP!\p$"
 
 Meadowvale_Farm_Inside_Text_MaxPreBattle::
-# 76 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 80 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	.string "You've beaten all FOUR of them?\n"
 	.string "...HELL YEAH!\p"
 	.string "Alright, the CHAMP is here!\n"
@@ -100,7 +103,7 @@ Meadowvale_Farm_Inside_Text_MaxPreBattle::
 	.string "Take me down if you can, BUB!\p$"
 
 Meadowvale_Farm_Inside_Text_MaxDefeated::
-# 84 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 88 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	.string "You beat me?\n"
 	.string "I can't believe it!\p"
 	.string "...HELL YEAH!\p"
@@ -108,7 +111,9 @@ Meadowvale_Farm_Inside_Text_MaxDefeated::
 	.string "You took me down no sweat!$"
 
 Meadowvale_Farm_Inside_Text_MaxPostBattle::
-# 92 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
-	.string "My kids will be all over me for losing now, UH!\n"
-	.string "They're gonna be behind the plow for a week!\l"
+# 96 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+	.string "My kids will be all over me for losing now.\p"
+	.string "URRRH!\p"
+	.string "They're gonna be behind the plow for a\n"
+	.string "week!\p"
 	.string "HAHAHAHAHAHA!\p$"
