@@ -11,3 +11,17 @@ script Westlock_Village_EventScript_LibrarySign
     msgbox ("Westlock Library\nRoute 2 ->", MSGBOX_SIGN)
     end
 }
+
+script Westlock_Village_EventScript_ReturnToAlderbrook {
+
+    if(var(VAR_ALDERBROOK_TOWN_STATE) != 4)
+    {
+        lock
+        msgbox("You should return to Alderbrook Town.\n"
+        "The Professor is waiting for you.\p", MSGBOX_DEFAULT)
+        applymovement(OBJ_EVENT_ID_PLAYER, Route2_Meadowvale_Farm_Movement_ReturnToWestlock)
+        waitmovement
+        release
+        end
+    }
+}

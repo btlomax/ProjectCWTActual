@@ -76,7 +76,26 @@
       "dest_warp_id": "4"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Westlock_Village_EventScript_ReturnToAlderbrook"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Westlock_Village_EventScript_ReturnToAlderbrook"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

@@ -1,14 +1,5 @@
 mapscripts Route2_Meadowvale_Farm_MapScripts {}
 
-script Route2_Meadowvale_Farm_EventScript_ReturnToAlderbrook {
-    lock
-    msgbox("You should return to Alderbrook Town.\nRhona is waiting for you.", MSGBOX_DEFAULT)
-    applymovement(OBJ_EVENT_ID_PLAYER, Route2_Meadowvale_Farm_Movement_ReturnToWestlock)
-    waitmovement
-    release
-    end
-}
-
 script Route2_Meadowvale_Farm_MapScripts_Route2Sign {
     msgbox("Meadowvale Farm -> Weirford Forest", MSGBOX_SIGN)
     end
