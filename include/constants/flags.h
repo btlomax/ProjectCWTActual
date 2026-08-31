@@ -664,8 +664,8 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
 
-#define FLAG_UNUSED_0x264  0x264 // Unused Flag
-#define FLAG_UNUSED_0x265  0x265 // Unused Flag
+#define FLAG_HIDDEN_ITEM_ROUTE2_MEADOWVALE_FARM_NETBALL (FLAG_HIDDEN_ITEMS_START + 0x70)
+#define FLAG_HIDDEN_ITEM_ROUTE2_MEADOWVALE_FARM_TINYMUSHROOM (FLAG_HIDDEN_ITEMS_START + 0x71)
 #define FLAG_UNUSED_0x266  0x266 // Unused Flag
 #define FLAG_UNUSED_0x267  0x267 // Unused Flag
 #define FLAG_UNUSED_0x268  0x268 // Unused Flag
@@ -1230,12 +1230,12 @@
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
 // Custom map object flags
-#define FLAG_HIDE_STARTER_ITEM                                     0x493
-#define FLAG_HIDE_BRIDGE_NPC_ROUTE1                                0x494
-#define FLAG_DOWNSTAIRS_FIRST_TIME                                 0x495
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
-#define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
-#define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
+#define FLAG_HIDE_STARTER_ITEM                                      0x493
+#define FLAG_HIDE_BRIDGE_NPC_ROUTE1                                 0x494
+#define FLAG_DOWNSTAIRS_FIRST_TIME                                  0x495
+#define FLAG_ITEM_ROUTE2_MEADOWVALE_FARM_POTION                     0x496
+#define FLAG_ITEM_ROUTE2_MEADOWVALE_FARM_ANTIDOTE                   0x497
+#define FLAG_ITEM_ROUTE2_MEADOWVALE_FARM_POKE_BALL                  0x498
 #define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
 #define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
 #define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag

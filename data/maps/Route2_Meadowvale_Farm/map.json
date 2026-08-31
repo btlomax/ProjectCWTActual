@@ -100,8 +100,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Route2_Meadowvale_Farm_MapScripts_FirstItem",
+      "flag": "FLAG_ITEM_ROUTE2_MEADOWVALE_FARM_POTION"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -113,8 +113,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Route2_Meadowvale_Farm_MapScripts_SecondItem",
+      "flag": "FLAG_ITEM_ROUTE2_MEADOWVALE_FARM_ANTIDOTE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -126,7 +126,33 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route2_Meadowvale_Farm_MapScripts_ThirdItem",
+      "flag": "FLAG_ITEM_ROUTE2_MEADOWVALE_FARM_POKE_BALL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
+      "x": 33,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "92",
+      "script": "BerryTreeScript",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
+      "x": 34,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "91",
+      "script": "BerryTreeScript",
       "flag": "0"
     }
   ],
@@ -155,7 +181,7 @@
       "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Route2_Meadowvale_Farm_MapScripts_ForestSign"
     },
     {
       "type": "sign",
@@ -164,6 +190,22 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route2_Meadowvale_Farm_MapScripts_Route2Sign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 16,
+      "y": 6,
+      "elevation": 0,
+      "item": "ITEM_NET_BALL",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE2_MEADOWVALE_FARM_NETBALL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 30,
+      "y": 39,
+      "elevation": 0,
+      "item": "ITEM_TINY_MUSHROOM",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE2_MEADOWVALE_FARM_TINYMUSHROOM"
     }
   ]
 }

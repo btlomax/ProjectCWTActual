@@ -10,6 +10,13 @@ script Route2_Meadowvale_Farm_MapScripts_FarmSign {
     end
 }
 
+script Route2_Meadowvale_Farm_MapScripts_ForestSign {
+    msgbox("Entering Weirford Forest\n"
+            "Ensure you're prepared!",
+    MSGBOX_SIGN)
+    end
+}
+
 script Route2_Meadowvale_Farm_MapScripts_FarmhandTommy {
     trainerbattle_single(TRAINER_ROUTE2_MEADOWVALE_TOMMY,
     Route2_Meadowvale_Farm_MapScripts_FarmhandTommy_TrainerPreBattle,
@@ -75,6 +82,21 @@ script Route2_Meadowvale_Farm_MapScripts_FarmhandLucy {
 script Route2_Meadowvale_Farm_MapScripts_FarmhandLucy_Beaten {
     addvar(VAR_ROUTE2_MEADOWVALE_FARM_STATE, 1)
     msgbox(Route2_Meadowvale_Farm_MapScripts_FarmhandLucy_TrainerPostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route2_Meadowvale_Farm_MapScripts_FirstItem{
+    finditem(ITEM_POTION)
+    end
+}
+
+script Route2_Meadowvale_Farm_MapScripts_SecondItem{
+    finditem(ITEM_ANTIDOTE)
+    end
+}
+
+script Route2_Meadowvale_Farm_MapScripts_ThirdItem{
+    finditem(ITEM_POKE_BALL)
     end
 }
 
