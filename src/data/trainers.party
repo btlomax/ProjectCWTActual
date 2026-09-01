@@ -16961,3 +16961,21 @@ Level: 7
 - Tackle
 - Work Up
 - Rage
+
+=== TRAINER_WEIRFORDFOREST_BUGCATCHER_SAM ===
+Name: SAMUEL
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Wurmple
+Level: 6
+
+Cascoon
+Level: 5
+
+Venipede
+Level: 6

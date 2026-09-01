@@ -1,1 +1,28 @@
 mapscripts Weirford_Forest_MapScripts {}
+
+script Weirford_Forest_MapScripts_BugCatcherSam {
+    trainerbattle_single(TRAINER_WEIRFORDFOREST_BUGCATCHER_SAM,
+    Weirford_Forest_MapScripts_BugCatcherSam_TrainerPreBattle,
+    Weirford_Forest_MapScripts_BugCatcherSam_TrainerDefeated,
+    Weirford_Forest_MapScripts_BugCatcherSam_Beaten
+    )
+
+    msgbox(Weirford_Forest_MapScripts_BugCatcherSam_TrainerPostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+text Weirford_Forest_MapScripts_BugCatcherSam_TrainerPreBattle {
+    "Bug Catcher Sam wants to battle!"
+}
+
+text Weirford_Forest_MapScripts_BugCatcherSam_TrainerPostBattle {
+    "Bug Catcher Sam: Thanks for the battle!"
+}
+
+text Weirford_Forest_MapScripts_BugCatcherSam_TrainerDefeated {
+    "Bug Catcher Sam: I can't believe I lost!"
+}
+
+text Weirford_Forest_MapScripts_BugCatcherSam_Beaten {
+    "Bug Catcher Sam has been defeated!"
+}
