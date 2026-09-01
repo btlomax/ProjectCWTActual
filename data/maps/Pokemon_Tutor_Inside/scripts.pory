@@ -5,7 +5,7 @@ script Pokemon_Tutor_Inside_MapScripts_Check_Pokemon_Caught
     lock
     faceplayer
 
-    msgbox("Ah hello young trainer! Are you here to\nsee how many Pokémon you've caught so far?", MSGBOX_YESNO)
+    msgbox("Ah hello young trainer! Are you here to\nsee how many Pokémon you've caught so\lfar?", MSGBOX_YESNO)
 
     if (var(VAR_RESULT) == 0) {
         msgbox("No problem! Come back anytime.", MSGBOX_DEFAULT)
@@ -25,26 +25,82 @@ script Pokemon_Tutor_Inside_MapScripts_Check_Pokemon_Caught
 
     msgbox("You've seen {STR_VAR_1} Pokémon and\ncaught {STR_VAR_2} Pokémon!\p", MSGBOX_DEFAULT)
 
-    if (!flag(FLAG_TEMP_1)) {
+    call(Pokemon_Tutor_Inside_Script_CheckRewardTiers)
+
+    release
+    end
+}
+
+script Pokemon_Tutor_Inside_Script_CheckRewardTiers {
+    if (!flag(FLAG_RECEIVED_TUTOR_REWARD_15)) {
         if (var(VAR_0x8009) >= 15) {
             msgbox("Wonderful! You've reached 15 caught Pokémon!\nHere is your reward!", MSGBOX_DEFAULT)
             call(Pokemon_Tutor_Inside_Script_GiveTier1Reward)
         } else {
             msgbox("Your first goal is to catch 15 Pokémon.\nCome back when you've caught a few more!", MSGBOX_DEFAULT)
         }
-    } else {
-        msgbox("You've already claimed all of your rewards!\nKeep up the good work!", MSGBOX_DEFAULT)
+        return
     }
 
-    release
-    end
+    if (!flag(FLAG_RECEIVED_TUTOR_REWARD_35)) {
+        if (var(VAR_0x8009) >= 35) {
+            msgbox("Wonderful! You've reached 35 caught Pokémon!\nHere is your reward!", MSGBOX_DEFAULT)
+            call(Pokemon_Tutor_Inside_Script_GiveTier2Reward)
+        } else {
+            msgbox("Your next goal is to catch 35 Pokémon.\nCome back when you've caught a few more!", MSGBOX_DEFAULT)
+        }
+        return
+    }
+
+    if (!flag(FLAG_RECEIVED_TUTOR_REWARD_60)) {
+        if (var(VAR_0x8009) >= 60) {
+            msgbox("Wonderful! You've reached 60 caught Pokémon!\nHere is your reward!", MSGBOX_DEFAULT)
+            call(Pokemon_Tutor_Inside_Script_GiveTier3Reward)
+        } else {
+            msgbox("Your next goal is to catch 60 Pokémon.\nCome back when you've caught a few more!", MSGBOX_DEFAULT)
+        }
+        return
+    }
+
+    if (!flag(FLAG_RECEIVED_TUTOR_REWARD_95)) {
+        if (var(VAR_0x8009) >= 95) {
+            msgbox("Wonderful! You've reached 95 caught Pokémon!\nHere is your reward!", MSGBOX_DEFAULT)
+            call(Pokemon_Tutor_Inside_Script_GiveTier4Reward)
+        } else {
+            msgbox("Your next goal is to catch 95 Pokémon.\nCome back when you've caught a few more!", MSGBOX_DEFAULT)
+        }
+        return
+    }
+
+    if (!flag(FLAG_RECEIVED_TUTOR_REWARD_140)) {
+        if (var(VAR_0x8009) >= 140) {
+            msgbox("Wonderful! You've reached 140 caught Pokémon!\nHere is your reward!", MSGBOX_DEFAULT)
+            call(Pokemon_Tutor_Inside_Script_GiveTier5Reward)
+        } else {
+            msgbox("Your next goal is to catch 140 Pokémon.\nCome back when you've caught a few more!", MSGBOX_DEFAULT)
+        }
+        return
+    }
+
+    if (!flag(FLAG_RECEIVED_TUTOR_REWARD_190)) {
+        if (var(VAR_0x8009) >= 190) {
+            msgbox("Wonderful! You've reached 190 caught Pokémon!\nHere is your reward!", MSGBOX_DEFAULT)
+            call(Pokemon_Tutor_Inside_Script_GiveTier6Reward)
+        } else {
+            msgbox("Your next goal is to catch 190 Pokémon.\nCome back when you've caught a few more!", MSGBOX_DEFAULT)
+        }
+        return
+    }
+
+    msgbox("You've claimed all currently available rewards!\nKeep up the good work!", MSGBOX_DEFAULT)
+    return
 }
 
 script Pokemon_Tutor_Inside_Script_GiveTier1Reward {
     givemon(SPECIES_GROWLITHE, 5, ITEM_NONE)
     call(Pokemon_Tutor_Inside_Script_HandleGiftResult)
     if (var(VAR_RESULT) != MON_CANT_GIVE) {
-        setflag(FLAG_TEMP_1)
+        setflag(FLAG_RECEIVED_TUTOR_REWARD_15)
     }
     return
 }
@@ -53,7 +109,7 @@ script Pokemon_Tutor_Inside_Script_GiveTier2Reward {
     givemon(SPECIES_EEVEE, 10, ITEM_NONE)
     call(Pokemon_Tutor_Inside_Script_HandleGiftResult)
     if (var(VAR_RESULT) != MON_CANT_GIVE) {
-        setflag(FLAG_TEMP_2)
+        setflag(FLAG_RECEIVED_TUTOR_REWARD_35)
     }
     return
 }
@@ -62,8 +118,23 @@ script Pokemon_Tutor_Inside_Script_GiveTier3Reward {
     givemon(SPECIES_DRATINI, 15, ITEM_NONE)
     call(Pokemon_Tutor_Inside_Script_HandleGiftResult)
     if (var(VAR_RESULT) != MON_CANT_GIVE) {
-        setflag(FLAG_TEMP_3)
+        setflag(FLAG_RECEIVED_TUTOR_REWARD_60)
     }
+    return
+}
+
+script Pokemon_Tutor_Inside_Script_GiveTier4Reward {
+    msgbox("This reward has not been configured yet.", MSGBOX_DEFAULT)
+    return
+}
+
+script Pokemon_Tutor_Inside_Script_GiveTier5Reward {
+    msgbox("This reward has not been configured yet.", MSGBOX_DEFAULT)
+    return
+}
+
+script Pokemon_Tutor_Inside_Script_GiveTier6Reward {
+    msgbox("This reward has not been configured yet.", MSGBOX_DEFAULT)
     return
 }
 
