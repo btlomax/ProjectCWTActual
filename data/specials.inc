@@ -640,3 +640,6 @@ gSpecials::
 	def_special StickerManGetBragFlags
 	def_special CheckAddCoins
 	def_special StartWillowbendTutorBattle, waitstate=1
+	def_special PokemonTutorRollStarterPool, requests_effects=1
+	def_special PokemonTutorShowStarterPoolMenu, requests_effects=1, waitstate=1
+	def_special PokemonTutorGiveStarterReward, requests_effects=1

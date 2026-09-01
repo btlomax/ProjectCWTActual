@@ -1,11 +1,74 @@
 mapscripts Pokemon_Tutor_Inside_MapScripts {}
 
+script Pokemon_Tutor_Inside_Script_GivePokemonReward {
+    specialvar(VAR_RESULT, PokemonTutorRollStarterPool)
+    if (var(VAR_RESULT) == FALSE) {
+        msgbox("I'm afraid I have no eligible partners\nfor you right now.", MSGBOX_DEFAULT)
+        setvar(VAR_RESULT, MON_CANT_GIVE)
+        return
+    }
+
+    msgbox("Take your pick!", MSGBOX_DEFAULT)
+    goto(Pokemon_Tutor_Inside_Script_SelectPokemonReward)
+}
+
+script Pokemon_Tutor_Inside_Script_SelectPokemonReward {
+    special(PokemonTutorShowStarterPoolMenu)
+    if (var(VAR_RESULT) == MULTI_B_PRESSED) {
+        msgbox("No problem. I'll draw new choices when\nyou return.", MSGBOX_DEFAULT)
+        setvar(VAR_RESULT, MON_CANT_GIVE)
+        return
+    }
+
+    copyvar(VAR_0x8007, VAR_RESULT)
+    if (var(VAR_0x8007) == 0) {
+        copyvar(VAR_0x800B, VAR_0x8004)
+    } else {
+        if (var(VAR_0x8007) == 1) {
+            copyvar(VAR_0x800B, VAR_0x8005)
+        } else {
+            copyvar(VAR_0x800B, VAR_0x8006)
+        }
+    }
+
+    bufferspeciesname(STR_VAR_1, VAR_0x800B)
+    msgbox("Would you like {STR_VAR_1}?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == NO) {
+        goto(Pokemon_Tutor_Inside_Script_SelectPokemonReward)
+    }
+
+    specialvar(VAR_RESULT, PokemonTutorGiveStarterReward)
+    if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
+        playfanfare(MUS_OBTAIN_ITEM)
+        msgbox("{PLAYER} received {STR_VAR_1}!", MSGBOX_DEFAULT)
+        waitfanfare
+        msgbox("I know you'll take great care of {STR_VAR_1}!\p"
+               "Come back anytime you want to see how many\n"
+               "Pokémon you've caught!\p",
+        MSGBOX_DEFAULT)
+    } else {
+        if (var(VAR_RESULT) == MON_GIVEN_TO_PC) {
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("{STR_VAR_1} was sent to the PC!", MSGBOX_DEFAULT)
+            waitfanfare
+            msgbox("I know you'll take great care of {STR_VAR_1}!\p"
+                   "Come back anytime you want to see how\n"
+                   "many Pokémon you've caught!\p",
+            MSGBOX_DEFAULT)
+        } else {
+            msgbox("Your party and PC are full! Make room\nand come back!", MSGBOX_DEFAULT)
+        }
+    }
+
+    return
+}
+
 script Pokemon_Tutor_Inside_MapScripts_Check_Pokemon_Caught 
 {
     lock
     faceplayer
 
-    msgbox("Ah hello young trainer! Are you here to\nsee how many Pokémon you've caught so\lfar?", MSGBOX_YESNO)
+    msgbox("Ah hello young trainer! Are you here to\nsee how many Pokémon you've caught?", MSGBOX_YESNO)
 
     if (var(VAR_RESULT) == 0) {
         msgbox("No problem! Come back anytime.", MSGBOX_DEFAULT)
@@ -23,8 +86,7 @@ script Pokemon_Tutor_Inside_MapScripts_Check_Pokemon_Caught
     buffernumberstring(STR_VAR_1, VAR_0x8008)
     buffernumberstring(STR_VAR_2, VAR_0x8009)
 
-    msgbox("You've seen {STR_VAR_1} Pokémon and\ncaught {STR_VAR_2} Pokémon!\p", MSGBOX_DEFAULT)
-
+    msgbox("You've seen {STR_VAR_1} Pokémon and caught\n{STR_VAR_2} Pokémon!\p", MSGBOX_DEFAULT)
     call(Pokemon_Tutor_Inside_Script_CheckRewardTiers)
 
     release
@@ -34,8 +96,11 @@ script Pokemon_Tutor_Inside_MapScripts_Check_Pokemon_Caught
 script Pokemon_Tutor_Inside_Script_CheckRewardTiers {
     if (!flag(FLAG_RECEIVED_TUTOR_REWARD_15)) {
         if (var(VAR_0x8009) >= 15) {
-            msgbox("Wonderful! You've reached 15 caught Pokémon!\nHere is your reward!", MSGBOX_DEFAULT)
-            call(Pokemon_Tutor_Inside_Script_GiveTier1Reward)
+            msgbox("Wonderful! You've caught 15 Pokémon!", MSGBOX_DEFAULT)
+            call(Pokemon_Tutor_Inside_Script_GivePokemonReward)
+            if (var(VAR_RESULT) != MON_CANT_GIVE) {
+                setflag(FLAG_RECEIVED_TUTOR_REWARD_15)
+            }
         } else {
             msgbox("Your first goal is to catch 15 Pokémon.\nCome back when you've caught a few more!", MSGBOX_DEFAULT)
         }
@@ -44,8 +109,11 @@ script Pokemon_Tutor_Inside_Script_CheckRewardTiers {
 
     if (!flag(FLAG_RECEIVED_TUTOR_REWARD_35)) {
         if (var(VAR_0x8009) >= 35) {
-            msgbox("Wonderful! You've reached 35 caught Pokémon!\nHere is your reward!", MSGBOX_DEFAULT)
-            call(Pokemon_Tutor_Inside_Script_GiveTier2Reward)
+            msgbox("Wow! You've caught 35 Pokémon!", MSGBOX_DEFAULT)
+            call(Pokemon_Tutor_Inside_Script_GivePokemonReward)
+            if (var(VAR_RESULT) != MON_CANT_GIVE) {
+                setflag(FLAG_RECEIVED_TUTOR_REWARD_35)
+            }
         } else {
             msgbox("Your next goal is to catch 35 Pokémon.\nCome back when you've caught a few more!", MSGBOX_DEFAULT)
         }
@@ -54,8 +122,11 @@ script Pokemon_Tutor_Inside_Script_CheckRewardTiers {
 
     if (!flag(FLAG_RECEIVED_TUTOR_REWARD_60)) {
         if (var(VAR_0x8009) >= 60) {
-            msgbox("Wonderful! You've reached 60 caught Pokémon!\nHere is your reward!", MSGBOX_DEFAULT)
-            call(Pokemon_Tutor_Inside_Script_GiveTier3Reward)
+            msgbox("Incredible! You've caught 60 Pokémon!", MSGBOX_DEFAULT)
+            call(Pokemon_Tutor_Inside_Script_GivePokemonReward)
+            if (var(VAR_RESULT) != MON_CANT_GIVE) {
+                setflag(FLAG_RECEIVED_TUTOR_REWARD_60)
+            }
         } else {
             msgbox("Your next goal is to catch 60 Pokémon.\nCome back when you've caught a few more!", MSGBOX_DEFAULT)
         }
@@ -64,8 +135,11 @@ script Pokemon_Tutor_Inside_Script_CheckRewardTiers {
 
     if (!flag(FLAG_RECEIVED_TUTOR_REWARD_95)) {
         if (var(VAR_0x8009) >= 95) {
-            msgbox("Wonderful! You've reached 95 caught Pokémon!\nHere is your reward!", MSGBOX_DEFAULT)
-            call(Pokemon_Tutor_Inside_Script_GiveTier4Reward)
+            msgbox("You've caught how many? 95?!", MSGBOX_DEFAULT)
+            call(Pokemon_Tutor_Inside_Script_GivePokemonReward)
+            if (var(VAR_RESULT) != MON_CANT_GIVE) {
+                setflag(FLAG_RECEIVED_TUTOR_REWARD_95)
+            }
         } else {
             msgbox("Your next goal is to catch 95 Pokémon.\nCome back when you've caught a few more!", MSGBOX_DEFAULT)
         }
@@ -74,8 +148,11 @@ script Pokemon_Tutor_Inside_Script_CheckRewardTiers {
 
     if (!flag(FLAG_RECEIVED_TUTOR_REWARD_140)) {
         if (var(VAR_0x8009) >= 140) {
-            msgbox("Wonderful! You've reached 140 caught Pokémon!\nHere is your reward!", MSGBOX_DEFAULT)
-            call(Pokemon_Tutor_Inside_Script_GiveTier5Reward)
+            msgbox("You've caught 140 Pokémon!", MSGBOX_DEFAULT)
+            call(Pokemon_Tutor_Inside_Script_GivePokemonReward)
+            if (var(VAR_RESULT) != MON_CANT_GIVE) {
+                setflag(FLAG_RECEIVED_TUTOR_REWARD_140)
+            }
         } else {
             msgbox("Your next goal is to catch 140 Pokémon.\nCome back when you've caught a few more!", MSGBOX_DEFAULT)
         }
@@ -84,67 +161,24 @@ script Pokemon_Tutor_Inside_Script_CheckRewardTiers {
 
     if (!flag(FLAG_RECEIVED_TUTOR_REWARD_190)) {
         if (var(VAR_0x8009) >= 190) {
-            msgbox("Wonderful! You've reached 190 caught Pokémon!\nHere is your reward!", MSGBOX_DEFAULT)
-            call(Pokemon_Tutor_Inside_Script_GiveTier6Reward)
+
+            playse(SE_PIN)
+            applymovement(LOCALID_POKEMON_TUTOR, Common_Movement_ExclamationMark)
+            waitmovement(LOCALID_POKEMON_TUTOR)
+
+            msgbox("You've done it! 190 Pokémon!", MSGBOX_DEFAULT)
+            call(Pokemon_Tutor_Inside_Script_GivePokemonReward)
+            if (var(VAR_RESULT) != MON_CANT_GIVE) {
+                setflag(FLAG_RECEIVED_TUTOR_REWARD_190)
+            }
         } else {
             msgbox("Your next goal is to catch 190 Pokémon.\nCome back when you've caught a few more!", MSGBOX_DEFAULT)
         }
         return
     }
 
-    msgbox("You've claimed all currently available rewards!\nKeep up the good work!", MSGBOX_DEFAULT)
-    return
-}
-
-script Pokemon_Tutor_Inside_Script_GiveTier1Reward {
-    givemon(SPECIES_GROWLITHE, 5, ITEM_NONE)
-    call(Pokemon_Tutor_Inside_Script_HandleGiftResult)
-    if (var(VAR_RESULT) != MON_CANT_GIVE) {
-        setflag(FLAG_RECEIVED_TUTOR_REWARD_15)
-    }
-    return
-}
-
-script Pokemon_Tutor_Inside_Script_GiveTier2Reward {
-    givemon(SPECIES_EEVEE, 10, ITEM_NONE)
-    call(Pokemon_Tutor_Inside_Script_HandleGiftResult)
-    if (var(VAR_RESULT) != MON_CANT_GIVE) {
-        setflag(FLAG_RECEIVED_TUTOR_REWARD_35)
-    }
-    return
-}
-
-script Pokemon_Tutor_Inside_Script_GiveTier3Reward {
-    givemon(SPECIES_DRATINI, 15, ITEM_NONE)
-    call(Pokemon_Tutor_Inside_Script_HandleGiftResult)
-    if (var(VAR_RESULT) != MON_CANT_GIVE) {
-        setflag(FLAG_RECEIVED_TUTOR_REWARD_60)
-    }
-    return
-}
-
-script Pokemon_Tutor_Inside_Script_GiveTier4Reward {
-    msgbox("This reward has not been configured yet.", MSGBOX_DEFAULT)
-    return
-}
-
-script Pokemon_Tutor_Inside_Script_GiveTier5Reward {
-    msgbox("This reward has not been configured yet.", MSGBOX_DEFAULT)
-    return
-}
-
-script Pokemon_Tutor_Inside_Script_GiveTier6Reward {
-    msgbox("This reward has not been configured yet.", MSGBOX_DEFAULT)
-    return
-}
-
-script Pokemon_Tutor_Inside_Script_HandleGiftResult {
-    if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY || var(VAR_RESULT) == MON_GIVEN_TO_PC) {
-        playfanfare(MUS_OBTAIN_ITEM)
-        msgbox("{PLAYER} received the Pokémon!", MSGBOX_DEFAULT)
-        waitfanfare
-    } else {
-        msgbox("Your party and PC are full! Make room and return.", MSGBOX_DEFAULT)
-    }
+    msgbox("That's all I have for you I'm afraid!\p"
+    "You can't be far off catching them all!\p"
+    "Keep going!", MSGBOX_DEFAULT)
     return
 }

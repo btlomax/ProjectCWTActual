@@ -1242,15 +1242,15 @@
 #define FLAG_RECEIVED_TUTOR_REWARD_95                               0x49C
 #define FLAG_RECEIVED_TUTOR_REWARD_140                              0x49D
 #define FLAG_RECEIVED_TUTOR_REWARD_190                              0x49E
-#define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
-#define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
-#define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
-#define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
-#define FLAG_UNUSED_0x4A3                                           0x4A3 // Unused Flag
-#define FLAG_UNUSED_0x4A4                                           0x4A4 // Unused Flag
-#define FLAG_UNUSED_0x4A5                                           0x4A5 // Unused Flag
-#define FLAG_UNUSED_0x4A6                                           0x4A6 // Unused Flag
-#define FLAG_UNUSED_0x4A7                                           0x4A7 // Unused Flag
+#define FLAG_POKEMON_TUTOR_STARTER_CHIKORITA_CLAIMED                 0x49F
+#define FLAG_POKEMON_TUTOR_STARTER_TREECKO_CLAIMED                   0x4A0
+#define FLAG_POKEMON_TUTOR_STARTER_TURTWIG_CLAIMED                   0x4A1
+#define FLAG_POKEMON_TUTOR_STARTER_CYNDAQUIL_CLAIMED                 0x4A2
+#define FLAG_POKEMON_TUTOR_STARTER_TORCHIC_CLAIMED                   0x4A3
+#define FLAG_POKEMON_TUTOR_STARTER_CHIMCHAR_CLAIMED                  0x4A4
+#define FLAG_POKEMON_TUTOR_STARTER_TOTODILE_CLAIMED                  0x4A5
+#define FLAG_POKEMON_TUTOR_STARTER_MUDKIP_CLAIMED                    0x4A6
+#define FLAG_POKEMON_TUTOR_STARTER_PIPLUP_CLAIMED                    0x4A7
 #define FLAG_UNUSED_0x4A8                                           0x4A8 // Unused Flag
 #define FLAG_UNUSED_0x4A9                                           0x4A9 // Unused Flag
 #define FLAG_UNUSED_0x4AA                                           0x4AA // Unused Flag
