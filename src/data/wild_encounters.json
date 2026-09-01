@@ -15793,12 +15793,12 @@
             "encounter_rate": 7,
             "mons": [
               {
-                "min_level": 3,
+                "min_level": 4,
                 "max_level": 5,
                 "species": "SPECIES_PIDGEY"
               },
               {
-                "min_level": 3,
+                "min_level": 4,
                 "max_level": 4,
                 "species": "SPECIES_NINCADA"
               },
@@ -15808,33 +15808,33 @@
                 "species": "SPECIES_POOCHYENA"
               },
               {
-                "min_level": 3,
+                "min_level": 4,
                 "max_level": 4,
                 "species": "SPECIES_RATTATA_ALOLA"
               },
               {
-                "min_level": 5,
+                "min_level": 3,
                 "max_level": 5,
                 "species": "SPECIES_ODDISH"
               },
               {
-                "min_level": 3,
-                "max_level": 5,
+                "min_level": 4,
+                "max_level": 4,
                 "species": "SPECIES_MANKEY"
               },
               {
-                "min_level": 5,
+                "min_level": 4,
                 "max_level": 5,
                 "species": "SPECIES_FLABEBE"
               },
               {
-                "min_level": 5,
+                "min_level": 4,
                 "max_level": 5,
                 "species": "SPECIES_TAUROS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 4,
+                "max_level": 6,
                 "species": "SPECIES_MANKEY"
               },
               {
@@ -15843,13 +15843,13 @@
                 "species": "SPECIES_RATTATA_ALOLA"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 4,
+                "max_level": 6,
                 "species": "SPECIES_FLABEBE"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
+                "max_level": 6,
                 "species": "SPECIES_TAUROS"
               }
             ]
