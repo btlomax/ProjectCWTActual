@@ -200,6 +200,10 @@ script Route1_WillbendCanal_MapScripts_PathSign {
     end
 }
 
+script Route1_WillbendCanal_MapScripts_TutorSign {
+    msgbox("Free Pokemon!\n<-- Inside", MSGBOX_SIGN)
+    end
+}
 #region Movement Data
 
 movement Movement_CameraUp {

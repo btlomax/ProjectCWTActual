@@ -181,6 +181,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route1_WillbendCanal_MapScripts_PathSign"
+    },
+    {
+      "type": "sign",
+      "x": 21,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route1_WillbendCanal_MapScripts_TutorSign"
     }
   ]
 }
