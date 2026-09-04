@@ -11,6 +11,114 @@ script Weirford_Forest_MapScripts_BugCatcherSam {
     end
 }
 
+script Weirford_Forest_MapScripts_CamperColin {
+    trainerbattle_single(TRAINER_WEIRFORDFOREST_CAMPER_COLIN,
+    Weirford_Forest_MapScripts_CamperColin_TrainerPreBattle,
+    Weirford_Forest_MapScripts_CamperColin_TrainerDefeated,
+    Weirford_Forest_MapScripts_CamperColin_Beaten
+    )
+
+    msgbox(Weirford_Forest_MapScripts_CamperColin_TrainerPostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Weirford_Forest_MapScripts_BugCatcherJason {
+    trainerbattle_single(TRAINER_WEIRFORDFOREST_BUGCATCHER_JASON,
+    Weirford_Forest_MapScripts_BugCatcherJason_TrainerPreBattle,
+    Weirford_Forest_MapScripts_BugCatcherJason_TrainerDefeated,
+    Weirford_Forest_MapScripts_BugCatcherJason_Beaten
+    )
+
+    msgbox(Weirford_Forest_MapScripts_BugCatcherJason_TrainerPostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Weirford_Forest_MapScripts_CorpoEric{
+    trainerbattle_single(TRAINER_WEIRFORDFOREST_CORPO_ERIC,
+    Weirford_Forest_MapScripts_CorpoEric_TrainerPreBattle,
+    Weirford_Forest_MapScripts_CorpoEric_TrainerDefeated,
+    Weirford_Forest_MapScripts_CorpoEric_Beaten
+    )
+
+    msgbox(Weirford_Forest_MapScripts_CorpoEric_TrainerPostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Weirford_Forest_MapScripts_LassLila {
+    trainerbattle_single(TRAINER_WEIRFORDFOREST_LASS_LILA,
+    Weirford_Forest_MapScripts_LassLila_TrainerPreBattle,
+    Weirford_Forest_MapScripts_LassLila_TrainerDefeated,
+    Weirford_Forest_MapScripts_LassLila_Beaten
+    )
+
+    msgbox(Weirford_Forest_MapScripts_LassLila_TrainerPostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+text Weirford_Forest_MapScripts_CorpoEric_TrainerPreBattle {
+    "Corpo Eric wants to battle!"
+}
+
+text Weirford_Forest_MapScripts_CorpoEric_TrainerPostBattle {
+    "Corpo Eric: Thanks for the battle!"
+}
+
+text Weirford_Forest_MapScripts_CorpoEric_TrainerDefeated {
+    "Corpo Eric: I can't believe I lost!"
+}
+
+text Weirford_Forest_MapScripts_CorpoEric_Beaten {
+    "Corpo Eric has been defeated!"
+}
+
+text Weirford_Forest_MapScripts_LassLila_TrainerPreBattle {
+    "Lass Lila wants to battle!"
+}
+
+text Weirford_Forest_MapScripts_LassLila_TrainerPostBattle {
+    "Lass Lila: Thanks for the battle!"
+}
+
+text Weirford_Forest_MapScripts_LassLila_TrainerDefeated {
+    "Lass Lila: I can't believe I lost!"
+}
+
+text Weirford_Forest_MapScripts_LassLila_Beaten {
+    "Lass Lila has been defeated!"
+}
+
+text Weirford_Forest_MapScripts_BugCatcherJason_TrainerPreBattle {
+    "Bug Catcher Jason wants to battle!"
+}
+
+text Weirford_Forest_MapScripts_BugCatcherJason_TrainerPostBattle {
+    "Bug Catcher Jason: Thanks for the battle!"
+}
+
+text Weirford_Forest_MapScripts_BugCatcherJason_TrainerDefeated {
+    "Bug Catcher Jason: I can't believe I lost!"
+}
+
+text Weirford_Forest_MapScripts_BugCatcherJason_Beaten {
+    "Bug Catcher Jason has been defeated!"
+}
+
+text Weirford_Forest_MapScripts_CamperColin_TrainerPreBattle {
+    "Camper Colin wants to battle!"
+}
+
+text Weirford_Forest_MapScripts_CamperColin_TrainerPostBattle {
+    "Camper Colin: Thanks for the battle!"
+}
+
+text Weirford_Forest_MapScripts_CamperColin_TrainerDefeated {
+    "Camper Colin: I can't believe I lost!"
+}
+
+text Weirford_Forest_MapScripts_CamperColin_Beaten {
+    "Camper Colin has been defeated!"
+}
+
 text Weirford_Forest_MapScripts_BugCatcherSam_TrainerPreBattle {
     "Bug Catcher Sam wants to battle!"
 }

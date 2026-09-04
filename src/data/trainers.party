@@ -16972,10 +16972,74 @@ Double Battle: No
 AI: Basic Trainer
 
 Wurmple
-Level: 6
+Level: 5
 
 Cascoon
 Level: 5
 
 Venipede
 Level: 6
+
+=== TRAINER_WEIRFORDFOREST_CAMPER_COLIN ===
+Name: COLIN
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Budew
+Level: 5
+
+Shinx
+Level: 5
+
+=== TRAINER_WEIRFORDFOREST_CORPO_ERIC ===
+Name: ERIC
+Class: Gentleman
+Pic: Gentleman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Growlithe
+Level: 7
+
+=== TRAINER_WEIRFORDFOREST_BUGCATCHER_JASON ===
+Name: JASON
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Silcoon
+Level: 5
+
+Cascoon
+Level: 5
+
+Nincada
+Level: 6
+
+=== TRAINER_WEIRFORDFOREST_LASS_LILA ===
+Name: LILA
+Class: Lass
+Pic: Lass
+Gender: Female 
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+Oddish
+Level: 6
+
+Starly
+Level: 6
+
+
+
+
