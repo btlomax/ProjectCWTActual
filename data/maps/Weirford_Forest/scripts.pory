@@ -3,8 +3,7 @@ mapscripts Weirford_Forest_MapScripts {}
 script Weirford_Forest_MapScripts_BugCatcherSam {
     trainerbattle_single(TRAINER_WEIRFORDFOREST_BUGCATCHER_SAM,
     Weirford_Forest_MapScripts_BugCatcherSam_TrainerPreBattle,
-    Weirford_Forest_MapScripts_BugCatcherSam_TrainerDefeated,
-    Weirford_Forest_MapScripts_BugCatcherSam_Beaten
+    Weirford_Forest_MapScripts_BugCatcherSam_TrainerDefeated
     )
 
     msgbox(Weirford_Forest_MapScripts_BugCatcherSam_TrainerPostBattle, MSGBOX_AUTOCLOSE)
@@ -14,8 +13,7 @@ script Weirford_Forest_MapScripts_BugCatcherSam {
 script Weirford_Forest_MapScripts_CamperColin {
     trainerbattle_single(TRAINER_WEIRFORDFOREST_CAMPER_COLIN,
     Weirford_Forest_MapScripts_CamperColin_TrainerPreBattle,
-    Weirford_Forest_MapScripts_CamperColin_TrainerDefeated,
-    Weirford_Forest_MapScripts_CamperColin_Beaten
+    Weirford_Forest_MapScripts_CamperColin_TrainerDefeated
     )
 
     msgbox(Weirford_Forest_MapScripts_CamperColin_TrainerPostBattle, MSGBOX_AUTOCLOSE)
@@ -25,8 +23,7 @@ script Weirford_Forest_MapScripts_CamperColin {
 script Weirford_Forest_MapScripts_BugCatcherJason {
     trainerbattle_single(TRAINER_WEIRFORDFOREST_BUGCATCHER_JASON,
     Weirford_Forest_MapScripts_BugCatcherJason_TrainerPreBattle,
-    Weirford_Forest_MapScripts_BugCatcherJason_TrainerDefeated,
-    Weirford_Forest_MapScripts_BugCatcherJason_Beaten
+    Weirford_Forest_MapScripts_BugCatcherJason_TrainerDefeated
     )
 
     msgbox(Weirford_Forest_MapScripts_BugCatcherJason_TrainerPostBattle, MSGBOX_AUTOCLOSE)
@@ -36,8 +33,7 @@ script Weirford_Forest_MapScripts_BugCatcherJason {
 script Weirford_Forest_MapScripts_CorpoEric{
     trainerbattle_single(TRAINER_WEIRFORDFOREST_CORPO_ERIC,
     Weirford_Forest_MapScripts_CorpoEric_TrainerPreBattle,
-    Weirford_Forest_MapScripts_CorpoEric_TrainerDefeated,
-    Weirford_Forest_MapScripts_CorpoEric_Beaten
+    Weirford_Forest_MapScripts_CorpoEric_TrainerDefeated
     )
 
     msgbox(Weirford_Forest_MapScripts_CorpoEric_TrainerPostBattle, MSGBOX_AUTOCLOSE)
@@ -47,90 +43,92 @@ script Weirford_Forest_MapScripts_CorpoEric{
 script Weirford_Forest_MapScripts_LassLila {
     trainerbattle_single(TRAINER_WEIRFORDFOREST_LASS_LILA,
     Weirford_Forest_MapScripts_LassLila_TrainerPreBattle,
-    Weirford_Forest_MapScripts_LassLila_TrainerDefeated,
-    Weirford_Forest_MapScripts_LassLila_Beaten
+    Weirford_Forest_MapScripts_LassLila_TrainerDefeated
     )
 
     msgbox(Weirford_Forest_MapScripts_LassLila_TrainerPostBattle, MSGBOX_AUTOCLOSE)
     end
 }
 
+
+script Weirford_Forest_MapScripts_FirstItem {
+    lock
+    finditem(ITEM_NET_BALL)
+    release
+    end
+}
+
+script Weirford_Forest_MapScripts_SecondItem {
+    lock
+    finditem(ITEM_ANTIDOTE)
+    release
+    end
+}
+
+script Weirford_Forest_MapScripts_ThirdItem_TM {
+    lock
+    finditem(ITEM_TM01)
+    release
+    end
+}
+
+
 text Weirford_Forest_MapScripts_CorpoEric_TrainerPreBattle {
-    "Corpo Eric wants to battle!"
+    "AH! Where did you come from?!"
 }
 
 text Weirford_Forest_MapScripts_CorpoEric_TrainerPostBattle {
-    "Corpo Eric: Thanks for the battle!"
+    "I'm hiding from my manager..."
 }
 
 text Weirford_Forest_MapScripts_CorpoEric_TrainerDefeated {
-    "Corpo Eric: I can't believe I lost!"
-}
-
-text Weirford_Forest_MapScripts_CorpoEric_Beaten {
-    "Corpo Eric has been defeated!"
+    "I only lost because you scared me!"
 }
 
 text Weirford_Forest_MapScripts_LassLila_TrainerPreBattle {
-    "Lass Lila wants to battle!"
+    "I'll tell you a secret if you\ncan beat me!"
 }
 
 text Weirford_Forest_MapScripts_LassLila_TrainerPostBattle {
-    "Lass Lila: Thanks for the battle!"
+    "There's a house hidden deep in the forest."
 }
 
 text Weirford_Forest_MapScripts_LassLila_TrainerDefeated {
-    "Lass Lila: I can't believe I lost!"
-}
-
-text Weirford_Forest_MapScripts_LassLila_Beaten {
-    "Lass Lila has been defeated!"
+    "UH! FINE I'LL TELL YOU!"
 }
 
 text Weirford_Forest_MapScripts_BugCatcherJason_TrainerPreBattle {
-    "Bug Catcher Jason wants to battle!"
+    "Have you seen another Bug\nCatcher around?"
 }
 
 text Weirford_Forest_MapScripts_BugCatcherJason_TrainerPostBattle {
-    "Bug Catcher Jason: Thanks for the battle!"
+    "He's near the Westlock entrance?\nWhy didn't you just say so!"
 }
 
 text Weirford_Forest_MapScripts_BugCatcherJason_TrainerDefeated {
-    "Bug Catcher Jason: I can't believe I lost!"
-}
-
-text Weirford_Forest_MapScripts_BugCatcherJason_Beaten {
-    "Bug Catcher Jason has been defeated!"
+    "DUDE! I only asked you a question!"
 }
 
 text Weirford_Forest_MapScripts_CamperColin_TrainerPreBattle {
-    "Camper Colin wants to battle!"
+    "This is my first time camping in the\nforest!"
 }
 
 text Weirford_Forest_MapScripts_CamperColin_TrainerPostBattle {
-    "Camper Colin: Thanks for the battle!"
+    "The camping is NOT going well..."
 }
 
 text Weirford_Forest_MapScripts_CamperColin_TrainerDefeated {
-    "Camper Colin: I can't believe I lost!"
-}
-
-text Weirford_Forest_MapScripts_CamperColin_Beaten {
-    "Camper Colin has been defeated!"
+    "I'm trying my best not to SHAKE with\nFEAR."
 }
 
 text Weirford_Forest_MapScripts_BugCatcherSam_TrainerPreBattle {
-    "Bug Catcher Sam wants to battle!"
+    "Have you got any Bug Pokémon?"
 }
 
 text Weirford_Forest_MapScripts_BugCatcherSam_TrainerPostBattle {
-    "Bug Catcher Sam: Thanks for the battle!"
+    "There are bug Pokemon here...\nI can feel them crawling up my OH SHI-\p"
 }
 
 text Weirford_Forest_MapScripts_BugCatcherSam_TrainerDefeated {
-    "Bug Catcher Sam: I can't believe I lost!"
-}
-
-text Weirford_Forest_MapScripts_BugCatcherSam_Beaten {
-    "Bug Catcher Sam has been defeated!"
+    "I can't believe you beat my team of\nalmighty bugs!"
 }

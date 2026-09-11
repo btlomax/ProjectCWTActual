@@ -22,8 +22,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
-      "x": 30,
-      "y": 9,
+      "x": 27,
+      "y": 13,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -94,7 +94,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "3",
+      "trainer_sight_or_berry_tree_id": "1",
       "script": "Weirford_Forest_MapScripts_BugCatcherJason",
       "flag": "0"
     },
@@ -113,16 +113,55 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_2",
-      "x": 24,
-      "y": 8,
+      "x": 19,
+      "y": 15,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "Weirford_Forest_MapScripts_LassLila",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 2,
+      "y": 32,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Weirford_Forest_MapScripts_FirstItem",
+      "flag": "FLAG_WEIRFORD_FOREST_FIRST_ITEM"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 36,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Weirford_Forest_MapScripts_SecondItem",
+      "flag": "FLAG_WEIRFORD_FOREST_SECOND_ITEM"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 10,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Weirford_Forest_MapScripts_ThirdItem_TM",
+      "flag": "FLAG_WEIRFORD_FOREST_THIRD_ITEM"
     }
   ],
   "warp_events": [],

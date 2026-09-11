@@ -4,120 +4,130 @@ Weirford_Forest_MapScripts::
 
 Weirford_Forest_MapScripts_BugCatcherSam::
 # 4 "data/maps/Weirford_Forest/scripts.pory"
-	trainerbattle_single TRAINER_WEIRFORDFOREST_BUGCATCHER_SAM, Weirford_Forest_MapScripts_BugCatcherSam_TrainerPreBattle, Weirford_Forest_MapScripts_BugCatcherSam_TrainerDefeated, Weirford_Forest_MapScripts_BugCatcherSam_Beaten
-# 10 "data/maps/Weirford_Forest/scripts.pory"
+	trainerbattle_single TRAINER_WEIRFORDFOREST_BUGCATCHER_SAM, Weirford_Forest_MapScripts_BugCatcherSam_TrainerPreBattle, Weirford_Forest_MapScripts_BugCatcherSam_TrainerDefeated
+# 9 "data/maps/Weirford_Forest/scripts.pory"
 	msgbox Weirford_Forest_MapScripts_BugCatcherSam_TrainerPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
 Weirford_Forest_MapScripts_CamperColin::
-# 15 "data/maps/Weirford_Forest/scripts.pory"
-	trainerbattle_single TRAINER_WEIRFORDFOREST_CAMPER_COLIN, Weirford_Forest_MapScripts_CamperColin_TrainerPreBattle, Weirford_Forest_MapScripts_CamperColin_TrainerDefeated, Weirford_Forest_MapScripts_CamperColin_Beaten
-# 21 "data/maps/Weirford_Forest/scripts.pory"
+# 14 "data/maps/Weirford_Forest/scripts.pory"
+	trainerbattle_single TRAINER_WEIRFORDFOREST_CAMPER_COLIN, Weirford_Forest_MapScripts_CamperColin_TrainerPreBattle, Weirford_Forest_MapScripts_CamperColin_TrainerDefeated
+# 19 "data/maps/Weirford_Forest/scripts.pory"
 	msgbox Weirford_Forest_MapScripts_CamperColin_TrainerPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
 Weirford_Forest_MapScripts_BugCatcherJason::
-# 26 "data/maps/Weirford_Forest/scripts.pory"
-	trainerbattle_single TRAINER_WEIRFORDFOREST_BUGCATCHER_JASON, Weirford_Forest_MapScripts_BugCatcherJason_TrainerPreBattle, Weirford_Forest_MapScripts_BugCatcherJason_TrainerDefeated, Weirford_Forest_MapScripts_BugCatcherJason_Beaten
-# 32 "data/maps/Weirford_Forest/scripts.pory"
+# 24 "data/maps/Weirford_Forest/scripts.pory"
+	trainerbattle_single TRAINER_WEIRFORDFOREST_BUGCATCHER_JASON, Weirford_Forest_MapScripts_BugCatcherJason_TrainerPreBattle, Weirford_Forest_MapScripts_BugCatcherJason_TrainerDefeated
+# 29 "data/maps/Weirford_Forest/scripts.pory"
 	msgbox Weirford_Forest_MapScripts_BugCatcherJason_TrainerPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
 Weirford_Forest_MapScripts_CorpoEric::
-# 37 "data/maps/Weirford_Forest/scripts.pory"
-	trainerbattle_single TRAINER_WEIRFORDFOREST_CORPO_ERIC, Weirford_Forest_MapScripts_CorpoEric_TrainerPreBattle, Weirford_Forest_MapScripts_CorpoEric_TrainerDefeated, Weirford_Forest_MapScripts_CorpoEric_Beaten
-# 43 "data/maps/Weirford_Forest/scripts.pory"
+# 34 "data/maps/Weirford_Forest/scripts.pory"
+	trainerbattle_single TRAINER_WEIRFORDFOREST_CORPO_ERIC, Weirford_Forest_MapScripts_CorpoEric_TrainerPreBattle, Weirford_Forest_MapScripts_CorpoEric_TrainerDefeated
+# 39 "data/maps/Weirford_Forest/scripts.pory"
 	msgbox Weirford_Forest_MapScripts_CorpoEric_TrainerPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
 Weirford_Forest_MapScripts_LassLila::
-# 48 "data/maps/Weirford_Forest/scripts.pory"
-	trainerbattle_single TRAINER_WEIRFORDFOREST_LASS_LILA, Weirford_Forest_MapScripts_LassLila_TrainerPreBattle, Weirford_Forest_MapScripts_LassLila_TrainerDefeated, Weirford_Forest_MapScripts_LassLila_Beaten
-# 54 "data/maps/Weirford_Forest/scripts.pory"
+# 44 "data/maps/Weirford_Forest/scripts.pory"
+	trainerbattle_single TRAINER_WEIRFORDFOREST_LASS_LILA, Weirford_Forest_MapScripts_LassLila_TrainerPreBattle, Weirford_Forest_MapScripts_LassLila_TrainerDefeated
+# 49 "data/maps/Weirford_Forest/scripts.pory"
 	msgbox Weirford_Forest_MapScripts_LassLila_TrainerPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
+Weirford_Forest_MapScripts_FirstItem::
+# 55 "data/maps/Weirford_Forest/scripts.pory"
+	lock
+# 56 "data/maps/Weirford_Forest/scripts.pory"
+	finditem ITEM_NET_BALL
+# 57 "data/maps/Weirford_Forest/scripts.pory"
+	release
+	end
+
+
+Weirford_Forest_MapScripts_SecondItem::
+# 62 "data/maps/Weirford_Forest/scripts.pory"
+	lock
+# 63 "data/maps/Weirford_Forest/scripts.pory"
+	finditem ITEM_ANTIDOTE
+# 64 "data/maps/Weirford_Forest/scripts.pory"
+	release
+	end
+
+
+Weirford_Forest_MapScripts_ThirdItem_TM::
+# 69 "data/maps/Weirford_Forest/scripts.pory"
+	lock
+# 70 "data/maps/Weirford_Forest/scripts.pory"
+	finditem ITEM_TM01
+# 71 "data/maps/Weirford_Forest/scripts.pory"
+	release
+	end
+
+
 Weirford_Forest_MapScripts_CorpoEric_TrainerPreBattle::
-# 58 "data/maps/Weirford_Forest/scripts.pory"
-	.string "Corpo Eric wants to battle!$"
+# 76 "data/maps/Weirford_Forest/scripts.pory"
+	.string "AH! Where did you come from?!$"
 
 Weirford_Forest_MapScripts_CorpoEric_TrainerPostBattle::
-# 62 "data/maps/Weirford_Forest/scripts.pory"
-	.string "Corpo Eric: Thanks for the battle!$"
+# 80 "data/maps/Weirford_Forest/scripts.pory"
+	.string "I'm hiding from my manager...$"
 
 Weirford_Forest_MapScripts_CorpoEric_TrainerDefeated::
-# 66 "data/maps/Weirford_Forest/scripts.pory"
-	.string "Corpo Eric: I can't believe I lost!$"
-
-Weirford_Forest_MapScripts_CorpoEric_Beaten::
-# 70 "data/maps/Weirford_Forest/scripts.pory"
-	.string "Corpo Eric has been defeated!$"
+# 84 "data/maps/Weirford_Forest/scripts.pory"
+	.string "I only lost because you scared me!$"
 
 Weirford_Forest_MapScripts_LassLila_TrainerPreBattle::
-# 74 "data/maps/Weirford_Forest/scripts.pory"
-	.string "Lass Lila wants to battle!$"
+# 88 "data/maps/Weirford_Forest/scripts.pory"
+	.string "I'll tell you a secret if you\ncan beat me!$"
 
 Weirford_Forest_MapScripts_LassLila_TrainerPostBattle::
-# 78 "data/maps/Weirford_Forest/scripts.pory"
-	.string "Lass Lila: Thanks for the battle!$"
+# 92 "data/maps/Weirford_Forest/scripts.pory"
+	.string "There's a house hidden deep in the forest.$"
 
 Weirford_Forest_MapScripts_LassLila_TrainerDefeated::
-# 82 "data/maps/Weirford_Forest/scripts.pory"
-	.string "Lass Lila: I can't believe I lost!$"
-
-Weirford_Forest_MapScripts_LassLila_Beaten::
-# 86 "data/maps/Weirford_Forest/scripts.pory"
-	.string "Lass Lila has been defeated!$"
+# 96 "data/maps/Weirford_Forest/scripts.pory"
+	.string "UH! FINE I'LL TELL YOU!$"
 
 Weirford_Forest_MapScripts_BugCatcherJason_TrainerPreBattle::
-# 90 "data/maps/Weirford_Forest/scripts.pory"
-	.string "Bug Catcher Jason wants to battle!$"
+# 100 "data/maps/Weirford_Forest/scripts.pory"
+	.string "Have you seen another Bug\nCatcher around?$"
 
 Weirford_Forest_MapScripts_BugCatcherJason_TrainerPostBattle::
-# 94 "data/maps/Weirford_Forest/scripts.pory"
-	.string "Bug Catcher Jason: Thanks for the battle!$"
+# 104 "data/maps/Weirford_Forest/scripts.pory"
+	.string "He's near the Westlock entrance?\nWhy didn't you just say so!$"
 
 Weirford_Forest_MapScripts_BugCatcherJason_TrainerDefeated::
-# 98 "data/maps/Weirford_Forest/scripts.pory"
-	.string "Bug Catcher Jason: I can't believe I lost!$"
-
-Weirford_Forest_MapScripts_BugCatcherJason_Beaten::
-# 102 "data/maps/Weirford_Forest/scripts.pory"
-	.string "Bug Catcher Jason has been defeated!$"
+# 108 "data/maps/Weirford_Forest/scripts.pory"
+	.string "DUDE! I only asked you a question!$"
 
 Weirford_Forest_MapScripts_CamperColin_TrainerPreBattle::
-# 106 "data/maps/Weirford_Forest/scripts.pory"
-	.string "Camper Colin wants to battle!$"
+# 112 "data/maps/Weirford_Forest/scripts.pory"
+	.string "This is my first time camping in the\nforest!$"
 
 Weirford_Forest_MapScripts_CamperColin_TrainerPostBattle::
-# 110 "data/maps/Weirford_Forest/scripts.pory"
-	.string "Camper Colin: Thanks for the battle!$"
+# 116 "data/maps/Weirford_Forest/scripts.pory"
+	.string "The camping is NOT going well...$"
 
 Weirford_Forest_MapScripts_CamperColin_TrainerDefeated::
-# 114 "data/maps/Weirford_Forest/scripts.pory"
-	.string "Camper Colin: I can't believe I lost!$"
-
-Weirford_Forest_MapScripts_CamperColin_Beaten::
-# 118 "data/maps/Weirford_Forest/scripts.pory"
-	.string "Camper Colin has been defeated!$"
+# 120 "data/maps/Weirford_Forest/scripts.pory"
+	.string "I'm trying my best not to SHAKE with\nFEAR.$"
 
 Weirford_Forest_MapScripts_BugCatcherSam_TrainerPreBattle::
-# 122 "data/maps/Weirford_Forest/scripts.pory"
-	.string "Bug Catcher Sam wants to battle!$"
+# 124 "data/maps/Weirford_Forest/scripts.pory"
+	.string "Have you got any Bug Pokémon?$"
 
 Weirford_Forest_MapScripts_BugCatcherSam_TrainerPostBattle::
-# 126 "data/maps/Weirford_Forest/scripts.pory"
-	.string "Bug Catcher Sam: Thanks for the battle!$"
+# 128 "data/maps/Weirford_Forest/scripts.pory"
+	.string "There are bug Pokemon here...\nI can feel them crawling up my OH SHI-\p$"
 
 Weirford_Forest_MapScripts_BugCatcherSam_TrainerDefeated::
-# 130 "data/maps/Weirford_Forest/scripts.pory"
-	.string "Bug Catcher Sam: I can't believe I lost!$"
-
-Weirford_Forest_MapScripts_BugCatcherSam_Beaten::
-# 134 "data/maps/Weirford_Forest/scripts.pory"
-	.string "Bug Catcher Sam has been defeated!$"
+# 132 "data/maps/Weirford_Forest/scripts.pory"
+	.string "I can't believe you beat my team of\nalmighty bugs!$"

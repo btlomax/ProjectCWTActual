@@ -10503,22 +10503,20 @@ Golbat
 Level: 35
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-=== TRAINER_GRUNT_UNUSED ===
-Name: GRUNT
-Class: Team Magma
-Pic: Aqua Grunt F
+=== TRAINER_WEIRFORDFOREST_LASS_LILA ===
+Name: LILA
+Class: Lass
+Pic: Lass
 Gender: Female
-Music: Aqua
+Music: Female
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Wailmer
-Level: 31
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Oddish
+Level: 6
 
-Zubat
-Level: 31
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Starly
+Level: 6
 
 === TRAINER_GRUNT_MT_PYRE_4 ===
 Name: GRUNT
@@ -17024,22 +17022,3 @@ Level: 5
 
 Nincada
 Level: 6
-
-=== TRAINER_WEIRFORDFOREST_LASS_LILA ===
-Name: LILA
-Class: Lass
-Pic: Lass
-Gender: Female 
-Music: Female
-Double Battle: No
-AI: Basic Trainer
-
-Oddish
-Level: 6
-
-Starly
-Level: 6
-
-
-
-

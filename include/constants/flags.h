@@ -1251,11 +1251,11 @@
 #define FLAG_POKEMON_TUTOR_STARTER_TOTODILE_CLAIMED                  0x4A5
 #define FLAG_POKEMON_TUTOR_STARTER_MUDKIP_CLAIMED                    0x4A6
 #define FLAG_POKEMON_TUTOR_STARTER_PIPLUP_CLAIMED                    0x4A7
-#define FLAG_UNUSED_0x4A8                                           0x4A8 // Unused Flag
-#define FLAG_UNUSED_0x4A9                                           0x4A9 // Unused Flag
-#define FLAG_UNUSED_0x4AA                                           0x4AA // Unused Flag
-#define FLAG_UNUSED_0x4AB                                           0x4AB // Unused Flag
-#define FLAG_UNUSED_0x4AC                                           0x4AC // Unused Flag
+#define FLAG_WEIRFORD_FOREST_FIRST_ITEM                             0x4A8
+#define FLAG_WEIRFORD_FOREST_SECOND_ITEM                            0x4A9 // Unused Flag
+#define FLAG_WEIRFORD_FOREST_THIRD_ITEM                             0x4AA // Unused Flag
+#define FLAG_DEBUG_NO_ENCOUNTERS                                    0x4AB
+#define FLAG_DEBUG_NO_TRAINER_SEE                                   0x4AC
 #define FLAG_UNUSED_0x4AD                                           0x4AD // Unused Flag
 #define FLAG_UNUSED_0x4AE                                           0x4AE // Unused Flag
 #define FLAG_UNUSED_0x4AF                                           0x4AF // Unused Flag
