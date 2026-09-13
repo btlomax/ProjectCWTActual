@@ -72,6 +72,21 @@ script Weirford_Forest_MapScripts_ThirdItem_TM {
     end
 }
 
+script Weirford_Forest_MapScripts_Entrance_Sign {
+    msgbox("Weirford Forest", MSGBOX_DEFAULT)
+    end
+}
+
+script Weirford_Forest_MapScripts_Exit_Sign {
+    msgbox("<- Route 3", MSGBOX_DEFAULT)
+    end
+}
+
+script Weirford_Forest_MapScripts_Weirford_House {
+    msgbox("Welcome to Weirford House", MSGBOX_DEFAULT)
+    end
+}
+
 
 text Weirford_Forest_MapScripts_CorpoEric_TrainerPreBattle {
     "AH! Where did you come from?!"

@@ -666,8 +666,8 @@
 
 #define FLAG_HIDDEN_ITEM_ROUTE2_MEADOWVALE_FARM_NETBALL (FLAG_HIDDEN_ITEMS_START + 0x70)
 #define FLAG_HIDDEN_ITEM_ROUTE2_MEADOWVALE_FARM_TINYMUSHROOM (FLAG_HIDDEN_ITEMS_START + 0x71)
-#define FLAG_UNUSED_0x266  0x266 // Unused Flag
-#define FLAG_UNUSED_0x267  0x267 // Unused Flag
+#define FLAG_HIDDEN_ITEM_WEIRFORD_FOREST_RARECANDY (FLAG_HIDDEN_ITEMS_START + 0x72)
+#define FLAG_HIDDEN_ITEM_WEIRFORD_FOREST_ESCAPE_ROPE (FLAG_HIDDEN_ITEMS_START + 0x73)
 #define FLAG_UNUSED_0x268  0x268 // Unused Flag
 #define FLAG_UNUSED_0x269  0x269 // Unused Flag
 #define FLAG_UNUSED_0x26A  0x26A // Unused Flag
@@ -1252,8 +1252,8 @@
 #define FLAG_POKEMON_TUTOR_STARTER_MUDKIP_CLAIMED                    0x4A6
 #define FLAG_POKEMON_TUTOR_STARTER_PIPLUP_CLAIMED                    0x4A7
 #define FLAG_WEIRFORD_FOREST_FIRST_ITEM                             0x4A8
-#define FLAG_WEIRFORD_FOREST_SECOND_ITEM                            0x4A9 // Unused Flag
-#define FLAG_WEIRFORD_FOREST_THIRD_ITEM                             0x4AA // Unused Flag
+#define FLAG_WEIRFORD_FOREST_SECOND_ITEM                            0x4A9 
+#define FLAG_WEIRFORD_FOREST_THIRD_ITEM                             0x4AA 
 #define FLAG_DEBUG_NO_ENCOUNTERS                                    0x4AB
 #define FLAG_DEBUG_NO_TRAINER_SEE                                   0x4AC
 #define FLAG_UNUSED_0x4AD                                           0x4AD // Unused Flag
