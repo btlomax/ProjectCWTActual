@@ -16864,17 +16864,19 @@ Groudon
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_MAY_PLACEHOLDER ===
-Name: MAY
-Class: RS Protag
-Pic: RS May
-Gender: Female
+=== TRAINER_ROUTE3_TIM   ===
+Name: TIMMY
+Class: Youngster
+Pic: Youngster
+Gender: Male
 Music: Male
 Double Battle: No
 
-Kyogre
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Shinx
+Level: 7
+
+Scraggy
+Level: 7
 
 /*
 * PROJECT CWT TRAINERS

@@ -1,1 +1,29 @@
 mapscripts Route3_Actual_MapScripts {}
+
+script Route3_Actual_MapScripts_Tim {
+    trainerbattle_single(
+        TRAINER_ROUTE3_TIM,
+    Route3_Actual_MapScripts_Tim_TrainerPreBattle,
+    Route3_Actual_MapScripts_Tim_TrainerDefeated
+    )
+
+    msgbox(Route3_Actual_MapScripts_Tim_TrainerPostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route3_Actual_SouthWest_Sign {
+    msgbox("Weirford Town -->\n<-- Weirford Forest", MSGBOX_SIGN)
+}
+
+text Route3_Actual_MapScripts_Tim_TrainerPreBattle {
+    "I've been training hard on this route!\n"
+    "Let's battle!"
+}
+
+text Route3_Actual_MapScripts_Tim_TrainerDefeated {
+    "Wow, you're strong!"
+}
+
+text Route3_Actual_MapScripts_Tim_TrainerPostBattle {
+    "I'll keep training until I can beat you!"
+}
