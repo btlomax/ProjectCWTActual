@@ -5529,19 +5529,6 @@
       "layout_version": "frlg"
     },
     {
-      "id": "LAYOUT_ROUTE3",
-      "name": "Route3_Layout",
-      "width": 84,
-      "height": 20,
-      "primary_tileset": "gTileset_General_Frlg",
-      "secondary_tileset": "gTileset_PewterCity",
-      "border_filepath": "data/layouts/Route3_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/Route3_Frlg/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "frlg"
-    },
-    {
       "id": "LAYOUT_ROUTE4",
       "name": "Route4_Layout",
       "width": 108,
@@ -9463,6 +9450,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/Pokemon_Tutor_Inside/border.bin",
       "blockdata_filepath": "data/layouts/Pokemon_Tutor_Inside/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE3_ACTUAL",
+      "name": "Route3_Actual_Layout",
+      "width": 50,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/Route3_Actual/border.bin",
+      "blockdata_filepath": "data/layouts/Route3_Actual/map.bin"
     }
   ]
 }

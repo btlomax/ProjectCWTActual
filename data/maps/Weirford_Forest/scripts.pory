@@ -73,17 +73,17 @@ script Weirford_Forest_MapScripts_ThirdItem_TM {
 }
 
 script Weirford_Forest_MapScripts_Entrance_Sign {
-    msgbox("Weirford Forest", MSGBOX_DEFAULT)
+    msgbox("Weirford Forest", MSGBOX_SIGN)
     end
 }
 
 script Weirford_Forest_MapScripts_Exit_Sign {
-    msgbox("<- Route 3", MSGBOX_DEFAULT)
+    msgbox("<- Route 3", MSGBOX_SIGN)
     end
 }
 
 script Weirford_Forest_MapScripts_Weirford_House {
-    msgbox("Welcome to Weirford House", MSGBOX_DEFAULT)
+    msgbox("Welcome to Weirford House", MSGBOX_SIGN)
     end
 }
 

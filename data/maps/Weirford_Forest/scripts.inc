@@ -74,19 +74,19 @@ Weirford_Forest_MapScripts_ThirdItem_TM::
 
 Weirford_Forest_MapScripts_Entrance_Sign::
 # 76 "data/maps/Weirford_Forest/scripts.pory"
-	msgbox Weirford_Forest_MapScripts_Entrance_Sign_Text_0, MSGBOX_DEFAULT
+	msgbox Weirford_Forest_MapScripts_Entrance_Sign_Text_0, MSGBOX_SIGN
 	end
 
 
 Weirford_Forest_MapScripts_Exit_Sign::
 # 81 "data/maps/Weirford_Forest/scripts.pory"
-	msgbox Weirford_Forest_MapScripts_Exit_Sign_Text_0, MSGBOX_DEFAULT
+	msgbox Weirford_Forest_MapScripts_Exit_Sign_Text_0, MSGBOX_SIGN
 	end
 
 
 Weirford_Forest_MapScripts_Weirford_House::
 # 86 "data/maps/Weirford_Forest/scripts.pory"
-	msgbox Weirford_Forest_MapScripts_Weirford_House_Text_0, MSGBOX_DEFAULT
+	msgbox Weirford_Forest_MapScripts_Weirford_House_Text_0, MSGBOX_SIGN
 	end
 
 

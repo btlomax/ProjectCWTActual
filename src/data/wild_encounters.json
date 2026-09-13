@@ -11290,11 +11290,11 @@
           "base_label": "sRoute2_LeafGreen"
         },
         {
-          "map": "MAP_ROUTE3",
+          "map": "MAP_ROUTE3_ACTUAL",
           "base_label": "sRoute3_FireRed"
         },
         {
-          "map": "MAP_ROUTE3",
+          "map": "MAP_ROUTE3_ACTUAL",
           "base_label": "sRoute3_LeafGreen"
         },
         {
