@@ -72,62 +72,92 @@ Weirford_Forest_MapScripts_ThirdItem_TM::
 	end
 
 
-Weirford_Forest_MapScripts_CorpoEric_TrainerPreBattle::
+Weirford_Forest_MapScripts_Entrance_Sign::
 # 76 "data/maps/Weirford_Forest/scripts.pory"
+	msgbox Weirford_Forest_MapScripts_Entrance_Sign_Text_0, MSGBOX_DEFAULT
+	end
+
+
+Weirford_Forest_MapScripts_Exit_Sign::
+# 81 "data/maps/Weirford_Forest/scripts.pory"
+	msgbox Weirford_Forest_MapScripts_Exit_Sign_Text_0, MSGBOX_DEFAULT
+	end
+
+
+Weirford_Forest_MapScripts_Weirford_House::
+# 86 "data/maps/Weirford_Forest/scripts.pory"
+	msgbox Weirford_Forest_MapScripts_Weirford_House_Text_0, MSGBOX_DEFAULT
+	end
+
+
+Weirford_Forest_MapScripts_Entrance_Sign_Text_0:
+# 76 "data/maps/Weirford_Forest/scripts.pory"
+	.string "Weirford Forest$"
+
+Weirford_Forest_MapScripts_Exit_Sign_Text_0:
+# 81 "data/maps/Weirford_Forest/scripts.pory"
+	.string "<- Route 3$"
+
+Weirford_Forest_MapScripts_Weirford_House_Text_0:
+# 86 "data/maps/Weirford_Forest/scripts.pory"
+	.string "Welcome to Weirford House$"
+
+Weirford_Forest_MapScripts_CorpoEric_TrainerPreBattle::
+# 91 "data/maps/Weirford_Forest/scripts.pory"
 	.string "AH! Where did you come from?!$"
 
 Weirford_Forest_MapScripts_CorpoEric_TrainerPostBattle::
-# 80 "data/maps/Weirford_Forest/scripts.pory"
+# 95 "data/maps/Weirford_Forest/scripts.pory"
 	.string "I'm hiding from my manager...$"
 
 Weirford_Forest_MapScripts_CorpoEric_TrainerDefeated::
-# 84 "data/maps/Weirford_Forest/scripts.pory"
+# 99 "data/maps/Weirford_Forest/scripts.pory"
 	.string "I only lost because you scared me!$"
 
 Weirford_Forest_MapScripts_LassLila_TrainerPreBattle::
-# 88 "data/maps/Weirford_Forest/scripts.pory"
+# 103 "data/maps/Weirford_Forest/scripts.pory"
 	.string "I'll tell you a secret if you\ncan beat me!$"
 
 Weirford_Forest_MapScripts_LassLila_TrainerPostBattle::
-# 92 "data/maps/Weirford_Forest/scripts.pory"
+# 107 "data/maps/Weirford_Forest/scripts.pory"
 	.string "There's a house hidden deep in the forest.$"
 
 Weirford_Forest_MapScripts_LassLila_TrainerDefeated::
-# 96 "data/maps/Weirford_Forest/scripts.pory"
+# 111 "data/maps/Weirford_Forest/scripts.pory"
 	.string "UH! FINE I'LL TELL YOU!$"
 
 Weirford_Forest_MapScripts_BugCatcherJason_TrainerPreBattle::
-# 100 "data/maps/Weirford_Forest/scripts.pory"
+# 115 "data/maps/Weirford_Forest/scripts.pory"
 	.string "Have you seen another Bug\nCatcher around?$"
 
 Weirford_Forest_MapScripts_BugCatcherJason_TrainerPostBattle::
-# 104 "data/maps/Weirford_Forest/scripts.pory"
+# 119 "data/maps/Weirford_Forest/scripts.pory"
 	.string "He's near the Westlock entrance?\nWhy didn't you just say so!$"
 
 Weirford_Forest_MapScripts_BugCatcherJason_TrainerDefeated::
-# 108 "data/maps/Weirford_Forest/scripts.pory"
+# 123 "data/maps/Weirford_Forest/scripts.pory"
 	.string "DUDE! I only asked you a question!$"
 
 Weirford_Forest_MapScripts_CamperColin_TrainerPreBattle::
-# 112 "data/maps/Weirford_Forest/scripts.pory"
+# 127 "data/maps/Weirford_Forest/scripts.pory"
 	.string "This is my first time camping in the\nforest!$"
 
 Weirford_Forest_MapScripts_CamperColin_TrainerPostBattle::
-# 116 "data/maps/Weirford_Forest/scripts.pory"
+# 131 "data/maps/Weirford_Forest/scripts.pory"
 	.string "The camping is NOT going well...$"
 
 Weirford_Forest_MapScripts_CamperColin_TrainerDefeated::
-# 120 "data/maps/Weirford_Forest/scripts.pory"
+# 135 "data/maps/Weirford_Forest/scripts.pory"
 	.string "I'm trying my best not to SHAKE with\nFEAR.$"
 
 Weirford_Forest_MapScripts_BugCatcherSam_TrainerPreBattle::
-# 124 "data/maps/Weirford_Forest/scripts.pory"
+# 139 "data/maps/Weirford_Forest/scripts.pory"
 	.string "Have you got any Bug Pokémon?$"
 
 Weirford_Forest_MapScripts_BugCatcherSam_TrainerPostBattle::
-# 128 "data/maps/Weirford_Forest/scripts.pory"
+# 143 "data/maps/Weirford_Forest/scripts.pory"
 	.string "There are bug Pokemon here...\nI can feel them crawling up my OH SHI-\p$"
 
 Weirford_Forest_MapScripts_BugCatcherSam_TrainerDefeated::
-# 132 "data/maps/Weirford_Forest/scripts.pory"
+# 147 "data/maps/Weirford_Forest/scripts.pory"
 	.string "I can't believe you beat my team of\nalmighty bugs!$"
