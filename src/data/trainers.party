@@ -16840,29 +16840,36 @@ Charmander
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_LEAF ===
-Name: LEAF
-Class: Rival
-Pic: Leaf
+=== TRAINER_ROUTE3_LASS_SARA  ===
+Name: SARA
+Class: Lass
+Pic: Lass
 Gender: Female
 Music: Male
 Double Battle: No
 
-Bulbasaur
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Poochyena
+Level: 8
 
-=== TRAINER_BRENDAN_PLACEHOLDER ===
-Name: BRENDAN
-Class: RS Protag
-Pic: RS Brendan
+Starly:
+Level: 7
+
+=== TRAINER_ROUTE3_CAMPER_GARY ===
+Name: GARY
+Class: Camper
+Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
 
-Groudon
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Pidgey
+Level: 6
+
+Oddish
+Level: 7
+
+Mankey
+Level: 7
 
 === TRAINER_ROUTE3_TIM   ===
 Name: TIMMY

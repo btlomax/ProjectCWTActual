@@ -856,9 +856,9 @@
 #define TRAINER_ALVARO                      849
 #define TRAINER_EVERETT                     850
 #define TRAINER_RED                         851
-#define TRAINER_LEAF                        852
-#define TRAINER_BRENDAN_PLACEHOLDER         853
-#define TRAINER_ROUTE3_TIM             854
+#define TRAINER_ROUTE3_LASS_SARA            852
+#define TRAINER_ROUTE3_CAMPER_GARY          853
+#define TRAINER_ROUTE3_TIM                  854
 #define TRAINER_ROUTE2_MEADOWVALE_TOMMY     855
 #define TRAINER_ROUTE2_MEADOWVALE_GEORGE    856
 #define TRAINER_ROUTE2_MEADOWVALE_JENNY     857

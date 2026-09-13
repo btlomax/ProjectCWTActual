@@ -11,19 +11,64 @@ script Route3_Actual_MapScripts_Tim {
     end
 }
 
+script Route3_Actual_CamperGary {
+    trainerbattle_single(
+        TRAINER_ROUTE3_CAMPER_GARY,
+    Route3_Actual_CamperGary_TrainerPreBattle,
+    Route3_Actual_CamperGary_TrainerDefeated
+    )
+
+    msgbox(Route3_Actual_CamperGary_TrainerPostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route3_Actual_LassSara {
+    trainerbattle_single(
+        TRAINER_ROUTE3_LASS_SARA,
+    Route3_Actual_LassSara_TrainerPreBattle,
+    Route3_Actual_LassSara_TrainerDefeated
+    )
+
+    msgbox(Route3_Actual_LassSara_TrainerPostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
 script Route3_Actual_SouthWest_Sign {
     msgbox("Weirford Town -->\n<-- Weirford Forest", MSGBOX_SIGN)
 }
 
+text Route3_Actual_LassSara_TrainerPreBattle {
+    "STOP RIGHT THERE MISTER!\nThis is MY turf!"
+}
+
+text Route3_Actual_LassSara_TrainerDefeated {
+    "I'd like more turf..."
+}
+
+text Route3_Actual_LassSara_TrainerPostBattle {
+    "I found an item hidden here so I claimed\nthe area in case there are more!"
+}
+
+text Route3_Actual_CamperGary_TrainerPreBattle {
+    "That forest sure is a maze! You gotta\nbe tough to get through!"
+}
+
+text Route3_Actual_CamperGary_TrainerDefeated {
+    "Yeah you're pretty tough..."
+}
+
+text Route3_Actual_CamperGary_TrainerPostBattle {
+    "It took me a long time to get through\nthe forest. Did you know there's a\lshortcut back down?"
+}
+
 text Route3_Actual_MapScripts_Tim_TrainerPreBattle {
-    "I've been training hard on this route!\n"
-    "Let's battle!"
+    "Oh FINALLY, someone chooses my side of\nthe path! Let's battle!"
 }
 
 text Route3_Actual_MapScripts_Tim_TrainerDefeated {
-    "Wow, you're strong!"
+    "Oh for fu-...\nAll that waiting and THAT happens!"
 }
 
 text Route3_Actual_MapScripts_Tim_TrainerPostBattle {
-    "I'll keep training until I can beat you!"
+    "I'm still not going to move."
 }
