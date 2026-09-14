@@ -1646,6 +1646,10 @@
     {
       "id": "MAPSEC_ROUTE2_MEADOWVALE_FARM",
       "name": "MEADOWVALE FARM"
+    },
+    {
+      "id": "MAPSEC_WEIRFORD_FOREST",
+      "name": "WEIRFORD FOREST"
     }
   ]
 }

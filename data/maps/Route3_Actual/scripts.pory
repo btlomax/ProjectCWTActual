@@ -33,8 +33,37 @@ script Route3_Actual_LassSara {
     end
 }
 
+script Route3_Actual_MapScript_RiverMan {
+    lock
+    faceplayer()
+
+    if(!flag(FLAG_ROUTE3_RECEIVED_SOOTHE_BELL)) 
+    {
+        msgbox("My Wanda used to love this spot.\nShe would spend hours here, watching\lthe water flow by...\p", MSGBOX_DEFAULT)
+        msgbox("Hold on to those cherished memories,\ndear child. One day it will all make sense.\p", MSGBOX_DEFAULT)
+
+        giveitem(ITEM_SOOTHE_BELL)
+        setflag(FLAG_ROUTE3_RECEIVED_SOOTHE_BELL)
+    }
+
+    msgbox("Your loved ones, your Pokemon, all are\nfleeting.")
+    release
+    end
+}
+
 script Route3_Actual_SouthWest_Sign {
     msgbox("Weirford Town -->\n<-- Weirford Forest", MSGBOX_SIGN)
+}
+
+script Route3_Actual_NorthEast_Sign {
+    msgbox("Weirford Town -->\n<-- Weirford Forest", MSGBOX_SIGN)
+}
+
+script Route3_Actual_Item_SilverPowder {
+    lock
+    finditem(ITEM_SILVER_POWDER)
+    release
+    end
 }
 
 text Route3_Actual_LassSara_TrainerPreBattle {
