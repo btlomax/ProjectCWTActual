@@ -656,6 +656,9 @@
     "Route3_Actual"
   ],
   "gMapGroup_WeirfordTown": [
-    "Weirford"
+    "Weirford",
+    "Weirford_Gym",
+    "Weirford_PC",
+    "Weirford_PM"
   ]
 }
