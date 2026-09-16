@@ -39,7 +39,8 @@
     "gMapGroup_WestlockVillage",
     "gMapGroup_Route2_Meadowvale_Farm",
     "gMapGroup_Weirford_Forest",
-    "gMapGroup_Route3"
+    "gMapGroup_Route3",
+    "gMapGroup_WeirfordTown"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -653,5 +654,8 @@
   ],
   "gMapGroup_Route3": [
     "Route3_Actual"
+  ],
+  "gMapGroup_WeirfordTown": [
+    "Weirford"
   ]
 }

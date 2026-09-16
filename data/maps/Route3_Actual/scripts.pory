@@ -91,7 +91,7 @@ text Route3_Actual_CamperGary_TrainerPostBattle {
 }
 
 text Route3_Actual_MapScripts_Tim_TrainerPreBattle {
-    "Oh FINALLY, someone chooses my side of\nthe path! Let's battle!"
+    "Oh FINALLY, someone chooses the wrong path! Let's battle!"
 }
 
 text Route3_Actual_MapScripts_Tim_TrainerDefeated {

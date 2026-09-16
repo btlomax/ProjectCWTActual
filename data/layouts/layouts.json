@@ -9454,12 +9454,22 @@
     {
       "id": "LAYOUT_ROUTE3_ACTUAL",
       "name": "Route3_Actual_Layout",
-      "width": 50,
+      "width": 60,
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/Route3_Actual/border.bin",
       "blockdata_filepath": "data/layouts/Route3_Actual/map.bin"
+    },
+    {
+      "id": "LAYOUT_WEIRFORD",
+      "name": "Weirford_Layout",
+      "width": 35,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Weirford/border.bin",
+      "blockdata_filepath": "data/layouts/Weirford/map.bin"
     }
   ]
 }

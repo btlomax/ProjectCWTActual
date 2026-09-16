@@ -116,7 +116,7 @@ Route3_Actual_CamperGary_TrainerPostBattle::
 
 Route3_Actual_MapScripts_Tim_TrainerPreBattle::
 # 93 "data/maps/Route3_Actual/scripts.pory"
-	.string "Oh FINALLY, someone chooses my side of\nthe path! Let's battle!$"
+	.string "Oh FINALLY, someone chooses the wrong path! Let's battle!$"
 
 Route3_Actual_MapScripts_Tim_TrainerDefeated::
 # 97 "data/maps/Route3_Actual/scripts.pory"
