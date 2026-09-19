@@ -9475,7 +9475,7 @@
       "id": "LAYOUT_WEIRFORD_GYM",
       "name": "Weirford_Gym_Layout",
       "width": 10,
-      "height": 16,
+      "height": 17,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/Weirford_Gym/border.bin",
