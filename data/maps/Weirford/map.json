@@ -48,6 +48,13 @@
       "elevation": 0,
       "dest_map": "MAP_WEIRFORD_PM",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 2,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_WEIRFORD",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

@@ -18,11 +18,11 @@ Weirford_Forest_MapScripts_CamperColin::
 	end
 
 
-Weirford_Forest_MapScripts_BugCatcherJason::
+Weirford_Forest_MapScripts_AcolyteLin::
 # 24 "data/maps/Weirford_Forest/scripts.pory"
-	trainerbattle_single TRAINER_WEIRFORDFOREST_BUGCATCHER_JASON, Weirford_Forest_MapScripts_BugCatcherJason_TrainerPreBattle, Weirford_Forest_MapScripts_BugCatcherJason_TrainerDefeated
+	trainerbattle_single TRAINER_WEIRFORDFOREST_ACOLYTE_LIN, Weirford_Forest_MapScripts_AcolyteLin_TrainerPreBattle, Weirford_Forest_MapScripts_AcolyteLin_TrainerDefeated
 # 29 "data/maps/Weirford_Forest/scripts.pory"
-	msgbox Weirford_Forest_MapScripts_BugCatcherJason_TrainerPostBattle, MSGBOX_AUTOCLOSE
+	msgbox Weirford_Forest_MapScripts_AcolyteLin_TrainerPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
@@ -126,17 +126,17 @@ Weirford_Forest_MapScripts_LassLila_TrainerDefeated::
 # 111 "data/maps/Weirford_Forest/scripts.pory"
 	.string "UH! FINE I'LL TELL YOU!$"
 
-Weirford_Forest_MapScripts_BugCatcherJason_TrainerPreBattle::
+Weirford_Forest_MapScripts_AcolyteLin_TrainerPreBattle::
 # 115 "data/maps/Weirford_Forest/scripts.pory"
-	.string "Have you seen another Bug\nCatcher around?$"
+	.string "Halt young trainer, allow me to test your\nprowess!$"
 
-Weirford_Forest_MapScripts_BugCatcherJason_TrainerPostBattle::
+Weirford_Forest_MapScripts_AcolyteLin_TrainerPostBattle::
 # 119 "data/maps/Weirford_Forest/scripts.pory"
-	.string "He's near the Westlock entrance?\nWhy didn't you just say so!$"
+	.string "Yes, there is power in you...$"
 
-Weirford_Forest_MapScripts_BugCatcherJason_TrainerDefeated::
+Weirford_Forest_MapScripts_AcolyteLin_TrainerDefeated::
 # 123 "data/maps/Weirford_Forest/scripts.pory"
-	.string "DUDE! I only asked you a question!$"
+	.string "The Weirford convent must hear of this.$"
 
 Weirford_Forest_MapScripts_CamperColin_TrainerPreBattle::
 # 127 "data/maps/Weirford_Forest/scripts.pory"

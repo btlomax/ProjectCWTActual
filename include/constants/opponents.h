@@ -867,7 +867,7 @@
 #define TRAINER_WEIRFORDFOREST_BUGCATCHER_SAM 860
 #define TRAINER_WEIRFORDFOREST_CAMPER_COLIN 861
 #define TRAINER_WEIRFORDFOREST_CORPO_ERIC 862
-#define TRAINER_WEIRFORDFOREST_BUGCATCHER_JASON 863
+#define TRAINER_WEIRFORDFOREST_ACOLYTE_LIN 863
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled

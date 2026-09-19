@@ -20,13 +20,13 @@ script Weirford_Forest_MapScripts_CamperColin {
     end
 }
 
-script Weirford_Forest_MapScripts_BugCatcherJason {
-    trainerbattle_single(TRAINER_WEIRFORDFOREST_BUGCATCHER_JASON,
-    Weirford_Forest_MapScripts_BugCatcherJason_TrainerPreBattle,
-    Weirford_Forest_MapScripts_BugCatcherJason_TrainerDefeated
+script Weirford_Forest_MapScripts_AcolyteLin {
+    trainerbattle_single(TRAINER_WEIRFORDFOREST_ACOLYTE_LIN,
+    Weirford_Forest_MapScripts_AcolyteLin_TrainerPreBattle,
+    Weirford_Forest_MapScripts_AcolyteLin_TrainerDefeated
     )
 
-    msgbox(Weirford_Forest_MapScripts_BugCatcherJason_TrainerPostBattle, MSGBOX_AUTOCLOSE)
+    msgbox(Weirford_Forest_MapScripts_AcolyteLin_TrainerPostBattle, MSGBOX_AUTOCLOSE)
     end
 }
 
@@ -112,16 +112,17 @@ text Weirford_Forest_MapScripts_LassLila_TrainerDefeated {
     "UH! FINE I'LL TELL YOU!"
 }
 
-text Weirford_Forest_MapScripts_BugCatcherJason_TrainerPreBattle {
-    "Have you seen another Bug\nCatcher around?"
+text Weirford_Forest_MapScripts_AcolyteLin_TrainerPreBattle {
+    "Halt young trainer, allow me to test your\nprowess!"
 }
 
-text Weirford_Forest_MapScripts_BugCatcherJason_TrainerPostBattle {
-    "He's near the Westlock entrance?\nWhy didn't you just say so!"
+text Weirford_Forest_MapScripts_AcolyteLin_TrainerPostBattle {
+    "The Weirford convent must hear of this."
 }
 
-text Weirford_Forest_MapScripts_BugCatcherJason_TrainerDefeated {
-    "DUDE! I only asked you a question!"
+text Weirford_Forest_MapScripts_AcolyteLin_TrainerDefeated {
+    "Yes, there is power in you..."
+    
 }
 
 text Weirford_Forest_MapScripts_CamperColin_TrainerPreBattle {

@@ -17014,20 +17014,20 @@ AI: Basic Trainer
 Growlithe
 Level: 7
 
-=== TRAINER_WEIRFORDFOREST_BUGCATCHER_JASON ===
-Name: JASON
-Class: Bug Catcher
-Pic: Bug Catcher
+=== TRAINER_WEIRFORDFOREST_ACOLYTE_LIN ===
+Name: LIN
+Class: Expert
+Pic: Expert M
 Gender: Male
-Music: Male
+Music: Suspicious
 Double Battle: No
 AI: Basic Trainer
 
-Silcoon
+Poochyena
 Level: 5
 
-Cascoon
+Oddish
 Level: 5
 
-Nincada
+Shinx
 Level: 6
