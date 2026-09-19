@@ -9474,10 +9474,10 @@
     {
       "id": "LAYOUT_WEIRFORD_GYM",
       "name": "Weirford_Gym_Layout",
-      "width": 15,
-      "height": 25,
+      "width": 10,
+      "height": 16,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_MysteryEventsHouse",
+      "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/Weirford_Gym/border.bin",
       "blockdata_filepath": "data/layouts/Weirford_Gym/map.bin"
     },
