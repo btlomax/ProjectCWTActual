@@ -1,1 +1,27 @@
 mapscripts Weirford_MapScripts {}
+
+script Weirford_MapScripts_GreetingsSign {
+    msgbox("Welcome to Weirford!", MSGBOX_SIGN)
+}
+
+script Weirford_MapScripts_GymSign {
+    msgbox("Down the alley if you're\nlooking for a scrap!", MSGBOX_SIGN)
+}
+
+script Weirford_MapScripts_MartNPC {
+    lock
+    faceplayer
+    msgbox("Have you been inside that scary looking\nbuilding yet?", MSGBOX_DEFAULT)
+
+    release
+    end
+}
+
+script Weirford_MapScripts_GardenNPC {
+    lock
+    faceplayer
+    msgbox("A bit of greenery in a town is\nalways welcome.", MSGBOX_DEFAULT)
+
+    release
+    end
+}

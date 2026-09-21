@@ -9500,6 +9500,16 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/Weirford_PC/border.bin",
       "blockdata_filepath": "data/layouts/Weirford_PC/map.bin"
+    },
+    {
+      "id": "LAYOUT_WEIRFORD_CONVENT",
+      "name": "Weirford_Convent_Layout",
+      "width": 15,
+      "height": 18,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattlePyramid",
+      "border_filepath": "data/layouts/Weirford_Convent/border.bin",
+      "blockdata_filepath": "data/layouts/Weirford_Convent/map.bin"
     }
   ]
 }

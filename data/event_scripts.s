@@ -1349,3 +1349,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Weirford_PM/scripts.inc"
 
 	.include "data/maps/Weirford_PC/scripts.inc"
+
+	.include "data/maps/Weirford_Convent/scripts.inc"
