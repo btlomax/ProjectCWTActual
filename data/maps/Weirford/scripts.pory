@@ -25,3 +25,11 @@ script Weirford_MapScripts_GardenNPC {
     release
     end
 }
+
+script Weirford_MapScripts_OutsideGymNPC {
+    lock
+    faceplayer
+    msgbox("Are you ready to go inside?", MSGBOX_DEFAULT)
+    release
+    end
+}
