@@ -16,15 +16,15 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 7,
-      "y": 17,
+      "x": 6,
+      "y": 13,
       "elevation": 0,
       "dest_map": "MAP_WEIRFORD",
       "dest_warp_id": "3"
     },
     {
-      "x": 8,
-      "y": 17,
+      "x": 7,
+      "y": 13,
       "elevation": 0,
       "dest_map": "MAP_WEIRFORD",
       "dest_warp_id": "4"

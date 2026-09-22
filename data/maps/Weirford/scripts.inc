@@ -16,14 +16,26 @@ Weirford_MapScripts_GymSign::
 
 Weirford_MapScripts_MartNPC::
 # 12 "data/maps/Weirford/scripts.pory"
+	lock
+# 13 "data/maps/Weirford/scripts.pory"
+	faceplayer
+# 14 "data/maps/Weirford/scripts.pory"
 	msgbox Weirford_MapScripts_MartNPC_Text_0, MSGBOX_DEFAULT
-	return
+# 16 "data/maps/Weirford/scripts.pory"
+	release
+	end
 
 
 Weirford_MapScripts_GardenNPC::
-# 16 "data/maps/Weirford/scripts.pory"
+# 21 "data/maps/Weirford/scripts.pory"
+	lock
+# 22 "data/maps/Weirford/scripts.pory"
+	faceplayer
+# 23 "data/maps/Weirford/scripts.pory"
 	msgbox Weirford_MapScripts_GardenNPC_Text_0, MSGBOX_DEFAULT
-	return
+# 25 "data/maps/Weirford/scripts.pory"
+	release
+	end
 
 
 Weirford_MapScripts_GreetingsSign_Text_0:
@@ -35,9 +47,9 @@ Weirford_MapScripts_GymSign_Text_0:
 	.string "Down the alley if you're\nlooking for a scrap!$"
 
 Weirford_MapScripts_MartNPC_Text_0:
-# 12 "data/maps/Weirford/scripts.pory"
-	.string "Have you been inside that scary looking building yet?$"
+# 14 "data/maps/Weirford/scripts.pory"
+	.string "Have you been inside that scary looking\nbuilding yet?$"
 
 Weirford_MapScripts_GardenNPC_Text_0:
-# 16 "data/maps/Weirford/scripts.pory"
+# 23 "data/maps/Weirford/scripts.pory"
 	.string "A bit of greenery in a town is\nalways welcome.$"
