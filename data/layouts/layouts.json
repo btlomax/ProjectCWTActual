@@ -9475,9 +9475,9 @@
       "id": "LAYOUT_WEIRFORD_GYM",
       "name": "Weirford_Gym_Layout",
       "width": 20,
-      "height": 12,
+      "height": 17,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_OceanicMuseum",
+      "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/Weirford_Gym/border.bin",
       "blockdata_filepath": "data/layouts/Weirford_Gym/map.bin"
     },

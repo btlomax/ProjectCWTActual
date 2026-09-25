@@ -48,7 +48,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "x": 1,
+      "x": 3,
       "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -89,7 +89,7 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 2,
+      "x": 4,
       "y": 17,
       "elevation": 0,
       "dest_map": "MAP_WEIRFORD_GYM",
@@ -108,6 +108,13 @@
       "elevation": 0,
       "dest_map": "MAP_WEIRFORD_CONVENT",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 5,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_WEIRFORD_GYM",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

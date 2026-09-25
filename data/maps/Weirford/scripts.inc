@@ -38,6 +38,18 @@ Weirford_MapScripts_GardenNPC::
 	end
 
 
+Weirford_MapScripts_OutsideGymNPC::
+# 30 "data/maps/Weirford/scripts.pory"
+	lock
+# 31 "data/maps/Weirford/scripts.pory"
+	faceplayer
+# 32 "data/maps/Weirford/scripts.pory"
+	msgbox Weirford_MapScripts_OutsideGymNPC_Text_0, MSGBOX_DEFAULT
+# 33 "data/maps/Weirford/scripts.pory"
+	release
+	end
+
+
 Weirford_MapScripts_GreetingsSign_Text_0:
 # 4 "data/maps/Weirford/scripts.pory"
 	.string "Welcome to Weirford!$"
@@ -53,3 +65,7 @@ Weirford_MapScripts_MartNPC_Text_0:
 Weirford_MapScripts_GardenNPC_Text_0:
 # 23 "data/maps/Weirford/scripts.pory"
 	.string "A bit of greenery in a town is\nalways welcome.$"
+
+Weirford_MapScripts_OutsideGymNPC_Text_0:
+# 32 "data/maps/Weirford/scripts.pory"
+	.string "Are you ready to go inside?$"
