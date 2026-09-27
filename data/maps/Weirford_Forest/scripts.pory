@@ -23,7 +23,8 @@ script Weirford_Forest_MapScripts_CamperColin {
 script Weirford_Forest_MapScripts_AcolyteLin {
     trainerbattle_single(TRAINER_WEIRFORDFOREST_ACOLYTE_LIN,
     Weirford_Forest_MapScripts_AcolyteLin_TrainerPreBattle,
-    Weirford_Forest_MapScripts_AcolyteLin_TrainerDefeated
+    Weirford_Forest_MapScripts_AcolyteLin_TrainerDefeated,
+    Weirford_Forest_MapScripts_AcolyteLin_TrainerPostBattle
     )
 
     msgbox(Weirford_Forest_MapScripts_AcolyteLin_TrainerPostBattle, MSGBOX_AUTOCLOSE)

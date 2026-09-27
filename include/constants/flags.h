@@ -1258,9 +1258,9 @@
 #define FLAG_DEBUG_NO_TRAINER_SEE                                   0x4AC
 #define FLAG_ITEM_ROUTE3_SILVER_POWDER                              0x4AD
 #define FLAG_ROUTE3_RECEIVED_SOOTHE_BELL                            0x4AE
-#define FLAG_UNUSED_0x4AF                                           0x4AF // Unused Flag
-#define FLAG_UNUSED_0x4B0                                           0x4B0 // Unused Flag
-#define FLAG_UNUSED_0x4B1                                           0x4B1 // Unused Flag
+#define FLAG_VISITED_WEIRFORD_GYM                                   0x4AF
+#define FLAG_DEFEATED_WEIRFORD_GYM                                  0x4B0
+#define FLAG_HIDE_WEIRFORD_GYM_MILO                                 0x4B1
 #define FLAG_UNUSED_0x4B2                                           0x4B2 // Unused Flag
 #define FLAG_UNUSED_0x4B3                                           0x4B3 // Unused Flag
 #define FLAG_UNUSED_0x4B4                                           0x4B4 // Unused Flag

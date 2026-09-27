@@ -190,34 +190,38 @@ PlayerHouse_Inside_GrandmotherOfferRest::
 # 149 "data/maps/PlayerHouse_Inside/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq PlayerHouse_Inside_GrandmotherOfferRest_2
-# 156 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 160 "data/maps/PlayerHouse_Inside/scripts.pory"
 	msgbox PlayerHouse_Inside_GrandmotherOfferRest_Text_3, MSGBOX_DEFAULT
 PlayerHouse_Inside_GrandmotherOfferRest_1:
-# 160 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 164 "data/maps/PlayerHouse_Inside/scripts.pory"
 	releaseall
 	end
 
 PlayerHouse_Inside_GrandmotherOfferRest_2:
 # 150 "data/maps/PlayerHouse_Inside/scripts.pory"
 	msgbox PlayerHouse_Inside_GrandmotherOfferRest_Text_1, MSGBOX_DEFAULT
-# 151 "data/maps/PlayerHouse_Inside/scripts.pory"
-	special HealPlayerParty
 # 152 "data/maps/PlayerHouse_Inside/scripts.pory"
-	setrespawn HEAL_LOCATION_ALDERBROOK_TOWN_PLAYER_HOUSE
+	special HealPlayerParty
 # 153 "data/maps/PlayerHouse_Inside/scripts.pory"
+	playfanfare MUS_HEAL
+# 154 "data/maps/PlayerHouse_Inside/scripts.pory"
+	waitfanfare
+# 155 "data/maps/PlayerHouse_Inside/scripts.pory"
+	setrespawn HEAL_LOCATION_ALDERBROOK_TOWN_PLAYER_HOUSE
+# 157 "data/maps/PlayerHouse_Inside/scripts.pory"
 	msgbox PlayerHouse_Inside_GrandmotherOfferRest_Text_2, MSGBOX_DEFAULT
 	goto PlayerHouse_Inside_GrandmotherOfferRest_1
 
 
-# 164 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 168 "data/maps/PlayerHouse_Inside/scripts.pory"
 PlayerHouse_Inside_MoveDown:
-# 165 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 169 "data/maps/PlayerHouse_Inside/scripts.pory"
 	walk_down
-# 165 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 169 "data/maps/PlayerHouse_Inside/scripts.pory"
 	walk_down
-# 166 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 170 "data/maps/PlayerHouse_Inside/scripts.pory"
 	face_left
-# 167 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 171 "data/maps/PlayerHouse_Inside/scripts.pory"
 	step_end
 
 PlayerHouse_Inside_Dinner_Text_0:
@@ -337,10 +341,10 @@ PlayerHouse_Inside_GrandmotherOfferRest_Text_1:
 	.string "Of course. Make yourselves at home.$"
 
 PlayerHouse_Inside_GrandmotherOfferRest_Text_2:
-# 153 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 157 "data/maps/PlayerHouse_Inside/scripts.pory"
 	.string "There we are. You and your POKéMON\nlook much better already.$"
 
 PlayerHouse_Inside_GrandmotherOfferRest_Text_3:
-# 156 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 160 "data/maps/PlayerHouse_Inside/scripts.pory"
 	.string "All right, dear. Take care of yourselves.\n"
 	.string "out there.$"

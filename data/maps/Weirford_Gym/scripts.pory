@@ -1,1 +1,18 @@
-mapscripts Weirford_Gym_MapScripts {}
+mapscripts Weirford_Gym_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Weirford_Gym_MapScripts_FirstEntry
+}
+
+script Weirford_Gym_MapScripts_FirstEntry
+{
+    if (!flag(FLAG_VISITED_WEIRFORD_GYM))
+    {
+        lock
+        playse(SE_PIN)
+        applymovement(LOCALID_GYMLEADER_MILO, Common_Movement_ExclamationMark)
+        waitmovement(LOCALID_GYMLEADER_MILO)
+        setflag(FLAG_VISITED_WEIRFORD_GYM)
+        setflag(FLAG_HIDE_WEIRFORD_GYM_MILO)
+        release
+    }
+    end
+}

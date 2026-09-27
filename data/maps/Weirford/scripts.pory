@@ -5,14 +5,13 @@ script Weirford_MapScripts_GreetingsSign {
 }
 
 script Weirford_MapScripts_GymSign {
-    msgbox("Down the alley if you're\nlooking for a scrap!", MSGBOX_SIGN)
+    msgbox("The text has faded away...", MSGBOX_SIGN)
 }
 
 script Weirford_MapScripts_MartNPC {
     lock
     faceplayer
     msgbox("Have you been inside that scary looking\nbuilding yet?", MSGBOX_DEFAULT)
-
     release
     end
 }
@@ -20,16 +19,8 @@ script Weirford_MapScripts_MartNPC {
 script Weirford_MapScripts_GardenNPC {
     lock
     faceplayer
-    msgbox("A bit of greenery in a town is\nalways welcome.", MSGBOX_DEFAULT)
-
-    release
-    end
-}
-
-script Weirford_MapScripts_OutsideGymNPC {
-    lock
-    faceplayer
-    msgbox("Are you ready to go inside?", MSGBOX_DEFAULT)
+    msgbox("A bit of greenery in a town is\nalways welcome."
+    "It makes everything feel fresher.\p", MSGBOX_DEFAULT)
     release
     end
 }
