@@ -28,10 +28,10 @@ script Meadowvale_Farm_Inside_MapScripts_FarmbossMax {
 
 script Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut {
     msgbox(
-        "WOOO I'M PUMPED NOW!\n"
+        "WOOOOOO I'M PUMPED NOW!\n"
         "I'm gonna work up a sweat in the fields!\p"
-        "Take this HM, my kids can do it\n"
-        "the old fashioned way! HAHAHAHA!\p"
+        "Take this HM, my kids can do it the old n"
+        "fashioned way! HAHAHAHA!\p"
         MSGBOX_DEFAULT
     )
     giveitem(ITEM_HM_CUT)
@@ -46,8 +46,17 @@ script Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut {
         "to use it outside of battle...\p"
         MSGBOX_DEFAULT
     )
-    msgbox("I don't think anyone has challenged\nthe gym for a very long time...\p"
-           "In fact, I don't know if it's a\ngym anymore! But Milo is in there,\lhe'll agree to battle you.\p"
+    msgbox("Let me heal your Pokémon for you, it's\n"
+        "still a fair way to Weirford.\p"
+        MSGBOX_DEFAULT
+    )
+
+    special(HealPlayerParty)
+    playfanfare(MUS_HEAL)
+    waitfanfare
+
+    msgbox("I don't think anyone has taken on the\nLeague challenge for a very long time...\p"
+           "In fact, I don't even know if it's a gym\nanymore! But Milo is in there, he'll\lagree to battle you.\p"
            "Best of luck, BUB!\p"
         MSGBOX_DEFAULT
     )
@@ -65,19 +74,17 @@ text Meadowvale_Farm_Inside_MapScripts_FarmbossMax_Intro {
     "FOUR!\p"
     "Their mothers have left them with me\n"
     "and swanned off to parts unknown!\p"
-    "So what do I do?\n"
-    "I PUT THEM TO WORK!\p"
+    "So what do I do? I PUT THEM TO WORK!\p"
     "I have them plow the fields, I have them\n"
-    "weed the crops, feed the animals,\l"
-    "and I have them chase off trespassers!\p"
+    "weed the crops, feed the animals, and I\l"
+    "have them chase off trespassers!\p"
     "They have 'fun' and my farm prospers!\p"
     "Everyone wins! Mostly me.\p"
     "Anyway, you need to defeat all FOUR of my\n"
     "farmhands if you wanna take a shot at\l"
     "the CHAMP!\p"
-    "I've got a great prize for you if you\n"
-    "can take me down!\p"
-    
+    "I've got a great prize for you if you can\n"
+    "take me down!\p"
 }
 
 text Meadowvale_Farm_Inside_Text_MaxNeedToDefeatChildren {
@@ -86,7 +93,7 @@ text Meadowvale_Farm_Inside_Text_MaxNeedToDefeatChildren {
 }
 
 text Meadowvale_Farm_Inside_Text_MaxPreBattle {
-    "You've beaten all FOUR of them?\n"
+    "You've beaten all of them?\p"
     "...HELL YEAH!\p"
     "Alright, the CHAMP is here!\n"
     "Let's goooooo!\p"

@@ -148,8 +148,12 @@ script PlayerHouse_Inside_GrandmotherOfferRest {
 
     if (var(VAR_RESULT) == YES) {
         msgbox("Of course. Make yourselves at home.", MSGBOX_DEFAULT)
+
         special(HealPlayerParty)
+        playfanfare(MUS_HEAL)
+        waitfanfare
         setrespawn(HEAL_LOCATION_ALDERBROOK_TOWN_PLAYER_HOUSE)
+
         msgbox("There we are. You and your POKéMON\nlook much better already.", MSGBOX_DEFAULT)
     }
     else {

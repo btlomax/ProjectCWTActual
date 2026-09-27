@@ -48,6 +48,10 @@ Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut::
 # 49 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	msgbox Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut_Text_3
 # 54 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+	special HealPlayerParty
+# 56 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+	msgbox Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut_Text_4
+# 61 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	release
 	end
 
@@ -72,12 +76,17 @@ Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut_Text_2:
 
 Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut_Text_3:
 # 49 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
-	.string "I don't think anyone has challenged\nthe gym for a very long time...\p"
-	.string "In fact, I don't know if it's a\ngym anymore! But Milo is in there,\lhe'll agree to battle you.\p"
+	.string "Let me heal your Pokémon for you, it's\n"
+	.string "still a fair way to Weirford.\p$"
+
+Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut_Text_4:
+# 56 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+	.string "I don't think anyone has taken on the\nLeague challenge for a very long time...\p"
+	.string "In fact, I don't even know if it's a\ngym anymore! But Milo is in there,\lhe'll agree to battle you.\p"
 	.string "Best of luck, BUB!\p$"
 
 Meadowvale_Farm_Inside_MapScripts_FarmbossMax_Intro::
-# 58 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 65 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	.string "Welcome to Meadowvale Farm, where we\n"
 	.string "grow crops, raise POKéMON, and apparently\l"
 	.string "collect children.\p"
@@ -101,20 +110,20 @@ Meadowvale_Farm_Inside_MapScripts_FarmbossMax_Intro::
 	.string "can take me down!\p$"
 
 Meadowvale_Farm_Inside_Text_MaxNeedToDefeatChildren::
-# 83 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 89 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	.string "You need to defeat all FOUR of my kids\n"
 	.string "if you wanna take a shot at the CHAMP!\p$"
 
 Meadowvale_Farm_Inside_Text_MaxPreBattle::
-# 88 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
-	.string "You've beaten all FOUR of them?\n"
+# 94 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+	.string "You've beaten all of them?\p"
 	.string "...HELL YEAH!\p"
 	.string "Alright, the CHAMP is here!\n"
 	.string "Let's goooooo!\p"
 	.string "Take me down if you can, BUB!\p$"
 
 Meadowvale_Farm_Inside_Text_MaxDefeated::
-# 96 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 102 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	.string "You beat me?\n"
 	.string "I can't believe it!\p"
 	.string "...HELL YEAH!\p"
@@ -122,7 +131,7 @@ Meadowvale_Farm_Inside_Text_MaxDefeated::
 	.string "You took me down no sweat!$"
 
 Meadowvale_Farm_Inside_Text_MaxPostBattle::
-# 104 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 110 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	.string "My kids will be all over me for losing now.\p"
 	.string "URRRH!\p"
 	.string "They're gonna be behind the plow for a\n"
