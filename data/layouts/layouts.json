@@ -9474,10 +9474,10 @@
     {
       "id": "LAYOUT_WEIRFORD_GYM",
       "name": "Weirford_Gym_Layout",
-      "width": 20,
-      "height": 17,
+      "width": 15,
+      "height": 10,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Facility",
+      "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Weirford_Gym/border.bin",
       "blockdata_filepath": "data/layouts/Weirford_Gym/map.bin"
     },
@@ -9510,6 +9510,16 @@
       "secondary_tileset": "gTileset_LavaridgeGym",
       "border_filepath": "data/layouts/Weirford_Convent/border.bin",
       "blockdata_filepath": "data/layouts/Weirford_Convent/map.bin"
+    },
+    {
+      "id": "LAYOUT_WEIRFORD_GYM_DOWNSTAIRS",
+      "name": "Weirford_Gym_Downstairs_Layout",
+      "width": 16,
+      "height": 11,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Weirford_Gym_Downstairs/border.bin",
+      "blockdata_filepath": "data/layouts/Weirford_Gym_Downstairs/map.bin"
     }
   ]
 }

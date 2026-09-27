@@ -46,6 +46,11 @@ script Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut {
         "to use it outside of battle...\p"
         MSGBOX_DEFAULT
     )
+    msgbox("I don't think anyone has challenged\nthe gym for a very long time...\p"
+           "In fact, I don't know if it's a\ngym anymore! But Milo is in there,\lhe'll agree to battle you.\p"
+           "Best of luck, BUB!\p"
+        MSGBOX_DEFAULT
+    )
     release
     end
 }
