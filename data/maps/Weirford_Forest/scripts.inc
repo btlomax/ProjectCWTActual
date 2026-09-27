@@ -128,36 +128,39 @@ Weirford_Forest_MapScripts_LassLila_TrainerDefeated::
 
 Weirford_Forest_MapScripts_AcolyteLin_TrainerPreBattle::
 # 115 "data/maps/Weirford_Forest/scripts.pory"
-	.string "Halt young trainer, allow me to test your\nprowess!$"
+	.string "Halt, young traveler!\n"
+	.string "Show me the strength you carry.$"
 
 Weirford_Forest_MapScripts_AcolyteLin_TrainerPostBattle::
-# 119 "data/maps/Weirford_Forest/scripts.pory"
-	.string "The Weirford convent must hear of this.$"
+# 120 "data/maps/Weirford_Forest/scripts.pory"
+	.string "You carry no Crest, yet your Pokémon\n"
+	.string "strike with unyielding weight...\p"
+	.string "The Weirford Convent must hear of this.$"
 
 Weirford_Forest_MapScripts_AcolyteLin_TrainerDefeated::
-# 123 "data/maps/Weirford_Forest/scripts.pory"
+# 126 "data/maps/Weirford_Forest/scripts.pory"
 	.string "Yes, there is power in you...$"
 
 Weirford_Forest_MapScripts_CamperColin_TrainerPreBattle::
-# 128 "data/maps/Weirford_Forest/scripts.pory"
+# 131 "data/maps/Weirford_Forest/scripts.pory"
 	.string "This is my first time camping in the\nforest!$"
 
 Weirford_Forest_MapScripts_CamperColin_TrainerPostBattle::
-# 132 "data/maps/Weirford_Forest/scripts.pory"
+# 135 "data/maps/Weirford_Forest/scripts.pory"
 	.string "The camping is NOT going well...$"
 
 Weirford_Forest_MapScripts_CamperColin_TrainerDefeated::
-# 136 "data/maps/Weirford_Forest/scripts.pory"
+# 139 "data/maps/Weirford_Forest/scripts.pory"
 	.string "I'm trying my best not to SHAKE with\nFEAR.$"
 
 Weirford_Forest_MapScripts_BugCatcherSam_TrainerPreBattle::
-# 140 "data/maps/Weirford_Forest/scripts.pory"
+# 143 "data/maps/Weirford_Forest/scripts.pory"
 	.string "Have you got any Bug Pokémon?$"
 
 Weirford_Forest_MapScripts_BugCatcherSam_TrainerPostBattle::
-# 144 "data/maps/Weirford_Forest/scripts.pory"
+# 147 "data/maps/Weirford_Forest/scripts.pory"
 	.string "There are bug Pokemon here...\nI can feel them crawling up my OH SHI-\p$"
 
 Weirford_Forest_MapScripts_BugCatcherSam_TrainerDefeated::
-# 148 "data/maps/Weirford_Forest/scripts.pory"
+# 151 "data/maps/Weirford_Forest/scripts.pory"
 	.string "I can't believe you beat my team of\nalmighty bugs!$"

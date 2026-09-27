@@ -78,7 +78,7 @@ script LarchLab_Inside_MapScripts_ProfessorLarch {
         "Now, go and see your grandmother.\p"
         "Tell Rhona that... hmm.\p"
         "Tell her the sun and the moon will soon\n"
-        "cross paths.\p"
+        "cross paths, and that the old ways stir.\p"
         "She will know what I mean.\p",
     MSGBOX_DEFAULT)
 

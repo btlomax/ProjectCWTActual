@@ -47,8 +47,8 @@ script PlayerHouse_Inside_Dinner {
 
     msgbox("Happy birthday {PLAYER}!\nMake a wish!\pNow, what have you been up to?", MSGBOX_DEFAULT)
     msgbox("...\p...\pYou found a what?\p...\p...\pYou found a Pokemon?\pLet me see...\p...\pA surprise gift on your birthday no less...\pHmmmm I wonder...", MSGBOX_DEFAULT)
-    msgbox("...\pI think you should go and see Professor\nLarch, he's an old friend.\pIf he's not at his lab he'll be in Westlock\nVillage library.\npast Route 1.", MSGBOX_DEFAULT)
-    msgbox("He'll be able to tell you more about\nPokemon.\pBe careful in the tall grass,\nwild pokemon are sure to jump out at you!", MSGBOX_DEFAULT)
+    msgbox("...\pI think you should go and see Professor\nLarch, he's an old friend.\pIf he's not at his lab he'll be in Westlock\nVillage library,\npast Route 1.", MSGBOX_DEFAULT)
+    msgbox("He'll be able to tell you more about\nPokemon.\pBe careful in the tall grass,\nwild Pokémon are sure to jump out at you!", MSGBOX_DEFAULT)
     msgbox("Come and see me when you've spoken to\nthe Professor, and please,\pdo be careful dear.", MSGBOX_DEFAULT)
 
     setvar(VAR_ALDERBROOK_TOWN_STATE, 2)
@@ -100,14 +100,11 @@ script PlayerHouse_Inside_GrandmotherAfterPokedex {
     msgbox(
     "The sun and moon will cross paths...\p"
     "Larch said that to you?\p"
-    "...\p"
+    "...the old ways...\p"
     "Come here, {PLAYER}. Let me have a look at you.\p"
     "Hmmm...\p"
     "Perhaps I am only seeing what I want to\n"
-    "see after all these years.\p"
-    "Still... there is a strength in you.\n"
-    "A feeling that you are meant to go\l"
-    "farther than this little town.\p"
+    "see after all these years. But if Alexander\lsees it too...\p"
     "...\p"
     "You should take on the League challenge.\n"
     "See the region. Meet its people.\p"
@@ -122,6 +119,8 @@ script PlayerHouse_Inside_GrandmotherAfterPokedex {
     "You can always come and see me, and tell\n"
     "me ofyour adventures!\p",
     MSGBOX_DEFAULT)
+    msgbox("Go back through Westlock to Meadowvale Farm.\n"
+    "From there, make your way through the forest\land you'll eventually reach Weirford Town.\p", MSGBOX_DEFAULT)
 
     msgbox("Before you leave, I have something for\n you.", MSGBOX_DEFAULT)
     playfanfare(MUS_OBTAIN_ITEM)
@@ -150,6 +149,7 @@ script PlayerHouse_Inside_GrandmotherOfferRest {
     if (var(VAR_RESULT) == YES) {
         msgbox("Of course. Make yourselves at home.", MSGBOX_DEFAULT)
         special(HealPlayerParty)
+        setrespawn(HEAL_LOCATION_ALDERBROOK_TOWN_PLAYER_HOUSE)
         msgbox("There we are. You and your POKéMON\nlook much better already.", MSGBOX_DEFAULT)
     }
     else {

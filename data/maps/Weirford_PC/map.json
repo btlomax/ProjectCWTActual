@@ -15,7 +15,7 @@
   "connections": null,
   "object_events": [
     {
-      "local_id": "LOCALID_WESTLOCK_NURSE",
+      "local_id": "LOCALID_WEIRFORD_NURSE",
       "graphics_id": "OBJ_EVENT_GFX_NURSE",
       "x": 7,
       "y": 2,
@@ -25,7 +25,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Westlock_PokeCentre_EventScript_Nurse",
+      "script": "Weirford_PokeCentre_EventScript_Nurse",
       "flag": "0"
     }
   ],

@@ -113,11 +113,14 @@ text Weirford_Forest_MapScripts_LassLila_TrainerDefeated {
 }
 
 text Weirford_Forest_MapScripts_AcolyteLin_TrainerPreBattle {
-    "Halt young trainer, allow me to test your\nprowess!"
+    "Halt, young traveler!\n"
+    "Show me the strength you carry."
 }
 
 text Weirford_Forest_MapScripts_AcolyteLin_TrainerPostBattle {
-    "The Weirford convent must hear of this."
+    "You carry no Crest, yet your Pokémon\n"
+    "strike with unyielding weight...\p"
+    "The Weirford Convent must hear of this."
 }
 
 text Weirford_Forest_MapScripts_AcolyteLin_TrainerDefeated {

@@ -15717,7 +15717,7 @@
           "map": "MAP_ROUTE1_WILLBEND_CANAL",
           "base_label": "gRoute1_WillbendCanal",
           "land_mons": {
-            "encounter_rate": 7,
+            "encounter_rate": 20,
             "mons": [
               {
                 "min_level": 2,

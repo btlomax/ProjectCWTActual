@@ -375,6 +375,12 @@
       "map": "MAP_PLAYER_HOUSE_INSIDE_UPSTAIRS",
       "x": 4,
       "y": 4
+    },
+    {
+      "id": "HEAL_LOCATION_ALDERBROOK_TOWN_PLAYER_HOUSE",
+      "map": "MAP_ALDERBROOK_TOWN_2",
+      "x": 9,
+      "y": 7
     }
   ]
 }

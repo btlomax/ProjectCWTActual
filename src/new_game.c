@@ -50,6 +50,7 @@
 #include "union_room_chat.h"
 #include "constants/maps.h"
 #include "constants/map_groups.h"
+#include "constants/heal_locations.h"
 #include "constants/items.h"
 #include "difficulty.h"
 #include "follower_npc.h"
@@ -227,6 +228,7 @@ void NewGameInitData(void)
     ResetFanClub();
     ResetLotteryCorner();
     UpdateDailySeed();
+    SetLastHealLocationWarp(HEAL_LOCATION_ALDERBROOK_TOWN_PLAYER_HOUSE);
 #ifdef DEBUG_START_SPECIES
     ScriptGiveMon(DEBUG_START_SPECIES, DEBUG_START_LEVEL, ITEM_NONE);
     FlagSet(FLAG_SYS_POKEMON_GET);

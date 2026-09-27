@@ -50,15 +50,7 @@ Westlock_Library_Inside_EventScripts_MeetProfLarch_1:
 # 40 "data/maps/Westlock_Library_Inside/scripts.pory"
 	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_2, MSGBOX_DEFAULT
 # 55 "data/maps/Westlock_Library_Inside/scripts.pory"
-	applymovement LOCALID_PROF_LARCH, Movement_Larch_LookLeft
-# 56 "data/maps/Westlock_Library_Inside/scripts.pory"
-	waitmovement LOCALID_PROF_LARCH
-# 58 "data/maps/Westlock_Library_Inside/scripts.pory"
 	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_3, MSGBOX_DEFAULT
-# 63 "data/maps/Westlock_Library_Inside/scripts.pory"
-	faceplayer
-# 64 "data/maps/Westlock_Library_Inside/scripts.pory"
-	waitmovement LOCALID_PROF_LARCH
 # 66 "data/maps/Westlock_Library_Inside/scripts.pory"
 	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_4, MSGBOX_YESNO
 # 68 "data/maps/Westlock_Library_Inside/scripts.pory"
@@ -247,15 +239,19 @@ Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_2:
 	.string "grandmother and I go back many years.$"
 
 Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_3:
-# 58 "data/maps/Westlock_Library_Inside/scripts.pory"
-	.string "I have been studying the Pokémon of\n"
-	.string "this region for nearly five decades,\l"
-	.string "there are always new mysteries to be\n"
-	.string "solved...$"
+# 56 "data/maps/Westlock_Library_Inside/scripts.pory"
+	.string "I have spent most of my life studying\n"
+	.string "the Pokémon of this region.\p"
+	.string "You learn to trust what you can observe:\n"
+	.string "a footprint, a call, the shape of a wing.\p"
+	.string "But every so often, something appears\n"
+	.string "that does not fit the pages.\p"
+	.string "When that happens, you stop reading\n"
+	.string "and start listening...$"
 
 Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_4:
 # 66 "data/maps/Westlock_Library_Inside/scripts.pory"
-	.string "Wondrous creatures, aren't they?$"
+	.string "Fascinating creatures, aren't they?$"
 
 Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_5:
 # 70 "data/maps/Westlock_Library_Inside/scripts.pory"
@@ -288,7 +284,7 @@ Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_10:
 
 Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_11:
 # 94 "data/maps/Westlock_Library_Inside/scripts.pory"
-	.string "A r-rarer species, uh, in these p-parts,\n"
+	.string "A r-rare species, uh, in these p-parts,\n"
 	.string "indeed y-yes!\p"
 	.string "Where, did you, erm, f-find it?\p"
 	.string "On the c-canal, y-you say!\p"

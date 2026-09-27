@@ -159,7 +159,7 @@ LarchLab_Inside_MapScripts_ProfessorLarch_Text_6:
 	.string "Now, go and see your grandmother.\p"
 	.string "Tell Rhona that... hmm.\p"
 	.string "Tell her the sun and the moon will soon\n"
-	.string "cross paths.\p"
+	.string "cross paths, and that the old ways stir.\p"
 	.string "She will know what I mean.\p$"
 
 LarchLab_Inside_MapScripts_WallNote_Text_0:

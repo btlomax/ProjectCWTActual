@@ -52,18 +52,18 @@ script Westlock_Library_Inside_EventScripts_MeetProfLarch
            "I do recognize you now, your\n"
            "grandmother and I go back many years.", MSGBOX_DEFAULT)
 
-    applymovement(LOCALID_PROF_LARCH, Movement_Larch_LookLeft)
-    waitmovement(LOCALID_PROF_LARCH)
+    msgbox(
+    "I have spent most of my life studying\n"
+    "the Pokémon of this region.\p"
+    "You learn to trust what you can observe:\n"
+    "a footprint, a call, the shape of a wing.\p"
+    "But every so often, something appears\n"
+    "that does not fit the pages.\p"
+    "When that happens, you stop reading\n"
+    "and start listening...",
+    MSGBOX_DEFAULT)
 
-    msgbox("I have been studying the Pokémon of\n"
-       "this region for nearly five decades,\l"
-       "there are always new mysteries to be\n"
-       "solved...", MSGBOX_DEFAULT)
-
-    faceplayer
-    waitmovement(LOCALID_PROF_LARCH)
-
-    msgbox("Wondrous creatures, aren't they?", MSGBOX_YESNO)
+    msgbox("Fascinating creatures, aren't they?", MSGBOX_YESNO)
 
     if (var(VAR_RESULT) == 1)
     {
@@ -91,7 +91,7 @@ script Westlock_Library_Inside_EventScripts_MeetProfLarch
 
     msgbox("Gah!", MSGBOX_DEFAULT)
 
-    msgbox("A r-rarer species, uh, in these p-parts,\n"
+    msgbox("A r-rare species, uh, in these p-parts,\n"
            "indeed y-yes!\p"
            "Where, did you, erm, f-find it?\p"
            "On the c-canal, y-you say!\p"
