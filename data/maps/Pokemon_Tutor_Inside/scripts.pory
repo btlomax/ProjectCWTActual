@@ -87,8 +87,39 @@ script Pokemon_Tutor_Inside_MapScripts_Check_Pokemon_Caught
     buffernumberstring(STR_VAR_2, VAR_0x8009)
 
     msgbox("You've seen {STR_VAR_1} Pokémon and caught\n{STR_VAR_2} Pokémon!\p", MSGBOX_DEFAULT)
+    setvar(VAR_0x8004, QUEST_TUTOR_CATCH)
+    specialvar(VAR_0x800B, Quest_GetStage)
+    if (var(VAR_0x800B) == QUEST_TUTOR_CATCH_STAGE_RETURN_15) {
+        goto(Pokemon_Tutor_Inside_Script_HandleQuestReturn15)
+    }
+    if (var(VAR_0x800B) == QUEST_TUTOR_CATCH_STAGE_RETURN_35) {
+        goto(Pokemon_Tutor_Inside_Script_HandleQuestReturn35)
+    }
     call(Pokemon_Tutor_Inside_Script_CheckRewardTiers)
 
+    release
+    end
+}
+
+script Pokemon_Tutor_Inside_Script_HandleQuestReturn15 {
+    call(Pokemon_Tutor_Inside_Script_CheckRewardTiers)
+    if (flag(FLAG_RECEIVED_TUTOR_REWARD_15)) {
+        setvar(VAR_0x8004, QUEST_TUTOR_CATCH)
+        setvar(VAR_0x8005, QUEST_TUTOR_CATCH_STAGE_CATCH_35)
+        special(Quest_SetStage)
+        msgbox("Your next challenge is to catch 35\nPokémon. Keep it up!", MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script Pokemon_Tutor_Inside_Script_HandleQuestReturn35 {
+    call(Pokemon_Tutor_Inside_Script_CheckRewardTiers)
+    if (flag(FLAG_RECEIVED_TUTOR_REWARD_35)) {
+        setvar(VAR_0x8004, QUEST_TUTOR_CATCH)
+        special(Quest_Complete)
+        msgbox("You've completed my challenges for now.\nCome back when I have another for you!", MSGBOX_DEFAULT)
+    }
     release
     end
 }

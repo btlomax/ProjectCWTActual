@@ -1,4 +1,5 @@
 #include "global.h"
+#include "quest.h"
 #include "malloc.h"
 #include "apprentice.h"
 #include "battle.h"
@@ -5763,6 +5764,8 @@ void HandleSetPokedexFlag(enum NationalDexOrder nationalNum, u8 caseId, u32 pers
     if (!GetSetPokedexFlag(nationalNum, getFlagCaseId)) // don't set if it's already set
     {
         GetSetPokedexFlag(nationalNum, caseId);
+        if (caseId == FLAG_SET_CAUGHT)
+            Quest_RefreshStages();
         if (NationalPokedexNumToSpecies(nationalNum) == SPECIES_UNOWN)
             gSaveBlock2Ptr->pokedex.unownPersonality = personality;
         if (NationalPokedexNumToSpecies(nationalNum) == SPECIES_SPINDA)

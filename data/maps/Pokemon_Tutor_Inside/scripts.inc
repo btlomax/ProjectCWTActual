@@ -132,8 +132,20 @@ Pokemon_Tutor_Inside_MapScripts_Check_Pokemon_Caught::
 # 89 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	msgbox Pokemon_Tutor_Inside_MapScripts_Check_Pokemon_Caught_Text_2, MSGBOX_DEFAULT
 # 90 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
-	call Pokemon_Tutor_Inside_Script_CheckRewardTiers
+	setvar VAR_0x8004, QUEST_TUTOR_CATCH
+# 91 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+	specialvar VAR_0x800B, Quest_GetStage
 # 92 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+	compare VAR_0x800B, QUEST_TUTOR_CATCH_STAGE_RETURN_15
+	goto_if_eq Pokemon_Tutor_Inside_MapScripts_Check_Pokemon_Caught_5
+Pokemon_Tutor_Inside_MapScripts_Check_Pokemon_Caught_4:
+# 95 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+	compare VAR_0x800B, QUEST_TUTOR_CATCH_STAGE_RETURN_35
+	goto_if_eq Pokemon_Tutor_Inside_MapScripts_Check_Pokemon_Caught_8
+Pokemon_Tutor_Inside_MapScripts_Check_Pokemon_Caught_7:
+# 98 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+	call Pokemon_Tutor_Inside_Script_CheckRewardTiers
+# 100 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	release
 	end
 
@@ -144,171 +156,223 @@ Pokemon_Tutor_Inside_MapScripts_Check_Pokemon_Caught_2:
 	release
 	end
 
+Pokemon_Tutor_Inside_MapScripts_Check_Pokemon_Caught_5:
+# 93 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+	goto Pokemon_Tutor_Inside_Script_HandleQuestReturn15
+	goto Pokemon_Tutor_Inside_MapScripts_Check_Pokemon_Caught_4
+
+Pokemon_Tutor_Inside_MapScripts_Check_Pokemon_Caught_8:
+# 96 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+	goto Pokemon_Tutor_Inside_Script_HandleQuestReturn35
+	goto Pokemon_Tutor_Inside_MapScripts_Check_Pokemon_Caught_7
+
+
+Pokemon_Tutor_Inside_Script_HandleQuestReturn15::
+# 105 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+	call Pokemon_Tutor_Inside_Script_CheckRewardTiers
+# 106 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+	goto_if_set FLAG_RECEIVED_TUTOR_REWARD_15, Pokemon_Tutor_Inside_Script_HandleQuestReturn15_2
+Pokemon_Tutor_Inside_Script_HandleQuestReturn15_1:
+# 112 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+	release
+	end
+
+Pokemon_Tutor_Inside_Script_HandleQuestReturn15_2:
+# 107 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+	setvar VAR_0x8004, QUEST_TUTOR_CATCH
+# 108 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+	setvar VAR_0x8005, QUEST_TUTOR_CATCH_STAGE_CATCH_35
+# 109 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+	special Quest_SetStage
+# 110 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+	msgbox Pokemon_Tutor_Inside_Script_HandleQuestReturn15_Text_0, MSGBOX_DEFAULT
+	goto Pokemon_Tutor_Inside_Script_HandleQuestReturn15_1
+
+
+Pokemon_Tutor_Inside_Script_HandleQuestReturn35::
+# 117 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+	call Pokemon_Tutor_Inside_Script_CheckRewardTiers
+# 118 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+	goto_if_set FLAG_RECEIVED_TUTOR_REWARD_35, Pokemon_Tutor_Inside_Script_HandleQuestReturn35_2
+Pokemon_Tutor_Inside_Script_HandleQuestReturn35_1:
+# 123 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+	release
+	end
+
+Pokemon_Tutor_Inside_Script_HandleQuestReturn35_2:
+# 119 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+	setvar VAR_0x8004, QUEST_TUTOR_CATCH
+# 120 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+	special Quest_Complete
+# 121 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+	msgbox Pokemon_Tutor_Inside_Script_HandleQuestReturn35_Text_0, MSGBOX_DEFAULT
+	goto Pokemon_Tutor_Inside_Script_HandleQuestReturn35_1
+
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers::
-# 97 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 128 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	goto_if_unset FLAG_RECEIVED_TUTOR_REWARD_15, Pokemon_Tutor_Inside_Script_CheckRewardTiers_2
-# 110 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 141 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	goto_if_unset FLAG_RECEIVED_TUTOR_REWARD_35, Pokemon_Tutor_Inside_Script_CheckRewardTiers_5
-# 123 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 154 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	goto_if_unset FLAG_RECEIVED_TUTOR_REWARD_60, Pokemon_Tutor_Inside_Script_CheckRewardTiers_12
-# 136 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 167 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	goto_if_unset FLAG_RECEIVED_TUTOR_REWARD_95, Pokemon_Tutor_Inside_Script_CheckRewardTiers_21
-# 149 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
-	goto_if_unset FLAG_RECEIVED_TUTOR_REWARD_140, Pokemon_Tutor_Inside_Script_CheckRewardTiers_30
-# 162 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
-	goto_if_unset FLAG_RECEIVED_TUTOR_REWARD_190, Pokemon_Tutor_Inside_Script_CheckRewardTiers_39
 # 180 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+	goto_if_unset FLAG_RECEIVED_TUTOR_REWARD_140, Pokemon_Tutor_Inside_Script_CheckRewardTiers_30
+# 193 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+	goto_if_unset FLAG_RECEIVED_TUTOR_REWARD_190, Pokemon_Tutor_Inside_Script_CheckRewardTiers_39
+# 211 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	msgbox Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_12, MSGBOX_DEFAULT
 	return
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_2:
-# 98 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 129 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	compare VAR_0x8009, 15
 	goto_if_ge Pokemon_Tutor_Inside_Script_CheckRewardTiers_8
-# 105 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 136 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	msgbox Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_1, MSGBOX_DEFAULT
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_7:
 	return
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_5:
-# 111 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 142 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	compare VAR_0x8009, 35
 	goto_if_ge Pokemon_Tutor_Inside_Script_CheckRewardTiers_15
-# 118 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 149 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	msgbox Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_3, MSGBOX_DEFAULT
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_14:
 	return
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_8:
-# 99 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 130 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	msgbox Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_0, MSGBOX_DEFAULT
-# 100 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 131 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	call Pokemon_Tutor_Inside_Script_GivePokemonReward
-# 101 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 132 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	compare VAR_RESULT, MON_CANT_GIVE
 	goto_if_ne Pokemon_Tutor_Inside_Script_CheckRewardTiers_18
 	goto Pokemon_Tutor_Inside_Script_CheckRewardTiers_7
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_12:
-# 124 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 155 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	compare VAR_0x8009, 60
 	goto_if_ge Pokemon_Tutor_Inside_Script_CheckRewardTiers_24
-# 131 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 162 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	msgbox Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_5, MSGBOX_DEFAULT
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_23:
 	return
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_15:
-# 112 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 143 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	msgbox Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_2, MSGBOX_DEFAULT
-# 113 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 144 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	call Pokemon_Tutor_Inside_Script_GivePokemonReward
-# 114 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 145 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	compare VAR_RESULT, MON_CANT_GIVE
 	goto_if_ne Pokemon_Tutor_Inside_Script_CheckRewardTiers_27
 	goto Pokemon_Tutor_Inside_Script_CheckRewardTiers_14
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_18:
-# 102 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 133 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	setflag FLAG_RECEIVED_TUTOR_REWARD_15
 	goto Pokemon_Tutor_Inside_Script_CheckRewardTiers_7
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_21:
-# 137 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 168 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	compare VAR_0x8009, 95
 	goto_if_ge Pokemon_Tutor_Inside_Script_CheckRewardTiers_33
-# 144 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 175 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	msgbox Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_7, MSGBOX_DEFAULT
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_32:
 	return
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_24:
-# 125 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 156 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	msgbox Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_4, MSGBOX_DEFAULT
-# 126 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 157 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	call Pokemon_Tutor_Inside_Script_GivePokemonReward
-# 127 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 158 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	compare VAR_RESULT, MON_CANT_GIVE
 	goto_if_ne Pokemon_Tutor_Inside_Script_CheckRewardTiers_36
 	goto Pokemon_Tutor_Inside_Script_CheckRewardTiers_23
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_27:
-# 115 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 146 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	setflag FLAG_RECEIVED_TUTOR_REWARD_35
 	goto Pokemon_Tutor_Inside_Script_CheckRewardTiers_14
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_30:
-# 150 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 181 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	compare VAR_0x8009, 140
 	goto_if_ge Pokemon_Tutor_Inside_Script_CheckRewardTiers_42
-# 157 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 188 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	msgbox Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_9, MSGBOX_DEFAULT
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_41:
 	return
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_33:
-# 138 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 169 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	msgbox Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_6, MSGBOX_DEFAULT
-# 139 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 170 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	call Pokemon_Tutor_Inside_Script_GivePokemonReward
-# 140 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 171 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	compare VAR_RESULT, MON_CANT_GIVE
 	goto_if_ne Pokemon_Tutor_Inside_Script_CheckRewardTiers_45
 	goto Pokemon_Tutor_Inside_Script_CheckRewardTiers_32
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_36:
-# 128 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 159 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	setflag FLAG_RECEIVED_TUTOR_REWARD_60
 	goto Pokemon_Tutor_Inside_Script_CheckRewardTiers_23
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_39:
-# 163 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 194 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	compare VAR_0x8009, 190
 	goto_if_ge Pokemon_Tutor_Inside_Script_CheckRewardTiers_48
-# 175 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 206 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	msgbox Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_11, MSGBOX_DEFAULT
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_47:
 	return
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_42:
-# 151 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 182 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	msgbox Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_8, MSGBOX_DEFAULT
-# 152 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 183 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	call Pokemon_Tutor_Inside_Script_GivePokemonReward
-# 153 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 184 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	compare VAR_RESULT, MON_CANT_GIVE
 	goto_if_ne Pokemon_Tutor_Inside_Script_CheckRewardTiers_51
 	goto Pokemon_Tutor_Inside_Script_CheckRewardTiers_41
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_45:
-# 141 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 172 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	setflag FLAG_RECEIVED_TUTOR_REWARD_95
 	goto Pokemon_Tutor_Inside_Script_CheckRewardTiers_32
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_48:
-# 165 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 196 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	playse SE_PIN
-# 166 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 197 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	applymovement LOCALID_POKEMON_TUTOR, Common_Movement_ExclamationMark
-# 167 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 198 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	waitmovement LOCALID_POKEMON_TUTOR
-# 169 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 200 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	msgbox Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_10, MSGBOX_DEFAULT
-# 170 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 201 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	call Pokemon_Tutor_Inside_Script_GivePokemonReward
-# 171 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 202 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	compare VAR_RESULT, MON_CANT_GIVE
 	goto_if_ne Pokemon_Tutor_Inside_Script_CheckRewardTiers_53
 	goto Pokemon_Tutor_Inside_Script_CheckRewardTiers_47
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_51:
-# 154 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 185 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	setflag FLAG_RECEIVED_TUTOR_REWARD_140
 	goto Pokemon_Tutor_Inside_Script_CheckRewardTiers_41
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_53:
-# 172 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 203 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	setflag FLAG_RECEIVED_TUTOR_REWARD_190
 	goto Pokemon_Tutor_Inside_Script_CheckRewardTiers_47
 
@@ -365,56 +429,64 @@ Pokemon_Tutor_Inside_MapScripts_Check_Pokemon_Caught_Text_2:
 # 89 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	.string "You've seen {STR_VAR_1} Pokémon and caught\n{STR_VAR_2} Pokémon!\p$"
 
+Pokemon_Tutor_Inside_Script_HandleQuestReturn15_Text_0:
+# 110 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+	.string "Your next challenge is to catch 35\nPokémon. Keep it up!$"
+
+Pokemon_Tutor_Inside_Script_HandleQuestReturn35_Text_0:
+# 121 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+	.string "You've completed my challenges for now.\nCome back when I have another for you!$"
+
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_0:
-# 99 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 130 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	.string "Wonderful! You've caught 15 Pokémon!$"
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_1:
-# 105 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 136 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	.string "Your first goal is to catch 15 Pokémon.\nCome back when you've caught a few more!$"
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_2:
-# 112 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 143 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	.string "Wow! You've caught 35 Pokémon!$"
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_3:
-# 118 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 149 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	.string "Your next goal is to catch 35 Pokémon.\nCome back when you've caught a few more!$"
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_4:
-# 125 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 156 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	.string "Incredible! You've caught 60 Pokémon!$"
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_5:
-# 131 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 162 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	.string "Your next goal is to catch 60 Pokémon.\nCome back when you've caught a few more!$"
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_6:
-# 138 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 169 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	.string "You've caught how many? 95?!$"
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_7:
-# 144 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 175 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	.string "Your next goal is to catch 95 Pokémon.\nCome back when you've caught a few more!$"
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_8:
-# 151 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 182 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	.string "You've caught 140 Pokémon!$"
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_9:
-# 157 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 188 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	.string "Your next goal is to catch 140 Pokémon.\nCome back when you've caught a few more!$"
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_10:
-# 169 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 200 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	.string "You've done it! 190 Pokémon!$"
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_11:
-# 175 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 206 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	.string "Your next goal is to catch 190 Pokémon.\nCome back when you've caught a few more!$"
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_12:
-# 180 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
+# 211 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	.string "That's all I have for you I'm afraid!\p"
 	.string "You can't be far off catching them all!\p"
 	.string "Keep going!$"

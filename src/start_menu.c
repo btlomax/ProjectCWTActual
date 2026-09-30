@@ -31,6 +31,7 @@
 #include "party_menu.h"
 #include "pokedex.h"
 #include "pokenav.h"
+#include "quest.h"
 #include "safari_zone.h"
 #include "save.h"
 #include "scanline_effect.h"
@@ -80,6 +81,12 @@ enum
     SAVE_ERROR
 };
 
+enum StartMenuFocus
+{
+    START_MENU_FOCUS_ACTIONS,
+    START_MENU_FOCUS_QUESTS,
+};
+
 // IWRAM common
 COMMON_DATA bool8 (*gMenuCallback)(void) = NULL;
 
@@ -88,6 +95,8 @@ EWRAM_DATA static u8 sSafariBallsWindowId = 0;
 EWRAM_DATA static u8 sBattlePyramidFloorWindowId = 0;
 EWRAM_DATA static u8 sQuestPanelWindowId = 0;
 EWRAM_DATA static bool8 sQuestPanelVisible = FALSE;
+EWRAM_DATA static u8 sStartMenuFocus = START_MENU_FOCUS_ACTIONS;
+EWRAM_DATA static u8 sQuestCursorPos = 0;
 EWRAM_DATA static u8 sStartMenuCursorPos = 0;
 EWRAM_DATA static u8 sNumStartMenuActions = 0;
 EWRAM_DATA static u8 sCurrentStartMenuActions[9] = {0};
@@ -192,6 +201,7 @@ static const struct WindowTemplate sWindowTemplate_PyramidPeak = {
 static const u8 sText_MenuDebug[] = _("DEBUG");
 static const u8 sText_QuestPanelTitle[] = _("QUESTS");
 static const u8 sText_NoActiveQuests[] = _("No active quests.");
+static const u8 sText_QuestProgress[] = _("{STR_VAR_1} {STR_VAR_2}/{STR_VAR_3}");
 
 static const struct MenuAction sStartMenuItems[] =
 {
@@ -265,6 +275,8 @@ static void ShowPyramidFloorWindow(void);
 static void RemoveExtraStartMenuWindows(void);
 static void ShowQuestPanel(void);
 static void RemoveQuestPanel(void);
+static void PrintQuestPanel(void);
+static void SetStartMenuFocus(u8 focus);
 static bool32 PrintStartMenuActions(s8 *pIndex, u32 count);
 static bool32 InitStartMenuStep(void);
 static void InitStartMenu(void);
@@ -514,9 +526,73 @@ static void ShowQuestPanel(void)
     sQuestPanelVisible = TRUE;
     PutWindowTilemap(sQuestPanelWindowId);
     DrawStdWindowFrame(sQuestPanelWindowId, FALSE);
+    PrintQuestPanel();
+}
+
+static void PrintQuestPanel(void)
+{
+    u8 questCount = Quest_GetActiveCount();
+
+    FillWindowPixelBuffer(sQuestPanelWindowId, PIXEL_FILL(1));
     AddTextPrinterParameterized(sQuestPanelWindowId, FONT_NORMAL, sText_QuestPanelTitle, 42, 1, TEXT_SKIP_DRAW, NULL);
-    AddTextPrinterParameterized(sQuestPanelWindowId, FONT_NORMAL, sText_NoActiveQuests, 8, 25, TEXT_SKIP_DRAW, NULL);
-    CopyWindowToVram(sQuestPanelWindowId, COPYWIN_FULL);
+    if (questCount == 0)
+    {
+        AddTextPrinterParameterized(sQuestPanelWindowId, FONT_NORMAL, sText_NoActiveQuests, 8, 25, TEXT_SKIP_DRAW, NULL);
+    }
+    else
+    {
+        u8 questId;
+        u16 target;
+
+        if (sQuestCursorPos >= questCount)
+            sQuestCursorPos = 0;
+
+        questId = Quest_GetActiveQuestId(sQuestCursorPos);
+        AddTextPrinterParameterized(sQuestPanelWindowId, FONT_NORMAL, Quest_GetCategoryName(questId), 8, 17, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(sQuestPanelWindowId, FONT_NORMAL, Quest_GetTitle(questId), 8, 33, TEXT_SKIP_DRAW, NULL);
+        target = Quest_GetTarget(questId);
+        if (target != 0)
+        {
+            StringCopy(gStringVar1, Quest_GetObjective(questId));
+            ConvertIntToDecimalStringN(gStringVar2, Quest_GetProgress(questId), STR_CONV_MODE_LEFT_ALIGN, 3);
+            ConvertIntToDecimalStringN(gStringVar3, target, STR_CONV_MODE_LEFT_ALIGN, 3);
+            StringExpandPlaceholders(gStringVar4, sText_QuestProgress);
+            AddTextPrinterParameterized(sQuestPanelWindowId, FONT_NORMAL, gStringVar4, 8, 49, TEXT_SKIP_DRAW, NULL);
+        }
+        else
+        {
+            AddTextPrinterParameterized(sQuestPanelWindowId, FONT_NORMAL, Quest_GetObjective(questId), 8, 49, TEXT_SKIP_DRAW, NULL);
+        }
+
+        if (sStartMenuFocus == START_MENU_FOCUS_QUESTS)
+            AddTextPrinterParameterized(sQuestPanelWindowId, FONT_NORMAL, gText_SelectorArrow3, 0, 33, TEXT_SKIP_DRAW, NULL);
+    }
+
+    CopyWindowToVram(sQuestPanelWindowId, COPYWIN_GFX);
+}
+
+static void SetStartMenuFocus(u8 focus)
+{
+    if (sStartMenuFocus == focus)
+        return;
+
+    if (focus == START_MENU_FOCUS_QUESTS)
+    {
+        u8 cursorWidth = GetMenuCursorDimensionByFont(FONT_NORMAL, 0);
+        u8 cursorHeight = GetMenuCursorDimensionByFont(FONT_NORMAL, 1);
+
+        FillWindowPixelRect(GetStartMenuWindowId(), PIXEL_FILL(1), 0, (sStartMenuCursorPos * 16) + 9, cursorWidth, cursorHeight);
+        CopyWindowToVram(GetStartMenuWindowId(), COPYWIN_GFX);
+    }
+
+    sStartMenuFocus = focus;
+    PrintQuestPanel();
+
+    if (focus == START_MENU_FOCUS_ACTIONS)
+    {
+        Menu_MoveCursor(0);
+        CopyWindowToVram(GetStartMenuWindowId(), COPYWIN_GFX);
+    }
 }
 
 static void RemoveQuestPanel(void)
@@ -568,6 +644,8 @@ static bool32 InitStartMenuStep(void)
     switch (state)
     {
     case 0:
+        sStartMenuFocus = START_MENU_FOCUS_ACTIONS;
+        sQuestCursorPos = 0;
         sInitStartMenuData[0]++;
         break;
     case 1:
@@ -677,19 +755,52 @@ void ShowStartMenu(void)
 
 static bool8 HandleStartMenuInput(void)
 {
-    if (JOY_NEW(DPAD_UP))
+    if (sStartMenuFocus == START_MENU_FOCUS_ACTIONS)
     {
-        PlaySE(SE_SELECT);
-        sStartMenuCursorPos = Menu_MoveCursor(-1);
+        if (JOY_NEW(DPAD_UP))
+        {
+            PlaySE(SE_SELECT);
+            sStartMenuCursorPos = Menu_MoveCursor(-1);
+        }
+
+        if (JOY_NEW(DPAD_DOWN))
+        {
+            PlaySE(SE_SELECT);
+            sStartMenuCursorPos = Menu_MoveCursor(1);
+        }
+
+        if (JOY_NEW(DPAD_LEFT) && Quest_GetActiveCount() != 0)
+        {
+            PlaySE(SE_SELECT);
+            SetStartMenuFocus(START_MENU_FOCUS_QUESTS);
+        }
+    }
+    else
+    {
+        u8 questCount = Quest_GetActiveCount();
+
+        if (JOY_NEW(DPAD_UP))
+        {
+            PlaySE(SE_SELECT);
+            sQuestCursorPos = (sQuestCursorPos == 0) ? questCount - 1 : sQuestCursorPos - 1;
+            PrintQuestPanel();
+        }
+
+        if (JOY_NEW(DPAD_DOWN))
+        {
+            PlaySE(SE_SELECT);
+            sQuestCursorPos = (sQuestCursorPos + 1) % questCount;
+            PrintQuestPanel();
+        }
+
+        if (JOY_NEW(DPAD_RIGHT))
+        {
+            PlaySE(SE_SELECT);
+            SetStartMenuFocus(START_MENU_FOCUS_ACTIONS);
+        }
     }
 
-    if (JOY_NEW(DPAD_DOWN))
-    {
-        PlaySE(SE_SELECT);
-        sStartMenuCursorPos = Menu_MoveCursor(1);
-    }
-
-    if (JOY_NEW(A_BUTTON))
+    if (sStartMenuFocus == START_MENU_FOCUS_ACTIONS && JOY_NEW(A_BUTTON))
     {
         PlaySE(SE_SELECT);
         if (sStartMenuItems[sCurrentStartMenuActions[sStartMenuCursorPos]].func.u8_void == StartMenuPokedexCallback)

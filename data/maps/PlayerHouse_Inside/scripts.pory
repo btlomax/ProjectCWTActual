@@ -46,8 +46,8 @@ script PlayerHouse_Inside_Dinner {
     fadescreen(FADE_FROM_BLACK)
 
     msgbox("Happy birthday {PLAYER}!\nMake a wish!\pNow, what have you been up to?", MSGBOX_DEFAULT)
-    msgbox("...\p...\pYou found a what?\p...\p...\pYou found a Pokemon?\pLet me see...\p...\pA surprise gift on your birthday no less...\pHmmmm I wonder...", MSGBOX_DEFAULT)
-    msgbox("...\pI think you should go and see Professor\nLarch, he's an old friend.\pIf he's not at his lab he'll be in Westlock\nVillage library,\npast Route 1.", MSGBOX_DEFAULT)
+    msgbox("...\p...\pYou found a what?\p...\p...\pYou found a Pokemon?\pLet me see...\p...\pA surprise gift on your birthday no less.\pHmmmm I wonder...", MSGBOX_DEFAULT)
+    msgbox("...\pI think you should go and see Professor\nLarch, he's an old friend.\pIf he's not at his lab, he'll be in Westlock\nVillage library,\npast Route 1.", MSGBOX_DEFAULT)
     msgbox("He'll be able to tell you more about\nPokemon.\pBe careful in the tall grass,\nwild Pokémon are sure to jump out at you!", MSGBOX_DEFAULT)
     msgbox("Come and see me when you've spoken to\nthe Professor, and please,\pdo be careful dear.", MSGBOX_DEFAULT)
 
@@ -66,6 +66,10 @@ script PlayerHouse_Inside_Rhona {
 script PlayerHouse_Inside_Birthday {
     switch (var(VAR_ALDERBROOK_TOWN_STATE)) {
         case 0:
+            playse(SE_PIN)
+            applymovement(LOCALID_GRANDMOTHER, Common_Movement_ExclamationMark)
+            waitmovement(LOCALID_GRANDMOTHER)
+            
             msgbox(
                 "You're finally up! I was starting to think\n"
                 "you'd sleep through your special day!\p"
