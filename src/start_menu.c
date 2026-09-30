@@ -86,6 +86,8 @@ COMMON_DATA bool8 (*gMenuCallback)(void) = NULL;
 // EWRAM
 EWRAM_DATA static u8 sSafariBallsWindowId = 0;
 EWRAM_DATA static u8 sBattlePyramidFloorWindowId = 0;
+EWRAM_DATA static u8 sQuestPanelWindowId = 0;
+EWRAM_DATA static bool8 sQuestPanelVisible = FALSE;
 EWRAM_DATA static u8 sStartMenuCursorPos = 0;
 EWRAM_DATA static u8 sNumStartMenuActions = 0;
 EWRAM_DATA static u8 sCurrentStartMenuActions[9] = {0};
@@ -188,6 +190,8 @@ static const struct WindowTemplate sWindowTemplate_PyramidPeak = {
 };
 
 static const u8 sText_MenuDebug[] = _("DEBUG");
+static const u8 sText_QuestPanelTitle[] = _("QUESTS");
+static const u8 sText_NoActiveQuests[] = _("No active quests.");
 
 static const struct MenuAction sStartMenuItems[] =
 {
@@ -259,6 +263,8 @@ static void BuildMultiPartnerRoomStartMenu(void);
 static void ShowSafariBallsWindow(void);
 static void ShowPyramidFloorWindow(void);
 static void RemoveExtraStartMenuWindows(void);
+static void ShowQuestPanel(void);
+static void RemoveQuestPanel(void);
 static bool32 PrintStartMenuActions(s8 *pIndex, u32 count);
 static bool32 InitStartMenuStep(void);
 static void InitStartMenu(void);
@@ -474,6 +480,8 @@ static void ShowPyramidFloorWindow(void)
 
 static void RemoveExtraStartMenuWindows(void)
 {
+    RemoveQuestPanel();
+
     if (GetSafariZoneFlag())
     {
         ClearStdWindowAndFrameToTransparent(sSafariBallsWindowId, FALSE);
@@ -485,6 +493,41 @@ static void RemoveExtraStartMenuWindows(void)
         ClearStdWindowAndFrameToTransparent(sBattlePyramidFloorWindowId, FALSE);
         RemoveWindow(sBattlePyramidFloorWindowId);
     }
+}
+
+static void ShowQuestPanel(void)
+{
+    static const struct WindowTemplate sWindowTemplate_QuestPanel = {
+        .bg = 0,
+        .tilemapLeft = 1,
+        .tilemapTop = 1,
+        .width = 15,
+        .height = 18,
+        .paletteNum = 15,
+        .baseBlock = 0x8
+    };
+
+    if (!FlagGet(FLAG_SYS_QUESTS_ENABLED) || sQuestPanelVisible)
+        return;
+
+    sQuestPanelWindowId = AddWindow(&sWindowTemplate_QuestPanel);
+    sQuestPanelVisible = TRUE;
+    PutWindowTilemap(sQuestPanelWindowId);
+    DrawStdWindowFrame(sQuestPanelWindowId, FALSE);
+    AddTextPrinterParameterized(sQuestPanelWindowId, FONT_NORMAL, sText_QuestPanelTitle, 42, 1, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized(sQuestPanelWindowId, FONT_NORMAL, sText_NoActiveQuests, 8, 25, TEXT_SKIP_DRAW, NULL);
+    CopyWindowToVram(sQuestPanelWindowId, COPYWIN_FULL);
+}
+
+static void RemoveQuestPanel(void)
+{
+    if (!sQuestPanelVisible)
+        return;
+
+    ClearStdWindowAndFrameToTransparent(sQuestPanelWindowId, FALSE);
+    CopyWindowToVram(sQuestPanelWindowId, COPYWIN_FULL);
+    RemoveWindow(sQuestPanelWindowId);
+    sQuestPanelVisible = FALSE;
 }
 
 static bool32 PrintStartMenuActions(s8 *pIndex, u32 count)
@@ -538,6 +581,7 @@ static bool32 InitStartMenuStep(void)
         sInitStartMenuData[0]++;
         break;
     case 3:
+        ShowQuestPanel();
         if (GetSafariZoneFlag())
             ShowSafariBallsWindow();
         if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE)
@@ -832,6 +876,7 @@ static bool8 StartMenuLinkModePlayerNameCallback(void)
     if (!gPaletteFade.active)
     {
         PlayRainStoppingSoundEffect();
+        RemoveExtraStartMenuWindows();
         CleanupOverworldWindowsAndTilemaps();
         ShowTrainerCardInLink(gLocalLinkPlayerId, CB2_ReturnToFieldWithOpenMenu);
 
@@ -894,6 +939,7 @@ static bool8 SaveCallback(void)
     case SAVE_SUCCESS:
     case SAVE_ERROR:    // Close start menu
         ClearDialogWindowAndFrameToTransparent(0, TRUE);
+        RemoveExtraStartMenuWindows();
         ScriptUnfreezeObjectEvents();
         UnlockPlayerFieldControls();
         SoftResetInBattlePyramid();
@@ -931,6 +977,7 @@ static bool8 BattlePyramidRetireCallback(void)
         return FALSE;
     case SAVE_CANCELED: // Yes (Retire from battle pyramid)
         ClearDialogWindowAndFrameToTransparent(0, TRUE);
+        RemoveExtraStartMenuWindows();
         ScriptUnfreezeObjectEvents();
         UnlockPlayerFieldControls();
         ScriptContext_SetupScript(BattlePyramid_Retire);
@@ -1507,6 +1554,7 @@ void AppendToList(u8 *list, u8 *pos, u8 newEntry)
 
 static bool8 StartMenuDexNavCallback(void)
 {
+    RemoveExtraStartMenuWindows();
     CreateTask(Task_OpenDexNavFromStartMenu, 0);
     return TRUE;
 }

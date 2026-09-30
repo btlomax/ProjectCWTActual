@@ -58,6 +58,7 @@ script LarchLab_Inside_MapScripts_ProfessorLarch {
     msgbox("{PLAYER} received the POKéDEX!", MSGBOX_DEFAULT)
     waitfanfare
     setflag(FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_SYS_QUESTS_ENABLED)
 
     msgbox(
         "Use it well, {PLAYER}. And do let me\n"
