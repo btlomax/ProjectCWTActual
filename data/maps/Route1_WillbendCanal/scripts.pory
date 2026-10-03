@@ -106,7 +106,13 @@ script Route1_EventScript_StarterDrop {
         call(Common_EventScript_NameReceivedPartyMon)
     }
 
+    setflag(FLAG_SYS_QUESTS_ENABLED)
+    msgbox("The quest system is now active!", MSGBOX_DEFAULT)
+    msgbox("Press START and select QUESTS to view\nyour current quests.", MSGBOX_DEFAULT)
     msgbox("Time to go home, your grandmother\nis waiting.", MSGBOX_DEFAULT)
+
+    setvar(VAR_0x8004, QUEST_FOREVER_A_LEGEND)
+    special(Quest_Add)
 
     removeobject(LOCALID_STARTER_DROP)
     setflag(FLAG_HIDE_STARTER_ITEM)
@@ -182,16 +188,11 @@ script Route1_EventScript_Catch_Pokemon_Tutorial{
    
     msgbox("Some Pokémon are hard to find, but they\nare out there!\pListen out for the cries of wild POKéMON,\nyou never know what you might find!", MSGBOX_DEFAULT)
     msgbox("Come to my house on this route after\nyou've caught 15 Pokemon, I'll have a\lgift ready for you.\p", MSGBOX_DEFAULT)
-    setflag(FLAG_SYS_QUESTS_ENABLED)
     setvar(VAR_0x8004, QUEST_TUTOR_CATCH)
     special(Quest_Add)
 
     applymovement(LOCALID_ROUTE1_TUTOR, Movement_TutorLeaveScreenRight)
     waitmovement(LOCALID_ROUTE1_TUTOR)
-
-    msgbox("The quest system is now active!", MSGBOX_DEFAULT)
-    msgbox("Press START and use the L/R arrows to\nnavigate between the two menus.", MSGBOX_DEFAULT)
-    msgbox("You'll pick up new quests as you progress\nthrough the game\p. Make sure you talk to NPCs and explore\nthoroughly!", MSGBOX_DEFAULT)
 
     setflag(FLAG_HIDE_ROUTE1_TUTOR)
     removeobject(LOCALID_ROUTE1_TUTOR)

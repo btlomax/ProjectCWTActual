@@ -1,0 +1,209 @@
+#!/usr/bin/env python3
+"""Generate quest constants and C catalog data from data/quests.ini."""
+
+import argparse
+import configparser
+import json
+import re
+from pathlib import Path
+
+
+IDENTIFIER_RE = re.compile(r"^[A-Z][A-Z0-9_]*$")
+CATEGORIES = {
+    "primary": "QUEST_CATEGORY_PRIMARY",
+    "secondary": "QUEST_CATEGORY_SECONDARY",
+}
+OBJECTIVE_TYPES = {
+    "none": "QUEST_OBJECTIVE_NONE",
+    "caught_species": "QUEST_OBJECTIVE_CAUGHT_SPECIES",
+}
+
+
+def c_string(value: str) -> str:
+    value = value.replace("{progress}", "{STR_VAR_1}").replace("{target}", "{STR_VAR_2}")
+    return json.dumps(value, ensure_ascii=False)
+
+
+def require_identifier(value: str, description: str) -> str:
+    if not IDENTIFIER_RE.fullmatch(value):
+        raise ValueError(f"{description} must be an uppercase identifier: {value}")
+    return value
+
+
+def load_quests(input_path: Path) -> list[dict]:
+    config = configparser.ConfigParser(interpolation=None)
+    config.optionxform = str
+    with input_path.open(encoding="utf-8") as input_file:
+        config.read_file(input_file)
+
+    quests = []
+    for section in config.sections():
+        if not section.startswith("quest.") or ".stage." in section:
+            continue
+
+        quest_id = require_identifier(section.removeprefix("quest."), f"Quest ID in [{section}]")
+        quest = config[section]
+        try:
+            category = CATEGORIES[quest["category"].lower()]
+            state_var = require_identifier(quest["state_var"], f"state_var in [{section}]")
+            stage_names = [require_identifier(name.strip(), f"stage in [{section}]") for name in quest["stages"].split(",")]
+        except KeyError as error:
+            raise ValueError(f"Missing {error.args[0]} in [{section}]") from error
+
+        if not quest.get("title", "").strip():
+            raise ValueError(f"Missing title in [{section}]")
+        if not stage_names or len(stage_names) != len(set(stage_names)):
+            raise ValueError(f"Stages in [{section}] must be unique and non-empty")
+
+        stages = []
+        for stage_name in stage_names:
+            stage_section = f"quest.{quest_id}.stage.{stage_name}"
+            if stage_section not in config:
+                raise ValueError(f"Missing [{stage_section}]")
+
+            stage = config[stage_section]
+            try:
+                objective_type = OBJECTIVE_TYPES[stage.get("objective_type", "none").lower()]
+            except KeyError as error:
+                raise ValueError(f"Unknown objective_type in [{stage_section}]") from error
+
+            try:
+                target = int(stage.get("target", "0"))
+            except ValueError as error:
+                raise ValueError(f"target in [{stage_section}] must be a number") from error
+            if not 0 <= target <= 65535:
+                raise ValueError(f"target in [{stage_section}] must be between 0 and 65535")
+            if objective_type == "QUEST_OBJECTIVE_CAUGHT_SPECIES" and target == 0:
+                raise ValueError(f"caught_species target in [{stage_section}] must be greater than zero")
+
+            location = stage.get("location", "").strip()
+            detail = stage.get("detail", "").strip()
+            if not location or not detail:
+                raise ValueError(f"[{stage_section}] requires location and detail")
+
+            stages.append(
+                {
+                    "id": stage_name,
+                    "location": location,
+                    "detail": detail,
+                    "objective_type": objective_type,
+                    "target": target,
+                }
+            )
+
+        quests.append(
+            {
+                "id": quest_id,
+                "title": quest["title"].strip(),
+                "category": category,
+                "state_var": state_var,
+                "stages": stages,
+            }
+        )
+
+    if not quests:
+        raise ValueError("No [quest.<ID>] sections found")
+    return quests
+
+
+def write_header(output_path: Path, quests: list[dict]) -> None:
+    lines = [
+        "#ifndef GUARD_CONSTANTS_QUESTS_H",
+        "#define GUARD_CONSTANTS_QUESTS_H",
+        "",
+    ]
+    for quest_index, quest in enumerate(quests):
+        lines.append(f"#define QUEST_{quest['id']:<37} {quest_index}")
+    lines.extend(
+        [
+            f"#define QUEST_COUNT{'':<42} {len(quests)}",
+            "",
+        ]
+    )
+
+    for quest in quests:
+        prefix = f"QUEST_{quest['id']}_STAGE_"
+        lines.append(f"#define {prefix + 'INACTIVE':<45} 0")
+        for stage_index, stage in enumerate(quest["stages"], start=1):
+            lines.append(f"#define {prefix + stage['id']:<45} {stage_index}")
+        lines.append(f"#define {prefix + 'COMPLETE':<45} {len(quest['stages']) + 1}")
+        lines.append("")
+
+    lines.append("#endif // GUARD_CONSTANTS_QUESTS_H")
+    lines.append("")
+    output_path.write_text("\n".join(lines), encoding="utf-8")
+
+
+def write_catalog(output_path: Path, quests: list[dict]) -> None:
+    lines = ["// Generated by tools/generate_quests.py. Do not edit.", ""]
+    for quest in quests:
+        name = quest["id"].title().replace("_", "")
+        lines.extend(
+            [
+                f"static const u8 sText_{name}Title[] = _({c_string(quest['title'])});",
+            ]
+        )
+        for stage in quest["stages"]:
+            stage_name = stage["id"].title().replace("_", "")
+            lines.append(f"static const u8 sText_{name}{stage_name}Location[] = _({c_string(stage['location'])});")
+            lines.append(f"static const u8 sText_{name}{stage_name}Detail[] = _({c_string(stage['detail'])});")
+        lines.append("")
+
+        lines.append(f"static const struct QuestStageDefinition sQuest{name}Stages[] =")
+        lines.append("{")
+        for stage in quest["stages"]:
+            stage_name = stage["id"].title().replace("_", "")
+            lines.extend(
+                [
+                    f"    [QUEST_{quest['id']}_STAGE_{stage['id']}] =",
+                    "    {",
+                    f"        .objective = sText_{name}{stage_name}Detail,",
+                    f"        .location = sText_{name}{stage_name}Location,",
+                    f"        .objectiveType = {stage['objective_type']},",
+                    f"        .target = {stage['target']},",
+                    "    },",
+                ]
+            )
+        lines.extend(["};", ""])
+
+    lines.extend(
+        [
+            "static const struct QuestDefinition sQuestDefinitions[QUEST_COUNT] =",
+            "{",
+        ]
+    )
+    for quest in quests:
+        name = quest["id"].title().replace("_", "")
+        lines.extend(
+            [
+                f"    [QUEST_{quest['id']}] =",
+                "    {",
+                f"        .title = sText_{name}Title,",
+                f"        .category = {quest['category']},",
+                f"        .stateVar = {quest['state_var']},",
+                f"        .firstStage = QUEST_{quest['id']}_STAGE_{quest['stages'][0]['id']},",
+                f"        .completeStage = QUEST_{quest['id']}_STAGE_COMPLETE,",
+                f"        .stages = sQuest{name}Stages,",
+                "    },",
+            ]
+        )
+    lines.extend(["};", ""])
+    output_path.write_text("\n".join(lines), encoding="utf-8")
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--input", type=Path, required=True)
+    parser.add_argument("--header", type=Path, required=True)
+    parser.add_argument("--catalog", type=Path, required=True)
+    args = parser.parse_args()
+
+    quests = load_quests(args.input)
+    args.header.parent.mkdir(parents=True, exist_ok=True)
+    args.catalog.parent.mkdir(parents=True, exist_ok=True)
+    write_header(args.header, quests)
+    write_catalog(args.catalog, quests)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,8 +1,14 @@
 #include "global.h"
 #include "event_data.h"
+#include "field_message_box.h"
+#include "main.h"
+#include "menu.h"
 #include "pokedex.h"
 #include "quest.h"
+#include "script.h"
 #include "string_util.h"
+#include "task.h"
+#include "text.h"
 
 enum QuestCategory
 {
@@ -19,6 +25,7 @@ enum QuestObjectiveType
 struct QuestStageDefinition
 {
     const u8 *objective;
+    const u8 *location;
     enum QuestObjectiveType objectiveType;
     u16 target;
 };
@@ -28,50 +35,21 @@ struct QuestDefinition
     const u8 *title;
     enum QuestCategory category;
     u16 stateVar;
+    u16 firstStage;
+    u16 completeStage;
     const struct QuestStageDefinition *stages;
 };
 
 static const u8 sText_Primary[] = _("PRIMARY");
 static const u8 sText_Secondary[] = _("SECONDARY");
 static const u8 sText_Empty[] = _("");
-static const u8 sText_TutorChallenge[] = _("TUTOR'S CHALLENGE");
-static const u8 sText_CatchPokemon[] = _("CATCH POKéMON");
-static const u8 sText_ReturnToTutor[] = _("RETURN TO TUTOR");
+static const u8 sText_QuestUpdated[] = _("Quest updated!\n{STR_VAR_1}");
 
-static const struct QuestStageDefinition sQuestTutorCatchStages[] =
-{
-    [QUEST_TUTOR_CATCH_STAGE_CATCH_15] =
-    {
-        .objective = sText_CatchPokemon,
-        .objectiveType = QUEST_OBJECTIVE_CAUGHT_SPECIES,
-        .target = 15,
-    },
-    [QUEST_TUTOR_CATCH_STAGE_RETURN_15] =
-    {
-        .objective = sText_ReturnToTutor,
-    },
-    [QUEST_TUTOR_CATCH_STAGE_CATCH_35] =
-    {
-        .objective = sText_CatchPokemon,
-        .objectiveType = QUEST_OBJECTIVE_CAUGHT_SPECIES,
-        .target = 35,
-    },
-    [QUEST_TUTOR_CATCH_STAGE_RETURN_35] =
-    {
-        .objective = sText_ReturnToTutor,
-    },
-};
+static EWRAM_DATA bool8 sQuestUpdatePending[QUEST_COUNT];
 
-static const struct QuestDefinition sQuestDefinitions[QUEST_COUNT] =
-{
-    [QUEST_TUTOR_CATCH] =
-    {
-        .title = sText_TutorChallenge,
-        .category = QUEST_CATEGORY_SECONDARY,
-        .stateVar = VAR_QUEST_TUTOR_CATCH_STATE,
-        .stages = sQuestTutorCatchStages,
-    },
-};
+#include "quest_data.inc"
+
+static void Task_CloseQuestUpdateMessage(u8 taskId);
 
 static bool8 IsQuestIdValid(u8 questId)
 {
@@ -88,6 +66,19 @@ static void SetQuestState(u8 questId, u16 stage)
     VarSet(sQuestDefinitions[questId].stateVar, stage);
 }
 
+static bool8 IsQuestActive(u8 questId)
+{
+    u16 stage = GetQuestState(questId);
+
+    return stage >= sQuestDefinitions[questId].firstStage
+        && stage < sQuestDefinitions[questId].completeStage;
+}
+
+static void QueueQuestUpdate(u8 questId)
+{
+    sQuestUpdatePending[questId] = TRUE;
+}
+
 void Quest_Add(void)
 {
     u8 questId = gSpecialVar_0x8004;
@@ -98,8 +89,11 @@ void Quest_Add(void)
         return;
     }
 
-    if (GetQuestState(questId) == QUEST_TUTOR_CATCH_STAGE_INACTIVE)
-        SetQuestState(questId, QUEST_TUTOR_CATCH_STAGE_CATCH_15);
+    if (GetQuestState(questId) < sQuestDefinitions[questId].firstStage)
+    {
+        SetQuestState(questId, sQuestDefinitions[questId].firstStage);
+        QueueQuestUpdate(questId);
+    }
 
     Quest_RefreshStages();
     gSpecialVar_Result = TRUE;
@@ -109,13 +103,19 @@ void Quest_SetStage(void)
 {
     u8 questId = gSpecialVar_0x8004;
 
-    if (!IsQuestIdValid(questId) || gSpecialVar_0x8005 >= QUEST_TUTOR_CATCH_STAGE_COMPLETE)
+    if (!IsQuestIdValid(questId)
+     || gSpecialVar_0x8005 < sQuestDefinitions[questId].firstStage
+     || gSpecialVar_0x8005 >= sQuestDefinitions[questId].completeStage)
     {
         gSpecialVar_Result = FALSE;
         return;
     }
 
-    SetQuestState(questId, gSpecialVar_0x8005);
+    if (GetQuestState(questId) != gSpecialVar_0x8005)
+    {
+        SetQuestState(questId, gSpecialVar_0x8005);
+        QueueQuestUpdate(questId);
+    }
     Quest_RefreshStages();
     gSpecialVar_Result = TRUE;
 }
@@ -130,7 +130,11 @@ void Quest_Complete(void)
         return;
     }
 
-    SetQuestState(questId, QUEST_TUTOR_CATCH_STAGE_COMPLETE);
+    if (GetQuestState(questId) != sQuestDefinitions[questId].completeStage)
+    {
+        SetQuestState(questId, sQuestDefinitions[questId].completeStage);
+        QueueQuestUpdate(questId);
+    }
     gSpecialVar_Result = TRUE;
 }
 
@@ -140,7 +144,7 @@ void Quest_GetStage(void)
 
     if (!IsQuestIdValid(questId))
     {
-        gSpecialVar_Result = QUEST_TUTOR_CATCH_STAGE_INACTIVE;
+        gSpecialVar_Result = 0;
         return;
     }
 
@@ -156,13 +160,52 @@ void Quest_RefreshStages(void)
         u16 stage = GetQuestState(questId);
         const struct QuestStageDefinition *stageDefinition;
 
-        if (stage == QUEST_TUTOR_CATCH_STAGE_INACTIVE || stage >= QUEST_TUTOR_CATCH_STAGE_COMPLETE)
+        if (!IsQuestActive(questId))
             continue;
 
         stageDefinition = &sQuestDefinitions[questId].stages[stage];
         if (stageDefinition->objectiveType == QUEST_OBJECTIVE_CAUGHT_SPECIES
          && GetRegionalPokedexCount(FLAG_GET_CAUGHT) >= stageDefinition->target)
+        {
             SetQuestState(questId, stage + 1);
+            QueueQuestUpdate(questId);
+        }
+    }
+}
+
+void Quest_TryShowUpdateMessage(void)
+{
+    u8 questId;
+
+    if (ArePlayerFieldControlsLocked() || !IsFieldMessageBoxHidden())
+        return;
+
+    for (questId = 0; questId < QUEST_COUNT; questId++)
+    {
+        if (sQuestUpdatePending[questId])
+        {
+            StringCopy(gStringVar1, Quest_GetTitle(questId));
+            if (ShowFieldMessage(sText_QuestUpdated))
+            {
+                sQuestUpdatePending[questId] = FALSE;
+                LockPlayerFieldControls();
+                CreateTask(Task_CloseQuestUpdateMessage, 0);
+            }
+            break;
+        }
+    }
+}
+
+static void Task_CloseQuestUpdateMessage(u8 taskId)
+{
+    if (IsTextPrinterActiveOnWindow(0))
+        return;
+
+    if (JOY_NEW(A_BUTTON | B_BUTTON))
+    {
+        HideFieldMessageBox();
+        UnlockPlayerFieldControls();
+        DestroyTask(taskId);
     }
 }
 
@@ -173,9 +216,7 @@ u8 Quest_GetActiveCount(void)
 
     for (questId = 0; questId < QUEST_COUNT; questId++)
     {
-        u16 stage = GetQuestState(questId);
-
-        if (stage != QUEST_TUTOR_CATCH_STAGE_INACTIVE && stage < QUEST_TUTOR_CATCH_STAGE_COMPLETE)
+        if (IsQuestActive(questId))
             count++;
     }
 
@@ -188,9 +229,7 @@ u8 Quest_GetActiveQuestId(u8 activeIndex)
 
     for (questId = 0; questId < QUEST_COUNT; questId++)
     {
-        u16 stage = GetQuestState(questId);
-
-        if (stage != QUEST_TUTOR_CATCH_STAGE_INACTIVE && stage < QUEST_TUTOR_CATCH_STAGE_COMPLETE)
+        if (IsQuestActive(questId))
         {
             if (activeIndex == 0)
                 return questId;
@@ -225,6 +264,20 @@ const u8 *Quest_GetTitle(u8 questId)
     return sQuestDefinitions[questId].title;
 }
 
+const u8 *Quest_GetLocation(u8 questId)
+{
+    u16 stage;
+
+    if (!IsQuestIdValid(questId))
+        return sText_Empty;
+
+    stage = GetQuestState(questId);
+    if (!IsQuestActive(questId))
+        return sText_Empty;
+
+    return sQuestDefinitions[questId].stages[stage].location;
+}
+
 const u8 *Quest_GetObjective(u8 questId)
 {
     u16 stage;
@@ -233,7 +286,7 @@ const u8 *Quest_GetObjective(u8 questId)
         return sText_Empty;
 
     stage = GetQuestState(questId);
-    if (stage == QUEST_TUTOR_CATCH_STAGE_INACTIVE || stage >= QUEST_TUTOR_CATCH_STAGE_COMPLETE)
+    if (!IsQuestActive(questId))
         return sText_Empty;
 
     return sQuestDefinitions[questId].stages[stage].objective;
@@ -247,6 +300,8 @@ u16 Quest_GetProgress(u8 questId)
         return 0;
 
     stage = GetQuestState(questId);
+    if (!IsQuestActive(questId))
+        return 0;
     if (sQuestDefinitions[questId].stages[stage].objectiveType == QUEST_OBJECTIVE_CAUGHT_SPECIES)
         return GetRegionalPokedexCount(FLAG_GET_CAUGHT);
 
@@ -261,5 +316,7 @@ u16 Quest_GetTarget(u8 questId)
         return 0;
 
     stage = GetQuestState(questId);
+    if (!IsQuestActive(questId))
+        return 0;
     return sQuestDefinitions[questId].stages[stage].target;
 }

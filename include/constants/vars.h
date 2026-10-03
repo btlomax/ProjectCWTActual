@@ -271,7 +271,7 @@
 #define VAR_WESTLOCK_LIBRARY_STATE                       0x40F9 
 #define VAR_ROUTE2_MEADOWVALE_FARM_STATE                 0x40FA
 #define VAR_QUEST_TUTOR_CATCH_STATE                       0x40FB
-#define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
+#define VAR_QUEST_FOREVER_A_LEGEND_STATE                  0x40FC
 #define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
 #define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
 #define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
