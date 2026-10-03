@@ -610,7 +610,7 @@ Route1_EventScript_Catch_Pokemon_Tutorial_Text_10:
 
 Route1_EventScript_Catch_Pokemon_Tutorial_Text_11:
 # 194 "data/maps/Route1_WillbendCanal/scripts.pory"
-	.string "You'll pick up new quests as you\nprogress through the game\pSo be sure to talk to NPCs and explore thoroughly!$"
+	.string "You'll pick up new quests as you progress\nthrough the game\p. Make sure you talk to NPCs and explore\nthoroughly!$"
 
 Route1_WillbendCanal_MapScripts_PathSign_Text_0:
 # 206 "data/maps/Route1_WillbendCanal/scripts.pory"
