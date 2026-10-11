@@ -37,6 +37,7 @@
   - [How to add new Trainer Slides](tutorials/how_to_new_trainer_slide.md)
   - [Day/Night System FAQ](tutorials/dns.md)
   - [How to use the code entry system](tutorials/how_to_code_entry.md)
+  - [How to define and update quests](tutorials/how_to_quests.md)
   - [How to use Follower NPCs](tutorials/how_to_follower_npc.md)
   - [Time-Based Encounters](tutorials/how_to_time_of_day_encounters.md)
   - [How to use Trainer Party Pools](tutorials/how_to_trainer_party_pool.md)
