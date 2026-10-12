@@ -16,7 +16,7 @@
   "object_events": [
     {
       "local_id": "LOCALID_GYMLEADER_MILO",
-      "graphics_id": "OBJ_EVENT_GFX_BOY",
+      "graphics_id": "OBJ_EVENT_GFX_BOY_3",
       "x": 5,
       "y": 5,
       "elevation": 0,
@@ -52,25 +52,6 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-    {
-      "type": "trigger",
-      "x": 1,
-      "y": 8,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "Weirford_Gym_MapScripts_FirstEntry"
-    },
-    {
-      "type": "trigger",
-      "x": 2,
-      "y": 8,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "Weirford_Gym_MapScripts_FirstEntry"
-    }
-  ],
+  "coord_events": [],
   "bg_events": []
 }
