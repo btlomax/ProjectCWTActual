@@ -191,45 +191,51 @@ PlayerHouse_Inside_GrandmotherAfterPokedex::
 	msgbox PlayerHouse_Inside_GrandmotherAfterPokedex_Text_11, MSGBOX_DEFAULT
 # 150 "data/maps/PlayerHouse_Inside/scripts.pory"
 	setvar VAR_ALDERBROOK_TOWN_STATE, 4
-# 151 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 152 "data/maps/PlayerHouse_Inside/scripts.pory"
+	setvar VAR_0x8004, QUEST_A_NEW_CHALLENGE
+# 153 "data/maps/PlayerHouse_Inside/scripts.pory"
+	setvar VAR_0x8005, QUEST_A_NEW_CHALLENGE_STAGE_BEAT_WEIRFORD_GYM
+# 154 "data/maps/PlayerHouse_Inside/scripts.pory"
+	special Quest_SetStage
+# 156 "data/maps/PlayerHouse_Inside/scripts.pory"
 	releaseall
 	end
 
 
 PlayerHouse_Inside_GrandmotherOfferRest::
-# 156 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 161 "data/maps/PlayerHouse_Inside/scripts.pory"
 	msgbox PlayerHouse_Inside_GrandmotherOfferRest_Text_0, MSGBOX_YESNO
-# 158 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 163 "data/maps/PlayerHouse_Inside/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq PlayerHouse_Inside_GrandmotherOfferRest_2
-# 165 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 170 "data/maps/PlayerHouse_Inside/scripts.pory"
 	msgbox PlayerHouse_Inside_GrandmotherOfferRest_Text_3, MSGBOX_DEFAULT
 PlayerHouse_Inside_GrandmotherOfferRest_1:
-# 169 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 174 "data/maps/PlayerHouse_Inside/scripts.pory"
 	releaseall
 	end
 
 PlayerHouse_Inside_GrandmotherOfferRest_2:
-# 159 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 164 "data/maps/PlayerHouse_Inside/scripts.pory"
 	msgbox PlayerHouse_Inside_GrandmotherOfferRest_Text_1, MSGBOX_DEFAULT
-# 160 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 165 "data/maps/PlayerHouse_Inside/scripts.pory"
 	special HealPlayerParty
-# 161 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 166 "data/maps/PlayerHouse_Inside/scripts.pory"
 	setrespawn HEAL_LOCATION_ALDERBROOK_TOWN_PLAYER_HOUSE
-# 162 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 167 "data/maps/PlayerHouse_Inside/scripts.pory"
 	msgbox PlayerHouse_Inside_GrandmotherOfferRest_Text_2, MSGBOX_DEFAULT
 	goto PlayerHouse_Inside_GrandmotherOfferRest_1
 
 
-# 173 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 178 "data/maps/PlayerHouse_Inside/scripts.pory"
 PlayerHouse_Inside_MoveDown:
-# 174 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 179 "data/maps/PlayerHouse_Inside/scripts.pory"
 	walk_down
-# 174 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 179 "data/maps/PlayerHouse_Inside/scripts.pory"
 	walk_down
-# 175 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 180 "data/maps/PlayerHouse_Inside/scripts.pory"
 	face_left
-# 176 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 181 "data/maps/PlayerHouse_Inside/scripts.pory"
 	step_end
 
 PlayerHouse_Inside_Dinner_Text_0:
@@ -341,18 +347,18 @@ PlayerHouse_Inside_GrandmotherAfterPokedex_Text_11:
 	.string "I'd be happy to see you and your Pokemon!\p$"
 
 PlayerHouse_Inside_GrandmotherOfferRest_Text_0:
-# 156 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 161 "data/maps/PlayerHouse_Inside/scripts.pory"
 	.string "Hello dear, do you and your POKéMON\nneed a rest?$"
 
 PlayerHouse_Inside_GrandmotherOfferRest_Text_1:
-# 159 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 164 "data/maps/PlayerHouse_Inside/scripts.pory"
 	.string "Of course. Make yourselves at home.$"
 
 PlayerHouse_Inside_GrandmotherOfferRest_Text_2:
-# 162 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 167 "data/maps/PlayerHouse_Inside/scripts.pory"
 	.string "There we are. You and your POKéMON\nlook much better already.$"
 
 PlayerHouse_Inside_GrandmotherOfferRest_Text_3:
-# 165 "data/maps/PlayerHouse_Inside/scripts.pory"
+# 170 "data/maps/PlayerHouse_Inside/scripts.pory"
 	.string "All right, dear. Take care of yourselves.\n"
 	.string "out there.$"
