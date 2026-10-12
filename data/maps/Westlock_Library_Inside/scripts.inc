@@ -87,7 +87,13 @@ Westlock_Library_Inside_EventScripts_MeetProfLarch_10:
 	removeobject LOCALID_PROF_LARCH
 # 127 "data/maps/Westlock_Library_Inside/scripts.pory"
 	setvar VAR_WESTLOCK_LIBRARY_STATE, 1
-# 128 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 129 "data/maps/Westlock_Library_Inside/scripts.pory"
+	setvar VAR_0x8004, QUEST_A_NEW_CHALLENGE
+# 130 "data/maps/Westlock_Library_Inside/scripts.pory"
+	setvar VAR_0x8005, QUEST_A_NEW_CHALLENGE_STAGE_LARCH_POKEDEX
+# 131 "data/maps/Westlock_Library_Inside/scripts.pory"
+	special Quest_SetStage
+# 133 "data/maps/Westlock_Library_Inside/scripts.pory"
 	release
 	return
 
@@ -117,99 +123,99 @@ Westlock_Library_Inside_EventScripts_MeetProfLarch_11:
 
 
 Westlock_Library_Inside_EventScripts_ProfLarchExit::
-# 133 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 138 "data/maps/Westlock_Library_Inside/scripts.pory"
 	specialvar VAR_RESULT, GetPlayerFacingDirection
-# 135 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 140 "data/maps/Westlock_Library_Inside/scripts.pory"
 	compare VAR_RESULT, DIR_NORTH
 	goto_if_eq Westlock_Library_Inside_EventScripts_ProfLarchExit_2
-# 142 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 147 "data/maps/Westlock_Library_Inside/scripts.pory"
 	applymovement LOCALID_PROF_LARCH, Movement_Larch_Exit_PlayerEastOrWest
-# 143 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 148 "data/maps/Westlock_Library_Inside/scripts.pory"
 	waitmovement LOCALID_PROF_LARCH
 Westlock_Library_Inside_EventScripts_ProfLarchExit_1:
 	return
 
 Westlock_Library_Inside_EventScripts_ProfLarchExit_2:
-# 137 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 142 "data/maps/Westlock_Library_Inside/scripts.pory"
 	applymovement LOCALID_PROF_LARCH, Movement_Larch_Exit_PlayerNorth
-# 138 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 143 "data/maps/Westlock_Library_Inside/scripts.pory"
 	waitmovement LOCALID_PROF_LARCH
 	goto Westlock_Library_Inside_EventScripts_ProfLarchExit_1
 
 
-# 157 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 162 "data/maps/Westlock_Library_Inside/scripts.pory"
 Movement_Larch_Exit_PlayerNorth:
-# 159 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_right
-# 159 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_right
-# 160 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_down
-# 161 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_right
-# 161 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_right
-# 161 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_right
-# 162 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_down
-# 162 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_down
-# 162 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_down
-# 162 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_down
-# 163 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_left
 # 164 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_down
+	walk_right
 # 164 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_right
+# 165 "data/maps/Westlock_Library_Inside/scripts.pory"
 	walk_down
-# 164 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_down
-	step_end
-
+# 166 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_right
+# 166 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_right
+# 166 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_right
 # 167 "data/maps/Westlock_Library_Inside/scripts.pory"
-Movement_Larch_Exit_PlayerEastOrWest:
+	walk_down
+# 167 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_down
+# 167 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_down
+# 167 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_down
+# 168 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_left
 # 169 "data/maps/Westlock_Library_Inside/scripts.pory"
 	walk_down
-# 170 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_right
-# 170 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_right
-# 170 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_right
-# 170 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_right
-# 170 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_right
-# 171 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 169 "data/maps/Westlock_Library_Inside/scripts.pory"
 	walk_down
-# 171 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_down
-# 171 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_down
-# 171 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_down
-# 172 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_left
-# 173 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_down
-# 173 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_down
-# 173 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 169 "data/maps/Westlock_Library_Inside/scripts.pory"
 	walk_down
 	step_end
 
+# 172 "data/maps/Westlock_Library_Inside/scripts.pory"
+Movement_Larch_Exit_PlayerEastOrWest:
+# 174 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_down
+# 175 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_right
+# 175 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_right
+# 175 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_right
+# 175 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_right
+# 175 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_right
 # 176 "data/maps/Westlock_Library_Inside/scripts.pory"
-Movement_Larch_LookLeft:
+	walk_down
+# 176 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_down
+# 176 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_down
+# 176 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_down
 # 177 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_left
+# 178 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_down
+# 178 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_down
+# 178 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_down
+	step_end
+
+# 181 "data/maps/Westlock_Library_Inside/scripts.pory"
+Movement_Larch_LookLeft:
+# 182 "data/maps/Westlock_Library_Inside/scripts.pory"
 	walk_in_place_left
 	step_end
 
-# 180 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 185 "data/maps/Westlock_Library_Inside/scripts.pory"
 Movement_Larch_LookDown:
-# 181 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 186 "data/maps/Westlock_Library_Inside/scripts.pory"
 	walk_in_place_down
 	step_end
 
@@ -312,9 +318,9 @@ Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_12:
 	.string "Until then, {PLAYER}, I bid you adieu!$"
 
 Westlock_Library_Inside_EventScripts_MeetProfLarch_Male::
-# 149 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 154 "data/maps/Westlock_Library_Inside/scripts.pory"
 	.string "Oh! Hello there young man! You snuck up\non me, didn't you?\pMy head was buried in that book.$"
 
 Westlock_Library_Inside_EventScripts_MeetProfLarch_Female::
-# 153 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 158 "data/maps/Westlock_Library_Inside/scripts.pory"
 	.string "Oh! Hello there young lady! You snuck up\non me, didn't you?\pMy head was buried in that book.$"

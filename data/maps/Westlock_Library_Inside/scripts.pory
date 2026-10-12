@@ -125,6 +125,11 @@ script Westlock_Library_Inside_EventScripts_MeetProfLarch
     setflag(FLAG_HIDE_PROF_LARCH)
     removeobject(LOCALID_PROF_LARCH)
     setvar(VAR_WESTLOCK_LIBRARY_STATE, 1)
+
+    setvar(VAR_0x8004, QUEST_A_NEW_CHALLENGE)
+    setvar(VAR_0x8005, QUEST_A_NEW_CHALLENGE_STAGE_LARCH_POKEDEX)
+    special(Quest_SetStage)
+
     release
 }
 

@@ -50,6 +50,7 @@
 #include "oras_dowse.h"
 #include "palette.h"
 #include "play_time.h"
+#include "quest.h"
 #include "random.h"
 #include "roamer.h"
 #include "rotating_gate.h"
@@ -1879,6 +1880,8 @@ void CB2_Overworld(void)
     if (fading)
         SetVBlankCallback(NULL);
     OverworldBasic();
+    if (!gPaletteFade.active)
+        Quest_TryShowUpdateMessage();
     if (fading)
     {
         SetFieldVBlankCallback();
