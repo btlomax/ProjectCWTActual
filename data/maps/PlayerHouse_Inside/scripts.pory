@@ -148,6 +148,11 @@ script PlayerHouse_Inside_GrandmotherAfterPokedex {
            "I'd be happy to see you and your Pokemon!\p", MSGBOX_DEFAULT)
 
     setvar(VAR_ALDERBROOK_TOWN_STATE, 4)
+
+    setvar(VAR_0x8004, QUEST_A_NEW_CHALLENGE)
+    setvar(VAR_0x8005, QUEST_A_NEW_CHALLENGE_STAGE_BEAT_WEIRFORD_GYM)
+    special(Quest_SetStage)
+    
     releaseall
     end
 }

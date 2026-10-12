@@ -7,6 +7,8 @@ static const u8 sText_ANewChallengeTalkToLarchLocation[] = _("WESTLOCK VILLAGE")
 static const u8 sText_ANewChallengeTalkToLarchDetail[] = _("Speak with Professor Larch");
 static const u8 sText_ANewChallengeLarchPokedexLocation[] = _("ALDERBROOK TOWN");
 static const u8 sText_ANewChallengeLarchPokedexDetail[] = _("Meet with Professor Larch at his laboratory");
+static const u8 sText_ANewChallengeBeatWeirfordGymLocation[] = _("WEIRFORD GYM");
+static const u8 sText_ANewChallengeBeatWeirfordGymDetail[] = _("Defeat the Weirford Gym Leader");
 static const u8 sText_ANewChallengeFinalObjectiveLocation[] = _("ROUTE 1");
 static const u8 sText_ANewChallengeFinalObjectiveDetail[] = _("Complete your legendary quest");
 
@@ -30,6 +32,13 @@ static const struct QuestStageDefinition sQuestANewChallengeStages[] =
     {
         .objective = sText_ANewChallengeLarchPokedexDetail,
         .location = sText_ANewChallengeLarchPokedexLocation,
+        .objectiveType = QUEST_OBJECTIVE_NONE,
+        .target = 0,
+    },
+    [QUEST_A_NEW_CHALLENGE_STAGE_BEAT_WEIRFORD_GYM] =
+    {
+        .objective = sText_ANewChallengeBeatWeirfordGymDetail,
+        .location = sText_ANewChallengeBeatWeirfordGymLocation,
         .objectiveType = QUEST_OBJECTIVE_NONE,
         .target = 0,
     },

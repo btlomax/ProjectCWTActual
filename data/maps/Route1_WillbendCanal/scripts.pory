@@ -109,7 +109,6 @@ script Route1_EventScript_StarterDrop {
     setflag(FLAG_SYS_QUESTS_ENABLED)
     msgbox("The quest system is now active!", MSGBOX_DEFAULT)
     msgbox("Press START and select QUESTS to view\nyour current quests.", MSGBOX_DEFAULT)
-    msgbox("Time to go home, your grandmother\nis waiting.", MSGBOX_DEFAULT)
 
     setvar(VAR_0x8004, QUEST_A_NEW_CHALLENGE)
     special(Quest_Add)
