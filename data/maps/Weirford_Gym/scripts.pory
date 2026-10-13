@@ -1,19 +1,104 @@
 mapscripts Weirford_Gym_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: Weirford_Gym_MapScripts_FirstEntry
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: Weirford_Gym_MapScripts_FirstEntryScene
+    ]
 }
 
 script Weirford_Gym_MapScripts_FirstEntry
 {
-    if(flag(FLAG_VISITED_WEIRFORD_GYM))
+    if (flag(FLAG_VISITED_WEIRFORD_GYM))
     {
         setflag(FLAG_HIDE_WEIRFORD_GYM_MILO)
+        setvar(VAR_TEMP_0, 1)
     }
     else
     {
         clearflag(FLAG_HIDE_WEIRFORD_GYM_MILO)
         addobject(LOCALID_GYMLEADER_MILO)
-        setflag(FLAG_VISITED_WEIRFORD_GYM)
+        setvar(VAR_TEMP_0, 0)
     }
 
     end
+}
+
+script Weirford_Gym_MapScripts_FirstEntryScene
+{
+    lock
+    call(Weirford_Gym_MapScripts_MiloInteraction)
+
+    setflag(FLAG_VISITED_WEIRFORD_GYM)
+    setvar(VAR_TEMP_0, 1)
+
+    release
+    end
+}
+
+script Weirford_Gym_MapScripts_MiloInteraction
+{
+    special(SpawnCameraObject)
+    applymovement(OBJ_EVENT_ID_CAMERA, Movement_CameraMoveUp)
+    waitmovement(OBJ_EVENT_ID_CAMERA)
+    delay(30)
+
+    playse(SE_PIN)
+    applymovement(LOCALID_GYMLEADER_MILO, Common_Movement_ExclamationMark)
+    waitmovement(LOCALID_GYMLEADER_MILO)
+
+    msgbox("Hello? Can I help you?\p", MSGBOX_DEFAULT)
+    applymovement(OBJ_EVENT_ID_PLAYER, Weirford_Gym_PlayerMoveUp)
+    applymovement(OBJ_EVENT_ID_CAMERA, Movement_CameraMoveUp)
+    waitmovement(OBJ_EVENT_ID_CAMERA)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+
+    delay(30)
+    faceplayer
+    msgbox("You're here for the what?\n"
+    "The Gym Challenge?\p"
+    "And you-you're serious?\p"
+    "...\p"
+    "Errrr...well I gue-", MSGBOX_DEFAULT)
+    playse(SE_PIN)
+    applymovement(LOCALID_GYMLEADER_MILO, Common_Movement_ExclamationMark)
+    waitmovement(LOCALID_GYMLEADER_MILO)
+    delay(30)
+    msgbox("Hold still a moment, trainer.\p"
+    "Let me look at you properly...\p"
+    "Interesting...\p"
+    "In that case, allow me to see if you are\n"
+    "prepared for battle.\p"
+    "Hmmm...\p"
+    "Your gear suggests experience you\n"
+    "should not yet possess...\p"
+    "Who showed you how to arrange your\n"
+    "Poké Balls like that?\p"
+    "...\p"
+    "It just seemed appropriate you say?\p"
+    "...\p"
+    "It comes naturally to you, doesn't it?\p"
+    "So it is time again, after all these years...\p", MSGBOX_DEFAULT)
+
+    msgbox("...\p"
+    "Trainer I apologise but you have caught\n" 
+    "me in a state of severe unreadiness.\p"
+    "Please go out and come back in again.\p"
+    "I will gather my members and wait for"
+    "you downstairs.\p"
+    "Be ready Trainer, we won't go down\n"
+    "easily.\p", MSGBOX_DEFAULT)
+}
+
+movement Weirford_Gym_PlayerMoveUp
+{
+    walk_up
+    walk_right * 3
+    walk_up * 2
+    step_end
+}
+
+movement Movement_CameraMoveUp
+{
+    walk_up * 2
+    walk_right * 2
+    step_end
 }
