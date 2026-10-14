@@ -854,8 +854,9 @@
 #define TRAINER_THALIA_5                    847
 #define TRAINER_MARIELA                     848
 #define TRAINER_ALVARO                      849
-#define TRAINER_EVERETT                     850
-#define TRAINER_RED                         851
+#define TRAINER_WEIRFORD_GYM_TANYA          850
+#define TRAINER_WEIRFORD_GYM_CAL            851
+#define TRAINER_EVERETT                     TRAINER_WEIRFORD_GYM_CAL
 #define TRAINER_ROUTE3_LASS_SARA            852
 #define TRAINER_ROUTE3_CAMPER_GARY          853
 #define TRAINER_ROUTE3_TIM                  854

@@ -73,7 +73,7 @@ Weirford_Gym_MapScripts_MiloInteraction::
 # 54 "data/maps/Weirford_Gym/scripts.pory"
 	delay 30
 # 55 "data/maps/Weirford_Gym/scripts.pory"
-	faceplayer
+	applymovement LOCALID_GYMLEADER_MILO, Movement_MiloFaceDown
 # 56 "data/maps/Weirford_Gym/scripts.pory"
 	msgbox Weirford_Gym_MapScripts_MiloInteraction_Text_1, MSGBOX_DEFAULT
 # 61 "data/maps/Weirford_Gym/scripts.pory"
@@ -88,33 +88,58 @@ Weirford_Gym_MapScripts_MiloInteraction::
 	msgbox Weirford_Gym_MapScripts_MiloInteraction_Text_2, MSGBOX_DEFAULT
 # 82 "data/maps/Weirford_Gym/scripts.pory"
 	msgbox Weirford_Gym_MapScripts_MiloInteraction_Text_3, MSGBOX_DEFAULT
+# 92 "data/maps/Weirford_Gym/scripts.pory"
+	special RemoveCameraObject
 	return
 
 
-# 91 "data/maps/Weirford_Gym/scripts.pory"
+Weirford_Gym_MapScripts_MiloAfterFirstEntry::
+# 97 "data/maps/Weirford_Gym/scripts.pory"
+	lock
+# 98 "data/maps/Weirford_Gym/scripts.pory"
+	faceplayer
+# 100 "data/maps/Weirford_Gym/scripts.pory"
+	msgbox Weirford_Gym_MapScripts_MiloAfterFirstEntry_Text_0, MSGBOX_DEFAULT
+# 112 "data/maps/Weirford_Gym/scripts.pory"
+	release
+	end
+
+
+# 116 "data/maps/Weirford_Gym/scripts.pory"
 Weirford_Gym_PlayerMoveUp:
-# 93 "data/maps/Weirford_Gym/scripts.pory"
+# 118 "data/maps/Weirford_Gym/scripts.pory"
 	walk_up
-# 94 "data/maps/Weirford_Gym/scripts.pory"
+# 119 "data/maps/Weirford_Gym/scripts.pory"
 	walk_right
-# 94 "data/maps/Weirford_Gym/scripts.pory"
+# 119 "data/maps/Weirford_Gym/scripts.pory"
 	walk_right
-# 94 "data/maps/Weirford_Gym/scripts.pory"
+# 119 "data/maps/Weirford_Gym/scripts.pory"
 	walk_right
-# 95 "data/maps/Weirford_Gym/scripts.pory"
+# 120 "data/maps/Weirford_Gym/scripts.pory"
 	walk_up
-# 95 "data/maps/Weirford_Gym/scripts.pory"
+# 120 "data/maps/Weirford_Gym/scripts.pory"
 	walk_up
-# 96 "data/maps/Weirford_Gym/scripts.pory"
+# 121 "data/maps/Weirford_Gym/scripts.pory"
 	step_end
 
-# 99 "data/maps/Weirford_Gym/scripts.pory"
+# 124 "data/maps/Weirford_Gym/scripts.pory"
 Movement_CameraMoveUp:
-# 101 "data/maps/Weirford_Gym/scripts.pory"
+# 126 "data/maps/Weirford_Gym/scripts.pory"
 	walk_up
-# 101 "data/maps/Weirford_Gym/scripts.pory"
+# 126 "data/maps/Weirford_Gym/scripts.pory"
 	walk_up
-# 102 "data/maps/Weirford_Gym/scripts.pory"
+# 127 "data/maps/Weirford_Gym/scripts.pory"
+	walk_right
+# 127 "data/maps/Weirford_Gym/scripts.pory"
+	walk_right
+# 128 "data/maps/Weirford_Gym/scripts.pory"
+	step_end
+
+# 131 "data/maps/Weirford_Gym/scripts.pory"
+Movement_MiloFaceDown:
+# 133 "data/maps/Weirford_Gym/scripts.pory"
+	face_down
+# 134 "data/maps/Weirford_Gym/scripts.pory"
 	step_end
 
 Weirford_Gym_MapScripts_MiloInteraction_Text_0:
@@ -145,8 +170,8 @@ Weirford_Gym_MapScripts_MiloInteraction_Text_2:
 	.string "It just seemed appropriate you say?\p"
 	.string "...\p"
 	.string "It comes naturally to you, doesn't it?\p"
-	.string "So it is time again, after all\n"
-	.string "these years...\p$"
+	.string "So, it is time again, after all these\n"
+	.string "years. A new challenger steps up.\p$"
 
 Weirford_Gym_MapScripts_MiloInteraction_Text_3:
 # 82 "data/maps/Weirford_Gym/scripts.pory"
@@ -154,6 +179,22 @@ Weirford_Gym_MapScripts_MiloInteraction_Text_3:
 	.string "Trainer I apologise but you have caught\n"
 	.string "me in a state of severe unreadiness.\p"
 	.string "Please go out and come back in again.\p"
-	.string "I will gather my members and wait\n"
-	.string "for you downstairs.\p"
-	.string "Be ready Trainer, we won't go down easily.\p$"
+	.string "Literally just do that.\p"
+	.string "I will gather my members and wait for\n"
+	.string "you downstairs.\p"
+	.string "Be ready Trainer, we won't go down\n"
+	.string "easily.$"
+
+Weirford_Gym_MapScripts_MiloAfterFirstEntry_Text_0:
+# 100 "data/maps/Weirford_Gym/scripts.pory"
+	.string "To dust off the old cobwebs, I feel the\n"
+	.string "fighting spirit stir within.\p"
+	.string "It has been a many a generation since\n"
+	.string "someone like you, has appeared.\p"
+	.string "The others and I have waited, passing\n"
+	.string "the mantle from one generation to the\l"
+	.string "next, until one of the bloodlines\l"
+	.string "surfaced again. Yet, you carry no Crest.\p"
+	.string "...\p"
+	.string "It is no matter, battle will reveal to us\n"
+	.string "the truth.\p$"

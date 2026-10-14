@@ -16816,29 +16816,34 @@ Kadabra
 Level: 41
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_EVERETT ===
-Name: EVERETT
-Class: Gentleman
-Pic: Gentleman
-Gender: Male
-Music: Rich
+=== TRAINER_WEIRFORD_GYM_TANYA ===
+Name: TANYA
+Class: Battle Girl
+Pic: Battle Girl
+Gender: Female
+Music: Intense
 Double Battle: No
 
-Wobbuffet
-Level: 41
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Scraggy
+Level: 10
 
-=== TRAINER_RED ===
-Name: RED
-Class: Rival
-Pic: Red
+Starly
+Level: 9
+
+=== TRAINER_WEIRFORD_GYM_CAL ===
+Name: Cal
+Class: Youngster
+Pic: Youngster
 Gender: Male
-Music: Male
+Music: Intense
 Double Battle: No
 
-Charmander
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Poochyena
+Level: 9
+
+Machop
+Level: 9
+
 
 === TRAINER_ROUTE3_LASS_SARA  ===
 Name: SARA
