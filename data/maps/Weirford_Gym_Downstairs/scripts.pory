@@ -11,6 +11,70 @@ script Weirford_Gym_Downstairs_MapScripts_FirstVisit
     }
 }
 
+script Weirford_Gym_Downstairs_MapScripts_LeaderMilo 
+{
+    lock
+    faceplayer
+
+    if (flag(FLAG_DEFEATED_WEIRFORD_GYM))
+    {
+        msgbox("I'll be sure to let the other leaders\n"
+        "know that you're on your way.\p",
+        MSGBOX_DEFAULT)
+        release
+        end
+    }
+
+    trainerbattle_single(TRAINER_WEIRFORD_GYM_MILO,
+    Weirford_Gym_Downstairs_MapScripts_LeaderMilo_TrainerPreBattle,
+    Weirford_Gym_Downstairs_MapScripts_LeaderMilo_TrainerDefeated,
+    Weirford_Gym_Downstairs_MapScripts_LeaderMilo_Defeated)
+
+    end
+}
+
+script Weirford_Gym_Downstairs_MapScripts_LeaderMilo_Defeated
+{
+    msgbox("You met us on our own terms and endured.\p"
+    "So it is true...\n"
+    "I had hoped I was not imagining it.\p"
+    "The old bloodlines stir, after all this\n"
+    "time. Congratulations trainer, you have\l"
+    "bested me. I hereby award you the\l"
+    "Grit Badge.\p",
+    MSGBOX_DEFAULT)
+
+    setflag(FLAG_DEFEATED_WEIRFORD_GYM)
+    setflag(FLAG_BADGE01_GET)
+    call(Common_EventScript_PlayGymBadgeFanfare)
+
+    msgbox("You received the Grit Badge!\p", MSGBOX_DEFAULT)
+    
+    msgbox(
+    "The GRIT BADGE is proof that you do not\n"
+    "go down without a fight.\p"
+    "With it, Pokémon up to L19 will continue\n"
+    "to listen to you.\p"
+    "It also allows you to use HM01 outside\n"
+    "battle.",
+    MSGBOX_DEFAULT)
+
+    setvar(VAR_0x8004, QUEST_A_NEW_CHALLENGE)
+    setvar(VAR_0x8005, QUEST_A_NEW_CHALLENGE_STAGE_BEAT_SECOND_GYM)
+    special(Quest_SetStage)
+
+    msgbox("Don't forget to talk to people you see,\n"
+    "some might have need of your aid.\p"
+    "In fact, I'm sure there's a gentleman in\n"
+    "town who looked like he needs help.\p", MSGBOX_DEFAULT)
+
+    setvar(VAR_0x8004, QUEST_THE_HOUSE_IN_THE_WOODS)
+    special(Quest_Add)
+
+    release
+    end
+}
+
 script Weirford_Gym_Downstairs_MapScripts_Tanya
 {
     trainerbattle_single(TRAINER_WEIRFORD_GYM_TANYA,
@@ -31,8 +95,28 @@ script Weirford_Gym_Downstairs_MapScripts_Cal
     end
 }
 
+text Weirford_Gym_Downstairs_MapScripts_LeaderMilo_TrainerPreBattle
+{
+    "Welcome trainer!\p"
+    "I'm Milo, the leader of this Gym.\p"
+    "The others answered my call, though none\n"
+    "of us expected to battle here again.\p"
+    "We don't rely on size or spectacle here.\p"
+    "My Pokémon know how to take a hit,\n"
+    "find an opening, and keep fighting.\p"
+    "Show me you can do the same!\p"
+}
+
+text Weirford_Gym_Downstairs_MapScripts_LeaderMilo_TrainerDefeated
+{
+    "You would not stay down...\p"
+    "That is the spirit this Gym was built on."
+}
+
 text Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerPreBattle
 {
+    "When Milo called me in, I thought he\n"
+    "was pulling my leg.\p"
     "This Gym has held on for decades,\n"
     "hidden away in the heart of town.\p"
     "Our Pokémon are much the same.\n"
@@ -42,27 +126,34 @@ text Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerPreBattle
 
 text Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerDefeated
 {
-    "Wow I didn't expect you to be so fierce!\p"
+    "Wow! I did not expect the Gym to open\n"
+    "again just so I could lose!"
 }
 
 text Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerPostBattle
 {
-    "We all use small, scrappy Pokemon that\n"
+    "It feels strange seeing this place active\n"
+    "again...\p"
+    "We all use small, scrappy Pokémon that\n"
     "tend to be Normal, Fighting or Dark\l"
-    "types. "
+    "types.\p"
 }
 
 text Weirford_Gym_Downstairs_MapScripts_Cal_TrainerPreBattle
 {
-    "Cal: Get ready for a tough fight!\p"
+    "Milo called us in for a real Gym battle?\p"
+    "I thought this old place would stay quiet\n"
+    "forever!\p"
 }
 
 text Weirford_Gym_Downstairs_MapScripts_Cal_TrainerDefeated
 {
-    "Cal: You defeated me...\p"
+    "Sorry, buddy!\n"
+    "I guess I am out of practice!"
 }
 
 text Weirford_Gym_Downstairs_MapScripts_Cal_TrainerPostBattle
 {
-    "Cal: That was a challenging battle!\p"
+    "I cannot believe we are doing this again.\p"
+    "You are tough, but Milo will not give up!"
 }

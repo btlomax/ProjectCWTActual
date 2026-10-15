@@ -16824,7 +16824,7 @@ Gender: Female
 Music: Intense
 Double Battle: No
 
-Scraggy
+Mankey
 Level: 10
 
 Starly
@@ -16842,8 +16842,28 @@ Poochyena
 Level: 9
 
 Machop
-Level: 9
+Level: 10
 
+=== TRAINER_WEIRFORD_GYM_MILO ===
+Name: MILO
+Class: Leader
+Pic: Leader Brawly
+Gender: Male
+Music: Elite Four
+Double Battle: No
+AI: Basic Trainer / Try To 2HKO / Ace Pokemon
+
+Lillipup
+Level: 11
+Ability: Vital Spirit
+
+Machop
+Level: 12
+Ability: No Guard
+
+Scraggy
+Level: 13
+Ability: Moxie
 
 === TRAINER_ROUTE3_LASS_SARA  ===
 Name: SARA

@@ -9,6 +9,8 @@ static const u8 sText_ANewChallengeLarchPokedexLocation[] = _("ALDERBROOK TOWN")
 static const u8 sText_ANewChallengeLarchPokedexDetail[] = _("Meet with Professor Larch at his laboratory");
 static const u8 sText_ANewChallengeBeatWeirfordGymLocation[] = _("WEIRFORD TOWN");
 static const u8 sText_ANewChallengeBeatWeirfordGymDetail[] = _("Defeat the Weirford Gym Leader");
+static const u8 sText_ANewChallengeBeatSecondGymLocation[] = _("SECOND GYM TOWN");
+static const u8 sText_ANewChallengeBeatSecondGymDetail[] = _("Defeat the Second Gym Leader");
 static const u8 sText_ANewChallengeFinalObjectiveLocation[] = _("ROUTE 1");
 static const u8 sText_ANewChallengeFinalObjectiveDetail[] = _("Complete your legendary quest");
 
@@ -39,6 +41,13 @@ static const struct QuestStageDefinition sQuestANewChallengeStages[] =
     {
         .objective = sText_ANewChallengeBeatWeirfordGymDetail,
         .location = sText_ANewChallengeBeatWeirfordGymLocation,
+        .objectiveType = QUEST_OBJECTIVE_NONE,
+        .target = 0,
+    },
+    [QUEST_A_NEW_CHALLENGE_STAGE_BEAT_SECOND_GYM] =
+    {
+        .objective = sText_ANewChallengeBeatSecondGymDetail,
+        .location = sText_ANewChallengeBeatSecondGymLocation,
         .objectiveType = QUEST_OBJECTIVE_NONE,
         .target = 0,
     },
@@ -93,6 +102,57 @@ static const struct QuestStageDefinition sQuestTutorCatchStages[] =
     },
 };
 
+static const u8 sText_TheHouseInTheWoodsTitle[] = _("The House in the Woods");
+static const u8 sText_TheHouseInTheWoodsTalkToTheManLocation[] = _("WEIRFORD TOWN");
+static const u8 sText_TheHouseInTheWoodsTalkToTheManDetail[] = _("Speak with the man in Weirford");
+static const u8 sText_TheHouseInTheWoodsFindTheHouseLocation[] = _("WEIRFORD FOREST");
+static const u8 sText_TheHouseInTheWoodsFindTheHouseDetail[] = _("Locate the house in Weirford Forest");
+static const u8 sText_TheHouseInTheWoodsInvestigateLocation[] = _("DEEP WOODS");
+static const u8 sText_TheHouseInTheWoodsInvestigateDetail[] = _("Investigate the house thoroughly");
+static const u8 sText_TheHouseInTheWoodsConfrontLocation[] = _("DEEP WOODS");
+static const u8 sText_TheHouseInTheWoodsConfrontDetail[] = _("Confront the person responsible for the disturbances");
+static const u8 sText_TheHouseInTheWoodsCompleteLocation[] = _("WEIRFORD TOWN");
+static const u8 sText_TheHouseInTheWoodsCompleteDetail[] = _("Report back to the man in Weirford");
+
+static const struct QuestStageDefinition sQuestTheHouseInTheWoodsStages[] =
+{
+    [QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_TALK_TO_THE_MAN] =
+    {
+        .objective = sText_TheHouseInTheWoodsTalkToTheManDetail,
+        .location = sText_TheHouseInTheWoodsTalkToTheManLocation,
+        .objectiveType = QUEST_OBJECTIVE_NONE,
+        .target = 0,
+    },
+    [QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_FIND_THE_HOUSE] =
+    {
+        .objective = sText_TheHouseInTheWoodsFindTheHouseDetail,
+        .location = sText_TheHouseInTheWoodsFindTheHouseLocation,
+        .objectiveType = QUEST_OBJECTIVE_NONE,
+        .target = 0,
+    },
+    [QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_INVESTIGATE] =
+    {
+        .objective = sText_TheHouseInTheWoodsInvestigateDetail,
+        .location = sText_TheHouseInTheWoodsInvestigateLocation,
+        .objectiveType = QUEST_OBJECTIVE_NONE,
+        .target = 0,
+    },
+    [QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_CONFRONT] =
+    {
+        .objective = sText_TheHouseInTheWoodsConfrontDetail,
+        .location = sText_TheHouseInTheWoodsConfrontLocation,
+        .objectiveType = QUEST_OBJECTIVE_NONE,
+        .target = 0,
+    },
+    [QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_COMPLETE] =
+    {
+        .objective = sText_TheHouseInTheWoodsCompleteDetail,
+        .location = sText_TheHouseInTheWoodsCompleteLocation,
+        .objectiveType = QUEST_OBJECTIVE_NONE,
+        .target = 0,
+    },
+};
+
 static const struct QuestDefinition sQuestDefinitions[QUEST_COUNT] =
 {
     [QUEST_A_NEW_CHALLENGE] =
@@ -112,5 +172,14 @@ static const struct QuestDefinition sQuestDefinitions[QUEST_COUNT] =
         .firstStage = QUEST_TUTOR_CATCH_STAGE_CATCH_15,
         .completeStage = QUEST_TUTOR_CATCH_STAGE_COMPLETE,
         .stages = sQuestTutorCatchStages,
+    },
+    [QUEST_THE_HOUSE_IN_THE_WOODS] =
+    {
+        .title = sText_TheHouseInTheWoodsTitle,
+        .category = QUEST_CATEGORY_SECONDARY,
+        .stateVar = VAR_QUEST_THE_HOUSE_IN_THE_WOODS_STATE,
+        .firstStage = QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_TALK_TO_THE_MAN,
+        .completeStage = QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_COMPLETE,
+        .stages = sQuestTheHouseInTheWoodsStages,
     },
 };

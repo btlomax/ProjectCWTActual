@@ -272,7 +272,7 @@
 #define VAR_ROUTE2_MEADOWVALE_FARM_STATE                 0x40FA
 #define VAR_QUEST_TUTOR_CATCH_STATE                       0x40FB
 #define VAR_QUEST_A_NEW_CHALLENGE_STATE                   0x40FC
-#define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
+#define VAR_QUEST_THE_HOUSE_IN_THE_WOODS_STATE            0x40FD
 #define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
 #define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
 

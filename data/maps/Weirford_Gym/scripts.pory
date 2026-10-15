@@ -84,8 +84,10 @@ script Weirford_Gym_MapScripts_MiloInteraction
     "me in a state of severe unreadiness.\p"
     "Please go out and come back in again.\p"
     "Literally just do that.\p"
-    "I will gather my members and wait for\n"
+    "I will call the others in and wait for\n"
     "you downstairs.\p"
+    "I never thought I would need to make\n"
+    "that call again.\p"
     "Be ready Trainer, we won't go down\n"
     "easily.", MSGBOX_DEFAULT)
 
