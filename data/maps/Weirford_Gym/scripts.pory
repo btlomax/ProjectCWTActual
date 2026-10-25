@@ -62,34 +62,37 @@ script Weirford_Gym_MapScripts_MiloInteraction
     applymovement(LOCALID_GYMLEADER_MILO, Common_Movement_ExclamationMark)
     waitmovement(LOCALID_GYMLEADER_MILO)
     delay(30)
-    msgbox("Hold still a moment, trainer.\p"
-    "Let me look at you properly...\p"
-    "Interesting...\p"
-    "In that case, allow me to see if you are\n"
-    "prepared for battle.\p"
-    "Hmmm...\p"
-    "Your gear suggests experience you\n"
-    "should not yet possess...\p"
-    "Who showed you how to arrange your\n"
-    "Poké Balls like that?\p"
-    "...\p"
-    "It just seemed appropriate you say?\p"
-    "...\p"
-    "It comes naturally to you, doesn't it?\p"
-    "So, it is time again, after all these\n"
-    "years. A new challenger steps up.\p", MSGBOX_DEFAULT)
+    msgbox(format(
+        "Hold still a moment, trainer.\p"
+        "Let me look at you properly...\p"
+        "Interesting...\p"
+        "In that case, allow me to see if you are prepared for battle.\p"
+        "Hmmm...\p"
+        "Your gear suggests experience you should not yet possess...\p"
+        "Who showed you how to arrange your Poké Balls like that?\p"
+        "...\p"
+        "It just seemed appropriate, you say?\p"
+        "...\p"
+        "It comes naturally to you, doesn't it?\p"
+        "Fascinating...\p"
+        "You don't even realize what you're doing, do you?\p"
+        "...\p"
+        "Right. Well. That is slightly terrifying."
+    ))
 
-    msgbox("...\p"
-    "Trainer I apologise but you have caught\n" 
-    "me in a state of severe unreadiness.\p"
+   msgbox(format(
+    "...\p"
+    "Forgive me. Being keeper of this Gym and its badge was a duty passed down to me by my father, as it was by his mother before him...\p"
+    "Truth be told, no one has stood at the threshold of this house to challenge us in hundreds of years.\p"
+    "I suppose I grew comfortable believing it was just an old family story.\p"
+    "Which brings us to the present problem: you have caught me in a state of severe unreadiness.\p"
     "Please go out and come back in again.\p"
     "Literally just do that.\p"
-    "I will call the others in and wait for\n"
-    "you downstairs.\p"
-    "I never thought I would need to make\n"
-    "that call again.\p"
-    "Be ready Trainer, we won't go down\n"
-    "easily.", MSGBOX_DEFAULT)
+    "I need to summon the trainers, move my ironing board, put away my lunch, blow the dust off the official arena mat, and basically de-mothball the ancient League testing ground in the basement.\p"
+    "...\p"
+    "I...truly never thought I would be the one to defend this gym...\p"
+    "Be ready, Trainer. Hundreds of years or not, we won't go down easily."
+), MSGBOX_DEFAULT)
 
     special(RemoveCameraObject)
 }

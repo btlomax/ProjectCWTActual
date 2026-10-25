@@ -18,9 +18,12 @@ script Weirford_Gym_Downstairs_MapScripts_LeaderMilo
 
     if (flag(FLAG_DEFEATED_WEIRFORD_GYM))
     {
-        msgbox("I'll be sure to let the other leaders\n"
-        "know that you're on your way.\p",
+       msgbox(format(
+        "I'll be sure to let the other leaders know that you're on your way. "
+        "Now that I know the Gym Challenge is actually active again, "
+        "I suppose I should finally clean out the basement and set up the arena properly!"),
         MSGBOX_DEFAULT)
+
         release
         end
     }
@@ -66,7 +69,7 @@ script Weirford_Gym_Downstairs_MapScripts_LeaderMilo_Defeated
     msgbox("Don't forget to talk to people you see,\n"
     "some might have need of your aid.\p"
     "In fact, I'm sure there's a gentleman in\n"
-    "town who looked like he needs help.\p", MSGBOX_DEFAULT)
+    "town who looked like he needed help.\p", MSGBOX_DEFAULT)
 
     setvar(VAR_0x8004, QUEST_THE_HOUSE_IN_THE_WOODS)
     special(Quest_Add)
@@ -113,47 +116,39 @@ text Weirford_Gym_Downstairs_MapScripts_LeaderMilo_TrainerDefeated
     "That is the spirit this Gym was built on."
 }
 
-text Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerPreBattle
-{
-    "When Milo called me in, I thought he\n"
-    "was pulling my leg.\p"
-    "This Gym has held on for decades,\n"
-    "hidden away in the heart of town.\p"
-    "Our Pokémon are much the same.\n"
-    "They may be small, but good luck getting\l"
-    "them to stay down!\p"
+text Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerPreBattle {
+    format(
+        "When Milo called me in, I thought he was pulling my leg.\p"
+        "This Gym has held on for decades, hidden away in the heart of town.\p"
+        "Our Pokémon are much the same. They may be small, but good luck getting them to stay down!"
+    )
 }
 
-text Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerDefeated
-{
-    "Wow! I did not expect the Gym to open\n"
-    "again just so I could lose!"
+text Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerDefeated {
+    format("Wow! I did not expect the Gym to open again just so I could lose!")
 }
 
-text Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerPostBattle
-{
-    "It feels strange seeing this place active\n"
-    "again...\p"
-    "We all use small, scrappy Pokémon that\n"
-    "tend to be Normal, Fighting or Dark\l"
-    "types.\p"
+text Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerPostBattle {
+    format(
+        "It feels strange seeing this place active again...\p"
+        "We all use small, scrappy Pokémon that tend to be Normal, Fighting, or Dark types."
+    )
 }
 
-text Weirford_Gym_Downstairs_MapScripts_Cal_TrainerPreBattle
-{
-    "Milo called us in for a real Gym battle?\p"
-    "I thought this old place would stay quiet\n"
-    "forever!\p"
+text Weirford_Gym_Downstairs_MapScripts_Cal_TrainerPreBattle {
+    format(
+        "Milo called us in for a real Gym battle?\p"
+        "I thought this old place would stay quiet forever!"
+    )
 }
 
-text Weirford_Gym_Downstairs_MapScripts_Cal_TrainerDefeated
-{
-    "Sorry, buddy!\n"
-    "I guess I am out of practice!"
+text Weirford_Gym_Downstairs_MapScripts_Cal_TrainerDefeated {
+    format("Sorry, buddy! I guess I am out of practice!")
 }
 
-text Weirford_Gym_Downstairs_MapScripts_Cal_TrainerPostBattle
-{
-    "I cannot believe we are doing this again.\p"
-    "You are tough, but Milo will not give up!"
+text Weirford_Gym_Downstairs_MapScripts_Cal_TrainerPostBattle {
+    format(
+        "I cannot believe we are doing this again.\p"
+        "You are tough, but Milo will not give up easily!"
+    )
 }

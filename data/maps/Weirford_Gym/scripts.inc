@@ -85,61 +85,61 @@ Weirford_Gym_MapScripts_MiloInteraction::
 # 64 "data/maps/Weirford_Gym/scripts.pory"
 	delay 30
 # 65 "data/maps/Weirford_Gym/scripts.pory"
-	msgbox Weirford_Gym_MapScripts_MiloInteraction_Text_2, MSGBOX_DEFAULT
-# 82 "data/maps/Weirford_Gym/scripts.pory"
+	msgbox Weirford_Gym_MapScripts_MiloInteraction_Text_2
+# 83 "data/maps/Weirford_Gym/scripts.pory"
 	msgbox Weirford_Gym_MapScripts_MiloInteraction_Text_3, MSGBOX_DEFAULT
-# 94 "data/maps/Weirford_Gym/scripts.pory"
+# 97 "data/maps/Weirford_Gym/scripts.pory"
 	special RemoveCameraObject
 	return
 
 
 Weirford_Gym_MapScripts_MiloAfterFirstEntry::
-# 99 "data/maps/Weirford_Gym/scripts.pory"
-	lock
-# 100 "data/maps/Weirford_Gym/scripts.pory"
-	faceplayer
 # 102 "data/maps/Weirford_Gym/scripts.pory"
+	lock
+# 103 "data/maps/Weirford_Gym/scripts.pory"
+	faceplayer
+# 105 "data/maps/Weirford_Gym/scripts.pory"
 	msgbox Weirford_Gym_MapScripts_MiloAfterFirstEntry_Text_0, MSGBOX_DEFAULT
-# 114 "data/maps/Weirford_Gym/scripts.pory"
+# 117 "data/maps/Weirford_Gym/scripts.pory"
 	release
 	end
 
 
-# 118 "data/maps/Weirford_Gym/scripts.pory"
+# 121 "data/maps/Weirford_Gym/scripts.pory"
 Weirford_Gym_PlayerMoveUp:
-# 120 "data/maps/Weirford_Gym/scripts.pory"
-	walk_up
-# 121 "data/maps/Weirford_Gym/scripts.pory"
-	walk_right
-# 121 "data/maps/Weirford_Gym/scripts.pory"
-	walk_right
-# 121 "data/maps/Weirford_Gym/scripts.pory"
-	walk_right
-# 122 "data/maps/Weirford_Gym/scripts.pory"
-	walk_up
-# 122 "data/maps/Weirford_Gym/scripts.pory"
-	walk_up
 # 123 "data/maps/Weirford_Gym/scripts.pory"
-	step_end
-
+	walk_up
+# 124 "data/maps/Weirford_Gym/scripts.pory"
+	walk_right
+# 124 "data/maps/Weirford_Gym/scripts.pory"
+	walk_right
+# 124 "data/maps/Weirford_Gym/scripts.pory"
+	walk_right
+# 125 "data/maps/Weirford_Gym/scripts.pory"
+	walk_up
+# 125 "data/maps/Weirford_Gym/scripts.pory"
+	walk_up
 # 126 "data/maps/Weirford_Gym/scripts.pory"
-Movement_CameraMoveUp:
-# 128 "data/maps/Weirford_Gym/scripts.pory"
-	walk_up
-# 128 "data/maps/Weirford_Gym/scripts.pory"
-	walk_up
-# 129 "data/maps/Weirford_Gym/scripts.pory"
-	walk_right
-# 129 "data/maps/Weirford_Gym/scripts.pory"
-	walk_right
-# 130 "data/maps/Weirford_Gym/scripts.pory"
 	step_end
 
+# 129 "data/maps/Weirford_Gym/scripts.pory"
+Movement_CameraMoveUp:
+# 131 "data/maps/Weirford_Gym/scripts.pory"
+	walk_up
+# 131 "data/maps/Weirford_Gym/scripts.pory"
+	walk_up
+# 132 "data/maps/Weirford_Gym/scripts.pory"
+	walk_right
+# 132 "data/maps/Weirford_Gym/scripts.pory"
+	walk_right
 # 133 "data/maps/Weirford_Gym/scripts.pory"
-Movement_MiloFaceDown:
-# 135 "data/maps/Weirford_Gym/scripts.pory"
-	face_down
+	step_end
+
 # 136 "data/maps/Weirford_Gym/scripts.pory"
+Movement_MiloFaceDown:
+# 138 "data/maps/Weirford_Gym/scripts.pory"
+	face_down
+# 139 "data/maps/Weirford_Gym/scripts.pory"
 	step_end
 
 Weirford_Gym_MapScripts_MiloInteraction_Text_0:
@@ -155,7 +155,7 @@ Weirford_Gym_MapScripts_MiloInteraction_Text_1:
 	.string "Errrr...well I gue-$"
 
 Weirford_Gym_MapScripts_MiloInteraction_Text_2:
-# 65 "data/maps/Weirford_Gym/scripts.pory"
+# 66 "data/maps/Weirford_Gym/scripts.pory"
 	.string "Hold still a moment, trainer.\p"
 	.string "Let me look at you properly...\p"
 	.string "Interesting...\p"
@@ -167,28 +167,44 @@ Weirford_Gym_MapScripts_MiloInteraction_Text_2:
 	.string "Who showed you how to arrange your\n"
 	.string "Poké Balls like that?\p"
 	.string "...\p"
-	.string "It just seemed appropriate you say?\p"
+	.string "It just seemed appropriate, you say?\p"
 	.string "...\p"
 	.string "It comes naturally to you, doesn't it?\p"
-	.string "So, it is time again, after all these\n"
-	.string "years. A new challenger steps up.\p$"
+	.string "Fascinating...\p"
+	.string "You don't even realize what you're\n"
+	.string "doing, do you?\p"
+	.string "...\p"
+	.string "Right. Well. That is slightly terrifying.$"
 
 Weirford_Gym_MapScripts_MiloInteraction_Text_3:
-# 82 "data/maps/Weirford_Gym/scripts.pory"
+# 84 "data/maps/Weirford_Gym/scripts.pory"
 	.string "...\p"
-	.string "Trainer I apologise but you have caught\n"
-	.string "me in a state of severe unreadiness.\p"
+	.string "Forgive me. My father passed this\n"
+	.string "mantle down to me, as his mother did\l"
+	.string "before him...\p"
+	.string "Truth be told, no one has stood at the\n"
+	.string "threshold of this house to challenge us\l"
+	.string "in hundreds of years.\p"
+	.string "I suppose I grew comfortable believing\n"
+	.string "it was just an old family story.\p"
+	.string "Which brings us to the present problem:\n"
+	.string "you have caught me in a state of severe\l"
+	.string "unreadiness.\p"
 	.string "Please go out and come back in again.\p"
 	.string "Literally just do that.\p"
-	.string "I will call the others in and wait for\n"
-	.string "you downstairs.\p"
-	.string "I never thought I would need to make\n"
-	.string "that call again.\p"
-	.string "Be ready Trainer, we won't go down\n"
-	.string "easily.$"
+	.string "I need to summon the trainers, move my\n"
+	.string "ironing board, put away my lunch, blow\l"
+	.string "the dust off the official arena mat,\l"
+	.string "and basically de-mothball the ancient\l"
+	.string "League testing ground in the basement.\p"
+	.string "...\p"
+	.string "I...truly never thought I would be the\n"
+	.string "one to defend this gym...\p"
+	.string "Be ready, Trainer. Hundreds of years or\n"
+	.string "not, we won't go down easily.$"
 
 Weirford_Gym_MapScripts_MiloAfterFirstEntry_Text_0:
-# 102 "data/maps/Weirford_Gym/scripts.pory"
+# 105 "data/maps/Weirford_Gym/scripts.pory"
 	.string "To dust off the old cobwebs, I feel the\n"
 	.string "fighting spirit stir within.\p"
 	.string "It has been a many a generation since\n"
