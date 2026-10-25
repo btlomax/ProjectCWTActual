@@ -78,7 +78,7 @@ script Weirford_Gym_Downstairs_MapScripts_LeaderMilo_Defeated
         "I'll be sure to inform the other Leaders that the challenge has officially been reignited.\p"
         "Go on then, Trainer. A long-dormant road lies ahead of you...\p"
         "If you're looking for your next step, head west out of town toward Route 3.\p"
-        "Passing through Cave One will bring you down toward the coastal settlements—if the old paths are still clear, that is."
+        "Passing through Cave One will bring you down toward the coastal settlements, if the old paths are still clear, that is."
     ), MSGBOX_DEFAULT)
 
     release
