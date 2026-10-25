@@ -19,7 +19,7 @@ script Weirford_Gym_Downstairs_MapScripts_LeaderMilo
     if (flag(FLAG_DEFEATED_WEIRFORD_GYM))
     {
        msgbox(format(
-        "I'll be sure to let the other leaders know that you're on your way. "
+        "I'll be sure to let the other leaders know that you're on your way!\p"
         "Now that I know the Gym Challenge is actually active again, "
         "I suppose I should finally clean out the basement and set up the arena properly!"),
         MSGBOX_DEFAULT)
@@ -49,9 +49,9 @@ script Weirford_Gym_Downstairs_MapScripts_LeaderMilo_Defeated
 
     setflag(FLAG_DEFEATED_WEIRFORD_GYM)
     setflag(FLAG_BADGE01_GET)
-    call(Common_EventScript_PlayGymBadgeFanfare)
 
     msgbox("You received the Grit Badge!\p", MSGBOX_DEFAULT)
+    call(Common_EventScript_PlayGymBadgeFanfare)
     
     msgbox(
     "The GRIT BADGE is proof that you do not\n"
@@ -73,6 +73,13 @@ script Weirford_Gym_Downstairs_MapScripts_LeaderMilo_Defeated
 
     setvar(VAR_0x8004, QUEST_THE_HOUSE_IN_THE_WOODS)
     special(Quest_Add)
+
+    msgbox(format(
+        "I'll be sure to inform the other Leaders that the challenge has officially been reignited.\p"
+        "Go on then, Trainer. A long-dormant road lies ahead of you...\p"
+        "If you're looking for your next step, head west out of town toward Route 3.\p"
+        "Passing through Cave One will bring you down toward the coastal settlements—if the old paths are still clear, that is."
+    ), MSGBOX_DEFAULT)
 
     release
     end

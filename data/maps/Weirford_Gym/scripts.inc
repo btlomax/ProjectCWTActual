@@ -179,8 +179,9 @@ Weirford_Gym_MapScripts_MiloInteraction_Text_2:
 Weirford_Gym_MapScripts_MiloInteraction_Text_3:
 # 84 "data/maps/Weirford_Gym/scripts.pory"
 	.string "...\p"
-	.string "Forgive me. My father passed this\n"
-	.string "mantle down to me, as his mother did\l"
+	.string "Forgive me. Being keeper of this Gym and\n"
+	.string "its badge was a duty passed down to me\l"
+	.string "by my father, as it was by his mother\l"
 	.string "before him...\p"
 	.string "Truth be told, no one has stood at the\n"
 	.string "threshold of this house to challenge us\l"
