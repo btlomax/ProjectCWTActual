@@ -4,7 +4,7 @@
 #define QUEST_A_NEW_CHALLENGE                       0
 #define QUEST_TUTOR_CATCH                           1
 #define QUEST_THE_HOUSE_IN_THE_WOODS                2
-#define QUEST_COUNT                                 3
+#define QUEST_COUNT                                           3
 
 #define QUEST_A_NEW_CHALLENGE_STAGE_INACTIVE          0
 #define QUEST_A_NEW_CHALLENGE_STAGE_BEGIN             1

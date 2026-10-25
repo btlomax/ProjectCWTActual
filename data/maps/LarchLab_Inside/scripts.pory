@@ -25,61 +25,42 @@ script LarchLab_Inside_MapScripts_ProfessorLarch {
         end
     }
 
-    msgbox(
-        "Ah! {PLAYER}, welcome to my humble laboratory!\p"
-        "That's Derek over there, he's my\n"
-        "assistant.\p"
-        "Say hello Derek!\p"
-        "Derek: Hello!\p"
-        "We're over here, Derek.\p"
-        "Derek: Oh...\p"
+    msgbox(format("Ah! {PLAYER}, welcome to my humble laboratory!"), MSGBOX_DEFAULT)
+    msgbox(format("That's Derek over there, he's my assistant.\pSay hello, Derek!"), MSGBOX_DEFAULT)
+    msgbox(format("Derek: Hello!"), MSGBOX_DEFAULT)
+    msgbox(format("We're over here, Derek."), MSGBOX_DEFAULT)
+    msgbox(format("Derek: Oh...\p..."), MSGBOX_DEFAULT)
+    
+    msgbox(format(
         "...\p"
         "Ah, he's a good lad.\p"
         "...\p"
-        "Now, {PLAYER}. Congratulations on\n"
-        "your first Pokémon!\p"
-        "A rather unusual first Pokémon, too.\n"
-        "You certainly have a talent for finding\l"
-        "interesting things.\p"
-        "Pokémon are full of surprises. The more\n"
-        "you travel, the more you will meet.\p"
-        "And unless you have a truly remarkable\n"
-        "memory, you will eventually lose track\l"
-        "of which one had the ALARMING teeth.\p"
+        "Now, {PLAYER}. Congratulations on your first Pokémon!\p"
+        "A rather unusual first Pokémon, too. You certainly have a talent for finding interesting things...\p"
+        "Pokémon are full of surprises. The more you travel, the more you will meet, and unless you have a truly remarkable memory, you will eventually lose track of which one had the ALARMING teeth.\p"
         "That is where this comes in.\p"
-        "It is a Pokédex: a small device that\n"
-        "records information about the Pokémon\l"
-        "you see and catch.\p"
-        "Think of it as a field notebook that\n"
-        "does all the writing for you.\p",
-    MSGBOX_DEFAULT)
+        "It is a Pokédex: a device that records information about the Pokémon you see and catch.\p"
+        "Think of it as a field notebook that does all the writing for you."
+    ), MSGBOX_DEFAULT)
 
     playfanfare(MUS_OBTAIN_ITEM)
     msgbox("{PLAYER} received the POKéDEX!", MSGBOX_DEFAULT)
     waitfanfare
     setflag(FLAG_SYS_POKEDEX_GET)
 
-    msgbox(
-        "Use it well, {PLAYER}. And do let me\n"
-        "know if you find anything else unusual\l"
-        "along that canal.",
-    MSGBOX_DEFAULT)
+    msgbox(format("Use it well, {PLAYER}. And do let me know if you find anything else... unusual along that canal."), MSGBOX_DEFAULT)
 
-    msgbox(
-        "Before you go, take these POKé BALLS.\n"
-        "You will need them for your journey.",
-    MSGBOX_DEFAULT)
+    msgbox(format("Before you go, take these POKé BALLS. You will need them for your journey."), MSGBOX_DEFAULT)
     additem(ITEM_POKE_BALL, 5)
     playfanfare(MUS_OBTAIN_ITEM)
     msgbox("{PLAYER} received 5 POKé BALLS!", MSGBOX_DEFAULT)
     waitfanfare
 
-    msgbox(
+    msgbox(format(
         "Now, go and see your grandmother.\p"
-        "Tell Rhona that... hmm.\p"
-        "Tell her the sun and the moon will soon\n"
-        "cross paths, and that the old ways stir.\p"
-        "She will know what I mean.\p",
+        "Tell Rhona that... well, just tell her that twenty years wasn't long enough.."
+        "Tell her the old ways are stirring again.\p"
+        "She will know what I mean.\p"),
     MSGBOX_DEFAULT)
 
     setvar(VAR_ALDERBROOK_TOWN_STATE, 3)

@@ -102,17 +102,16 @@ script Weirford_Gym_MapScripts_MiloAfterFirstEntry
     lock
     faceplayer
 
-    msgbox("To dust off the old cobwebs, I feel the\n"
-    "fighting spirit stir within.\p"
-    "It has been a many a generation since\n"
-    "someone like you, has appeared.\p"
-    "The others and I have waited, passing\n"
-    "the mantle from one generation to the\l"
-    "next, until one of the bloodlines\l"
+    msgbox(format("Dusting off the old arena... I can actually feel the spirit of this place stirring again.\p"
+    "It has been a many a generation since"
+    "someone like you has appeared.\p"
+    "The others and I have waited, passing"
+    "the mantle from one generation to the"
+    "next, until one of the bloodlines"
     "surfaced again. Yet, you carry no Crest.\p"
     "...\p"
-    "It is no matter, battle will reveal to us\n"
-    "the truth.\p", MSGBOX_DEFAULT)
+    "It is no matter, battle will reveal to us"
+    "the truth."), MSGBOX_DEFAULT)
 
     release
     end

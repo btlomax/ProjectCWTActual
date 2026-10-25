@@ -100,46 +100,46 @@ Weirford_Gym_MapScripts_MiloAfterFirstEntry::
 	faceplayer
 # 105 "data/maps/Weirford_Gym/scripts.pory"
 	msgbox Weirford_Gym_MapScripts_MiloAfterFirstEntry_Text_0, MSGBOX_DEFAULT
-# 117 "data/maps/Weirford_Gym/scripts.pory"
+# 116 "data/maps/Weirford_Gym/scripts.pory"
 	release
 	end
 
 
-# 121 "data/maps/Weirford_Gym/scripts.pory"
+# 120 "data/maps/Weirford_Gym/scripts.pory"
 Weirford_Gym_PlayerMoveUp:
+# 122 "data/maps/Weirford_Gym/scripts.pory"
+	walk_up
 # 123 "data/maps/Weirford_Gym/scripts.pory"
+	walk_right
+# 123 "data/maps/Weirford_Gym/scripts.pory"
+	walk_right
+# 123 "data/maps/Weirford_Gym/scripts.pory"
+	walk_right
+# 124 "data/maps/Weirford_Gym/scripts.pory"
 	walk_up
 # 124 "data/maps/Weirford_Gym/scripts.pory"
-	walk_right
-# 124 "data/maps/Weirford_Gym/scripts.pory"
-	walk_right
-# 124 "data/maps/Weirford_Gym/scripts.pory"
-	walk_right
+	walk_up
 # 125 "data/maps/Weirford_Gym/scripts.pory"
-	walk_up
-# 125 "data/maps/Weirford_Gym/scripts.pory"
-	walk_up
-# 126 "data/maps/Weirford_Gym/scripts.pory"
 	step_end
 
-# 129 "data/maps/Weirford_Gym/scripts.pory"
+# 128 "data/maps/Weirford_Gym/scripts.pory"
 Movement_CameraMoveUp:
-# 131 "data/maps/Weirford_Gym/scripts.pory"
+# 130 "data/maps/Weirford_Gym/scripts.pory"
+	walk_up
+# 130 "data/maps/Weirford_Gym/scripts.pory"
 	walk_up
 # 131 "data/maps/Weirford_Gym/scripts.pory"
-	walk_up
-# 132 "data/maps/Weirford_Gym/scripts.pory"
+	walk_right
+# 131 "data/maps/Weirford_Gym/scripts.pory"
 	walk_right
 # 132 "data/maps/Weirford_Gym/scripts.pory"
-	walk_right
-# 133 "data/maps/Weirford_Gym/scripts.pory"
 	step_end
 
-# 136 "data/maps/Weirford_Gym/scripts.pory"
+# 135 "data/maps/Weirford_Gym/scripts.pory"
 Movement_MiloFaceDown:
-# 138 "data/maps/Weirford_Gym/scripts.pory"
+# 137 "data/maps/Weirford_Gym/scripts.pory"
 	face_down
-# 139 "data/maps/Weirford_Gym/scripts.pory"
+# 138 "data/maps/Weirford_Gym/scripts.pory"
 	step_end
 
 Weirford_Gym_MapScripts_MiloInteraction_Text_0:
@@ -206,14 +206,15 @@ Weirford_Gym_MapScripts_MiloInteraction_Text_3:
 
 Weirford_Gym_MapScripts_MiloAfterFirstEntry_Text_0:
 # 105 "data/maps/Weirford_Gym/scripts.pory"
-	.string "To dust off the old cobwebs, I feel the\n"
-	.string "fighting spirit stir within.\p"
+	.string "Dusting off the old arena... I can\n"
+	.string "actually feel the spirit of this place\l"
+	.string "stirring again.\p"
 	.string "It has been a many a generation since\n"
-	.string "someone like you, has appeared.\p"
+	.string "someone like you has appeared.\p"
 	.string "The others and I have waited, passing\n"
 	.string "the mantle from one generation to the\l"
 	.string "next, until one of the bloodlines\l"
 	.string "surfaced again. Yet, you carry no Crest.\p"
 	.string "...\p"
 	.string "It is no matter, battle will reveal to us\n"
-	.string "the truth.\p$"
+	.string "the truth.$"

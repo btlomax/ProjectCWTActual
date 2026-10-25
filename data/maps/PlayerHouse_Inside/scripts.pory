@@ -90,7 +90,7 @@ script PlayerHouse_Inside_Birthday {
             goto(PlayerHouse_Inside_Dinner)
             break
         case 2:
-            msgbox("{PLAYER}, go and see Professor Larch in Westlock Village.\pI'm sure he will want to see your new Pokemon!", MSGBOX_DEFAULT)
+            msgbox(format("{PLAYER}, go and see Professor Larch in Westlock Village.\pI'm sure he will want to see your new Pokemon!"), MSGBOX_DEFAULT)
             break
         case 3:
             goto(PlayerHouse_Inside_GrandmotherAfterPokedex)
@@ -103,33 +103,34 @@ script PlayerHouse_Inside_Birthday {
 }
 
 script PlayerHouse_Inside_GrandmotherAfterPokedex {
-    msgbox("{PLAYER}, you're back, good!", MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER}, you're back, good!"), MSGBOX_DEFAULT)
     msgbox("...\p", MSGBOX_DEFAULT)
 
-    msgbox(
-    "The sun and moon will cross paths...\p"
-    "Larch said that to you?\p"
+    msgbox(format(
+    "Twenty years...\p"
+    "Larch said that to you? Has it truly been that long?\p"
     "...the old ways...\p"
+    "..."
     "Come here, {PLAYER}. Let me have a look at you.\p"
     "Hmmm...\p"
-    "Perhaps I am only seeing what I want to\n"
-    "see after all these years. But if Alexander\lsees it too...\p"
+    "Perhaps I am only seeing what I want to"
+    "see, I thought I saw it in Jul-...\p"
     "...\p"
-    "You should take on the League challenge.\n"
+    "{PLAYER}, you should take on the League challenge."
     "See the region. Meet its people.\p"
     "Learn what kind of trainer you want to be.\p"
     "...\p"
-    "Be careful, {PLAYER}. There are people out\n"
-    "there who mean ill to those who are,\n"
+    "Be careful, {PLAYER}. There are people out"
+    "there who mean ill to those who are,"
     "different.\p"
-    "Trust your Pokemon, and trust yourself,\n"
-    "and I know you will live up to your\l"
+    "Trust your Pokemon, and trust yourself,"
+    "and I know you will live up to your"
     "potential.\p"
-    "You can always come and see me, and tell\n"
-    "me ofyour adventures!\p",
+    "You can always come and see me, and tell"
+    "me of your adventures!\p"),
     MSGBOX_DEFAULT)
-    msgbox("Go back through Westlock to Meadowvale Farm.\n"
-    "From there, make your way through the forest\land you'll eventually reach Weirford Town.\p", MSGBOX_DEFAULT)
+    msgbox(format("Go back through Westlock to Meadowvale Farm."
+    "From there, make your way through the forest and you'll eventually reach Weirford Town.\p"), MSGBOX_DEFAULT)
 
     msgbox("Before you leave, I have something for\n you.", MSGBOX_DEFAULT)
     playfanfare(MUS_OBTAIN_ITEM)
@@ -142,10 +143,10 @@ script PlayerHouse_Inside_GrandmotherAfterPokedex {
     playfanfare(MUS_OBTAIN_ITEM)
     msgbox("{PLAYER} received 3 POTIONS!", MSGBOX_DEFAULT)
     waitfanfare
-    msgbox("I see it now, the glint in the eyes...\n", MSGBOX_DEFAULT)
     msgbox("So it begins again.\p Walk worthy, {PLAYER}.\p", MSGBOX_DEFAULT)
-    msgbox("You can always come home if you need to.\n"
-           "I'd be happy to see you and your Pokemon!\p", MSGBOX_DEFAULT)
+    msgbox(format(
+           "You can always come home if you need to."
+           "I'd be happy to see you and your Pokemon!\p"), MSGBOX_DEFAULT)
 
     setvar(VAR_ALDERBROOK_TOWN_STATE, 4)
 

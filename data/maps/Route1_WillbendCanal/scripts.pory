@@ -31,32 +31,28 @@ script Route1_WillbendCanal_MapScripts_LarchTrigger {
     clearflag(FLAG_HIDE_BRIDGE_NPC_ROUTE1)
     addobject(LOCALID_BRIDGE_NPC_ROUTE1)
 
-    // 1. Pan Camera Up
     special(SpawnCameraObject)
     applymovement(OBJ_EVENT_ID_CAMERA, Movement_CameraUp)
     waitmovement(0)
 
-    // 2. Spawn NPC and Run In
     applymovement(LOCALID_BRIDGE_NPC_ROUTE1, Movement_NPCRuns)
     waitmovement(LOCALID_BRIDGE_NPC_ROUTE1)
 
-    // 3. Dialogue
-    msgbox("Oh DRAT, it's not this way either!", MSGBOX_DEFAULT)
+    msgbox(format("Why is the meter reading getting higher?! There's nothing around here!"), MSGBOX_DEFAULT)
     closemessage
 
     applymovement(LOCALID_BRIDGE_NPC_ROUTE1, Movement_NPCLookAround)
     waitmovement(LOCALID_BRIDGE_NPC_ROUTE1)
 
-    msgbox("I could have sworn the entrance was on\nthis route! I need to deliver the\lpackage!", MSGBOX_DEFAULT)
+    msgbox(format("This just can't be right, these levels make no sense!"), MSGBOX_DEFAULT)
     closemessage
 
     applymovement(LOCALID_BRIDGE_NPC_ROUTE1, Movement_NPCLookAround)
     waitmovement(LOCALID_BRIDGE_NPC_ROUTE1)
 
-    msgbox("Oh BALLS, is that the time?\nI need to get back!", MSGBOX_DEFAULT)
+    msgbox(format("Oh BALLS, it's going off the scale! Whatever's causing this, I am NOT staying around to meet it!"), MSGBOX_DEFAULT)
     closemessage
 
-     // 5. NPC Flees & Despawns
     applymovement(LOCALID_BRIDGE_NPC_ROUTE1, Movement_NPCRunsAway)
     waitmovement(LOCALID_BRIDGE_NPC_ROUTE1)
 
@@ -66,13 +62,11 @@ script Route1_WillbendCanal_MapScripts_LarchTrigger {
     removeobject(LOCALID_BRIDGE_NPC_ROUTE1)
     setflag(FLAG_HIDE_BRIDGE_NPC_ROUTE1)
 
-    // 6. Reset Camera Safely
     applymovement(OBJ_EVENT_ID_CAMERA, Movement_CameraDown)
     waitmovement(0)
     
     special(RemoveCameraObject)
 
-    // 7. Update Event Var
     setvar(VAR_ROUTE1_STATE, 1)
     release
 }
@@ -80,7 +74,7 @@ script Route1_WillbendCanal_MapScripts_LarchTrigger {
 script Route1_EventScript_StarterDrop {
     lock
     faceplayer
-    msgbox("He dropped the package...", MSGBOX_DEFAULT)
+    msgbox("He dropped something...", MSGBOX_DEFAULT)
     closemessage
 
     msgbox("Take a look inside?", MSGBOX_YESNO)
@@ -121,7 +115,7 @@ script Route1_EventScript_StarterDrop {
     end
 }
 
-script Route1_EventScript_TurnAround { // If the player tries to go too far, they get a message telling them they can't go that way
+script Route1_EventScript_TurnAround { 
    
    if(var(VAR_ALDERBROOK_TOWN_STATE) != 2) {
         lock

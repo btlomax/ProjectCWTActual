@@ -120,7 +120,8 @@ Weirford_Forest_MapScripts_LassLila_TrainerPreBattle::
 
 Weirford_Forest_MapScripts_LassLila_TrainerPostBattle::
 # 108 "data/maps/Weirford_Forest/scripts.pory"
-	.string "There's a house hidden deep in the forest.$"
+	.string "There's a house hidden deep in the\n"
+	.string "forest.$"
 
 Weirford_Forest_MapScripts_LassLila_TrainerDefeated::
 # 112 "data/maps/Weirford_Forest/scripts.pory"
@@ -142,25 +143,25 @@ Weirford_Forest_MapScripts_AcolyteLin_TrainerDefeated::
 	.string "Yes, there is power in you...$"
 
 Weirford_Forest_MapScripts_CamperColin_TrainerPreBattle::
-# 132 "data/maps/Weirford_Forest/scripts.pory"
+# 131 "data/maps/Weirford_Forest/scripts.pory"
 	.string "This is my first time camping in the\nforest!$"
 
 Weirford_Forest_MapScripts_CamperColin_TrainerPostBattle::
-# 136 "data/maps/Weirford_Forest/scripts.pory"
+# 135 "data/maps/Weirford_Forest/scripts.pory"
 	.string "The camping is NOT going well...$"
 
 Weirford_Forest_MapScripts_CamperColin_TrainerDefeated::
-# 140 "data/maps/Weirford_Forest/scripts.pory"
+# 139 "data/maps/Weirford_Forest/scripts.pory"
 	.string "I'm trying my best not to SHAKE with\nFEAR.$"
 
 Weirford_Forest_MapScripts_BugCatcherSam_TrainerPreBattle::
-# 144 "data/maps/Weirford_Forest/scripts.pory"
+# 143 "data/maps/Weirford_Forest/scripts.pory"
 	.string "Have you got any Bug Pokémon?$"
 
 Weirford_Forest_MapScripts_BugCatcherSam_TrainerPostBattle::
-# 148 "data/maps/Weirford_Forest/scripts.pory"
+# 147 "data/maps/Weirford_Forest/scripts.pory"
 	.string "There are bug Pokemon here...\nI can feel them crawling up my OH SHI-\p$"
 
 Weirford_Forest_MapScripts_BugCatcherSam_TrainerDefeated::
-# 152 "data/maps/Weirford_Forest/scripts.pory"
+# 151 "data/maps/Weirford_Forest/scripts.pory"
 	.string "I can't believe you beat my team of\nalmighty bugs!$"

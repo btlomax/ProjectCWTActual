@@ -106,7 +106,7 @@ text Weirford_Forest_MapScripts_LassLila_TrainerPreBattle {
 }
 
 text Weirford_Forest_MapScripts_LassLila_TrainerPostBattle {
-    "There's a house hidden deep in the forest."
+   format("There's a house hidden deep in the forest.")
 }
 
 text Weirford_Forest_MapScripts_LassLila_TrainerDefeated {
@@ -126,7 +126,6 @@ text Weirford_Forest_MapScripts_AcolyteLin_TrainerPostBattle {
 
 text Weirford_Forest_MapScripts_AcolyteLin_TrainerDefeated {
     "Yes, there is power in you..."
-    
 }
 
 text Weirford_Forest_MapScripts_CamperColin_TrainerPreBattle {
