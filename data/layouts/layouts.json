@@ -9520,6 +9520,16 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Weirford_Gym_Downstairs/border.bin",
       "blockdata_filepath": "data/layouts/Weirford_Gym_Downstairs/map.bin"
+    },
+    {
+      "id": "LAYOUT_WEIRFORD_HOUSE",
+      "name": "Weirford_House_Layout",
+      "width": 20,
+      "height": 15,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Weirford_House/border.bin",
+      "blockdata_filepath": "data/layouts/Weirford_House/map.bin"
     }
   ]
 }

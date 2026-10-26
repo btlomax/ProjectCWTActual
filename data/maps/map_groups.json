@@ -650,7 +650,8 @@
     "Meadowvale_Farm_Inside"
   ],
   "gMapGroup_Weirford_Forest": [
-    "Weirford_Forest"
+    "Weirford_Forest",
+    "Weirford_House"
   ],
   "gMapGroup_Route3": [
     "Route3_Actual"
