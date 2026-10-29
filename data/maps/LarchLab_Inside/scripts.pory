@@ -83,21 +83,21 @@ script LarchLab_Inside_MapScripts_ProfessorAide {
         msgbox("Are you looking for the Professor?", MSGBOX_YESNO)
         if (var(VAR_RESULT) == YES) 
         {
-        msgbox("I'm afraid he's not here right now.\pHe has been acting a bit strange recently...\nI'm not sure when he'll be back.", MSGBOX_DEFAULT)
+        msgbox(format("I'm afraid he's not here right now.\pHe has been acting a bit strange recently... I'm not sure when he'll be back."), MSGBOX_DEFAULT)
         }
         else
         {
-        msgbox("Ah, well enjoy your visit to the lab then!", MSGBOX_DEFAULT)
+        msgbox(format("Ah, well enjoy your visit to the lab then!"), MSGBOX_DEFAULT)
         }
     }
     else 
     {
-        msgbox(
+        msgbox(format(
             "Hello, I'm the Professor's aide!\p"
-            "I mostly help with research, but he\n"
-            "has been sending me on a lot of errands\l"
+            "I mostly help with research, but he"
+            "has been sending me on a lot of errands"
             "lately...I should talk to him about that...\p"
-        )
+        ), MSGBOX_DEFAULT)
     }
    
     release

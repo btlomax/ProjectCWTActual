@@ -90,7 +90,7 @@ LarchLab_Inside_MapScripts_ProfessorAide::
 	compare VAR_WESTLOCK_LIBRARY_STATE, 0
 	goto_if_eq LarchLab_Inside_MapScripts_ProfessorAide_2
 # 95 "data/maps/LarchLab_Inside/scripts.pory"
-	msgbox LarchLab_Inside_MapScripts_ProfessorAide_Text_3
+	msgbox LarchLab_Inside_MapScripts_ProfessorAide_Text_3, MSGBOX_DEFAULT
 LarchLab_Inside_MapScripts_ProfessorAide_1:
 # 103 "data/maps/LarchLab_Inside/scripts.pory"
 	release
@@ -200,15 +200,21 @@ LarchLab_Inside_MapScripts_ProfessorAide_Text_0:
 
 LarchLab_Inside_MapScripts_ProfessorAide_Text_1:
 # 86 "data/maps/LarchLab_Inside/scripts.pory"
-	.string "I'm afraid he's not here right now.\pHe has been acting a bit strange recently...\nI'm not sure when he'll be back.$"
+	.string "I'm afraid he's not here right now.\p"
+	.string "He has been acting a bit strange\n"
+	.string "recently... I'm not sure when he'll be\l"
+	.string "back.$"
 
 LarchLab_Inside_MapScripts_ProfessorAide_Text_2:
 # 90 "data/maps/LarchLab_Inside/scripts.pory"
-	.string "Ah, well enjoy your visit to the lab then!$"
+	.string "Ah, well enjoy your visit to the lab\n"
+	.string "then!$"
 
 LarchLab_Inside_MapScripts_ProfessorAide_Text_3:
 # 96 "data/maps/LarchLab_Inside/scripts.pory"
 	.string "Hello, I'm the Professor's aide!\p"
-	.string "I mostly help with research, but he\n"
-	.string "has been sending me on a lot of errands\l"
-	.string "lately...I should talk to him about that...\p$"
+	.string "I mostly help with research, but he has\n"
+	.string "been sending me on a lot of errands\l"
+	.string "lately...I should talk to him about\l"
+	.string "that...\p"
+	.string "$"

@@ -143,7 +143,15 @@
       "flag": "FLAG_WEIRFORD_FOREST_THIRD_ITEM"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 36,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_WEIRFORD_FOREST",
+      "dest_warp_id": "0"
+    }
+  ],
   "coord_events": [],
   "bg_events": [
     {
