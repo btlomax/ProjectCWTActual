@@ -1,1 +1,7 @@
 mapscripts Weirford_House_MapScripts {}
+
+script Weirford_House_GoUpstairs {
+    warpsilent(MAP_WEIRFORD_HOUSE_UPSTAIRS, 1, 2)
+    waitstate
+    end
+}

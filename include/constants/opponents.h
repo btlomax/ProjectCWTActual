@@ -870,13 +870,14 @@
 #define TRAINER_WEIRFORDFOREST_CORPO_ERIC 862
 #define TRAINER_WEIRFORDFOREST_ACOLYTE_LIN 863
 #define TRAINER_WEIRFORD_GYM_MILO           864
+#define TRAINER_WEIRFORD_HOUSE_SHUPPET      865
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT_EMERALD     865
-#define MAX_TRAINERS_COUNT_EMERALD 865
+#define TRAINERS_COUNT_EMERALD     866
+#define MAX_TRAINERS_COUNT_EMERALD 866
 
 #if IS_FRLG
 #define TRAINERS_COUNT                      TRAINERS_COUNT_FRLG

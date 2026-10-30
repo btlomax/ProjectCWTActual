@@ -1,1 +1,65 @@
 mapscripts Weirford_House_Basement_MapScripts {}
+
+script Weirford_House_Basement_ShuppetBoss {
+    lockall
+
+    if (var(VAR_WEIRFORD_HOUSE_STATE) == 4) {
+        releaseall
+        end
+    }
+
+    playmoncry(SPECIES_SHUPPET, CRY_MODE_NORMAL)
+    trainerbattle_single(
+        TRAINER_WEIRFORD_HOUSE_SHUPPET,
+        Weirford_House_Basement_ShuppetBoss_PreBattle,
+        Weirford_House_Basement_ShuppetBoss_Defeated,
+        Weirford_House_Basement_ShuppetBoss_AfterBattle
+    )
+
+    end
+}
+
+script Weirford_House_Basement_ShuppetBoss_AfterBattle {
+    lockall
+    msgbox(format(
+        "SHUPPET is weak!\p"
+        "Hanging on by a thread, TOBY reaches out to you."),
+        MSGBOX_DEFAULT
+    )
+
+    msgbox("What will you do?", MSGBOX_DEFAULT)
+    multichoice(17, 6, MULTI_WEIRFORD_HOUSE_DECISION, TRUE)
+
+    if (var(VAR_RESULT) == 0) {
+        setflag(FLAG_WEIRFORD_HOUSE_CHOSE_SHUPPET)
+        givemon(SPECIES_SHUPPET, 16, ITEM_SPELL_TAG, ITEM_DUSK_BALL, NATURE_ADAMANT, 2, FEMALE,
+         0, 0, 0, 0, 0, 0, 31, 18, 20, 20, 15, 31, MOVE_SHADOW_SNEAK, MOVE_WILL_O_WISP, MOVE_GRUDGE, MOVE_ASTONISH)
+
+        msgbox("SHUPPET settles into its Poké Ball.", MSGBOX_DEFAULT)
+        msgbox(format("A sudden, cold silence fills the room.\pTOBY's arm drops to the floor."), MSGBOX_DEFAULT)
+
+        subvar(VAR_PLAYER_MORALITY, 5)
+        msgbox("The world seems a little darker.", MSGBOX_DEFAULT)
+    }
+    else {
+        msgbox("You grab TOBY by the arm.", MSGBOX_DEFAULT)
+        playse(SE_FLEE)
+        msgbox("SHUPPET vanishes into the shadows.", MSGBOX_DEFAULT)
+        msgbox(format("TOBY collapses into your arms, breathing weakly but alive."), MSGBOX_DEFAULT)
+
+        addvar(VAR_PLAYER_MORALITY, 5)
+        msgbox("The world seems a little brighter.", MSGBOX_DEFAULT)
+    }
+
+    setvar(VAR_WEIRFORD_HOUSE_STATE, 4)
+    releaseall
+    end
+}
+
+text Weirford_House_Basement_ShuppetBoss_PreBattle {
+    "SHUUUPPET!"
+}
+
+text Weirford_House_Basement_ShuppetBoss_Defeated {
+    "..."
+}

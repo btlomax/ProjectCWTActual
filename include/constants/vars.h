@@ -273,8 +273,8 @@
 #define VAR_QUEST_TUTOR_CATCH_STATE                       0x40FB
 #define VAR_QUEST_A_NEW_CHALLENGE_STATE                   0x40FC
 #define VAR_QUEST_THE_HOUSE_IN_THE_WOODS_STATE            0x40FD
-#define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
-#define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
+#define VAR_WEIRFORD_HOUSE_STATE                          0x40FE
+#define VAR_PLAYER_MORALITY                               0x40FF
 
 #define VARS_END                                         0x40FF
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)

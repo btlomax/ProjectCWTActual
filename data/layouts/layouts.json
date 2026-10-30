@@ -9544,12 +9544,32 @@
     {
       "id": "LAYOUT_WEIRFORD_HOUSE_BASEMENT",
       "name": "Weirford_House_Basement_Layout",
-      "width": 15,
-      "height": 12,
+      "width": 9,
+      "height": 8,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Weirford_House_Basement/border.bin",
       "blockdata_filepath": "data/layouts/Weirford_House_Basement/map.bin"
+    },
+    {
+      "id": "LAYOUT_WEIRFORD_HOUSE_2",
+      "name": "Weirford_House_2_Layout",
+      "width": 15,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Weirford_House_2/border.bin",
+      "blockdata_filepath": "data/layouts/Weirford_House_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_WEIRFORD_HOUSE_UPSTAIRS_2",
+      "name": "Weirford_House_Upstairs_2_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Weirford_House_Upstairs_2/border.bin",
+      "blockdata_filepath": "data/layouts/Weirford_House_Upstairs_2/map.bin"
     }
   ]
 }

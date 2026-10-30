@@ -653,7 +653,9 @@
     "Weirford_Forest",
     "Weirford_House",
     "Weirford_House_Upstairs",
-    "Weirford_House_Basement"
+    "Weirford_House_Basement",
+    "Weirford_House_2",
+    "Weirford_House_Upstairs_2"
   ],
   "gMapGroup_Route3": [
     "Route3_Actual"

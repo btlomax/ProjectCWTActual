@@ -1,1 +1,12 @@
 mapscripts Weirford_House_Upstairs_MapScripts {}
+
+script Weirford_House_Upstairs_Downstairs {
+    if (var(VAR_WEIRFORD_HOUSE_STATE) == 0) {
+        warpsilent(MAP_WEIRFORD_HOUSE, 8, 2)
+    }
+    else {
+        warpsilent(MAP_WEIRFORD_HOUSE_2, 8, 2)
+    }
+    waitstate
+    end
+}

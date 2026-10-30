@@ -16865,6 +16865,23 @@ Scraggy
 Level: 13
 Ability: Moxie
 
+=== TRAINER_WEIRFORD_HOUSE_SHUPPET ===
+Name: SHUPPET
+Class: Hex Maniac
+Pic: Hex Maniac
+Gender: Female
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+Shuppet
+Level: 16
+IVs: 3 HP / 1 Atk / 2 Def / 2 SpA / 1 SpD / 2 Spe
+- Shadow Sneak
+- Will O Wisp
+- Grudge
+- Astonish
+
 === TRAINER_ROUTE3_LASS_SARA  ===
 Name: SARA
 Class: Lass
