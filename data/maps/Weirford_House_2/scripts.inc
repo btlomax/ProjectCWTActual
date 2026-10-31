@@ -148,11 +148,17 @@ Weirford_House_2_Toby_Interact::
 	release
 # 111 "data/maps/Weirford_House_2/scripts.pory"
 	setvar VAR_WEIRFORD_HOUSE_STATE, 3
-# 112 "data/maps/Weirford_House_2/scripts.pory"
-	playse SE_CLICK
+# 113 "data/maps/Weirford_House_2/scripts.pory"
+	setvar VAR_0x8004, QUEST_THE_HOUSE_IN_THE_WOODS
 # 114 "data/maps/Weirford_House_2/scripts.pory"
-	msgbox Weirford_House_2_Toby_Interact_Text_1, MSGBOX_DEFAULT
+	setvar VAR_0x8005, QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_CONFRONT
 # 115 "data/maps/Weirford_House_2/scripts.pory"
+	special Quest_SetStage
+# 117 "data/maps/Weirford_House_2/scripts.pory"
+	playse SE_CLICK
+# 119 "data/maps/Weirford_House_2/scripts.pory"
+	msgbox Weirford_House_2_Toby_Interact_Text_1, MSGBOX_DEFAULT
+# 120 "data/maps/Weirford_House_2/scripts.pory"
 	release
 	end
 
@@ -174,6 +180,5 @@ Weirford_House_2_Toby_Interact_Text_0:
 	.string "I feel...cold...$"
 
 Weirford_House_2_Toby_Interact_Text_1:
-# 114 "data/maps/Weirford_House_2/scripts.pory"
-	.string "The door is unlocked, but where did TOBY\n"
-	.string "go?$"
+# 119 "data/maps/Weirford_House_2/scripts.pory"
+	.string "A door unlocks somewhere nearby.$"

@@ -1271,8 +1271,8 @@
 #define FLAG_HIDE_WEIRFORD_HOUSE_TOBY                               0x4B9
 #define FLAG_HIDE_WEIRFORD_HOUSE_DOWNSTAIRS_TOBY                    0x4BA
 #define FLAG_WEIRFORD_HOUSE_ALTERED_DOWNSTAIRS_ENTERED              0x4BB
-#define FLAG_UNUSED_0x4BC                                           0x4BC // Unused Flag
-#define FLAG_UNUSED_0x4BD                                           0x4BD // Unused Flag
+#define FLAG_WEIRFORD_HOUSE_ENTERED                                 0x4BC
+#define FLAG_FOUND_LOST_DOLL                                        0x4BD
 #define FLAG_UNUSED_0x4BE                                           0x4BE // Unused Flag
 #define FLAG_UNUSED_0x4BF                                           0x4BF // Unused Flag
 #define FLAG_UNUSED_0x4C0                                           0x4C0 // Unused Flag

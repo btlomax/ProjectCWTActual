@@ -42,6 +42,15 @@
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "Weirford_House_FrontDoorAccess"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
     }
   ],
   "bg_events": [

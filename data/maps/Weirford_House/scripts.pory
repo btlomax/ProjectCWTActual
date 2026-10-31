@@ -1,4 +1,20 @@
-mapscripts Weirford_House_MapScripts {}
+mapscripts Weirford_House_MapScripts
+{
+    MAP_SCRIPT_ON_TRANSITION: Weirford_House_OnTransition
+}
+
+script Weirford_House_OnTransition
+{
+    if (flag(FLAG_WEIRFORD_HOUSE_ENTERED)) {
+        end
+    }
+
+    setflag(FLAG_WEIRFORD_HOUSE_ENTERED)
+    setvar(VAR_0x8004, QUEST_THE_HOUSE_IN_THE_WOODS)
+    setvar(VAR_0x8005, QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_INVESTIGATE)
+    special(Quest_SetStage)
+    end
+}
 
 script Weirford_House_GoUpstairs
 {

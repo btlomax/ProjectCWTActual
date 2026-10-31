@@ -107,10 +107,10 @@ static const u8 sText_TheHouseInTheWoodsTalkToTheManLocation[] = _("WEIRFORD TOW
 static const u8 sText_TheHouseInTheWoodsTalkToTheManDetail[] = _("Speak with the man in Weirford");
 static const u8 sText_TheHouseInTheWoodsFindTheHouseLocation[] = _("WEIRFORD FOREST");
 static const u8 sText_TheHouseInTheWoodsFindTheHouseDetail[] = _("Locate the house in Weirford Forest");
-static const u8 sText_TheHouseInTheWoodsInvestigateLocation[] = _("DEEP WOODS");
+static const u8 sText_TheHouseInTheWoodsInvestigateLocation[] = _("WEIRFORD HOUSE");
 static const u8 sText_TheHouseInTheWoodsInvestigateDetail[] = _("Investigate the house thoroughly");
-static const u8 sText_TheHouseInTheWoodsConfrontLocation[] = _("DEEP WOODS");
-static const u8 sText_TheHouseInTheWoodsConfrontDetail[] = _("Confront the person responsible for the disturbances");
+static const u8 sText_TheHouseInTheWoodsConfrontLocation[] = _("WEIRFORD HOUSE");
+static const u8 sText_TheHouseInTheWoodsConfrontDetail[] = _("Confront the malevolent force and save Toby");
 static const u8 sText_TheHouseInTheWoodsCompleteLocation[] = _("WEIRFORD TOWN");
 static const u8 sText_TheHouseInTheWoodsCompleteDetail[] = _("Report back to the man in Weirford");
 
