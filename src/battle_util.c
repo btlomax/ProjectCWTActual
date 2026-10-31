@@ -706,7 +706,8 @@ void HandleAction_Run(void)
     {
         if (IsOnPlayerSide(gBattlerAttacker))
         {
-            if (!TryRunFromBattle(gBattlerAttacker)) // failed to run away
+            if ((IsScriptedBossBattle() && !ScriptedBossBattleAllowsEscape())
+             || !TryRunFromBattle(gBattlerAttacker)) // failed to run away
             {
                 ClearVariousBattlerFlags(gBattlerAttacker);
                 gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_CANT_ESCAPE_2;

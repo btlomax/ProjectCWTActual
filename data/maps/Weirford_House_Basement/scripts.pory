@@ -9,18 +9,13 @@ script Weirford_House_Basement_ShuppetBoss {
     }
 
     playmoncry(SPECIES_SHUPPET, CRY_MODE_NORMAL)
-    trainerbattle_single(
-        TRAINER_WEIRFORD_HOUSE_SHUPPET,
-        Weirford_House_Basement_ShuppetBoss_PreBattle,
-        Weirford_House_Basement_ShuppetBoss_Defeated,
-        Weirford_House_Basement_ShuppetBoss_AfterBattle
-    )
+    setvar(VAR_0x8004, SCRIPTED_BOSS_WEIRFORD_HOUSE_SHUPPET)
+    special(StartScriptedBossBattle)
 
-    end
-}
+    if (var(VAR_RESULT) != B_OUTCOME_WON) {
+        end
+    }
 
-script Weirford_House_Basement_ShuppetBoss_AfterBattle {
-    lockall
     msgbox(format(
         "SHUPPET is weak!\p"
         "Hanging on by a thread, TOBY reaches out to you."),
@@ -54,12 +49,4 @@ script Weirford_House_Basement_ShuppetBoss_AfterBattle {
     setvar(VAR_WEIRFORD_HOUSE_STATE, 4)
     releaseall
     end
-}
-
-text Weirford_House_Basement_ShuppetBoss_PreBattle {
-    "SHUUUPPET!"
-}
-
-text Weirford_House_Basement_ShuppetBoss_Defeated {
-    "..."
 }

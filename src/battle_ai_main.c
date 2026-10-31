@@ -314,7 +314,12 @@ void BattleAI_SetupFlags(void)
         return;
     }
 
-    if (IsWildMonSmart() && !(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_TRAINER)))
+    if (gBattleTypeFlags & BATTLE_TYPE_SCRIPTED_BOSS)
+    {
+        gAiThinkingStruct->aiFlags[B_BATTLER_1] = GetScriptedBossAiFlags();
+        gAiThinkingStruct->aiFlags[B_BATTLER_3] = GetScriptedBossAiFlags();
+    }
+    else if (IsWildMonSmart() && !(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_TRAINER)))
     {
         // smart wild AI
         gAiThinkingStruct->aiFlags[B_BATTLER_1] = GetAiFlags(0xFFFF, B_BATTLER_1);

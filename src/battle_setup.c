@@ -2,6 +2,7 @@
 #include "battle.h"
 #include "load_save.h"
 #include "battle_setup.h"
+#include "scripted_boss.h"
 #include "battle_tower.h"
 #include "battle_transition.h"
 #include "main.h"
@@ -98,6 +99,7 @@ EWRAM_DATA u16 gPartnerTrainerId = 0;
 EWRAM_DATA static u8 *sTrainerBattleEndScript = NULL;
 EWRAM_DATA static bool8 sShouldCheckTrainerBScript = FALSE;
 EWRAM_DATA static u8 sNoOfPossibleTrainerRetScripts = 0;
+EWRAM_DATA static enum ScriptedBossId sActiveScriptedBoss = SCRIPTED_BOSS_NONE;
 
 // The first transition is used if the enemy Pokémon are lower level than our Pokémon.
 // Otherwise, the second transition is used.
@@ -498,6 +500,65 @@ void BattleSetup_StartScriptedWildBattle(void)
     TryUpdateGymLeaderRematchFromWild();
 }
 
+bool32 IsScriptedBossBattle(void)
+{
+    return sActiveScriptedBoss != SCRIPTED_BOSS_NONE;
+}
+
+bool32 ScriptedBossBattleAllowsItems(void)
+{
+    return gScriptedBosses[sActiveScriptedBoss].allowItems;
+}
+
+bool32 ScriptedBossBattleAllowsCapture(void)
+{
+    return gScriptedBosses[sActiveScriptedBoss].allowCapture;
+}
+
+bool32 ScriptedBossBattleAllowsEscape(void)
+{
+    return gScriptedBosses[sActiveScriptedBoss].allowEscape;
+}
+
+u64 GetScriptedBossAiFlags(void)
+{
+    return gScriptedBosses[sActiveScriptedBoss].aiFlags;
+}
+
+void StartScriptedBossBattle(void)
+{
+    struct Trainer bossTrainer;
+    enum ScriptedBossId bossId = gSpecialVar_0x8004;
+    const struct ScriptedBoss *boss;
+
+    assertf(bossId > SCRIPTED_BOSS_NONE && bossId < SCRIPTED_BOSS_COUNT, "invalid scripted boss: %d", bossId)
+    {
+        return;
+    }
+
+    boss = &gScriptedBosses[bossId];
+    bossTrainer = (struct Trainer)
+    {
+        .aiFlags = boss->aiFlags,
+        .party = &boss->mon,
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_1,
+        .gender = TRAINER_GENDER_MALE,
+        .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+        .partySize = 1,
+    };
+
+    CreateNPCTrainerPartyFromTrainer(gParties[B_TRAINER_OPPONENT_A], &bossTrainer, FALSE, BATTLE_TYPE_TRAINER);
+    sActiveScriptedBoss = bossId;
+    LockPlayerFieldControls();
+    gMain.savedCallback = CB2_EndScriptedWildBattle;
+    gBattleTypeFlags = BATTLE_TYPE_SCRIPTED_BOSS;
+    CreateBattleStartTask(GetWildBattleTransition(), boss->battleMusic);
+    IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
+    IncrementGameStat(GAME_STAT_WILD_BATTLES);
+    IncrementDailyWildBattles();
+    TryUpdateGymLeaderRematchFromWild();
+}
+
 void BattleSetup_StartScriptedDoubleWildBattle(void)
 {
     LockPlayerFieldControls();
@@ -674,6 +735,7 @@ static void CB2_EndWildBattle(void)
 
 static void CB2_EndScriptedWildBattle(void)
 {
+    sActiveScriptedBoss = SCRIPTED_BOSS_NONE;
     CpuFill16(0, (void *)(BG_PLTT), BG_PLTT_SIZE);
     ResetOamRange(0, 128);
 
