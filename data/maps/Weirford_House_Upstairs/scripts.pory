@@ -1,12 +1,101 @@
 mapscripts Weirford_House_Upstairs_MapScripts {}
 
-script Weirford_House_Upstairs_Downstairs {
-    if (var(VAR_WEIRFORD_HOUSE_STATE) == 0) {
+script Weirford_House_Upstairs_StairRouting
+{
+    playse(SE_EXIT)
+
+    if (var(VAR_WEIRFORD_HOUSE_STATE) == 0 || var(VAR_WEIRFORD_HOUSE_STATE) == 4)
+    {
         warpsilent(MAP_WEIRFORD_HOUSE, 8, 2)
     }
-    else {
+    else
+    {
         warpsilent(MAP_WEIRFORD_HOUSE_2, 8, 2)
     }
     waitstate
     end
+}
+
+script Weirford_House_Upstairs_FirstClue
+{
+    lock
+    msgbox(format("The painting has been slashed. There are fragments of the canvas scattered on the floor."))
+    setflag(FLAG_WEIRFORD_HOUSE_INITIAL_CLUE_1)
+
+    call(Weirford_House_SealDoorAfterFirstClueFound)
+    call(Weirford_House_Upstairs_CheckClues)
+    release
+}
+
+script Weirford_House_Upstairs_SecondClue
+{
+    lock
+    msgbox(format("The bed feels strangely warm, as if someone has been lying in it recently."))
+    setflag(FLAG_WEIRFORD_HOUSE_INITIAL_CLUE_2)
+
+    call(Weirford_House_SealDoorAfterFirstClueFound)
+    call(Weirford_House_Upstairs_CheckClues)
+
+    release
+}
+
+script Weirford_House_Upstairs_ThirdClue
+{
+    lock
+    msgbox(format("The TV screen is cracked, but you can hear the faint sound of static coming from it."))
+
+    if(!flag(FLAG_WEIRFORD_HOUSE_INITIAL_CLUE_3))
+    {
+        delay(60)
+        msgbox(format("Dark fabric suddenly bursts through the shattered glass, reaching out towards you!"))
+        fadescreen(FADE_TO_WHITE)
+        playmoncry(SPECIES_SHUPPET, CRY_MODE_NORMAL)
+        delay(10)
+        fadescreen(FADE_FROM_WHITE)
+        waitmoncry()
+
+        applymovement(OBJ_EVENT_ID_PLAYER, Weirford_House_Upstairs_Movement_Player_JumpBack)
+        waitmovement()
+        msgbox(("Was that...a doll?"), MSGBOX_DEFAULT)
+
+        setflag(FLAG_WEIRFORD_HOUSE_INITIAL_CLUE_3)
+    }
+
+    call(Weirford_House_SealDoorAfterFirstClueFound)
+    call(Weirford_House_Upstairs_CheckClues)
+
+    release
+}
+
+script Weirford_House_SealDoorAfterFirstClueFound
+{
+    if (flag(FLAG_WEIRFORD_HOUSE_DOOR_SEALED)) {
+        return
+    }
+
+    setflag(FLAG_WEIRFORD_HOUSE_DOOR_SEALED)
+    playse(SE_CLICK)
+    msgbox(format("Somewhere downstairs, a lock clicks shut."), MSGBOX_DEFAULT)
+    return
+}
+
+script Weirford_House_Upstairs_CheckClues
+{
+    if (var(VAR_WEIRFORD_HOUSE_STATE) != 0) {
+        return
+    }
+
+    if (flag(FLAG_WEIRFORD_HOUSE_INITIAL_CLUE_1) &&
+        flag(FLAG_WEIRFORD_HOUSE_INITIAL_CLUE_2) &&
+        flag(FLAG_WEIRFORD_HOUSE_INITIAL_CLUE_3))
+    {
+    setvar(VAR_WEIRFORD_HOUSE_STATE, 1)
+    msgbox(format("The temperature suddenly drops, your breath misting in the cold air. A faint whisper drifts from the stairway..."), MSGBOX_DEFAULT)
+    }
+}
+
+movement Weirford_House_Upstairs_Movement_Player_JumpBack
+{
+    jump_down
+    face_up
 }

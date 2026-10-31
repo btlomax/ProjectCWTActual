@@ -90,6 +90,16 @@ Weirford_Forest_MapScripts_Weirford_House::
 	end
 
 
+Weirford_Forest_MapScripts_HouseWarp::
+# 93 "data/maps/Weirford_Forest/scripts.pory"
+	playse SE_DOOR
+# 94 "data/maps/Weirford_Forest/scripts.pory"
+	warpsilent MAP_WEIRFORD_HOUSE, 7, 11
+# 95 "data/maps/Weirford_Forest/scripts.pory"
+	waitstate
+	end
+
+
 Weirford_Forest_MapScripts_Entrance_Sign_Text_0:
 # 77 "data/maps/Weirford_Forest/scripts.pory"
 	.string "Weirford Forest$"
@@ -103,65 +113,65 @@ Weirford_Forest_MapScripts_Weirford_House_Text_0:
 	.string "Welcome to Weirford House$"
 
 Weirford_Forest_MapScripts_CorpoEric_TrainerPreBattle::
-# 92 "data/maps/Weirford_Forest/scripts.pory"
+# 100 "data/maps/Weirford_Forest/scripts.pory"
 	.string "AH! Where did you come from?!$"
 
 Weirford_Forest_MapScripts_CorpoEric_TrainerPostBattle::
-# 96 "data/maps/Weirford_Forest/scripts.pory"
+# 104 "data/maps/Weirford_Forest/scripts.pory"
 	.string "I'm hiding from my manager...$"
 
 Weirford_Forest_MapScripts_CorpoEric_TrainerDefeated::
-# 100 "data/maps/Weirford_Forest/scripts.pory"
+# 108 "data/maps/Weirford_Forest/scripts.pory"
 	.string "I only lost because you scared me!$"
 
 Weirford_Forest_MapScripts_LassLila_TrainerPreBattle::
-# 104 "data/maps/Weirford_Forest/scripts.pory"
+# 112 "data/maps/Weirford_Forest/scripts.pory"
 	.string "I'll tell you a secret if you\ncan beat me!$"
 
 Weirford_Forest_MapScripts_LassLila_TrainerPostBattle::
-# 108 "data/maps/Weirford_Forest/scripts.pory"
+# 116 "data/maps/Weirford_Forest/scripts.pory"
 	.string "There's a house hidden deep in the\n"
 	.string "forest.$"
 
 Weirford_Forest_MapScripts_LassLila_TrainerDefeated::
-# 112 "data/maps/Weirford_Forest/scripts.pory"
+# 120 "data/maps/Weirford_Forest/scripts.pory"
 	.string "UH! FINE I'LL TELL YOU!$"
 
 Weirford_Forest_MapScripts_AcolyteLin_TrainerPreBattle::
-# 116 "data/maps/Weirford_Forest/scripts.pory"
+# 124 "data/maps/Weirford_Forest/scripts.pory"
 	.string "Halt, young traveler!\n"
 	.string "Show me the strength you carry.$"
 
 Weirford_Forest_MapScripts_AcolyteLin_TrainerPostBattle::
-# 121 "data/maps/Weirford_Forest/scripts.pory"
+# 129 "data/maps/Weirford_Forest/scripts.pory"
 	.string "You carry no Crest, yet your Pokémon\n"
 	.string "strike with unyielding weight...\p"
 	.string "The Weirford Convent must hear of this.$"
 
 Weirford_Forest_MapScripts_AcolyteLin_TrainerDefeated::
-# 127 "data/maps/Weirford_Forest/scripts.pory"
+# 135 "data/maps/Weirford_Forest/scripts.pory"
 	.string "Yes, there is power in you...$"
 
 Weirford_Forest_MapScripts_CamperColin_TrainerPreBattle::
-# 131 "data/maps/Weirford_Forest/scripts.pory"
+# 139 "data/maps/Weirford_Forest/scripts.pory"
 	.string "This is my first time camping in the\nforest!$"
 
 Weirford_Forest_MapScripts_CamperColin_TrainerPostBattle::
-# 135 "data/maps/Weirford_Forest/scripts.pory"
+# 143 "data/maps/Weirford_Forest/scripts.pory"
 	.string "The camping is NOT going well...$"
 
 Weirford_Forest_MapScripts_CamperColin_TrainerDefeated::
-# 139 "data/maps/Weirford_Forest/scripts.pory"
+# 147 "data/maps/Weirford_Forest/scripts.pory"
 	.string "I'm trying my best not to SHAKE with\nFEAR.$"
 
 Weirford_Forest_MapScripts_BugCatcherSam_TrainerPreBattle::
-# 143 "data/maps/Weirford_Forest/scripts.pory"
+# 151 "data/maps/Weirford_Forest/scripts.pory"
 	.string "Have you got any Bug Pokémon?$"
 
 Weirford_Forest_MapScripts_BugCatcherSam_TrainerPostBattle::
-# 147 "data/maps/Weirford_Forest/scripts.pory"
+# 155 "data/maps/Weirford_Forest/scripts.pory"
 	.string "There are bug Pokemon here...\nI can feel them crawling up my OH SHI-\p$"
 
 Weirford_Forest_MapScripts_BugCatcherSam_TrainerDefeated::
-# 151 "data/maps/Weirford_Forest/scripts.pory"
+# 159 "data/maps/Weirford_Forest/scripts.pory"
 	.string "I can't believe you beat my team of\nalmighty bugs!$"

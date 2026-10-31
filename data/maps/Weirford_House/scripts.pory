@@ -1,7 +1,42 @@
 mapscripts Weirford_House_MapScripts {}
 
-script Weirford_House_GoUpstairs {
+script Weirford_House_GoUpstairs
+{
+    playse(SE_EXIT)
     warpsilent(MAP_WEIRFORD_HOUSE_UPSTAIRS, 1, 2)
     waitstate
+    end
+}
+
+script Weirford_House_FrontDoorAccess
+{
+    if(!flag(FLAG_WEIRFORD_HOUSE_DOOR_SEALED))
+    {
+        playse(SE_EXIT)
+        warpsilent(MAP_WEIRFORD_FOREST, 36, 6)
+        waitstate
+        end
+    }
+    lock
+    playse(SE_CLICK)
+    msgbox("The door is locked.", MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script Weirford_House_BasementDoorAccess
+{
+    if(var(VAR_WEIRFORD_HOUSE_STATE) == 3 || var(VAR_WEIRFORD_HOUSE_STATE) == 4)
+    {
+        playse(SE_EXIT)
+        warpsilent(MAP_WEIRFORD_HOUSE_BASEMENT, 4, 2)
+        waitstate
+        end
+    }
+
+    lock
+
+    msgbox("The basement door is locked.", MSGBOX_DEFAULT)
+    release
     end
 }

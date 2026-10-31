@@ -88,6 +88,14 @@ script Weirford_Forest_MapScripts_Weirford_House {
     end
 }
 
+script Weirford_Forest_MapScripts_HouseWarp
+{
+    playse(SE_DOOR)
+    warpsilent(MAP_WEIRFORD_HOUSE, 7, 11)
+    waitstate
+    end
+}
+
 
 text Weirford_Forest_MapScripts_CorpoEric_TrainerPreBattle {
     "AH! Where did you come from?!"

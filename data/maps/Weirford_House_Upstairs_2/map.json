@@ -26,5 +26,22 @@
       "script": "Weirford_House_Upstairs_2_GoDownstairs"
     }
   ],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 10,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Weirford_House_Upstairs_2_Second_Clue"
+    },
+    {
+      "type": "sign",
+      "x": 2,
+      "y": 6,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Weirford_House_Upstairs_2_First_Clue"
+    }
+  ]
 }

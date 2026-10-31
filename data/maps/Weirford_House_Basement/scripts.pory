@@ -1,6 +1,19 @@
-mapscripts Weirford_House_Basement_MapScripts {}
+mapscripts Weirford_House_Basement_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Weirford_House_Basement_OnTransition
+}
 
-script Weirford_House_Basement_ShuppetBoss {
+script Weirford_House_Basement_OnTransition
+{
+    if (var(VAR_WEIRFORD_HOUSE_STATE) == 4) {
+        setflag(FLAG_HIDE_WEIRFORD_HOUSE_TOBY)
+        removeobject(LOCALID_TOBY)
+    }
+
+    end
+}
+
+script Weirford_House_Basement_ShuppetBoss
+{
     lockall
 
     if (var(VAR_WEIRFORD_HOUSE_STATE) == 4) {
@@ -9,18 +22,24 @@ script Weirford_House_Basement_ShuppetBoss {
     }
 
     playmoncry(SPECIES_SHUPPET, CRY_MODE_NORMAL)
+    waitmoncry()
     setvar(VAR_0x8004, SCRIPTED_BOSS_WEIRFORD_HOUSE_SHUPPET)
     special(StartScriptedBossBattle)
 
     if (var(VAR_RESULT) != B_OUTCOME_WON) {
+        releaseall
         end
     }
 
     msgbox(format(
-        "SHUPPET is weak!\p"
-        "Hanging on by a thread, TOBY reaches out to you."),
+        "SHUPPET begins to retreat!"),
         MSGBOX_DEFAULT
     )
+
+    playmoncry(SPECIES_SHUPPET, CRY_MODE_NORMAL)
+    waitmoncry()
+
+    msgbox(format("But Toby is fading away. You need to act quickly!"))
 
     msgbox("What will you do?", MSGBOX_DEFAULT)
     multichoice(17, 6, MULTI_WEIRFORD_HOUSE_DECISION, TRUE)
@@ -46,7 +65,17 @@ script Weirford_House_Basement_ShuppetBoss {
         msgbox("The world seems a little brighter.", MSGBOX_DEFAULT)
     }
 
+    setflag(FLAG_HIDE_WEIRFORD_HOUSE_TOBY)
+    clearflag(FLAG_WEIRFORD_HOUSE_DOOR_SEALED)
     setvar(VAR_WEIRFORD_HOUSE_STATE, 4)
     releaseall
+    end
+}
+
+script Weirford_House_Basement_Stairs
+{
+    playse(SE_EXIT)
+    warpsilent(MAP_WEIRFORD_HOUSE, 13, 2)
+    waitstate
     end
 }

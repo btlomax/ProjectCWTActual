@@ -14,22 +14,7 @@
   "battle_scene": "MAP_BATTLE_SCENE_INDOOR_1",
   "connections": null,
   "object_events": [],
-  "warp_events": [
-    {
-      "x": 7,
-      "y": 11,
-      "elevation": 0,
-      "dest_map": "MAP_WEIRFORD_FOREST",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 8,
-      "y": 11,
-      "elevation": 0,
-      "dest_map": "MAP_WEIRFORD_FOREST",
-      "dest_warp_id": "0"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [
     {
       "type": "trigger",
@@ -39,7 +24,34 @@
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "Weirford_House_GoUpstairs"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Weirford_House_FrontDoorAccess"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Weirford_House_FrontDoorAccess"
     }
   ],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Weirford_House_BasementDoorAccess"
+    }
+  ]
 }

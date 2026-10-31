@@ -143,16 +143,18 @@
       "flag": "FLAG_WEIRFORD_FOREST_THIRD_ITEM"
     }
   ],
-  "warp_events": [
+  "warp_events": [],
+  "coord_events": [
     {
+      "type": "trigger",
       "x": 36,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_WEIRFORD_HOUSE",
-      "dest_warp_id": "0"
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Weirford_Forest_MapScripts_HouseWarp"
     }
   ],
-  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",
