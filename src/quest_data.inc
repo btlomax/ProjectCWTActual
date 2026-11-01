@@ -111,8 +111,8 @@ static const u8 sText_TheHouseInTheWoodsInvestigateLocation[] = _("WEIRFORD HOUS
 static const u8 sText_TheHouseInTheWoodsInvestigateDetail[] = _("Investigate the house thoroughly");
 static const u8 sText_TheHouseInTheWoodsConfrontLocation[] = _("WEIRFORD HOUSE");
 static const u8 sText_TheHouseInTheWoodsConfrontDetail[] = _("Confront the malevolent force and save Toby");
-static const u8 sText_TheHouseInTheWoodsCompleteLocation[] = _("WEIRFORD TOWN");
-static const u8 sText_TheHouseInTheWoodsCompleteDetail[] = _("Report back to the man in Weirford");
+static const u8 sText_TheHouseInTheWoodsReturnToTheManLocation[] = _("WEIRFORD TOWN");
+static const u8 sText_TheHouseInTheWoodsReturnToTheManDetail[] = _("Return to the man in Weirford");
 
 static const struct QuestStageDefinition sQuestTheHouseInTheWoodsStages[] =
 {
@@ -144,10 +144,10 @@ static const struct QuestStageDefinition sQuestTheHouseInTheWoodsStages[] =
         .objectiveType = QUEST_OBJECTIVE_NONE,
         .target = 0,
     },
-    [QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_COMPLETE] =
+    [QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_RETURN_TO_THE_MAN] =
     {
-        .objective = sText_TheHouseInTheWoodsCompleteDetail,
-        .location = sText_TheHouseInTheWoodsCompleteLocation,
+        .objective = sText_TheHouseInTheWoodsReturnToTheManDetail,
+        .location = sText_TheHouseInTheWoodsReturnToTheManLocation,
         .objectiveType = QUEST_OBJECTIVE_NONE,
         .target = 0,
     },

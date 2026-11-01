@@ -1,4 +1,21 @@
-mapscripts Weirford_MapScripts {}
+mapscripts Weirford_MapScripts
+{
+    MAP_SCRIPT_ON_TRANSITION: Weirford_MapScripts_OnTransition
+}
+
+script Weirford_MapScripts_OnTransition
+{
+    if (flag(FLAG_BADGE01_GET)) {
+        setflag(FLAG_HIDE_WEIRFORD_JONAS_OUTSIDE)
+        removeobject(LOCALID_WEIRFORD_JONAS_OUTSIDE)
+    }
+    else {
+        clearflag(FLAG_HIDE_WEIRFORD_JONAS_OUTSIDE)
+        addobject(LOCALID_WEIRFORD_JONAS_OUTSIDE)
+    }
+
+    end
+}
 
 script Weirford_MapScripts_GreetingsSign {
     msgbox("Welcome to Weirford!", MSGBOX_SIGN)
@@ -19,9 +36,32 @@ script Weirford_MapScripts_MartNPC {
 script Weirford_MapScripts_GardenNPC {
     lock
     faceplayer
-    msgbox("A bit of greenery in a town is\nalways welcome."
-    "It makes everything feel fresher.\p", MSGBOX_DEFAULT)
+    msgbox(format("A bit of greenery in a town is always welcome."
+    "It makes everything feel fresher."), MSGBOX_DEFAULT)
     release
     end
 }
 
+script Weirford_MapScripts_BasinSign
+{
+    msgbox(format("The stone basin is filled with murky water after the recent storms.\p"), MSGBOX_SIGN)
+
+    if (var(VAR_QUEST_THE_HOUSE_IN_THE_WOODS_STATE) > 0 &&
+        var(VAR_QUEST_THE_HOUSE_IN_THE_WOODS_STATE) < 4 &&
+        !flag(FLAG_FOUND_LOST_DOLL))
+    {
+        msgbox(format("You notice a water-logged bundle of cloth floating in the basin.\p"), MSGBOX_DEFAULT)
+        msgbox(format("Reach in and grab it?"), MSGBOX_YESNO)
+
+        if (var(VAR_RESULT) == YES)
+        {
+            msgbox(format("It's very wet and soggy, but it seems intact.\p"), MSGBOX_DEFAULT)
+            giveitem(ITEM_DAMP_RAGDOLL)
+            setflag(FLAG_FOUND_LOST_DOLL)
+        }
+        else
+        {
+            msgbox(format("You decide not to grab the bundle."), MSGBOX_DEFAULT)
+        }
+    }
+}

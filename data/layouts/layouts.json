@@ -9570,6 +9570,16 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Weirford_House_Upstairs_2/border.bin",
       "blockdata_filepath": "data/layouts/Weirford_House_Upstairs_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_WEIRFORD_JONAS_HOUSE",
+      "name": "Weirford_Jonas_House_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Weirford_Jonas_House/border.bin",
+      "blockdata_filepath": "data/layouts/Weirford_Jonas_House/map.bin"
     }
   ]
 }

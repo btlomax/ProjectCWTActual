@@ -15832,6 +15832,22 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
+
+    [ITEM_DAMP_RAGDOLL] =
+    {
+        .name = ITEM_NAME("Damp Ragdoll"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A small rag doll,\n"
+            "damp and cold to\n"
+            "the touch."),
+        .importance = 2,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_PokeDoll,
+        .iconPalette = gItemIconPalette_PokeDoll,
+    },
 };
 
 #undef ITEM_NAME

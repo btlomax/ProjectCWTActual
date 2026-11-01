@@ -1,0 +1,18 @@
+mapscripts Weirford_Jonas_House_MapScripts
+{
+    MAP_SCRIPT_ON_TRANSITION: Weirford_Jonas_House_MapScripts_OnTransition
+}
+
+script Weirford_Jonas_House_MapScripts_OnTransition
+{
+    if (flag(FLAG_BADGE01_GET)) {
+        clearflag(FLAG_HIDE_WEIRFORD_JONAS_INSIDE)
+        addobject(LOCALID_WEIRFORD_JONAS_INSIDE)
+    }
+    else {
+        setflag(FLAG_HIDE_WEIRFORD_JONAS_INSIDE)
+        removeobject(LOCALID_WEIRFORD_JONAS_INSIDE)
+    }
+
+    end
+}

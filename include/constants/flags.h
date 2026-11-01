@@ -1266,16 +1266,16 @@
 #define FLAG_WEIRFORD_HOUSE_INITIAL_CLUE_3                          0x4B4
 #define FLAG_WEIRFORD_HOUSE_ALTERED_CLUE_1                          0x4B5
 #define FLAG_WEIRFORD_HOUSE_ALTERED_CLUE_2                          0x4B6
-#define FLAG_WEIRFORD_HOUSE_CHOSE_SHUPPET                           0x4B7
+#define FLAG_UNUSED_0x4B7                                           0x4B7 // Unused Flag
 #define FLAG_WEIRFORD_HOUSE_DOOR_SEALED                             0x4B8
 #define FLAG_HIDE_WEIRFORD_HOUSE_TOBY                               0x4B9
 #define FLAG_HIDE_WEIRFORD_HOUSE_DOWNSTAIRS_TOBY                    0x4BA
 #define FLAG_WEIRFORD_HOUSE_ALTERED_DOWNSTAIRS_ENTERED              0x4BB
 #define FLAG_WEIRFORD_HOUSE_ENTERED                                 0x4BC
 #define FLAG_FOUND_LOST_DOLL                                        0x4BD
-#define FLAG_UNUSED_0x4BE                                           0x4BE // Unused Flag
-#define FLAG_UNUSED_0x4BF                                           0x4BF // Unused Flag
-#define FLAG_UNUSED_0x4C0                                           0x4C0 // Unused Flag
+#define FLAG_WEIRFORD_HOUSE_TOBY_SAVED                              0x4BE
+#define FLAG_HIDE_WEIRFORD_JONAS_OUTSIDE                            0x4BF
+#define FLAG_HIDE_WEIRFORD_JONAS_INSIDE                             0x4C0
 #define FLAG_UNUSED_0x4C1                                           0x4C1 // Unused Flag
 #define FLAG_UNUSED_0x4C2                                           0x4C2 // Unused Flag
 #define FLAG_UNUSED_0x4C3                                           0x4C3 // Unused Flag

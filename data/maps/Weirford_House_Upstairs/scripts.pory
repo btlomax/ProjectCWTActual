@@ -19,7 +19,7 @@ script Weirford_House_Upstairs_StairRouting
 script Weirford_House_Upstairs_FirstClue
 {
     lock
-    msgbox(format("The painting has been slashed. There are fragments of the canvas scattered on the floor."))
+    msgbox(format("The painting has been slashed. There are fragments of the canvas scattered on the floor.\p"), MSGBOX_SIGN)
     setflag(FLAG_WEIRFORD_HOUSE_INITIAL_CLUE_1)
 
     call(Weirford_House_SealDoorAfterFirstClueFound)
@@ -30,7 +30,7 @@ script Weirford_House_Upstairs_FirstClue
 script Weirford_House_Upstairs_SecondClue
 {
     lock
-    msgbox(format("The bed feels strangely warm, as if someone has been lying in it recently."))
+    msgbox(format("The bed feels strangely warm, as if someone has been lying in it recently.\p"), MSGBOX_SIGN)
     setflag(FLAG_WEIRFORD_HOUSE_INITIAL_CLUE_2)
 
     call(Weirford_House_SealDoorAfterFirstClueFound)
@@ -42,7 +42,7 @@ script Weirford_House_Upstairs_SecondClue
 script Weirford_House_Upstairs_ThirdClue
 {
     lock
-    msgbox(format("The TV screen is cracked, but you can hear the faint sound of static coming from it."))
+    msgbox(format("The TV screen is cracked, but you can hear the faint sound of static coming from it.\p"), MSGBOX_SIGN)
 
     if(!flag(FLAG_WEIRFORD_HOUSE_INITIAL_CLUE_3))
     {

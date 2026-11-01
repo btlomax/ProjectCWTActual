@@ -16,7 +16,7 @@ Weirford_House_Upstairs_2_First_Clue::
 # 15 "data/maps/Weirford_House_Upstairs_2/scripts.pory"
 	lock
 # 16 "data/maps/Weirford_House_Upstairs_2/scripts.pory"
-	msgbox Weirford_House_Upstairs_2_First_Clue_Text_0, MSGBOX_DEFAULT
+	msgbox Weirford_House_Upstairs_2_First_Clue_Text_0, MSGBOX_SIGN
 # 17 "data/maps/Weirford_House_Upstairs_2/scripts.pory"
 	setflag FLAG_WEIRFORD_HOUSE_ALTERED_CLUE_1
 # 19 "data/maps/Weirford_House_Upstairs_2/scripts.pory"
@@ -30,7 +30,7 @@ Weirford_House_Upstairs_2_Second_Clue::
 # 25 "data/maps/Weirford_House_Upstairs_2/scripts.pory"
 	lock
 # 27 "data/maps/Weirford_House_Upstairs_2/scripts.pory"
-	msgbox Weirford_House_Upstairs_2_Second_Clue_Text_0, MSGBOX_DEFAULT
+	msgbox Weirford_House_Upstairs_2_Second_Clue_Text_0, MSGBOX_SIGN
 # 28 "data/maps/Weirford_House_Upstairs_2/scripts.pory"
 	msgbox Weirford_House_Upstairs_2_Second_Clue_Text_1, MSGBOX_DEFAULT
 # 29 "data/maps/Weirford_House_Upstairs_2/scripts.pory"

@@ -46,35 +46,32 @@ Weirford_House_Basement_ShuppetBoss::
 	msgbox Weirford_House_Basement_ShuppetBoss_Text_1
 # 44 "data/maps/Weirford_House_Basement/scripts.pory"
 	goto_if_set FLAG_FOUND_LOST_DOLL, Weirford_House_Basement_ShuppetBoss_8
-# 50 "data/maps/Weirford_House_Basement/scripts.pory"
+Weirford_House_Basement_ShuppetBoss_7:
+# 48 "data/maps/Weirford_House_Basement/scripts.pory"
 	msgbox Weirford_House_Basement_ShuppetBoss_Text_2, MSGBOX_DEFAULT
-# 51 "data/maps/Weirford_House_Basement/scripts.pory"
+# 49 "data/maps/Weirford_House_Basement/scripts.pory"
 	multichoice 17, 6, MULTI_WEIRFORD_HOUSE_DECISION, TRUE
-# 53 "data/maps/Weirford_House_Basement/scripts.pory"
+# 51 "data/maps/Weirford_House_Basement/scripts.pory"
 	compare VAR_RESULT, 0
-	goto_if_eq Weirford_House_Basement_ShuppetBoss_16
-# 66 "data/maps/Weirford_House_Basement/scripts.pory"
+	goto_if_eq Weirford_House_Basement_ShuppetBoss_11
+# 62 "data/maps/Weirford_House_Basement/scripts.pory"
 	msgbox Weirford_House_Basement_ShuppetBoss_Text_6, MSGBOX_DEFAULT
-# 67 "data/maps/Weirford_House_Basement/scripts.pory"
+# 63 "data/maps/Weirford_House_Basement/scripts.pory"
 	playse SE_FLEE
-# 68 "data/maps/Weirford_House_Basement/scripts.pory"
+# 64 "data/maps/Weirford_House_Basement/scripts.pory"
 	msgbox Weirford_House_Basement_ShuppetBoss_Text_7, MSGBOX_DEFAULT
-# 69 "data/maps/Weirford_House_Basement/scripts.pory"
+# 65 "data/maps/Weirford_House_Basement/scripts.pory"
 	msgbox Weirford_House_Basement_ShuppetBoss_Text_8, MSGBOX_DEFAULT
-# 71 "data/maps/Weirford_House_Basement/scripts.pory"
+# 67 "data/maps/Weirford_House_Basement/scripts.pory"
+	setflag FLAG_WEIRFORD_HOUSE_TOBY_SAVED
+# 68 "data/maps/Weirford_House_Basement/scripts.pory"
 	addvar VAR_PLAYER_MORALITY, 5
-# 72 "data/maps/Weirford_House_Basement/scripts.pory"
+# 69 "data/maps/Weirford_House_Basement/scripts.pory"
 	msgbox Weirford_House_Basement_ShuppetBoss_Text_9, MSGBOX_DEFAULT
-Weirford_House_Basement_ShuppetBoss_15:
-# 75 "data/maps/Weirford_House_Basement/scripts.pory"
-	setflag FLAG_HIDE_WEIRFORD_HOUSE_TOBY
-# 76 "data/maps/Weirford_House_Basement/scripts.pory"
-	clearflag FLAG_WEIRFORD_HOUSE_DOOR_SEALED
-# 77 "data/maps/Weirford_House_Basement/scripts.pory"
-	setvar VAR_WEIRFORD_HOUSE_STATE, 4
-# 78 "data/maps/Weirford_House_Basement/scripts.pory"
-	releaseall
-	end
+Weirford_House_Basement_ShuppetBoss_10:
+# 72 "data/maps/Weirford_House_Basement/scripts.pory"
+	goto Weirford_House_Basement_AdvanceQuest
+	return
 
 Weirford_House_Basement_ShuppetBoss_2:
 # 20 "data/maps/Weirford_House_Basement/scripts.pory"
@@ -86,83 +83,73 @@ Weirford_House_Basement_ShuppetBoss_5:
 	releaseall
 	end
 
-Weirford_House_Basement_ShuppetBoss_7:
-# 82 "data/maps/Weirford_House_Basement/scripts.pory"
-	msgbox Weirford_House_Basement_ShuppetBoss_Text_2, MSGBOX_DEFAULT
-# 83 "data/maps/Weirford_House_Basement/scripts.pory"
-	multichoice 17, 6, MULTI_WEIRFORD_HOUSE_DECISION, TRUE
-# 85 "data/maps/Weirford_House_Basement/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_eq Weirford_House_Basement_ShuppetBoss_12
-# 97 "data/maps/Weirford_House_Basement/scripts.pory"
-	msgbox Weirford_House_Basement_ShuppetBoss_Text_6, MSGBOX_DEFAULT
-# 98 "data/maps/Weirford_House_Basement/scripts.pory"
-	playse SE_FLEE
-# 99 "data/maps/Weirford_House_Basement/scripts.pory"
-	msgbox Weirford_House_Basement_ShuppetBoss_Text_7, MSGBOX_DEFAULT
-# 100 "data/maps/Weirford_House_Basement/scripts.pory"
-	msgbox Weirford_House_Basement_ShuppetBoss_Text_8, MSGBOX_DEFAULT
-# 102 "data/maps/Weirford_House_Basement/scripts.pory"
-	addvar VAR_PLAYER_MORALITY, 5
-# 103 "data/maps/Weirford_House_Basement/scripts.pory"
-	msgbox Weirford_House_Basement_ShuppetBoss_Text_9, MSGBOX_DEFAULT
-Weirford_House_Basement_ShuppetBoss_11:
-# 106 "data/maps/Weirford_House_Basement/scripts.pory"
-	setflag FLAG_HIDE_WEIRFORD_HOUSE_TOBY
-# 107 "data/maps/Weirford_House_Basement/scripts.pory"
-	clearflag FLAG_WEIRFORD_HOUSE_DOOR_SEALED
-# 108 "data/maps/Weirford_House_Basement/scripts.pory"
-	setvar VAR_WEIRFORD_HOUSE_STATE, 4
-# 109 "data/maps/Weirford_House_Basement/scripts.pory"
-	releaseall
-	end
-
 Weirford_House_Basement_ShuppetBoss_8:
-# 46 "data/maps/Weirford_House_Basement/scripts.pory"
-	call Weirford_House_Basement_LostDollResolution
+# 45 "data/maps/Weirford_House_Basement/scripts.pory"
+	goto Weirford_House_Basement_LostDollResolution
 	goto Weirford_House_Basement_ShuppetBoss_7
 
-Weirford_House_Basement_ShuppetBoss_12:
-# 86 "data/maps/Weirford_House_Basement/scripts.pory"
-	setflag FLAG_WEIRFORD_HOUSE_CHOSE_SHUPPET
-# 87 "data/maps/Weirford_House_Basement/scripts.pory"
+Weirford_House_Basement_ShuppetBoss_11:
+# 52 "data/maps/Weirford_House_Basement/scripts.pory"
 	givemon SPECIES_SHUPPET, 16, ITEM_SPELL_TAG, ITEM_DUSK_BALL, NATURE_ADAMANT, 2, FEMALE, 0, 0, 0, 0, 0, 0, 31, 18, 20, 20, 15, 31, MOVE_SHADOW_SNEAK, MOVE_WILL_O_WISP, MOVE_GRUDGE, MOVE_ASTONISH
-# 90 "data/maps/Weirford_House_Basement/scripts.pory"
-	msgbox Weirford_House_Basement_ShuppetBoss_Text_3, MSGBOX_DEFAULT
-# 91 "data/maps/Weirford_House_Basement/scripts.pory"
-	msgbox Weirford_House_Basement_ShuppetBoss_Text_4, MSGBOX_DEFAULT
-# 93 "data/maps/Weirford_House_Basement/scripts.pory"
-	subvar VAR_PLAYER_MORALITY, 5
-# 94 "data/maps/Weirford_House_Basement/scripts.pory"
-	msgbox Weirford_House_Basement_ShuppetBoss_Text_5, MSGBOX_DEFAULT
-	goto Weirford_House_Basement_ShuppetBoss_11
-
-Weirford_House_Basement_ShuppetBoss_16:
-# 54 "data/maps/Weirford_House_Basement/scripts.pory"
-	setflag FLAG_WEIRFORD_HOUSE_CHOSE_SHUPPET
 # 55 "data/maps/Weirford_House_Basement/scripts.pory"
-	givemon SPECIES_SHUPPET, 16, ITEM_SPELL_TAG, ITEM_DUSK_BALL, NATURE_ADAMANT, 2, FEMALE, 0, 0, 0, 0, 0, 0, 31, 18, 20, 20, 15, 31, MOVE_SHADOW_SNEAK, MOVE_WILL_O_WISP, MOVE_GRUDGE, MOVE_ASTONISH
-# 58 "data/maps/Weirford_House_Basement/scripts.pory"
 	msgbox Weirford_House_Basement_ShuppetBoss_Text_3, MSGBOX_DEFAULT
-# 59 "data/maps/Weirford_House_Basement/scripts.pory"
+# 56 "data/maps/Weirford_House_Basement/scripts.pory"
 	msgbox Weirford_House_Basement_ShuppetBoss_Text_4, MSGBOX_DEFAULT
-# 61 "data/maps/Weirford_House_Basement/scripts.pory"
+# 58 "data/maps/Weirford_House_Basement/scripts.pory"
 	subvar VAR_PLAYER_MORALITY, 5
-# 62 "data/maps/Weirford_House_Basement/scripts.pory"
+# 59 "data/maps/Weirford_House_Basement/scripts.pory"
 	msgbox Weirford_House_Basement_ShuppetBoss_Text_5, MSGBOX_DEFAULT
-	goto Weirford_House_Basement_ShuppetBoss_15
+	goto Weirford_House_Basement_ShuppetBoss_10
 
 
 Weirford_House_Basement_LostDollResolution::
+# 77 "data/maps/Weirford_House_Basement/scripts.pory"
+	msgbox Weirford_House_Basement_LostDollResolution_Text_0, MSGBOX_DEFAULT
+# 79 "data/maps/Weirford_House_Basement/scripts.pory"
+	msgbox Weirford_House_Basement_LostDollResolution_Text_1, MSGBOX_DEFAULT
+# 81 "data/maps/Weirford_House_Basement/scripts.pory"
+	givemon SPECIES_SHUPPET, 16, ITEM_SPELL_TAG, ITEM_DUSK_BALL, NATURE_ADAMANT, 2, FEMALE, 0, 0, 0, 0, 0, 0, 31, 18, 20, 20, 15, 31, MOVE_SHADOW_SNEAK, MOVE_WILL_O_WISP, MOVE_GRUDGE, MOVE_ASTONISH
+# 83 "data/maps/Weirford_House_Basement/scripts.pory"
+	setflag FLAG_WEIRFORD_HOUSE_TOBY_SAVED
+# 84 "data/maps/Weirford_House_Basement/scripts.pory"
+	addvar VAR_PLAYER_MORALITY, 5
+# 85 "data/maps/Weirford_House_Basement/scripts.pory"
+	msgbox Weirford_House_Basement_ShuppetBoss_Text_9, MSGBOX_DEFAULT
+# 87 "data/maps/Weirford_House_Basement/scripts.pory"
+	goto Weirford_House_Basement_AdvanceQuest
 	return
 
 
-Weirford_House_Basement_Stairs::
-# 120 "data/maps/Weirford_House_Basement/scripts.pory"
+Weirford_House_Basement_AdvanceQuest::
+# 92 "data/maps/Weirford_House_Basement/scripts.pory"
+	setflag FLAG_HIDE_WEIRFORD_HOUSE_TOBY
+# 93 "data/maps/Weirford_House_Basement/scripts.pory"
+	clearflag FLAG_WEIRFORD_HOUSE_DOOR_SEALED
+# 94 "data/maps/Weirford_House_Basement/scripts.pory"
+	setvar VAR_WEIRFORD_HOUSE_STATE, 4
+# 96 "data/maps/Weirford_House_Basement/scripts.pory"
+	setvar VAR_0x8004, QUEST_THE_HOUSE_IN_THE_WOODS
+# 97 "data/maps/Weirford_House_Basement/scripts.pory"
+	setvar VAR_0x8005, QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_RETURN_TO_THE_MAN
+# 98 "data/maps/Weirford_House_Basement/scripts.pory"
+	special Quest_SetStage
+# 100 "data/maps/Weirford_House_Basement/scripts.pory"
+	releaseall
+# 101 "data/maps/Weirford_House_Basement/scripts.pory"
 	playse SE_EXIT
-# 121 "data/maps/Weirford_House_Basement/scripts.pory"
+# 102 "data/maps/Weirford_House_Basement/scripts.pory"
+	warpsilent MAP_WEIRFORD, 3, 36
+# 103 "data/maps/Weirford_House_Basement/scripts.pory"
+	waitstate
+	end
+
+
+Weirford_House_Basement_Stairs::
+# 109 "data/maps/Weirford_House_Basement/scripts.pory"
+	playse SE_EXIT
+# 110 "data/maps/Weirford_House_Basement/scripts.pory"
 	warpsilent MAP_WEIRFORD_HOUSE, 13, 2
-# 122 "data/maps/Weirford_House_Basement/scripts.pory"
+# 111 "data/maps/Weirford_House_Basement/scripts.pory"
 	waitstate
 	end
 
@@ -177,35 +164,49 @@ Weirford_House_Basement_ShuppetBoss_Text_1:
 	.string "act quickly!$"
 
 Weirford_House_Basement_ShuppetBoss_Text_2:
-# 50 "data/maps/Weirford_House_Basement/scripts.pory"
+# 48 "data/maps/Weirford_House_Basement/scripts.pory"
 	.string "What will you do?$"
 
 Weirford_House_Basement_ShuppetBoss_Text_3:
-# 58 "data/maps/Weirford_House_Basement/scripts.pory"
+# 55 "data/maps/Weirford_House_Basement/scripts.pory"
 	.string "SHUPPET settles into its Poké Ball.$"
 
 Weirford_House_Basement_ShuppetBoss_Text_4:
-# 59 "data/maps/Weirford_House_Basement/scripts.pory"
+# 56 "data/maps/Weirford_House_Basement/scripts.pory"
 	.string "A sudden, cold silence fills the room.\p"
 	.string "TOBY's arm drops to the floor.$"
 
 Weirford_House_Basement_ShuppetBoss_Text_5:
-# 62 "data/maps/Weirford_House_Basement/scripts.pory"
+# 59 "data/maps/Weirford_House_Basement/scripts.pory"
 	.string "The world seems a little darker.$"
 
 Weirford_House_Basement_ShuppetBoss_Text_6:
-# 66 "data/maps/Weirford_House_Basement/scripts.pory"
+# 62 "data/maps/Weirford_House_Basement/scripts.pory"
 	.string "You grab TOBY by the arm.$"
 
 Weirford_House_Basement_ShuppetBoss_Text_7:
-# 68 "data/maps/Weirford_House_Basement/scripts.pory"
+# 64 "data/maps/Weirford_House_Basement/scripts.pory"
 	.string "SHUPPET vanishes into the shadows.$"
 
 Weirford_House_Basement_ShuppetBoss_Text_8:
-# 69 "data/maps/Weirford_House_Basement/scripts.pory"
+# 65 "data/maps/Weirford_House_Basement/scripts.pory"
 	.string "TOBY collapses into your arms,\n"
 	.string "breathing weakly but alive.$"
 
 Weirford_House_Basement_ShuppetBoss_Text_9:
-# 72 "data/maps/Weirford_House_Basement/scripts.pory"
+# 69 "data/maps/Weirford_House_Basement/scripts.pory"
 	.string "The world seems a little brighter.$"
+
+Weirford_House_Basement_LostDollResolution_Text_0:
+# 77 "data/maps/Weirford_House_Basement/scripts.pory"
+	.string "SHUPPET drifts closer, its hollow eyes\n"
+	.string "catching the dim light.\p"
+	.string "It keens softly at the damp ragdoll in\n"
+	.string "your hand, glancing down at TOBY’s\l"
+	.string "motionless form before raising its gaze\l"
+	.string "to yours.$"
+
+Weirford_House_Basement_LostDollResolution_Text_1:
+# 79 "data/maps/Weirford_House_Basement/scripts.pory"
+	.string "The malice in the room fades... It seems\n"
+	.string "to want to join you.$"

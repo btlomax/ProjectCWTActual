@@ -28,7 +28,7 @@ Weirford_House_Upstairs_FirstClue::
 # 21 "data/maps/Weirford_House_Upstairs/scripts.pory"
 	lock
 # 22 "data/maps/Weirford_House_Upstairs/scripts.pory"
-	msgbox Weirford_House_Upstairs_FirstClue_Text_0
+	msgbox Weirford_House_Upstairs_FirstClue_Text_0, MSGBOX_SIGN
 # 23 "data/maps/Weirford_House_Upstairs/scripts.pory"
 	setflag FLAG_WEIRFORD_HOUSE_INITIAL_CLUE_1
 # 25 "data/maps/Weirford_House_Upstairs/scripts.pory"
@@ -44,7 +44,7 @@ Weirford_House_Upstairs_SecondClue::
 # 32 "data/maps/Weirford_House_Upstairs/scripts.pory"
 	lock
 # 33 "data/maps/Weirford_House_Upstairs/scripts.pory"
-	msgbox Weirford_House_Upstairs_SecondClue_Text_0
+	msgbox Weirford_House_Upstairs_SecondClue_Text_0, MSGBOX_SIGN
 # 34 "data/maps/Weirford_House_Upstairs/scripts.pory"
 	setflag FLAG_WEIRFORD_HOUSE_INITIAL_CLUE_2
 # 36 "data/maps/Weirford_House_Upstairs/scripts.pory"
@@ -60,7 +60,7 @@ Weirford_House_Upstairs_ThirdClue::
 # 44 "data/maps/Weirford_House_Upstairs/scripts.pory"
 	lock
 # 45 "data/maps/Weirford_House_Upstairs/scripts.pory"
-	msgbox Weirford_House_Upstairs_ThirdClue_Text_0
+	msgbox Weirford_House_Upstairs_ThirdClue_Text_0, MSGBOX_SIGN
 # 47 "data/maps/Weirford_House_Upstairs/scripts.pory"
 	goto_if_unset FLAG_WEIRFORD_HOUSE_INITIAL_CLUE_3, Weirford_House_Upstairs_ThirdClue_2
 Weirford_House_Upstairs_ThirdClue_1:
@@ -154,18 +154,21 @@ Weirford_House_Upstairs_FirstClue_Text_0:
 # 22 "data/maps/Weirford_House_Upstairs/scripts.pory"
 	.string "The painting has been slashed. There\n"
 	.string "are fragments of the canvas scattered\l"
-	.string "on the floor.$"
+	.string "on the floor.\p"
+	.string "$"
 
 Weirford_House_Upstairs_SecondClue_Text_0:
 # 33 "data/maps/Weirford_House_Upstairs/scripts.pory"
 	.string "The bed feels strangely warm, as if\n"
-	.string "someone has been lying in it recently.$"
+	.string "someone has been lying in it recently.\p"
+	.string "$"
 
 Weirford_House_Upstairs_ThirdClue_Text_0:
 # 45 "data/maps/Weirford_House_Upstairs/scripts.pory"
 	.string "The TV screen is cracked, but you can\n"
 	.string "hear the faint sound of static coming\l"
-	.string "from it.$"
+	.string "from it.\p"
+	.string "$"
 
 Weirford_House_Upstairs_ThirdClue_Text_1:
 # 50 "data/maps/Weirford_House_Upstairs/scripts.pory"
