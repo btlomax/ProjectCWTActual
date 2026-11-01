@@ -9574,8 +9574,8 @@
     {
       "id": "LAYOUT_WEIRFORD_JONAS_HOUSE",
       "name": "Weirford_Jonas_House_Layout",
-      "width": 10,
-      "height": 8,
+      "width": 13,
+      "height": 10,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Weirford_Jonas_House/border.bin",

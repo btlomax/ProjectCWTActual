@@ -58,3 +58,80 @@ SE_TAILLOW_WING_FLAP, SE_SHOP, SE_SHINY, SE_INTRO_BLAST, SE_MUGSHOT,
 SE_APPLAUSE, SE_VEND, SE_ORB, SE_DEX_SCROLL, SE_DEX_PAGE,
 SE_POKENAV_ON, SE_POKENAV_OFF, SE_DEX_SEARCH, SE_EGG_HATCH,
 SE_GLASS_FLUTE
+
+    face_up
+    face_down
+    face_left
+    face_right
+
+    walk_up
+    walk_down
+    walk_left
+    walk_right
+
+    walk_fast_up
+    walk_fast_down
+    walk_fast_left
+    walk_fast_right
+
+    walk_faster_up
+    walk_faster_down
+    walk_faster_left
+    walk_faster_right
+
+    jump_up
+    jump_down
+    jump_left
+    jump_right
+
+    jump_in_place_up
+    jump_in_place_down
+    jump_in_place_left
+    jump_in_place_right
+
+    walk_in_place_up
+    walk_in_place_down
+    walk_in_place_left
+    walk_in_place_right
+
+    walk_in_place_fast_up
+    walk_in_place_fast_down
+    walk_in_place_fast_left
+    walk_in_place_fast_right
+
+    walk_in_place_faster_up
+    walk_in_place_faster_down
+    walk_in_place_faster_left
+    walk_in_place_faster_right
+
+    delay_1
+    delay_2
+    delay_4
+    delay_8
+    delay_16
+
+    step_end
+}
+
+Useful extras supported by the movement definitions:
+
+walk_slow_up
+walk_slow_down
+walk_slow_left
+walk_slow_right
+
+walk_fast_diagonal_up_left
+walk_fast_diagonal_up_right
+walk_fast_diagonal_down_left
+walk_fast_diagonal_down_right
+
+spin_up
+spin_down
+spin_left
+spin_right
+
+set_invisible
+set_visible
+emote_exclamation_mark
+emote_question_mark
+emote_heart

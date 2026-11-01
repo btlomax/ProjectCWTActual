@@ -14,5 +14,133 @@ script Weirford_Jonas_House_MapScripts_OnTransition
         removeobject(LOCALID_WEIRFORD_JONAS_INSIDE)
     }
 
+    if (flag(FLAG_WEIRFORD_HOUSE_TOBY_SAVED)) {
+        clearflag(FLAG_HIDE_WEIRFORD_TOBY_INSIDE)
+        addobject(LOCALID_TOBY_INSIDE)
+    }
+    else {
+        setflag(FLAG_HIDE_WEIRFORD_TOBY_INSIDE)
+        removeobject(LOCALID_TOBY_INSIDE)
+    }
+
+    end
+}
+
+script Weirford_Jonas_House_Interact
+{
+    faceplayer
+
+    switch(var(VAR_QUEST_THE_HOUSE_IN_THE_WOODS_STATE))
+    {
+        case QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_TALK_TO_THE_MAN:
+            goto(Weirford_Jonas_House_Interact_StartQuest)
+
+        case QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_FIND_THE_HOUSE:
+            msgbox(format("Have you found any clues about my little brother yet?"), MSGBOX_DEFAULT)
+
+        case QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_RETURN_TO_THE_MAN:
+            goto(Weirford_Jonas_House_Interact_QuestReturn)
+
+        case QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_COMPLETE:
+            if(flag(FLAG_WEIRFORD_HOUSE_TOBY_SAVED)) {
+                msgbox(format("Thank you for helping me with my little brother, he's recovering next door if you want to go and see him, I'm sure he would like that."), MSGBOX_DEFAULT)
+            }
+            else {
+                msgbox(format("I have nothing else to say to you."), MSGBOX_DEFAULT)
+            }
+    }
+}
+
+script Weirford_Jonas_House_Interact_StartQuest
+{
+    lock
+    msgbox(format("AH! It's you again! Is that, a gym badge? I didn't know it was still active."), MSGBOX_DEFAULT)
+    playse(SE_PIN)
+    applymovement(LOCALID_WEIRFORD_JONAS_INSIDE, Common_Movement_ExclamationMark)
+    waitmovement(LOCALID_WEIRFORD_JONAS_INSIDE)
+    msgbox(format("That means you can use CUT! In that case, will you hear me out?"), MSGBOX_YESNO)
+
+    if(var(VAR_RESULT) == 1)
+    {
+        msgbox(format("Thank you! You've a kind heart. OK, here we go..."), MSGBOX_DEFAULT)
+        msgbox(format("My little brother, Toby, vanished two years ago after going into Weirford Forest. The whole town joined the search, but after weeks of nothing... everyone just gave up.\p"
+                  "Then came the storm last night. I don't know where it came from, but Toby's journal was on the floor outside when I got home today...\p"
+                  "Toby wrote about losing his favorite doll, he dropped it in the old stone basin and it was washed away... and how right after, something began stalking him..\p"
+                  "A Pokémon. He said it was watching him every night through the window...\p"
+                  "The last entry just says, 'Itsinthehouseitsinthehouseitsinthehouse'\p"
+                  "{FONT_NARROW}choked sobs{FONT_NORMAL}\p"
+                  "I went into the forest to try and get into Weirford House but I couldn't get past the trees that were blocking the path...\p"
+                  "If you could help me find him, I would be forever grateful, I'm not a brave man but if there's any chance...\p"
+                  "...\p"
+                  "You'll need to find the house first and then go inside and look for clues...\p"
+                  "Please come back with any information you find...\p"), MSGBOX_DEFAULT)
+
+        setvar(VAR_0x8004, QUEST_THE_HOUSE_IN_THE_WOODS)
+        setvar(VAR_0x8005, QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_FIND_THE_HOUSE)
+        special(Quest_SetStage)
+    }
+    else
+    {
+        msgbox(format("I understand. Please come back if you change your mind."), MSGBOX_DEFAULT)
+    }
+
+    release
+    end
+}
+
+script Weirford_Jonas_House_Interact_QuestReturn
+{
+    lock
+    faceplayer
+
+    if (flag(FLAG_WEIRFORD_HOUSE_TOBY_SAVED)) {
+        goto(Weirford_Jonas_House_Interact_QuestReturn_TobySaved)
+    }
+
+    goto(Weirford_Jonas_House_Interact_QuestReturn_TobyLost)
+}
+
+script Weirford_Jonas_House_Interact_QuestReturn_TobySaved
+{
+    lock
+    msgbox(format("You found him! He's safe! He just appeared out of thin air, I...I thought I was seeing things! Please, tell me what happened.\p"
+            "...\p"
+           "A SHUPPET? It was keeping TOBY trapped in there? What for? No, never mind that...my brother is safe, thanks to you.\p"
+           "Please, take this, it was hidden in the back of TOBY's journal.\p"))
+    giveitem(ITEM_CLEANSE_TAG)
+    release
+
+    setvar(VAR_0x8004, QUEST_THE_HOUSE_IN_THE_WOODS)
+    special(Quest_Complete)
+
+    end
+}
+
+script Weirford_Jonas_House_Interact_QuestReturn_TobyLost
+{
+    msgbox(format("{FONT_NARROW}Jonas stares at the new Poké Ball on your belt, his eyes widening in recognition...{FONT_NORMAL}\p"
+                  "That...is that the thing from Toby's journal?\p"
+                  "He looks past you toward the doorway, his voice barely above a whisper.\p"
+                  "Where is he? Where's my brother?\p"
+                  "...\p"
+                  "{FONT_NARROW}Jonas's hands drop to his sides. Tears spill down his face, but his expression turns entirely blank as recognition dawns on him.{FONT_NORMAL}\p"
+                  "You captured it... You caught the thing that took him...but he died, and you're keeping it?\p"
+                  "{FONT_NARROW}He backs away slowly, wiping his eyes with a trembling hand.{FONT_NORMAL}\p"
+                  "Just...get out. Please. I never want to see you or that monster again.\p"))
+    release
+
+    setvar(VAR_0x8004, QUEST_THE_HOUSE_IN_THE_WOODS)
+    special(Quest_Complete)
+
+    end
+}
+
+script Weirford_Jonas_House_Interact_Toby
+{
+    lock
+    faceplayer
+    msgbox(format("Hello, I never got the chance to properly thank you for saving me. I don't remember much of what happened, Jonas says I've been gone for two years!\p"
+                  "I've got lots to catch up on, but first, I'm STARVING!\p"), MSGBOX_DEFAULT)
+    release
     end
 }
