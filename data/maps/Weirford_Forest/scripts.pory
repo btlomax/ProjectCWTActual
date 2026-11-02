@@ -27,7 +27,7 @@ script Weirford_Forest_MapScripts_AcolyteLin {
     Weirford_Forest_MapScripts_AcolyteLin_TrainerPostBattle
     )
 
-    msgbox(Weirford_Forest_MapScripts_AcolyteLin_TrainerPostBattle, MSGBOX_AUTOCLOSE)
+    msgbox("The Convent must hear of this...", MSGBOX_AUTOCLOSE)
     end
 }
 
@@ -96,7 +96,6 @@ script Weirford_Forest_MapScripts_HouseWarp
     end
 }
 
-
 text Weirford_Forest_MapScripts_CorpoEric_TrainerPreBattle {
     "AH! Where did you come from?!"
 }
@@ -114,7 +113,7 @@ text Weirford_Forest_MapScripts_LassLila_TrainerPreBattle {
 }
 
 text Weirford_Forest_MapScripts_LassLila_TrainerPostBattle {
-   format("There's a house hidden deep in the forest.")
+   format("There's a house hidden deep in the forest. I heard that it's haunted...")
 }
 
 text Weirford_Forest_MapScripts_LassLila_TrainerDefeated {
@@ -133,7 +132,7 @@ text Weirford_Forest_MapScripts_AcolyteLin_TrainerPostBattle {
 }
 
 text Weirford_Forest_MapScripts_AcolyteLin_TrainerDefeated {
-    "Yes, there is power in you..."
+    format("Undisciplined, yet there is power in you...")
 }
 
 text Weirford_Forest_MapScripts_CamperColin_TrainerPreBattle {

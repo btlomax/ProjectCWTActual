@@ -62,14 +62,12 @@ script Weirford_Gym_Downstairs_MapScripts_LeaderMilo_Defeated
     "battle.",
     MSGBOX_DEFAULT)
 
-    setvar(VAR_0x8004, QUEST_A_NEW_CHALLENGE)
-    setvar(VAR_0x8005, QUEST_A_NEW_CHALLENGE_STAGE_BEAT_SECOND_GYM)
-    special(Quest_SetStage)
-
-    msgbox("Don't forget to talk to people you see,\n"
+    msgbox(format(
+    "Don't forget to talk to people you see,"
     "some might have need of your aid.\p"
-    "In fact, I'm sure there's a gentleman in\n"
-    "town who looked like he needed help.\p", MSGBOX_DEFAULT)
+    "In fact, I'm sure there's a gentleman in"
+    "town who looked like he needed help.\p"
+    "Your choices will shape your journey through this world, good and bad, so choose wisely.\p"), MSGBOX_DEFAULT)
 
     setvar(VAR_0x8004, QUEST_THE_HOUSE_IN_THE_WOODS)
     special(Quest_Add)
@@ -79,7 +77,12 @@ script Weirford_Gym_Downstairs_MapScripts_LeaderMilo_Defeated
         "Go on then, Trainer. A long-dormant road lies ahead of you...\p"
         "If you're looking for your next step, head west out of town toward Route 3.\p"
         "Passing through Cave One will bring you down toward the coastal settlements, if the old paths are still clear, that is."
+        "Walk worthy, trainer."
     ), MSGBOX_DEFAULT)
+
+    setvar(VAR_0x8004, QUEST_A_NEW_CHALLENGE)
+    setvar(VAR_0x8005, QUEST_A_NEW_CHALLENGE_STAGE_WEIRFORD_CONVENT)
+    special(Quest_SetStage)
 
     release
     end

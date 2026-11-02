@@ -14,6 +14,11 @@ script Weirford_MapScripts_OnTransition
         addobject(LOCALID_WEIRFORD_JONAS_OUTSIDE)
     }
 
+    if (flag(FLAG_WEIRFORD_ACOLYTE_LIN_APPEARS))
+    {
+        removeobject(LOCALID_WEIRFORD_ACOLYTE_LIN)
+    }
+
     end
 }
 
@@ -42,6 +47,34 @@ script Weirford_MapScripts_GardenNPC
     faceplayer
     msgbox(format("A bit of greenery in a town is always welcome."
     "It makes everything feel fresher."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script Weirford_MapScripts_AcolyteLin
+{
+    lock
+
+    msgbox(format("Ah, the child from the forest, I was hoping to meet you again. After you bested me, I returned to the Convent to meditate on my defeat.\p"
+    "You possess talent, certainly... but it is crude. Unrefined. A raw confidence that borders on recklessness.\p"), MSGBOX_DEFAULT)
+
+    if(flag(FLAG_BADGE01_GET))
+    {
+        msgbox(format("I see that Milo handed over his badge... Could it be? The first true challenger in centuries?\p"
+            "Or perhaps Milo has simply grown old and soft behind his desk, and the trial has lost whatever luster it once had.\p"
+            "If the other heirs are ready, they will make themselves known soon enough. We shall see if you last that long.\p"
+            "The Abbess insists on meeting you. Come up to the Convent in the north of town before you leave...though I doubt she will find much to admire."), MSGBOX_DEFAULT)
+    }
+    else
+    {
+        msgbox(format("You have not even challenged the gym yet, I see. Lingering around, wasting daylight.\p"
+            "Should you somehow manage to best Milo, bring yourself up to the Convent in the north of town. The Abbess wishes to examine you herself, if only to satisfy her curiosity."), MSGBOX_DEFAULT)
+    }
+
+    applymovement(LOCALID_WEIRFORD_ACOLYTE_LIN, Weirford_Movement_AcolyteLin)
+    waitmovement(LOCALID_WEIRFORD_ACOLYTE_LIN)
+
+    setflag(FLAG_WEIRFORD_ACOLYTE_LIN_APPEARS)
     release
     end
 }
@@ -94,4 +127,10 @@ movement Weirford_Movement_Jonas_Turn_Around
 {
     face_up
     step_end
+}
+
+movement Weirford_Movement_AcolyteLin
+{
+    walk_right
+    face_left
 }
