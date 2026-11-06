@@ -10,12 +10,12 @@ Meadowvale_Farm_Inside_MapScripts_FarmbossMax::
 # 7 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	goto_if_unset FLAG_MEADOWVALE_FARM_MAXINTRODUCTION, Meadowvale_Farm_Inside_MapScripts_FarmbossMax_2
 Meadowvale_Farm_Inside_MapScripts_FarmbossMax_1:
-# 12 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 14 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	compare VAR_ROUTE2_MEADOWVALE_FARM_STATE, 4
 	goto_if_lt Meadowvale_Farm_Inside_MapScripts_FarmbossMax_5
-# 18 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 20 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	trainerbattle_single TRAINER_ROUTE2_MEADOWVALEFARM_INSIDE_MAX, Meadowvale_Farm_Inside_Text_MaxPreBattle, Meadowvale_Farm_Inside_Text_MaxDefeated, Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut
-# 25 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 27 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	msgbox Meadowvale_Farm_Inside_Text_MaxPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -24,73 +24,77 @@ Meadowvale_Farm_Inside_MapScripts_FarmbossMax_2:
 	msgbox Meadowvale_Farm_Inside_MapScripts_FarmbossMax_Intro, MSGBOX_DEFAULT
 # 9 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	setflag FLAG_MEADOWVALE_FARM_MAXINTRODUCTION
+# 10 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+	setvar VAR_0x8004, QUEST_MAX_FARM_BOSS
+# 11 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+	special Quest_Add
 	goto Meadowvale_Farm_Inside_MapScripts_FarmbossMax_1
 
 Meadowvale_Farm_Inside_MapScripts_FarmbossMax_5:
-# 13 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 15 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	msgbox Meadowvale_Farm_Inside_Text_MaxNeedToDefeatChildren, MSGBOX_DEFAULT
-# 14 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 16 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	release
 	end
 
 
 Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut::
-# 30 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 32 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	msgbox Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut_Text_0
-# 37 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
-	giveitem ITEM_HM_CUT
-# 38 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
-	setflag FLAG_RECEIVED_HM_CUT
 # 39 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+	giveitem ITEM_HM_CUT
+# 40 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+	setflag FLAG_RECEIVED_HM_CUT
+# 41 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	msgbox Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut_Text_1, MSGBOX_DEFAULT
-# 43 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 45 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	msgbox Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut_Text_2
-# 49 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 51 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	msgbox Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut_Text_3
-# 54 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
-	special HealPlayerParty
-# 55 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
-	playfanfare MUS_HEAL
 # 56 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
-	waitfanfare
+	special HealPlayerParty
+# 57 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+	playfanfare MUS_HEAL
 # 58 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+	waitfanfare
+# 60 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	msgbox Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut_Text_4
-# 63 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 65 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	release
 	end
 
 
 Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut_Text_0:
-# 31 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 33 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	.string "WOOOOOO I'M PUMPED NOW!\n"
 	.string "I'm gonna work up a sweat in the fields!\p"
 	.string "Take this HM, my kids can do it the old n"
 	.string "fashioned way! HAHAHAHA!\p$"
 
 Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut_Text_1:
-# 40 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 42 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	.string "{PLAYER} received HM01 CUT!$"
 
 Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut_Text_2:
-# 43 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 45 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	.string "You can use CUT to remove small trees\n"
 	.string "that block your path.\p"
 	.string "BUT, you will need the Weirford Gym badge\n"
 	.string "to use it outside of battle...\p$"
 
 Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut_Text_3:
-# 49 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 51 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	.string "Let me heal your Pokémon for you, it's\n"
 	.string "still a fair way to Weirford.\p$"
 
 Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut_Text_4:
-# 58 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 60 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	.string "I don't think anyone has taken on the\nLeague challenge for a very long time...\p"
 	.string "In fact, I don't even know if it's a gym\nanymore! But Milo is in there, he'll\lagree to battle you.\p"
 	.string "Best of luck, BUB!\p$"
 
 Meadowvale_Farm_Inside_MapScripts_FarmbossMax_Intro::
-# 67 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 69 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	.string "Welcome to Meadowvale Farm, where we\n"
 	.string "grow crops, raise POKéMON, and apparently\l"
 	.string "collect children.\p"
@@ -113,12 +117,12 @@ Meadowvale_Farm_Inside_MapScripts_FarmbossMax_Intro::
 	.string "take me down!\p$"
 
 Meadowvale_Farm_Inside_Text_MaxNeedToDefeatChildren::
-# 90 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 94 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	.string "You need to defeat all FOUR of my kids\n"
 	.string "if you wanna take a shot at the CHAMP!\p$"
 
 Meadowvale_Farm_Inside_Text_MaxPreBattle::
-# 95 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 99 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	.string "You've beaten all of them?\p"
 	.string "...HELL YEAH!\p"
 	.string "Alright, the CHAMP is here!\n"
@@ -126,7 +130,7 @@ Meadowvale_Farm_Inside_Text_MaxPreBattle::
 	.string "Take me down if you can, BUB!\p$"
 
 Meadowvale_Farm_Inside_Text_MaxDefeated::
-# 103 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 107 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	.string "You beat me?\n"
 	.string "I can't believe it!\p"
 	.string "...HELL YEAH!\p"
@@ -134,7 +138,7 @@ Meadowvale_Farm_Inside_Text_MaxDefeated::
 	.string "You took me down no sweat!$"
 
 Meadowvale_Farm_Inside_Text_MaxPostBattle::
-# 111 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
+# 115 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	.string "My kids will be all over me for losing now.\p"
 	.string "URRRH!\p"
 	.string "They're gonna be behind the plow for a\n"

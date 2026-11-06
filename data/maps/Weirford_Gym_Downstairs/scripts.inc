@@ -50,36 +50,36 @@ Weirford_Gym_Downstairs_MapScripts_LeaderMilo_Defeated::
 # 56 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	msgbox Weirford_Gym_Downstairs_MapScripts_LeaderMilo_Defeated_Text_2, MSGBOX_DEFAULT
 # 65 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
-	setvar VAR_0x8004, QUEST_A_NEW_CHALLENGE
-# 66 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
-	setvar VAR_0x8005, QUEST_A_NEW_CHALLENGE_STAGE_BEAT_SECOND_GYM
-# 67 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
-	special Quest_SetStage
-# 69 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	msgbox Weirford_Gym_Downstairs_MapScripts_LeaderMilo_Defeated_Text_3, MSGBOX_DEFAULT
-# 74 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 72 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	setvar VAR_0x8004, QUEST_THE_HOUSE_IN_THE_WOODS
-# 75 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 73 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	special Quest_Add
-# 77 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 75 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	msgbox Weirford_Gym_Downstairs_MapScripts_LeaderMilo_Defeated_Text_4, MSGBOX_DEFAULT
+# 83 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+	setvar VAR_0x8004, QUEST_A_NEW_CHALLENGE
 # 84 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+	setvar VAR_0x8005, QUEST_A_NEW_CHALLENGE_STAGE_WEIRFORD_CONVENT
+# 85 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+	special Quest_SetStage
+# 87 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	release
 	end
 
 
 Weirford_Gym_Downstairs_MapScripts_Tanya::
-# 90 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 93 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	trainerbattle_single TRAINER_WEIRFORD_GYM_TANYA, Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerPreBattle, Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerDefeated
-# 94 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 97 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	msgbox Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
 Weirford_Gym_Downstairs_MapScripts_Cal::
-# 100 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 103 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	trainerbattle_single TRAINER_WEIRFORD_GYM_CAL, Weirford_Gym_Downstairs_MapScripts_Cal_TrainerPreBattle, Weirford_Gym_Downstairs_MapScripts_Cal_TrainerDefeated
-# 104 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 107 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	msgbox Weirford_Gym_Downstairs_MapScripts_Cal_TrainerPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -117,14 +117,18 @@ Weirford_Gym_Downstairs_MapScripts_LeaderMilo_Defeated_Text_2:
 	.string "battle.$"
 
 Weirford_Gym_Downstairs_MapScripts_LeaderMilo_Defeated_Text_3:
-# 69 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 66 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	.string "Don't forget to talk to people you see,\n"
 	.string "some might have need of your aid.\p"
 	.string "In fact, I'm sure there's a gentleman in\n"
-	.string "town who looked like he needed help.\p$"
+	.string "town who looked like he needed help.\p"
+	.string "Your choices will shape your journey\n"
+	.string "through this world, good and bad, so\l"
+	.string "choose wisely.\p"
+	.string "$"
 
 Weirford_Gym_Downstairs_MapScripts_LeaderMilo_Defeated_Text_4:
-# 78 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 76 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	.string "I'll be sure to inform the other Leaders\n"
 	.string "that the challenge has officially been\l"
 	.string "reignited.\p"
@@ -134,10 +138,11 @@ Weirford_Gym_Downstairs_MapScripts_LeaderMilo_Defeated_Text_4:
 	.string "head west out of town toward Route 3.\p"
 	.string "Passing through Cave One will bring you\n"
 	.string "down toward the coastal settlements,\l"
-	.string "if the old paths are still clear, that is.$"
+	.string "if the old paths are still clear, that is.\l"
+	.string "Walk worthy, trainer.$"
 
 Weirford_Gym_Downstairs_MapScripts_LeaderMilo_TrainerPreBattle::
-# 108 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 111 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	.string "Welcome trainer!\p"
 	.string "I'm Milo, the leader of this Gym.\p"
 	.string "The others answered my call, though none\n"
@@ -148,12 +153,12 @@ Weirford_Gym_Downstairs_MapScripts_LeaderMilo_TrainerPreBattle::
 	.string "Show me you can do the same!\p$"
 
 Weirford_Gym_Downstairs_MapScripts_LeaderMilo_TrainerDefeated::
-# 120 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 123 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	.string "You would not stay down...\p"
 	.string "That is the spirit this Gym was built on.$"
 
 Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerPreBattle::
-# 126 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 129 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	.string "When Milo called me in, I thought he was\n"
 	.string "pulling my leg.\p"
 	.string "This Gym has held on for decades,\n"
@@ -163,12 +168,12 @@ Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerPreBattle::
 	.string "stay down!$"
 
 Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerDefeated::
-# 134 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 137 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	.string "Wow! I did not expect the Gym to open\n"
 	.string "again just so I could lose!$"
 
 Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerPostBattle::
-# 138 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 141 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	.string "It feels strange seeing this place\n"
 	.string "active again...\p"
 	.string "We all use small, scrappy Pokémon that\n"
@@ -176,18 +181,18 @@ Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerPostBattle::
 	.string "types.$"
 
 Weirford_Gym_Downstairs_MapScripts_Cal_TrainerPreBattle::
-# 145 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 148 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	.string "Milo called us in for a real Gym battle?\p"
 	.string "I thought this old place would stay\n"
 	.string "quiet forever!$"
 
 Weirford_Gym_Downstairs_MapScripts_Cal_TrainerDefeated::
-# 152 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 155 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	.string "Sorry, buddy! I guess I am out of\n"
 	.string "practice!$"
 
 Weirford_Gym_Downstairs_MapScripts_Cal_TrainerPostBattle::
-# 156 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 159 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	.string "I cannot believe we are doing this\n"
 	.string "again.\p"
 	.string "You are tough, but Milo will not give up\n"

@@ -3,8 +3,9 @@
 
 #define QUEST_A_NEW_CHALLENGE                       0
 #define QUEST_TUTOR_CATCH                           1
-#define QUEST_THE_HOUSE_IN_THE_WOODS                2
-#define QUEST_COUNT                                           3
+#define QUEST_MAX_FARM_BOSS                         2
+#define QUEST_THE_HOUSE_IN_THE_WOODS                3
+#define QUEST_COUNT                                           4
 
 #define QUEST_A_NEW_CHALLENGE_STAGE_INACTIVE          0
 #define QUEST_A_NEW_CHALLENGE_STAGE_BEGIN             1
@@ -21,6 +22,11 @@
 #define QUEST_TUTOR_CATCH_STAGE_CATCH_35              3
 #define QUEST_TUTOR_CATCH_STAGE_RETURN_35             4
 #define QUEST_TUTOR_CATCH_STAGE_COMPLETE              5
+
+#define QUEST_MAX_FARM_BOSS_STAGE_INACTIVE            0
+#define QUEST_MAX_FARM_BOSS_STAGE_DEFEAT_FARMHANDS    1
+#define QUEST_MAX_FARM_BOSS_STAGE_DEFEAT_MAX          2
+#define QUEST_MAX_FARM_BOSS_STAGE_COMPLETE            3
 
 #define QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_INACTIVE   0
 #define QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_TALK_TO_THE_MAN 1

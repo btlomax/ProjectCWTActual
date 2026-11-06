@@ -1,4 +1,21 @@
-mapscripts Weirford_Forest_MapScripts {}
+mapscripts Weirford_Forest_MapScripts
+{
+    MAP_SCRIPT_ON_TRANSITION: Weirford_Forest_MapScripts_OnTransition
+}
+
+script Weirford_Forest_MapScripts_OnTransition
+{
+    if (flag(FLAG_HIDE_WEIRFORD_FOREST_ACOLYTE_LIN))
+    {
+        removeobject(LOCALID_WEIRFORD_FOREST_ACOLYTE_LIN)
+    }
+    else
+    {
+        addobject(LOCALID_WEIRFORD_FOREST_ACOLYTE_LIN)
+    }
+
+    end
+}
 
 script Weirford_Forest_MapScripts_BugCatcherSam {
     trainerbattle_single(TRAINER_WEIRFORDFOREST_BUGCATCHER_SAM,
@@ -24,10 +41,24 @@ script Weirford_Forest_MapScripts_AcolyteLin {
     trainerbattle_single(TRAINER_WEIRFORDFOREST_ACOLYTE_LIN,
     Weirford_Forest_MapScripts_AcolyteLin_TrainerPreBattle,
     Weirford_Forest_MapScripts_AcolyteLin_TrainerDefeated,
-    Weirford_Forest_MapScripts_AcolyteLin_TrainerPostBattle
+    Weirford_Forest_MapScripts_AcolyteLin_AfterBattle
     )
 
-    msgbox("The Convent must hear of this...", MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Weirford_Forest_MapScripts_AcolyteLin_AfterBattle
+{
+    lock
+
+    msgbox(Weirford_Forest_MapScripts_AcolyteLin_TrainerPostBattle, MSGBOX_AUTOCLOSE)
+
+    applymovement(LOCALID_WEIRFORD_FOREST_ACOLYTE_LIN, Weirford_Forest_MapScripts_AcolyteLin_Leave)
+    waitmovement(LOCALID_WEIRFORD_FOREST_ACOLYTE_LIN)
+    setflag(FLAG_HIDE_WEIRFORD_FOREST_ACOLYTE_LIN)
+    removeobject(LOCALID_WEIRFORD_FOREST_ACOLYTE_LIN)
+    
+    release
     end
 }
 
@@ -157,4 +188,9 @@ text Weirford_Forest_MapScripts_BugCatcherSam_TrainerPostBattle {
 
 text Weirford_Forest_MapScripts_BugCatcherSam_TrainerDefeated {
     "I can't believe you beat my team of\nalmighty bugs!"
+}
+
+movement Weirford_Forest_MapScripts_AcolyteLin_Leave {
+    walk_up
+    walk_right * 12
 }

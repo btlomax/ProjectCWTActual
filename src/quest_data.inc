@@ -9,8 +9,8 @@ static const u8 sText_ANewChallengeLarchPokedexLocation[] = _("ALDERBROOK TOWN")
 static const u8 sText_ANewChallengeLarchPokedexDetail[] = _("Meet with Professor Larch at his laboratory");
 static const u8 sText_ANewChallengeBeatWeirfordGymLocation[] = _("WEIRFORD TOWN");
 static const u8 sText_ANewChallengeBeatWeirfordGymDetail[] = _("Defeat the Weirford Gym Leader");
-static const u8 sText_ANewChallengeBeatSecondGymLocation[] = _("SECOND GYM TOWN");
-static const u8 sText_ANewChallengeBeatSecondGymDetail[] = _("Defeat the Second Gym Leader");
+static const u8 sText_ANewChallengeWeirfordConventLocation[] = _("WEIRFORD CONVENT");
+static const u8 sText_ANewChallengeWeirfordConventDetail[] = _("Speak with the Abbess at the Weirford Convent");
 static const u8 sText_ANewChallengeFinalObjectiveLocation[] = _("ROUTE 1");
 static const u8 sText_ANewChallengeFinalObjectiveDetail[] = _("Complete your legendary quest");
 
@@ -44,10 +44,10 @@ static const struct QuestStageDefinition sQuestANewChallengeStages[] =
         .objectiveType = QUEST_OBJECTIVE_NONE,
         .target = 0,
     },
-    [QUEST_A_NEW_CHALLENGE_STAGE_BEAT_SECOND_GYM] =
+    [QUEST_A_NEW_CHALLENGE_STAGE_WEIRFORD_CONVENT] =
     {
-        .objective = sText_ANewChallengeBeatSecondGymDetail,
-        .location = sText_ANewChallengeBeatSecondGymLocation,
+        .objective = sText_ANewChallengeWeirfordConventDetail,
+        .location = sText_ANewChallengeWeirfordConventLocation,
         .objectiveType = QUEST_OBJECTIVE_NONE,
         .target = 0,
     },
@@ -60,7 +60,7 @@ static const struct QuestStageDefinition sQuestANewChallengeStages[] =
     },
 };
 
-static const u8 sText_TutorCatchTitle[] = _("Tutor's Challenge");
+static const u8 sText_TutorCatchTitle[] = _("Tutor Challenge");
 static const u8 sText_TutorCatchCatch15Location[] = _("ROUTE 1");
 static const u8 sText_TutorCatchCatch15Detail[] = _("Pokémon caught: {STR_VAR_1}/{STR_VAR_2}");
 static const u8 sText_TutorCatchReturn15Location[] = _("Pokémon Tutor");
@@ -102,6 +102,30 @@ static const struct QuestStageDefinition sQuestTutorCatchStages[] =
     },
 };
 
+static const u8 sText_MaxFarmBossTitle[] = _("Max the Farm Boss");
+static const u8 sText_MaxFarmBossDefeatFarmhandsLocation[] = _("MEADOWVALE FARM");
+static const u8 sText_MaxFarmBossDefeatFarmhandsDetail[] = _("Defeat the four farmhands");
+static const u8 sText_MaxFarmBossDefeatMaxLocation[] = _("MEADOWVALE FARM");
+static const u8 sText_MaxFarmBossDefeatMaxDetail[] = _("Defeat Max");
+
+static const struct QuestStageDefinition sQuestMaxFarmBossStages[] =
+{
+    [QUEST_MAX_FARM_BOSS_STAGE_DEFEAT_FARMHANDS] =
+    {
+        .objective = sText_MaxFarmBossDefeatFarmhandsDetail,
+        .location = sText_MaxFarmBossDefeatFarmhandsLocation,
+        .objectiveType = QUEST_OBJECTIVE_NONE,
+        .target = 0,
+    },
+    [QUEST_MAX_FARM_BOSS_STAGE_DEFEAT_MAX] =
+    {
+        .objective = sText_MaxFarmBossDefeatMaxDetail,
+        .location = sText_MaxFarmBossDefeatMaxLocation,
+        .objectiveType = QUEST_OBJECTIVE_NONE,
+        .target = 0,
+    },
+};
+
 static const u8 sText_TheHouseInTheWoodsTitle[] = _("The House in the Woods");
 static const u8 sText_TheHouseInTheWoodsTalkToTheManLocation[] = _("WEIRFORD TOWN");
 static const u8 sText_TheHouseInTheWoodsTalkToTheManDetail[] = _("Speak with the man in Weirford");
@@ -110,7 +134,7 @@ static const u8 sText_TheHouseInTheWoodsFindTheHouseDetail[] = _("Locate the hou
 static const u8 sText_TheHouseInTheWoodsInvestigateLocation[] = _("WEIRFORD HOUSE");
 static const u8 sText_TheHouseInTheWoodsInvestigateDetail[] = _("Investigate the house thoroughly");
 static const u8 sText_TheHouseInTheWoodsConfrontLocation[] = _("WEIRFORD HOUSE");
-static const u8 sText_TheHouseInTheWoodsConfrontDetail[] = _("Confront the malevolent force and save Toby");
+static const u8 sText_TheHouseInTheWoodsConfrontDetail[] = _("Confront the malevolent force");
 static const u8 sText_TheHouseInTheWoodsReturnToTheManLocation[] = _("WEIRFORD TOWN");
 static const u8 sText_TheHouseInTheWoodsReturnToTheManDetail[] = _("Return to the man in Weirford");
 
@@ -172,6 +196,15 @@ static const struct QuestDefinition sQuestDefinitions[QUEST_COUNT] =
         .firstStage = QUEST_TUTOR_CATCH_STAGE_CATCH_15,
         .completeStage = QUEST_TUTOR_CATCH_STAGE_COMPLETE,
         .stages = sQuestTutorCatchStages,
+    },
+    [QUEST_MAX_FARM_BOSS] =
+    {
+        .title = sText_MaxFarmBossTitle,
+        .category = QUEST_CATEGORY_SECONDARY,
+        .stateVar = VAR_QUEST_MAX_FARM_BOSS_STATE,
+        .firstStage = QUEST_MAX_FARM_BOSS_STAGE_DEFEAT_FARMHANDS,
+        .completeStage = QUEST_MAX_FARM_BOSS_STAGE_COMPLETE,
+        .stages = sQuestMaxFarmBossStages,
     },
     [QUEST_THE_HOUSE_IN_THE_WOODS] =
     {

@@ -7,6 +7,8 @@ script Meadowvale_Farm_Inside_MapScripts_FarmbossMax {
     if (!flag(FLAG_MEADOWVALE_FARM_MAXINTRODUCTION)) {
         msgbox(Meadowvale_Farm_Inside_MapScripts_FarmbossMax_Intro, MSGBOX_DEFAULT)
         setflag(FLAG_MEADOWVALE_FARM_MAXINTRODUCTION)
+        setvar(VAR_0x8004, QUEST_MAX_FARM_BOSS)
+        special(Quest_Add)
     }
 
     if (var(VAR_ROUTE2_MEADOWVALE_FARM_STATE) < 4) {
@@ -85,6 +87,8 @@ text Meadowvale_Farm_Inside_MapScripts_FarmbossMax_Intro {
     "the CHAMP!\p"
     "I've got a great prize for you if you can\n"
     "take me down!\p"
+
+    
 }
 
 text Meadowvale_Farm_Inside_Text_MaxNeedToDefeatChildren {
