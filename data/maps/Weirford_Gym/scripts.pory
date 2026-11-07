@@ -45,7 +45,7 @@ script Weirford_Gym_MapScripts_MiloInteraction
     applymovement(LOCALID_GYMLEADER_MILO, Common_Movement_ExclamationMark)
     waitmovement(LOCALID_GYMLEADER_MILO)
 
-    msgbox("Hello? Can I help you?\p", MSGBOX_DEFAULT)
+    msgbox(format("Hello? Can I help you?\p"), MSGBOX_DEFAULT)
     applymovement(OBJ_EVENT_ID_PLAYER, Weirford_Gym_PlayerMoveUp)
     applymovement(OBJ_EVENT_ID_CAMERA, Movement_CameraMoveUp)
     waitmovement(OBJ_EVENT_ID_CAMERA)
@@ -53,11 +53,11 @@ script Weirford_Gym_MapScripts_MiloInteraction
 
     delay(30)
     applymovement(LOCALID_GYMLEADER_MILO, Movement_MiloFaceDown)
-    msgbox("You're here for the what?\n"
+    msgbox(format("You're here for the what? "
     "The Gym Challenge?\p"
     "And you-you're serious?\p"
     "...\p"
-    "Errrr...well I gue-", MSGBOX_DEFAULT)
+    "Errrr...well I gue-"), MSGBOX_DEFAULT)
     playse(SE_PIN)
     applymovement(LOCALID_GYMLEADER_MILO, Common_Movement_ExclamationMark)
     waitmovement(LOCALID_GYMLEADER_MILO)

@@ -16,6 +16,7 @@ CATEGORIES = {
 OBJECTIVE_TYPES = {
     "none": "QUEST_OBJECTIVE_NONE",
     "caught_species": "QUEST_OBJECTIVE_CAUGHT_SPECIES",
+    "defeated_trainers": "QUEST_OBJECTIVE_DEFEATED_TRAINERS",
 }
 
 
@@ -46,6 +47,9 @@ def load_quests(input_path: Path) -> list[dict]:
         try:
             category = CATEGORIES[quest["category"].lower()]
             state_var = require_identifier(quest["state_var"], f"state_var in [{section}]")
+            progress_var = quest.get("progress_var", "0")
+            if progress_var != "0":
+                progress_var = require_identifier(progress_var, f"progress_var in [{section}]")
             stage_names = [require_identifier(name.strip(), f"stage in [{section}]") for name in quest["stages"].split(",")]
         except KeyError as error:
             raise ValueError(f"Missing {error.args[0]} in [{section}]") from error
@@ -73,8 +77,10 @@ def load_quests(input_path: Path) -> list[dict]:
                 raise ValueError(f"target in [{stage_section}] must be a number") from error
             if not 0 <= target <= 65535:
                 raise ValueError(f"target in [{stage_section}] must be between 0 and 65535")
-            if objective_type == "QUEST_OBJECTIVE_CAUGHT_SPECIES" and target == 0:
-                raise ValueError(f"caught_species target in [{stage_section}] must be greater than zero")
+            if objective_type in ("QUEST_OBJECTIVE_CAUGHT_SPECIES", "QUEST_OBJECTIVE_DEFEATED_TRAINERS") and target == 0:
+                raise ValueError(f"{stage.get('objective_type')} target in [{stage_section}] must be greater than zero")
+            if objective_type == "QUEST_OBJECTIVE_DEFEATED_TRAINERS" and progress_var == "0":
+                raise ValueError(f"defeated_trainers requires progress_var in [{section}]")
 
             location = stage.get("location", "").strip()
             detail = stage.get("detail", "").strip()
@@ -97,6 +103,7 @@ def load_quests(input_path: Path) -> list[dict]:
                 "title": quest["title"].strip(),
                 "category": category,
                 "state_var": state_var,
+                "progress_var": progress_var,
                 "stages": stages,
             }
         )
@@ -181,6 +188,7 @@ def write_catalog(output_path: Path, quests: list[dict]) -> None:
                 f"        .title = sText_{name}Title,",
                 f"        .category = {quest['category']},",
                 f"        .stateVar = {quest['state_var']},",
+                f"        .progressVar = {quest['progress_var']},",
                 f"        .firstStage = QUEST_{quest['id']}_STAGE_{quest['stages'][0]['id']},",
                 f"        .completeStage = QUEST_{quest['id']}_STAGE_COMPLETE,",
                 f"        .stages = sQuest{name}Stages,",

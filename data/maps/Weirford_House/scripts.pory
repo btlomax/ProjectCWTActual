@@ -35,7 +35,7 @@ script Weirford_House_FrontDoorAccess
     }
     lock
     playse(SE_CLICK)
-    msgbox("The door is locked.", MSGBOX_DEFAULT)
+    msgbox(format("The door is locked."), MSGBOX_DEFAULT)
     release
     end
 }
@@ -52,7 +52,7 @@ script Weirford_House_BasementDoorAccess
 
     lock
 
-    msgbox("The basement door is locked.", MSGBOX_DEFAULT)
+    msgbox(format("The basement door is locked."), MSGBOX_DEFAULT)
     release
     end
 }

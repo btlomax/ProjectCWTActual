@@ -40,9 +40,10 @@ Westlock_Village_EventScript_MainSign_Text_0:
 
 Westlock_Village_EventScript_LibrarySign_Text_0:
 # 11 "data/maps/Westlock_Village/scripts.pory"
-	.string "Westlock Library\nRoute 2 ->$"
+	.string "Westlock Library Route 2 ->$"
 
 Westlock_Village_EventScript_ReturnToAlderbrook_Text_0:
 # 20 "data/maps/Westlock_Village/scripts.pory"
 	.string "You should return to Alderbrook Town.\n"
-	.string "The Professor is waiting for you.\p$"
+	.string "The Professor is waiting for you.\p"
+	.string "$"

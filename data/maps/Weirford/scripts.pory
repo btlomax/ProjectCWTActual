@@ -24,19 +24,19 @@ script Weirford_MapScripts_OnTransition
 
 script Weirford_MapScripts_GreetingsSign
 {
-    msgbox("Welcome to Weirford!", MSGBOX_SIGN)
+    msgbox(format("Welcome to Weirford!"), MSGBOX_SIGN)
 }
 
 script Weirford_MapScripts_GymSign
 {
-    msgbox("The text has faded away...", MSGBOX_SIGN)
+    msgbox(format("The text has faded away..."), MSGBOX_SIGN)
 }
 
 script Weirford_MapScripts_MartNPC
 {
     lock
     faceplayer
-    msgbox("Have you been inside that scary looking\nbuilding yet?", MSGBOX_DEFAULT)
+    msgbox(format("Have you been inside that scary looking building yet?"), MSGBOX_DEFAULT)
     release
     end
 }
@@ -115,7 +115,7 @@ script Weirford_MapScripts_JonasOutside
     msgbox(format("Oh wait, wait I'm sorry, I didn't mean to scare you!"), MSGBOX_DEFAULT)
     msgbox(format("It's just...this notebook. It was my little brother's, he went missing a couple of years ago."), MSGBOX_DEFAULT)
     msgbox(format("Wait, you're a trainer! You don't happen to know how to use CUT do you?"), MSGBOX_DEFAULT)
-    msgbox("...", MSGBOX_DEFAULT)
+    msgbox(format("..."), MSGBOX_DEFAULT)
     msgbox(format("I see, please come back when you know how to use CUT."), MSGBOX_DEFAULT)
     applymovement(LOCALID_WEIRFORD_JONAS_OUTSIDE, Weirford_Movement_Jonas_Turn_Around)
 

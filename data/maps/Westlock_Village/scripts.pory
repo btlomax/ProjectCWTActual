@@ -2,13 +2,13 @@ mapscripts Westlock_Village_MapScripts {}
 
 script Westlock_Village_EventScript_MainSign
 {
-    msgbox ("Welcome to Westlock Village!", MSGBOX_SIGN)
+    msgbox (format("Welcome to Westlock Village!"), MSGBOX_SIGN)
     end
 }
 
 script Westlock_Village_EventScript_LibrarySign 
 {
-    msgbox ("Westlock Library\nRoute 2 ->", MSGBOX_SIGN)
+    msgbox (format("Westlock Library Route 2 ->"), MSGBOX_SIGN)
     end
 }
 
@@ -17,8 +17,8 @@ script Westlock_Village_EventScript_ReturnToAlderbrook {
     if(var(VAR_ALDERBROOK_TOWN_STATE) != 4)
     {
         lock
-        msgbox("You should return to Alderbrook Town.\n"
-        "The Professor is waiting for you.\p", MSGBOX_DEFAULT)
+        msgbox(format("You should return to Alderbrook Town. "
+        "The Professor is waiting for you.\p"), MSGBOX_DEFAULT)
         applymovement(OBJ_EVENT_ID_PLAYER, Route2_Meadowvale_Farm_Movement_ReturnToWestlock)
         waitmovement
         release

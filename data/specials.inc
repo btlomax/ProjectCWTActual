@@ -646,5 +646,6 @@ gSpecials::
 	def_special PokemonTutorGiveStarterReward, requests_effects=1
 	def_special Quest_Add
 	def_special Quest_SetStage
+	def_special Quest_IncrementTrainerDefeats
 	def_special Quest_Complete
 	def_special Quest_GetStage

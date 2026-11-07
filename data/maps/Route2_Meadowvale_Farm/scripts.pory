@@ -1,18 +1,18 @@
 mapscripts Route2_Meadowvale_Farm_MapScripts {}
 
 script Route2_Meadowvale_Farm_MapScripts_Route2Sign {
-    msgbox("Meadowvale Farm -> Weirford Forest", MSGBOX_SIGN)
+    msgbox(format("Meadowvale Farm -> Weirford Forest"), MSGBOX_SIGN)
     end
 }
 
 script Route2_Meadowvale_Farm_MapScripts_FarmSign {
-    msgbox("Meadowvale Farm\nPlease come in!", MSGBOX_SIGN)
+    msgbox(format("Meadowvale Farm Please come in!"), MSGBOX_SIGN)
     end
 }
 
 script Route2_Meadowvale_Farm_MapScripts_ForestSign {
-    msgbox("Entering Weirford Forest\n"
-            "Ensure you're prepared!",
+    msgbox(format("Entering Weirford Forest "
+            "Ensure you're prepared!"),
     MSGBOX_SIGN)
     end
 }
@@ -106,49 +106,73 @@ movement Route2_Meadowvale_Farm_Movement_ReturnToWestlock {
 }
 
 text Route2_Meadowvale_Farm_MapScripts_FarmhandTommy_TrainerPreBattle {
-    "H-hey! You look like a trainer!\nI-I challenge you to a b-battle!"
+    format(
+        "H-hey! You look like a trainer! I-I challenge you to a b-battle!"
+    )
 }
 
 text Route2_Meadowvale_Farm_MapScripts_FarmhandTommy_TrainerDefeated {
-    "Dad told us to battle trainers if we\nsaw any..."
+    format(
+        "Dad told us to battle trainers if we saw any..."
+    )
 }
 
 text Route2_Meadowvale_Farm_MapScripts_FarmhandTommy_TrainerPostBattle {
-    "The farm is up the route, past the fields.\nYou should go check it out!"
+    format(
+        "The farm is up the route, past the fields. You should go check it out!"
+    )
 }
 
 text Route2_Meadowvale_Farm_MapScripts_FarmhandGeorge_TrainerPreBattle {
-    "Hey! You! I'm bored, let's battle!"
+    format(
+        "Hey! You! I'm bored, let's battle!"
+    )
 }
 
 text Route2_Meadowvale_Farm_MapScripts_FarmhandGeorge_TrainerDefeated {
-    "Ugh, now and I'm bored AND I have to go\nback to work..."
+    format(
+        "Ugh, now and I'm bored AND I have to go back to work..."
+    )
 }
 
 text Route2_Meadowvale_Farm_MapScripts_FarmhandGeorge_TrainerPostBattle {
-    "Farms are so boring, at least there are\nPokemon to find."
+    format(
+        "Farms are so boring, at least there are Pokemon to find."
+    )
 }
 
 text Route2_Meadowvale_Farm_MapScripts_FarmhandJenny_TrainerPreBattle {
-    "Haha I got you! Now we have to battle!\nYay!"
+    format(
+        "Haha I got you! Now we have to battle! Yay!"
+    )
 }
 
 text Route2_Meadowvale_Farm_MapScripts_FarmhandJenny_TrainerDefeated {
-    "Nooooooo! I'm telling my dad about you!"
+    format(
+        "Nooooooo! I'm telling my dad about you!"
+    )
 }
 
 text Route2_Meadowvale_Farm_MapScripts_FarmhandJenny_TrainerPostBattle {
-    "I don't like you anymore!\nI'm going to tell my dad about you!"
+    format(
+        "I don't like you anymore! I'm going to tell my dad about you!"
+    )
 }
 
 text Route2_Meadowvale_Farm_MapScripts_FarmhandLucy_TrainerPreBattle {
-    "I'm the oldest, I bet you can't beat me!"
+    format(
+        "I'm the oldest, I bet you can't beat me!"
+    )
 }
 
 text Route2_Meadowvale_Farm_MapScripts_FarmhandLucy_TrainerDefeated {
-    "My dad will want to speak to you..."
+    format(
+        "My dad will want to speak to you..."
+    )
 }
 
 text Route2_Meadowvale_Farm_MapScripts_FarmhandLucy_TrainerPostBattle {
-    "My little sister likes to hide in long\ngrass and scare people."
+    format(
+        "My little sister likes to hide in long grass and scare people."
+    )
 }

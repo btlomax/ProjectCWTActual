@@ -20,7 +20,7 @@ script LarchLab_Inside_MapScripts_ProfessorLarch {
 
     if(flag(FLAG_SYS_POKEDEX_GET))
     {
-        msgbox("Good luck on your journey, {PLAYER}.", MSGBOX_DEFAULT)
+        msgbox(format("Good luck on your journey, {PLAYER}."), MSGBOX_DEFAULT)
         release
         end
     }
@@ -44,7 +44,7 @@ script LarchLab_Inside_MapScripts_ProfessorLarch {
     ), MSGBOX_DEFAULT)
 
     playfanfare(MUS_OBTAIN_ITEM)
-    msgbox("{PLAYER} received the POKéDEX!", MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER} received the POKéDEX!"), MSGBOX_DEFAULT)
     waitfanfare
     setflag(FLAG_SYS_POKEDEX_GET)
 
@@ -53,7 +53,7 @@ script LarchLab_Inside_MapScripts_ProfessorLarch {
     msgbox(format("Before you go, take these POKé BALLS. You will need them for your journey."), MSGBOX_DEFAULT)
     additem(ITEM_POKE_BALL, 5)
     playfanfare(MUS_OBTAIN_ITEM)
-    msgbox("{PLAYER} received 5 POKé BALLS!", MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER} received 5 POKé BALLS!"), MSGBOX_DEFAULT)
     waitfanfare
 
     msgbox(format(
@@ -70,7 +70,7 @@ script LarchLab_Inside_MapScripts_ProfessorLarch {
 }
 
 script LarchLab_Inside_MapScripts_WallNote {
-    msgbox("Gone to Westlock Village - AOPL", MSGBOX_SIGN)
+    msgbox(format("Gone to Westlock Village - AOPL"), MSGBOX_SIGN)
     end
 }
 
@@ -80,7 +80,7 @@ script LarchLab_Inside_MapScripts_ProfessorAide {
 
     if(var(VAR_WESTLOCK_LIBRARY_STATE) == 0) 
     {
-        msgbox("Are you looking for the Professor?", MSGBOX_YESNO)
+        msgbox(format("Are you looking for the Professor?"), MSGBOX_YESNO)
         if (var(VAR_RESULT) == YES) 
         {
         msgbox(format("I'm afraid he's not here right now.\pHe has been acting a bit strange recently... I'm not sure when he'll be back."), MSGBOX_DEFAULT)

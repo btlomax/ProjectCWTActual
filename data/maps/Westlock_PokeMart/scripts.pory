@@ -12,7 +12,7 @@ script Westlock_PokeMart_EventScript_MartEmployee
     else {
         pokemart(Westlock_PokeMart_Items)
     }
-    msgbox("Thank you, please come again!", MSGBOX_DEFAULT)
+    msgbox(format("Thank you, please come again!"), MSGBOX_DEFAULT)
     release
     end
 }

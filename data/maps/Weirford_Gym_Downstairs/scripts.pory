@@ -38,28 +38,28 @@ script Weirford_Gym_Downstairs_MapScripts_LeaderMilo
 
 script Weirford_Gym_Downstairs_MapScripts_LeaderMilo_Defeated
 {
-    msgbox("You met us on our own terms and endured.\p"
-    "So it is true...\n"
+    msgbox(format("You met us on our own terms and endured.\p"
+    "So it is true... "
     "I had hoped I was not imagining it.\p"
-    "The old bloodlines stir, after all this\n"
-    "time. Congratulations trainer, you have\l"
-    "bested me. I hereby award you the\l"
-    "Grit Badge.\p",
+    "The old bloodlines stir, after all this "
+    "time. Congratulations trainer, you have "
+    "bested me. I hereby award you the "
+    "Grit Badge.\p"),
     MSGBOX_DEFAULT)
 
     setflag(FLAG_DEFEATED_WEIRFORD_GYM)
     setflag(FLAG_BADGE01_GET)
 
-    msgbox("You received the Grit Badge!\p", MSGBOX_DEFAULT)
+    msgbox(format("You received the Grit Badge!\p"), MSGBOX_DEFAULT)
     call(Common_EventScript_PlayGymBadgeFanfare)
     
     msgbox(
-    "The GRIT BADGE is proof that you do not\n"
+    format("The GRIT BADGE is proof that you do not "
     "go down without a fight.\p"
-    "With it, Pokémon up to L19 will continue\n"
+    "With it, Pokémon up to L19 will continue "
     "to listen to you.\p"
-    "It also allows you to use HM01 outside\n"
-    "battle.",
+    "It also allows you to use HM01 outside "
+    "battle."),
     MSGBOX_DEFAULT)
 
     msgbox(format(
@@ -110,20 +110,24 @@ script Weirford_Gym_Downstairs_MapScripts_Cal
 
 text Weirford_Gym_Downstairs_MapScripts_LeaderMilo_TrainerPreBattle
 {
-    "Welcome trainer!\p"
-    "I'm Milo, the leader of this Gym.\p"
-    "The others answered my call, though none\n"
-    "of us expected to battle here again.\p"
-    "We don't rely on size or spectacle here.\p"
-    "My Pokémon know how to take a hit,\n"
-    "find an opening, and keep fighting.\p"
-    "Show me you can do the same!\p"
+    format(
+        "Welcome trainer!\p"
+        "I'm Milo, the leader of this Gym.\p"
+        "The others answered my call, though none "
+        "of us expected to battle here again.\p"
+        "We don't rely on size or spectacle here.\p"
+        "My Pokémon know how to take a hit, "
+        "find an opening, and keep fighting.\p"
+        "Show me you can do the same!\p"
+    )
 }
 
 text Weirford_Gym_Downstairs_MapScripts_LeaderMilo_TrainerDefeated
 {
-    "You would not stay down...\p"
-    "That is the spirit this Gym was built on."
+    format(
+        "You would not stay down...\p"
+        "That is the spirit this Gym was built on."
+    )
 }
 
 text Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerPreBattle {

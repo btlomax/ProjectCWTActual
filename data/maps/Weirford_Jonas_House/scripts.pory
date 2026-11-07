@@ -36,17 +36,17 @@ script Weirford_Jonas_House_Interact
             goto(Weirford_Jonas_House_Interact_StartQuest)
 
         case QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_FIND_THE_HOUSE:
-            msgbox(format("Have you found any clues about my little brother yet?"), MSGBOX_DEFAULT)
+            msgbox(format("Have you found any clues about my brother yet?"), MSGBOX_DEFAULT)
 
         case QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_RETURN_TO_THE_MAN:
             goto(Weirford_Jonas_House_Interact_QuestReturn)
 
         case QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_COMPLETE:
             if(flag(FLAG_WEIRFORD_HOUSE_TOBY_SAVED)) {
-                msgbox(format("Thank you for helping me with my little brother, he's recovering next door if you want to go and see him, I'm sure he would like that."), MSGBOX_DEFAULT)
+                msgbox(format("Thank you for saving TOBY, he's next door if you want to go and see him, I'm sure he would like that."), MSGBOX_DEFAULT)
             }
             else {
-                msgbox(format("I have nothing else to say to you."), MSGBOX_DEFAULT)
+                msgbox(format("Get out."), MSGBOX_DEFAULT)
             }
     }
 }

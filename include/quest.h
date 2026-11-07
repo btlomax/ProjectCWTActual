@@ -5,6 +5,7 @@
 
 void Quest_Add(void);
 void Quest_SetStage(void);
+void Quest_IncrementTrainerDefeats(void);
 void Quest_Complete(void);
 void Quest_GetStage(void);
 void Quest_RefreshStages(void);

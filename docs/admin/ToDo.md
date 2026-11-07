@@ -19,4 +19,4 @@ Look at overall balance of Meadowvale
 Change TM in Weirford Forest to something other than TM01
 
 Maybes
-Make Max's challenge a quest?
+Make Max's challenge a quest? - DONE

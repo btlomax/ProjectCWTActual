@@ -56,7 +56,7 @@ Pokemon_Tutor_Inside_Script_SelectPokemonReward_8:
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq Pokemon_Tutor_Inside_Script_SelectPokemonReward_18
 # 59 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
-	msgbox Pokemon_Tutor_Inside_Script_SelectPokemonReward_Text_6, MSGBOX_DEFAULT
+	msgbox Pokemon_Tutor_Inside_Script_SelectPokemonReward_Text_5, MSGBOX_DEFAULT
 Pokemon_Tutor_Inside_Script_SelectPokemonReward_14:
 	return
 
@@ -101,7 +101,7 @@ Pokemon_Tutor_Inside_Script_SelectPokemonReward_18:
 # 53 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	waitfanfare
 # 54 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
-	msgbox Pokemon_Tutor_Inside_Script_SelectPokemonReward_Text_5, MSGBOX_DEFAULT
+	msgbox Pokemon_Tutor_Inside_Script_SelectPokemonReward_Text_3, MSGBOX_DEFAULT
 	goto Pokemon_Tutor_Inside_Script_SelectPokemonReward_14
 
 
@@ -379,7 +379,8 @@ Pokemon_Tutor_Inside_Script_CheckRewardTiers_53:
 
 Pokemon_Tutor_Inside_Script_GivePokemonReward_Text_0:
 # 6 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
-	.string "I'm afraid I have no eligible partners\nfor you right now.$"
+	.string "I'm afraid I have no eligible partners\n"
+	.string "for you right now.$"
 
 Pokemon_Tutor_Inside_Script_GivePokemonReward_Text_1:
 # 11 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
@@ -387,7 +388,8 @@ Pokemon_Tutor_Inside_Script_GivePokemonReward_Text_1:
 
 Pokemon_Tutor_Inside_Script_SelectPokemonReward_Text_0:
 # 18 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
-	.string "No problem. I'll draw new choices when\nyou return.$"
+	.string "No problem. I'll draw new choices when\n"
+	.string "you return.$"
 
 Pokemon_Tutor_Inside_Script_SelectPokemonReward_Text_1:
 # 35 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
@@ -399,27 +401,25 @@ Pokemon_Tutor_Inside_Script_SelectPokemonReward_Text_2:
 
 Pokemon_Tutor_Inside_Script_SelectPokemonReward_Text_3:
 # 45 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
-	.string "I know you'll take great care of {STR_VAR_1}!\p"
-	.string "Come back anytime you want to see how many\n"
-	.string "Pokémon you've caught!\p$"
+	.string "I know you'll take great care of\n"
+	.string "{STR_VAR_1}!\p"
+	.string "Come back anytime you want to see how\n"
+	.string "many Pokémon you've caught!\p"
+	.string "$"
 
 Pokemon_Tutor_Inside_Script_SelectPokemonReward_Text_4:
 # 52 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
 	.string "{STR_VAR_1} was sent to the PC!$"
 
 Pokemon_Tutor_Inside_Script_SelectPokemonReward_Text_5:
-# 54 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
-	.string "I know you'll take great care of {STR_VAR_1}!\p"
-	.string "Come back anytime you want to see how\n"
-	.string "many Pokémon you've caught!\p$"
-
-Pokemon_Tutor_Inside_Script_SelectPokemonReward_Text_6:
 # 59 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
-	.string "Your party and PC are full! Make room\nand come back!$"
+	.string "Your party and PC are full! Make room\n"
+	.string "and come back!$"
 
 Pokemon_Tutor_Inside_MapScripts_Check_Pokemon_Caught_Text_0:
 # 71 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
-	.string "Ah hello young trainer! Are you here to\nsee how many Pokémon you've caught?$"
+	.string "Ah hello young trainer! Are you here to\n"
+	.string "see how many Pokémon you've caught?$"
 
 Pokemon_Tutor_Inside_MapScripts_Check_Pokemon_Caught_Text_1:
 # 74 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
@@ -427,15 +427,19 @@ Pokemon_Tutor_Inside_MapScripts_Check_Pokemon_Caught_Text_1:
 
 Pokemon_Tutor_Inside_MapScripts_Check_Pokemon_Caught_Text_2:
 # 89 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
-	.string "You've seen {STR_VAR_1} Pokémon and caught\n{STR_VAR_2} Pokémon!\p$"
+	.string "You've seen {STR_VAR_1} Pokémon\n"
+	.string "and caught {STR_VAR_2} Pokémon!\p"
+	.string "$"
 
 Pokemon_Tutor_Inside_Script_HandleQuestReturn15_Text_0:
 # 110 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
-	.string "Your next challenge is to catch 35\nPokémon. Keep it up!$"
+	.string "Your next challenge is to catch 35\n"
+	.string "Pokémon. Keep it up!$"
 
 Pokemon_Tutor_Inside_Script_HandleQuestReturn35_Text_0:
 # 121 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
-	.string "You've completed my challenges for now.\nCome back when I have another for you!$"
+	.string "You've completed my challenges for now.\n"
+	.string "Come back when I have another for you!$"
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_0:
 # 130 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
@@ -443,7 +447,9 @@ Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_0:
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_1:
 # 136 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
-	.string "Your first goal is to catch 15 Pokémon.\nCome back when you've caught a few more!$"
+	.string "Your first goal is to catch 15 Pokémon.\n"
+	.string "Come back when you've caught a few\l"
+	.string "more!$"
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_2:
 # 143 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
@@ -451,7 +457,9 @@ Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_2:
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_3:
 # 149 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
-	.string "Your next goal is to catch 35 Pokémon.\nCome back when you've caught a few more!$"
+	.string "Your next goal is to catch 35 Pokémon.\n"
+	.string "Come back when you've caught a few\l"
+	.string "more!$"
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_4:
 # 156 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
@@ -459,7 +467,9 @@ Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_4:
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_5:
 # 162 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
-	.string "Your next goal is to catch 60 Pokémon.\nCome back when you've caught a few more!$"
+	.string "Your next goal is to catch 60 Pokémon.\n"
+	.string "Come back when you've caught a few\l"
+	.string "more!$"
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_6:
 # 169 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
@@ -467,7 +477,9 @@ Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_6:
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_7:
 # 175 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
-	.string "Your next goal is to catch 95 Pokémon.\nCome back when you've caught a few more!$"
+	.string "Your next goal is to catch 95 Pokémon.\n"
+	.string "Come back when you've caught a few\l"
+	.string "more!$"
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_8:
 # 182 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
@@ -475,7 +487,9 @@ Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_8:
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_9:
 # 188 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
-	.string "Your next goal is to catch 140 Pokémon.\nCome back when you've caught a few more!$"
+	.string "Your next goal is to catch 140 Pokémon.\n"
+	.string "Come back when you've caught a few\l"
+	.string "more!$"
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_10:
 # 200 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
@@ -483,7 +497,9 @@ Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_10:
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_11:
 # 206 "data/maps/Pokemon_Tutor_Inside/scripts.pory"
-	.string "Your next goal is to catch 190 Pokémon.\nCome back when you've caught a few more!$"
+	.string "Your next goal is to catch 190 Pokémon.\n"
+	.string "Come back when you've caught a few\l"
+	.string "more!$"
 
 Pokemon_Tutor_Inside_Script_CheckRewardTiers_Text_12:
 # 211 "data/maps/Pokemon_Tutor_Inside/scripts.pory"

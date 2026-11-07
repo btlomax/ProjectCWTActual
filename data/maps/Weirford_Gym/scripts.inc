@@ -144,12 +144,13 @@ Movement_MiloFaceDown:
 
 Weirford_Gym_MapScripts_MiloInteraction_Text_0:
 # 48 "data/maps/Weirford_Gym/scripts.pory"
-	.string "Hello? Can I help you?\p$"
+	.string "Hello? Can I help you?\p"
+	.string "$"
 
 Weirford_Gym_MapScripts_MiloInteraction_Text_1:
 # 56 "data/maps/Weirford_Gym/scripts.pory"
-	.string "You're here for the what?\n"
-	.string "The Gym Challenge?\p"
+	.string "You're here for the what? The Gym\n"
+	.string "Challenge?\p"
 	.string "And you-you're serious?\p"
 	.string "...\p"
 	.string "Errrr...well I gue-$"

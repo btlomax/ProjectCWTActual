@@ -20,6 +20,7 @@ enum QuestObjectiveType
 {
     QUEST_OBJECTIVE_NONE,
     QUEST_OBJECTIVE_CAUGHT_SPECIES,
+    QUEST_OBJECTIVE_DEFEATED_TRAINERS,
 };
 
 struct QuestStageDefinition
@@ -35,6 +36,7 @@ struct QuestDefinition
     const u8 *title;
     enum QuestCategory category;
     u16 stateVar;
+    u16 progressVar;
     u16 firstStage;
     u16 completeStage;
     const struct QuestStageDefinition *stages;
@@ -92,6 +94,8 @@ void Quest_Add(void)
     if (GetQuestState(questId) < sQuestDefinitions[questId].firstStage)
     {
         SetQuestState(questId, sQuestDefinitions[questId].firstStage);
+        if (sQuestDefinitions[questId].progressVar != 0)
+            VarSet(sQuestDefinitions[questId].progressVar, 0);
         QueueQuestUpdate(questId);
     }
 
@@ -116,6 +120,34 @@ void Quest_SetStage(void)
         SetQuestState(questId, gSpecialVar_0x8005);
         QueueQuestUpdate(questId);
     }
+    Quest_RefreshStages();
+    gSpecialVar_Result = TRUE;
+}
+
+void Quest_IncrementTrainerDefeats(void)
+{
+    u8 questId = gSpecialVar_0x8004;
+    u16 stage;
+    const struct QuestStageDefinition *stageDefinition;
+
+    if (!IsQuestIdValid(questId) || !IsQuestActive(questId))
+    {
+        gSpecialVar_Result = FALSE;
+        return;
+    }
+
+    stage = GetQuestState(questId);
+    stageDefinition = &sQuestDefinitions[questId].stages[stage];
+    if (stageDefinition->objectiveType != QUEST_OBJECTIVE_DEFEATED_TRAINERS
+     || sQuestDefinitions[questId].progressVar == 0)
+    {
+        gSpecialVar_Result = FALSE;
+        return;
+    }
+
+    if (VarGet(sQuestDefinitions[questId].progressVar) < stageDefinition->target)
+        VarSet(sQuestDefinitions[questId].progressVar, VarGet(sQuestDefinitions[questId].progressVar) + 1);
+
     Quest_RefreshStages();
     gSpecialVar_Result = TRUE;
 }
@@ -164,8 +196,10 @@ void Quest_RefreshStages(void)
             continue;
 
         stageDefinition = &sQuestDefinitions[questId].stages[stage];
-        if (stageDefinition->objectiveType == QUEST_OBJECTIVE_CAUGHT_SPECIES
-         && GetRegionalPokedexCount(FLAG_GET_CAUGHT) >= stageDefinition->target)
+        if ((stageDefinition->objectiveType == QUEST_OBJECTIVE_CAUGHT_SPECIES
+          && GetRegionalPokedexCount(FLAG_GET_CAUGHT) >= stageDefinition->target)
+         || (stageDefinition->objectiveType == QUEST_OBJECTIVE_DEFEATED_TRAINERS
+          && VarGet(sQuestDefinitions[questId].progressVar) >= stageDefinition->target))
         {
             SetQuestState(questId, stage + 1);
             QueueQuestUpdate(questId);
@@ -304,6 +338,8 @@ u16 Quest_GetProgress(u8 questId)
         return 0;
     if (sQuestDefinitions[questId].stages[stage].objectiveType == QUEST_OBJECTIVE_CAUGHT_SPECIES)
         return GetRegionalPokedexCount(FLAG_GET_CAUGHT);
+    if (sQuestDefinitions[questId].stages[stage].objectiveType == QUEST_OBJECTIVE_DEFEATED_TRAINERS)
+        return VarGet(sQuestDefinitions[questId].progressVar);
 
     return 0;
 }

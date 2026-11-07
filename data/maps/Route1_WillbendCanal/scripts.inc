@@ -554,7 +554,8 @@ Route1_EventScript_StarterDrop_Text_4:
 
 Route1_EventScript_StarterDrop_Text_5:
 # 97 "data/maps/Route1_WillbendCanal/scripts.pory"
-	.string "Do you want to give a nickname\nto your POKéMON?$"
+	.string "Do you want to give a nickname to your\n"
+	.string "POKéMON?$"
 
 Route1_EventScript_StarterDrop_Text_6:
 # 104 "data/maps/Route1_WillbendCanal/scripts.pory"
@@ -562,7 +563,8 @@ Route1_EventScript_StarterDrop_Text_6:
 
 Route1_EventScript_StarterDrop_Text_7:
 # 105 "data/maps/Route1_WillbendCanal/scripts.pory"
-	.string "Press START and select QUESTS to view\nyour current quests.$"
+	.string "Press START and select QUESTS to view\n"
+	.string "your current quests.$"
 
 Route1_EventScript_TurnAround_Text_0:
 # 122 "data/maps/Route1_WillbendCanal/scripts.pory"
@@ -570,11 +572,13 @@ Route1_EventScript_TurnAround_Text_0:
 
 Route1_EventScript_TurnAround_Text_1:
 # 123 "data/maps/Route1_WillbendCanal/scripts.pory"
-	.string "{STR_VAR_1}, don't go too far please!$"
+	.string "{STR_VAR_1}, don't go too far\n"
+	.string "please!$"
 
 Route1_EventScript_Catch_Pokemon_Tutorial_Text_0:
 # 148 "data/maps/Route1_WillbendCanal/scripts.pory"
-	.string "Hey kid! You look like a new trainer!\pI can see you have a POKéMON with you.$"
+	.string "Hey kid! You look like a new trainer!\p"
+	.string "I can see you have a POKéMON with you.$"
 
 Route1_EventScript_Catch_Pokemon_Tutorial_Text_1:
 # 149 "data/maps/Route1_WillbendCanal/scripts.pory"
@@ -586,7 +590,8 @@ Route1_EventScript_Catch_Pokemon_Tutorial_Text_2:
 
 Route1_EventScript_Catch_Pokemon_Tutorial_Text_3:
 # 153 "data/maps/Route1_WillbendCanal/scripts.pory"
-	.string "First, you need to find a wild POKéMON.\nYou can find them in tall grass.$"
+	.string "First, you need to find a wild POKéMON.\n"
+	.string "You can find them in tall grass.$"
 
 Route1_EventScript_Catch_Pokemon_Tutorial_Text_4:
 # 162 "data/maps/Route1_WillbendCanal/scripts.pory"
@@ -594,24 +599,35 @@ Route1_EventScript_Catch_Pokemon_Tutorial_Text_4:
 
 Route1_EventScript_Catch_Pokemon_Tutorial_Text_5:
 # 176 "data/maps/Route1_WillbendCanal/scripts.pory"
-	.string "See, that wasn't so hard!\pYou can catch wild POKéMON by weakening\nthem in battle and then throwing a\lPOKéBALL at them.$"
+	.string "See, that wasn't so hard!\p"
+	.string "You can catch wild POKéMON by\n"
+	.string "weakening them in battle and then\l"
+	.string "throwing a POKéBALL at them.$"
 
 Route1_EventScript_Catch_Pokemon_Tutorial_Text_6:
 # 179 "data/maps/Route1_WillbendCanal/scripts.pory"
-	.string "No problem, but let me give you some\ntips at least.$"
+	.string "No problem, but let me give you some\n"
+	.string "tips at least.$"
 
 Route1_EventScript_Catch_Pokemon_Tutorial_Text_7:
 # 182 "data/maps/Route1_WillbendCanal/scripts.pory"
-	.string "Some Pokémon are hard to find, but they\nare out there!\pListen out for the cries of wild POKéMON,\nyou never know what you might find!$"
+	.string "Some Pokémon are hard to find, but they\n"
+	.string "are out there!\p"
+	.string "Listen out for the cries of wild\n"
+	.string "POKéMON, you never know what you might\l"
+	.string "find!$"
 
 Route1_EventScript_Catch_Pokemon_Tutorial_Text_8:
 # 183 "data/maps/Route1_WillbendCanal/scripts.pory"
-	.string "Come to my house on this route after\nyou've caught 15 Pokemon, I'll have a\lgift ready for you.\p$"
+	.string "Come to my house on this route after\n"
+	.string "you've caught 15 Pokemon, I'll have a\l"
+	.string "gift ready for you.\p"
+	.string "$"
 
 Route1_WillbendCanal_MapScripts_PathSign_Text_0:
 # 200 "data/maps/Route1_WillbendCanal/scripts.pory"
-	.string "Alderbrook Town\nV Westlock Village -->$"
+	.string "Alderbrook Town V Westlock Village -->$"
 
 Route1_WillbendCanal_MapScripts_TutorSign_Text_0:
 # 205 "data/maps/Route1_WillbendCanal/scripts.pory"
-	.string "Free Pokemon!\n<-- Inside$"
+	.string "Free Pokemon! <-- Inside$"

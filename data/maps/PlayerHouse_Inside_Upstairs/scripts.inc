@@ -39,4 +39,5 @@ PlayerHouse_Inside_WakeUp::
 
 PlayerHouse_Inside_WakeUp_Text_0:
 # 18 "data/maps/PlayerHouse_Inside_Upstairs/scripts.pory"
-	.string "It's your birthday…\p$"
+	.string "It's your birthday…\p"
+	.string "$"

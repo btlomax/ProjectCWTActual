@@ -104,7 +104,7 @@ static const struct QuestStageDefinition sQuestTutorCatchStages[] =
 
 static const u8 sText_MaxFarmBossTitle[] = _("Max the Farm Boss");
 static const u8 sText_MaxFarmBossDefeatFarmhandsLocation[] = _("MEADOWVALE FARM");
-static const u8 sText_MaxFarmBossDefeatFarmhandsDetail[] = _("Defeat the four farmhands");
+static const u8 sText_MaxFarmBossDefeatFarmhandsDetail[] = _("Trainers defeated: {STR_VAR_1}/{STR_VAR_2}");
 static const u8 sText_MaxFarmBossDefeatMaxLocation[] = _("MEADOWVALE FARM");
 static const u8 sText_MaxFarmBossDefeatMaxDetail[] = _("Defeat Max");
 
@@ -114,8 +114,8 @@ static const struct QuestStageDefinition sQuestMaxFarmBossStages[] =
     {
         .objective = sText_MaxFarmBossDefeatFarmhandsDetail,
         .location = sText_MaxFarmBossDefeatFarmhandsLocation,
-        .objectiveType = QUEST_OBJECTIVE_NONE,
-        .target = 0,
+        .objectiveType = QUEST_OBJECTIVE_DEFEATED_TRAINERS,
+        .target = 4,
     },
     [QUEST_MAX_FARM_BOSS_STAGE_DEFEAT_MAX] =
     {
@@ -184,6 +184,7 @@ static const struct QuestDefinition sQuestDefinitions[QUEST_COUNT] =
         .title = sText_ANewChallengeTitle,
         .category = QUEST_CATEGORY_PRIMARY,
         .stateVar = VAR_QUEST_A_NEW_CHALLENGE_STATE,
+        .progressVar = 0,
         .firstStage = QUEST_A_NEW_CHALLENGE_STAGE_BEGIN,
         .completeStage = QUEST_A_NEW_CHALLENGE_STAGE_COMPLETE,
         .stages = sQuestANewChallengeStages,
@@ -193,6 +194,7 @@ static const struct QuestDefinition sQuestDefinitions[QUEST_COUNT] =
         .title = sText_TutorCatchTitle,
         .category = QUEST_CATEGORY_SECONDARY,
         .stateVar = VAR_QUEST_TUTOR_CATCH_STATE,
+        .progressVar = 0,
         .firstStage = QUEST_TUTOR_CATCH_STAGE_CATCH_15,
         .completeStage = QUEST_TUTOR_CATCH_STAGE_COMPLETE,
         .stages = sQuestTutorCatchStages,
@@ -202,6 +204,7 @@ static const struct QuestDefinition sQuestDefinitions[QUEST_COUNT] =
         .title = sText_MaxFarmBossTitle,
         .category = QUEST_CATEGORY_SECONDARY,
         .stateVar = VAR_QUEST_MAX_FARM_BOSS_STATE,
+        .progressVar = VAR_QUEST_MAX_FARM_BOSS_PROGRESS,
         .firstStage = QUEST_MAX_FARM_BOSS_STAGE_DEFEAT_FARMHANDS,
         .completeStage = QUEST_MAX_FARM_BOSS_STAGE_COMPLETE,
         .stages = sQuestMaxFarmBossStages,
@@ -211,6 +214,7 @@ static const struct QuestDefinition sQuestDefinitions[QUEST_COUNT] =
         .title = sText_TheHouseInTheWoodsTitle,
         .category = QUEST_CATEGORY_SECONDARY,
         .stateVar = VAR_QUEST_THE_HOUSE_IN_THE_WOODS_STATE,
+        .progressVar = 0,
         .firstStage = QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_TALK_TO_THE_MAN,
         .completeStage = QUEST_THE_HOUSE_IN_THE_WOODS_STAGE_COMPLETE,
         .stages = sQuestTheHouseInTheWoodsStages,

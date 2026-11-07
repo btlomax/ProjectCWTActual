@@ -95,17 +95,20 @@ Weirford_Gym_Downstairs_MapScripts_LeaderMilo_Text_0:
 
 Weirford_Gym_Downstairs_MapScripts_LeaderMilo_Defeated_Text_0:
 # 41 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
-	.string "You met us on our own terms and endured.\p"
-	.string "So it is true...\n"
-	.string "I had hoped I was not imagining it.\p"
+	.string "You met us on our own terms and\n"
+	.string "endured.\p"
+	.string "So it is true... I had hoped I was not\n"
+	.string "imagining it.\p"
 	.string "The old bloodlines stir, after all this\n"
 	.string "time. Congratulations trainer, you have\l"
-	.string "bested me. I hereby award you the\l"
-	.string "Grit Badge.\p$"
+	.string "bested me. I hereby award you the Grit\l"
+	.string "Badge.\p"
+	.string "$"
 
 Weirford_Gym_Downstairs_MapScripts_LeaderMilo_Defeated_Text_1:
 # 53 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
-	.string "You received the Grit Badge!\p$"
+	.string "You received the Grit Badge!\p"
+	.string "$"
 
 Weirford_Gym_Downstairs_MapScripts_LeaderMilo_Defeated_Text_2:
 # 57 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
@@ -145,20 +148,22 @@ Weirford_Gym_Downstairs_MapScripts_LeaderMilo_TrainerPreBattle::
 # 111 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	.string "Welcome trainer!\p"
 	.string "I'm Milo, the leader of this Gym.\p"
-	.string "The others answered my call, though none\n"
-	.string "of us expected to battle here again.\p"
+	.string "The others answered my call, though\n"
+	.string "none of us expected to battle here\l"
+	.string "again.\p"
 	.string "We don't rely on size or spectacle here.\p"
-	.string "My Pokémon know how to take a hit,\n"
-	.string "find an opening, and keep fighting.\p"
-	.string "Show me you can do the same!\p$"
+	.string "My Pokémon know how to take a hit, find\n"
+	.string "an opening, and keep fighting.\p"
+	.string "Show me you can do the same!\p"
+	.string "$"
 
 Weirford_Gym_Downstairs_MapScripts_LeaderMilo_TrainerDefeated::
-# 123 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 125 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	.string "You would not stay down...\p"
 	.string "That is the spirit this Gym was built on.$"
 
 Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerPreBattle::
-# 129 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 133 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	.string "When Milo called me in, I thought he was\n"
 	.string "pulling my leg.\p"
 	.string "This Gym has held on for decades,\n"
@@ -168,12 +173,12 @@ Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerPreBattle::
 	.string "stay down!$"
 
 Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerDefeated::
-# 137 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 141 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	.string "Wow! I did not expect the Gym to open\n"
 	.string "again just so I could lose!$"
 
 Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerPostBattle::
-# 141 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 145 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	.string "It feels strange seeing this place\n"
 	.string "active again...\p"
 	.string "We all use small, scrappy Pokémon that\n"
@@ -181,18 +186,18 @@ Weirford_Gym_Downstairs_MapScripts_Tanya_TrainerPostBattle::
 	.string "types.$"
 
 Weirford_Gym_Downstairs_MapScripts_Cal_TrainerPreBattle::
-# 148 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 152 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	.string "Milo called us in for a real Gym battle?\p"
 	.string "I thought this old place would stay\n"
 	.string "quiet forever!$"
 
 Weirford_Gym_Downstairs_MapScripts_Cal_TrainerDefeated::
-# 155 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 159 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	.string "Sorry, buddy! I guess I am out of\n"
 	.string "practice!$"
 
 Weirford_Gym_Downstairs_MapScripts_Cal_TrainerPostBattle::
-# 159 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
+# 163 "data/maps/Weirford_Gym_Downstairs/scripts.pory"
 	.string "I cannot believe we are doing this\n"
 	.string "again.\p"
 	.string "You are tough, but Milo will not give up\n"

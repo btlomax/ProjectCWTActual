@@ -242,32 +242,54 @@ PlayerHouse_Inside_MoveDown:
 
 PlayerHouse_Inside_Dinner_Text_0:
 # 33 "data/maps/PlayerHouse_Inside/scripts.pory"
-	.string "{PLAYER}, just in time!\pCome and sit down.$"
+	.string "{PLAYER}, just in time!\p"
+	.string "Come and sit down.$"
 
 PlayerHouse_Inside_Dinner_Text_1:
 # 48 "data/maps/PlayerHouse_Inside/scripts.pory"
-	.string "Happy birthday {PLAYER}!\nMake a wish!\pNow, what have you been up to?$"
+	.string "Happy birthday {PLAYER}! Make a wish!\p"
+	.string "Now, what have you been up to?$"
 
 PlayerHouse_Inside_Dinner_Text_2:
 # 49 "data/maps/PlayerHouse_Inside/scripts.pory"
-	.string "...\p...\pYou found a what?\p...\p...\pYou found a Pokemon?\pLet me see...\p...\pA surprise gift on your birthday no less.\pHmmmm I wonder...$"
+	.string "...\p"
+	.string "...\p"
+	.string "You found a what?\p"
+	.string "...\p"
+	.string "...\p"
+	.string "You found a Pokemon?\p"
+	.string "Let me see...\p"
+	.string "...\p"
+	.string "A surprise gift on your birthday no\n"
+	.string "less.\p"
+	.string "Hmmmm I wonder...$"
 
 PlayerHouse_Inside_Dinner_Text_3:
 # 50 "data/maps/PlayerHouse_Inside/scripts.pory"
-	.string "...\pI think you should go and see Professor\nLarch, he's an old friend.\pIf he's not at his lab, he'll be in Westlock\nVillage library,\npast Route 1.$"
+	.string "...\p"
+	.string "I think you should go and see Professor\n"
+	.string "Larch, he's an old friend.\p"
+	.string "If he's not at his lab, he'll be in\n"
+	.string "Westlock Village library, past Route 1.$"
 
 PlayerHouse_Inside_Dinner_Text_4:
 # 51 "data/maps/PlayerHouse_Inside/scripts.pory"
-	.string "He'll be able to tell you more about\nPokemon.\pBe careful in the tall grass,\nwild Pokémon are sure to jump out at you!$"
+	.string "He'll be able to tell you more about\n"
+	.string "Pokemon.\p"
+	.string "Be careful in the tall grass, wild\n"
+	.string "Pokémon are sure to jump out at you!$"
 
 PlayerHouse_Inside_Dinner_Text_5:
 # 52 "data/maps/PlayerHouse_Inside/scripts.pory"
-	.string "Come and see me when you've spoken to\nthe Professor, and please,\pdo be careful dear.$"
+	.string "Come and see me when you've spoken to\n"
+	.string "the Professor, and please,\p"
+	.string "do be careful dear.$"
 
 PlayerHouse_Inside_Birthday_Text_0:
 # 79 "data/maps/PlayerHouse_Inside/scripts.pory"
-	.string "You're finally up! I was starting to think\n"
-	.string "you'd sleep through your special day!\p"
+	.string "You're finally up! I was starting to\n"
+	.string "think you'd sleep through your special\l"
+	.string "day!\p"
 	.string "Happy birthday {PLAYER}!\p"
 	.string "I'm just adding the finishing touches\n"
 	.string "to your birthday cake, no peeking!\p"
@@ -288,7 +310,8 @@ PlayerHouse_Inside_GrandmotherAfterPokedex_Text_0:
 
 PlayerHouse_Inside_GrandmotherAfterPokedex_Text_1:
 # 107 "data/maps/PlayerHouse_Inside/scripts.pory"
-	.string "...\p$"
+	.string "...\p"
+	.string "$"
 
 PlayerHouse_Inside_GrandmotherAfterPokedex_Text_2:
 # 110 "data/maps/PlayerHouse_Inside/scripts.pory"
@@ -328,7 +351,8 @@ PlayerHouse_Inside_GrandmotherAfterPokedex_Text_3:
 
 PlayerHouse_Inside_GrandmotherAfterPokedex_Text_4:
 # 135 "data/maps/PlayerHouse_Inside/scripts.pory"
-	.string "Before you leave, I have something for\n you.$"
+	.string "Before you leave, I have something for\n"
+	.string "you.$"
 
 PlayerHouse_Inside_GrandmotherAfterPokedex_Text_5:
 # 137 "data/maps/PlayerHouse_Inside/scripts.pory"
@@ -336,11 +360,14 @@ PlayerHouse_Inside_GrandmotherAfterPokedex_Text_5:
 
 PlayerHouse_Inside_GrandmotherAfterPokedex_Text_6:
 # 140 "data/maps/PlayerHouse_Inside/scripts.pory"
-	.string "These will allow you to get around\nquicker. Hold B to run!\p$"
+	.string "These will allow you to get around\n"
+	.string "quicker. Hold B to run!\p"
+	.string "$"
 
 PlayerHouse_Inside_GrandmotherAfterPokedex_Text_7:
 # 141 "data/maps/PlayerHouse_Inside/scripts.pory"
-	.string "And take these POTIONS, too.\p$"
+	.string "And take these POTIONS, too.\p"
+	.string "$"
 
 PlayerHouse_Inside_GrandmotherAfterPokedex_Text_8:
 # 144 "data/maps/PlayerHouse_Inside/scripts.pory"
@@ -348,7 +375,9 @@ PlayerHouse_Inside_GrandmotherAfterPokedex_Text_8:
 
 PlayerHouse_Inside_GrandmotherAfterPokedex_Text_9:
 # 146 "data/maps/PlayerHouse_Inside/scripts.pory"
-	.string "So it begins again.\p Walk worthy, {PLAYER}.\p$"
+	.string "So it begins again.\p"
+	.string "Walk worthy, {PLAYER}.\p"
+	.string "$"
 
 PlayerHouse_Inside_GrandmotherAfterPokedex_Text_10:
 # 148 "data/maps/PlayerHouse_Inside/scripts.pory"
@@ -359,7 +388,8 @@ PlayerHouse_Inside_GrandmotherAfterPokedex_Text_10:
 
 PlayerHouse_Inside_GrandmotherOfferRest_Text_0:
 # 162 "data/maps/PlayerHouse_Inside/scripts.pory"
-	.string "Hello dear, do you and your POKéMON\nneed a rest?$"
+	.string "Hello dear, do you and your POKéMON\n"
+	.string "need a rest?$"
 
 PlayerHouse_Inside_GrandmotherOfferRest_Text_1:
 # 165 "data/maps/PlayerHouse_Inside/scripts.pory"
@@ -367,7 +397,8 @@ PlayerHouse_Inside_GrandmotherOfferRest_Text_1:
 
 PlayerHouse_Inside_GrandmotherOfferRest_Text_2:
 # 172 "data/maps/PlayerHouse_Inside/scripts.pory"
-	.string "There we are. You and your POKéMON\nlook much better already.$"
+	.string "There we are. You and your POKéMON look\n"
+	.string "much better already.$"
 
 PlayerHouse_Inside_GrandmotherOfferRest_Text_3:
 # 175 "data/maps/PlayerHouse_Inside/scripts.pory"

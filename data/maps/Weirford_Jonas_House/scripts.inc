@@ -177,18 +177,17 @@ Weirford_Jonas_House_Interact_Toby::
 Weirford_Jonas_House_Interact_Text_0:
 # 39 "data/maps/Weirford_Jonas_House/scripts.pory"
 	.string "Have you found any clues about my\n"
-	.string "little brother yet?$"
+	.string "brother yet?$"
 
 Weirford_Jonas_House_Interact_Text_1:
 # 46 "data/maps/Weirford_Jonas_House/scripts.pory"
-	.string "Thank you for helping me with my little\n"
-	.string "brother, he's recovering next door if\l"
-	.string "you want to go and see him, I'm sure he\l"
-	.string "would like that.$"
+	.string "Thank you for saving TOBY, he's next\n"
+	.string "door if you want to go and see him, I'm\l"
+	.string "sure he would like that.$"
 
 Weirford_Jonas_House_Interact_Text_2:
 # 49 "data/maps/Weirford_Jonas_House/scripts.pory"
-	.string "I have nothing else to say to you.$"
+	.string "Get out.$"
 
 Weirford_Jonas_House_Interact_StartQuest_Text_0:
 # 57 "data/maps/Weirford_Jonas_House/scripts.pory"

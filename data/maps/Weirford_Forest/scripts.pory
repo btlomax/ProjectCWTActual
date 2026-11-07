@@ -105,17 +105,17 @@ script Weirford_Forest_MapScripts_ThirdItem_TM {
 }
 
 script Weirford_Forest_MapScripts_Entrance_Sign {
-    msgbox("Weirford Forest", MSGBOX_SIGN)
+    msgbox(format("Weirford Forest"), MSGBOX_SIGN)
     end
 }
 
 script Weirford_Forest_MapScripts_Exit_Sign {
-    msgbox("<- Route 3", MSGBOX_SIGN)
+    msgbox(format("<- Route 3"), MSGBOX_SIGN)
     end
 }
 
 script Weirford_Forest_MapScripts_Weirford_House {
-    msgbox("Welcome to Weirford House", MSGBOX_SIGN)
+    msgbox(format("Welcome to Weirford House"), MSGBOX_SIGN)
     end
 }
 
@@ -128,19 +128,27 @@ script Weirford_Forest_MapScripts_HouseWarp
 }
 
 text Weirford_Forest_MapScripts_CorpoEric_TrainerPreBattle {
-    "AH! Where did you come from?!"
+    format(
+        "AH! Where did you come from?!"
+    )
 }
 
 text Weirford_Forest_MapScripts_CorpoEric_TrainerPostBattle {
-    "I'm hiding from my manager..."
+    format(
+        "I'm hiding from my manager..."
+    )
 }
 
 text Weirford_Forest_MapScripts_CorpoEric_TrainerDefeated {
-    "I only lost because you scared me!"
+    format(
+        "I only lost because you scared me!"
+    )
 }
 
 text Weirford_Forest_MapScripts_LassLila_TrainerPreBattle {
-    "I'll tell you a secret if you\ncan beat me!"
+    format(
+        "I'll tell you a secret if you can beat me!"
+    )
 }
 
 text Weirford_Forest_MapScripts_LassLila_TrainerPostBattle {
@@ -148,18 +156,24 @@ text Weirford_Forest_MapScripts_LassLila_TrainerPostBattle {
 }
 
 text Weirford_Forest_MapScripts_LassLila_TrainerDefeated {
-    "UH! FINE I'LL TELL YOU!"
+    format(
+        "UH! FINE I'LL TELL YOU!"
+    )
 }
 
 text Weirford_Forest_MapScripts_AcolyteLin_TrainerPreBattle {
-    "Halt, young traveler!\n"
-    "Show me the strength you carry."
+    format(
+        "Halt, young traveler! "
+        "Show me the strength you carry."
+    )
 }
 
 text Weirford_Forest_MapScripts_AcolyteLin_TrainerPostBattle {
-    "You carry no Crest, yet your Pokémon\n"
-    "strike with unyielding weight...\p"
-    "The Weirford Convent must hear of this."
+    format(
+        "You carry no Crest, yet your Pokémon "
+        "strike with unyielding weight...\p"
+        "The Weirford Convent must hear of this."
+    )
 }
 
 text Weirford_Forest_MapScripts_AcolyteLin_TrainerDefeated {
@@ -167,27 +181,39 @@ text Weirford_Forest_MapScripts_AcolyteLin_TrainerDefeated {
 }
 
 text Weirford_Forest_MapScripts_CamperColin_TrainerPreBattle {
-    "This is my first time camping in the\nforest!"
+    format(
+        "This is my first time camping in the forest!"
+    )
 }
 
 text Weirford_Forest_MapScripts_CamperColin_TrainerPostBattle {
-    "The camping is NOT going well..."
+    format(
+        "The camping is NOT going well..."
+    )
 }
 
 text Weirford_Forest_MapScripts_CamperColin_TrainerDefeated {
-    "I'm trying my best not to SHAKE with\nFEAR."
+    format(
+        "I'm trying my best not to SHAKE with FEAR."
+    )
 }
 
 text Weirford_Forest_MapScripts_BugCatcherSam_TrainerPreBattle {
-    "Have you got any Bug Pokémon?"
+    format(
+        "Have you got any Bug Pokémon?"
+    )
 }
 
 text Weirford_Forest_MapScripts_BugCatcherSam_TrainerPostBattle {
-    "There are bug Pokemon here...\nI can feel them crawling up my OH SHI-\p"
+    format(
+        "There are bug Pokemon here... I can feel them crawling up my OH SHI-\p"
+    )
 }
 
 text Weirford_Forest_MapScripts_BugCatcherSam_TrainerDefeated {
-    "I can't believe you beat my team of\nalmighty bugs!"
+    format(
+        "I can't believe you beat my team of almighty bugs!"
+    )
 }
 
 movement Weirford_Forest_MapScripts_AcolyteLin_Leave {

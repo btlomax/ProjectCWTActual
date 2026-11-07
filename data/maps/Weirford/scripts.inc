@@ -190,7 +190,8 @@ Weirford_MapScripts_GymSign_Text_0:
 
 Weirford_MapScripts_MartNPC_Text_0:
 # 39 "data/maps/Weirford/scripts.pory"
-	.string "Have you been inside that scary looking\nbuilding yet?$"
+	.string "Have you been inside that scary looking\n"
+	.string "building yet?$"
 
 Weirford_MapScripts_GardenNPC_Text_0:
 # 48 "data/maps/Weirford/scripts.pory"

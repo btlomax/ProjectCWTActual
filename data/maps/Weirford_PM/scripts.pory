@@ -7,7 +7,7 @@ script Weirford_PokeMart_EventScript_MartEmployee
     message("How may I help you?$")
     waitmessage
     pokemart(Weirford_PokeMart_Items)
-    msgbox("Thank you, please come again!", MSGBOX_DEFAULT)
+    msgbox(format("Thank you, please come again!"), MSGBOX_DEFAULT)
     release
     end
 }

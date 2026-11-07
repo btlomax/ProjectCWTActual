@@ -37,7 +37,7 @@ script Weirford_House_2_BasementDoorAccess
 
     lock
 
-    msgbox("The basement door is locked.", MSGBOX_DEFAULT)
+    msgbox(format("The basement door is locked."), MSGBOX_DEFAULT)
     release
     end
 }
@@ -67,7 +67,7 @@ script Weirford_House_2_Toby_Interact
 
     lock
     faceplayer()
-    msgbox("I feel...cold...", MSGBOX_DEFAULT)
+    msgbox(format("I feel...cold..."), MSGBOX_DEFAULT)
 
     setflag(FLAG_HIDE_WEIRFORD_HOUSE_DOWNSTAIRS_TOBY)
     removeobject(LOCALID_TOBY)

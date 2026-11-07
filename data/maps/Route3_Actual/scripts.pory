@@ -39,24 +39,24 @@ script Route3_Actual_MapScript_RiverMan {
 
     if(!flag(FLAG_ROUTE3_RECEIVED_SOOTHE_BELL)) 
     {
-        msgbox("My Wanda used to love this spot.\nShe would spend hours here, watching\lthe water flow by...\p", MSGBOX_DEFAULT)
-        msgbox("Hold on to those cherished memories,\ndear child. One day it will all make sense.\p", MSGBOX_DEFAULT)
+        msgbox(format("My Wanda used to love this spot. She would spend hours here, watching the water flow by...\p"), MSGBOX_DEFAULT)
+        msgbox(format("Hold on to those cherished memories, dear child. One day it will all make sense.\p"), MSGBOX_DEFAULT)
 
         giveitem(ITEM_SOOTHE_BELL)
         setflag(FLAG_ROUTE3_RECEIVED_SOOTHE_BELL)
     }
 
-    msgbox("Your loved ones, your Pokemon, all are\nfleeting.")
+    msgbox(format("Your loved ones, your Pokemon, all are fleeting."))
     release
     end
 }
 
 script Route3_Actual_SouthWest_Sign {
-    msgbox("Weirford Town -->\n<-- Weirford Forest", MSGBOX_SIGN)
+    msgbox(format("Weirford Town --> <-- Weirford Forest"), MSGBOX_SIGN)
 }
 
 script Route3_Actual_NorthEast_Sign {
-    msgbox("Weirford Town -->\n<-- Weirford Forest", MSGBOX_SIGN)
+    msgbox(format("Weirford Town --> <-- Weirford Forest"), MSGBOX_SIGN)
 }
 
 script Route3_Actual_Item_SilverPowder {
@@ -67,37 +67,55 @@ script Route3_Actual_Item_SilverPowder {
 }
 
 text Route3_Actual_LassSara_TrainerPreBattle {
-    "STOP RIGHT THERE MISTER!\nThis is MY turf!"
+    format(
+        "STOP RIGHT THERE MISTER! This is MY turf!"
+    )
 }
 
 text Route3_Actual_LassSara_TrainerDefeated {
-    "I'd like more turf..."
+    format(
+        "I'd like more turf..."
+    )
 }
 
 text Route3_Actual_LassSara_TrainerPostBattle {
-    "I found an item hidden here so I claimed\nthe area in case there are more!"
+    format(
+        "I found an item hidden here so I claimed the area in case there are more!"
+    )
 }
 
 text Route3_Actual_CamperGary_TrainerPreBattle {
-    "That forest sure is a maze! You gotta\nbe tough to get through!"
+    format(
+        "That forest sure is a maze! You gotta be tough to get through!"
+    )
 }
 
 text Route3_Actual_CamperGary_TrainerDefeated {
-    "Yeah you're pretty tough..."
+    format(
+        "Yeah you're pretty tough..."
+    )
 }
 
 text Route3_Actual_CamperGary_TrainerPostBattle {
-    "It took me a long time to get through\nthe forest. Did you know there's a\lshortcut back down?"
+    format(
+        "It took me a long time to get through the forest. Did you know there's a shortcut back down?"
+    )
 }
 
 text Route3_Actual_MapScripts_Tim_TrainerPreBattle {
-    "Oh FINALLY, someone chooses the wrong path! Let's battle!"
+    format(
+        "Oh FINALLY, someone chooses the wrong path! Let's battle!"
+    )
 }
 
 text Route3_Actual_MapScripts_Tim_TrainerDefeated {
-    "Oh for fu-...\nAll that waiting and THAT happens!"
+    format(
+        "Oh for fu-... All that waiting and THAT happens!"
+    )
 }
 
 text Route3_Actual_MapScripts_Tim_TrainerPostBattle {
-    "I'm still not going to move."
+    format(
+        "I'm still not going to move."
+    )
 }

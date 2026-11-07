@@ -16,8 +16,9 @@ Alderbrook_Town_MapScripts_LabSign::
 
 Alderbrook_Town_MapScripts_PathSign_Text_0:
 # 4 "data/maps/Alderbrook_Town/scripts.pory"
-	.string "<- Alderbrook Town\nRoute 1 ->$"
+	.string "<- Alderbrook Town Route 1 ->$"
 
 Alderbrook_Town_MapScripts_LabSign_Text_0:
 # 9 "data/maps/Alderbrook_Town/scripts.pory"
-	.string "Alderbrook Pokemon Research Lab\nProfessor Larch's Lab$"
+	.string "Alderbrook Pokemon Research Lab\n"
+	.string "Professor Larch's Lab$"
