@@ -20,7 +20,7 @@ script LarchLab_Inside_MapScripts_ProfessorLarch {
 
     if(flag(FLAG_SYS_POKEDEX_GET))
     {
-        msgbox(format("Good luck on your journey, {PLAYER}."), MSGBOX_DEFAULT)
+        msgbox(format("I will be keeping a close eye on your progress, {PLAYER}."), MSGBOX_DEFAULT)
         release
         end
     }
@@ -51,17 +51,19 @@ script LarchLab_Inside_MapScripts_ProfessorLarch {
     msgbox(format("Use it well, {PLAYER}. And do let me know if you find anything else... unusual along that canal."), MSGBOX_DEFAULT)
 
     msgbox(format("Before you go, take these POKé BALLS. You will need them for your journey."), MSGBOX_DEFAULT)
-    additem(ITEM_POKE_BALL, 5)
-    playfanfare(MUS_OBTAIN_ITEM)
-    msgbox(format("{PLAYER} received 5 POKé BALLS!"), MSGBOX_DEFAULT)
-    waitfanfare
+    
+    setvar(VAR_0x8000, ITEM_POKE_BALL)
+    setvar(VAR_0x8001, 5)
+    call(Std_ObtainItem)
 
     msgbox(format(
         "Now, go and see your grandmother.\p"
-        "Tell Rhona that... well, just tell her that twenty years wasn't long enough.."
+        "Tell Rhona that... well, just tell her that twenty years wasn't long enough..."
         "Tell her the old ways are stirring again.\p"
         "She will know what I mean.\p"),
     MSGBOX_DEFAULT)
+
+    msgbox(format("I will be keeping a close eye on your progress, {PLAYER}."))
 
     setvar(VAR_ALDERBROOK_TOWN_STATE, 3)
    

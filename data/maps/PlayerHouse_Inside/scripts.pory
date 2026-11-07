@@ -110,11 +110,14 @@ script PlayerHouse_Inside_GrandmotherAfterPokedex {
     "Twenty years...\p"
     "Larch said that to you? Has it truly been that long?\p"
     "...the old ways...\p"
-    "..."
+    "...\p"
     "Come here, {PLAYER}. Let me have a look at you.\p"
+    "{FONT_NARROW}Rhona grabs you by the shoulders, and her eyes bore into yours, searching for something only she can see. The room seems to close in around you.{FONT_NORMAL}\p"
     "Hmmm...\p"
     "Perhaps I am only seeing what I want to"
     "see, I thought I saw it in Jul-...\p"
+    "...\p"
+    "No, I shouldn't place the weight of my old ghosts on your shoulders.\p"
     "...\p"
     "{PLAYER}, you should take on the League challenge."
     "See the region. Meet its people.\p"
@@ -129,8 +132,10 @@ script PlayerHouse_Inside_GrandmotherAfterPokedex {
     "You can always come and see me, and tell"
     "me of your adventures!\p"),
     MSGBOX_DEFAULT)
+    msgbox(format("{FONT_NARROW}Her hands linger on your shoulders, and you feel the weight of her gaze once more. In her eyes, the shadow of old grief gives way to a quiet, fierce strength. With a sigh, she lets go.{FONT_NORMAL}\p"))
+    msgbox(format("If this is truly the path that the Fates have laid at your feet, then go with my blessing."))
     msgbox(format("Go back through Westlock to Meadowvale Farm."
-    "From there, make your way through the forest and you'll eventually reach Weirford Town.\p"), MSGBOX_DEFAULT)
+    "From there, make your way through the forest and you'll eventually reach Weirford Town. Then, your journey truly begins.\p"), MSGBOX_DEFAULT)
 
     msgbox(format("Before you leave, I have something for  you."), MSGBOX_DEFAULT)
     playfanfare(MUS_OBTAIN_ITEM)
@@ -143,7 +148,7 @@ script PlayerHouse_Inside_GrandmotherAfterPokedex {
     playfanfare(MUS_OBTAIN_ITEM)
     msgbox(format("{PLAYER} received 3 POTIONS!"), MSGBOX_DEFAULT)
     waitfanfare
-    msgbox(format("So it begins again.\p Walk worthy, {PLAYER}.\p"), MSGBOX_DEFAULT)
+    msgbox(format("So it begins again...\p Walk worthy, {PLAYER}.\p"), MSGBOX_DEFAULT)
     msgbox(format(
            "You can always come home if you need to."
            "I'd be happy to see you and your Pokemon!\p"), MSGBOX_DEFAULT)

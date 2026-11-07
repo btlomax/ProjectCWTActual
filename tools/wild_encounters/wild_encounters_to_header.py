@@ -203,6 +203,17 @@ class WildEncounterAssembler:
     def WriteEncounters(self):
         wild_encounter_groups = self.json_data["wild_encounter_groups"]
         for wild_encounter_group in wild_encounter_groups:
+            field_sizes = {
+                field["type"]: len(field["encounter_rates"])
+                for field in wild_encounter_group.get("fields", [])
+            }
+            land_mon_types = {
+                "land_mons_4",
+                "land_mons_6",
+                "land_mons_8",
+                "land_mons_10",
+                "land_mons_12",
+            }
             headers = {}
             headers["label"] = wild_encounter_group["label"]
             headers["data"] = {}
@@ -213,6 +224,22 @@ class WildEncounterAssembler:
             encounters = wild_encounter_group["encounters"]
 
             for map_encounters in encounters:
+                configured_land_types = land_mon_types.intersection(map_encounters)
+                if len(configured_land_types) > 1:
+                    raise ValueError(
+                        f'{map_encounters["map"]} defines multiple land encounter table sizes: '
+                        f'{", ".join(sorted(configured_land_types))}'
+                    )
+
+                for mon_type, mons_entry in map_encounters.items():
+                    if mon_type not in field_sizes:
+                        continue
+                    if len(mons_entry["mons"]) != field_sizes[mon_type]:
+                        raise ValueError(
+                            f'{map_encounters["map"]} {mon_type} has {len(mons_entry["mons"])} slots; '
+                            f'expected {field_sizes[mon_type]}'
+                        )
+
                 map_group = "0"
                 map_num = str(map_num_counter)
                 if for_maps:

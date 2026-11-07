@@ -16828,7 +16828,7 @@ Mankey
 Level: 10
 
 Starly
-Level: 9
+Level: 11
 
 === TRAINER_WEIRFORD_GYM_CAL ===
 Name: Cal
@@ -16904,7 +16904,7 @@ Double Battle: No
 Shinx
 Level: 7
 
-Scraggy
+Lillipup
 Level: 7
 
 /*
@@ -16925,7 +16925,7 @@ AI: Basic Trainer
 Poochyena
 Level: 4
 
-Rattata
+Starly
 Level: 4
 
 === TRAINER_ROUTE2_MEADOWVALE_GEORGE ===
@@ -16937,7 +16937,7 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Rattata Alola
+Shinx
 Level: 5
 
 === TRAINER_ROUTE2_MEADOWVALE_JENNY ===
@@ -16948,9 +16948,6 @@ Gender: Female
 Music: Girl
 Double Battle: No
 AI: Basic Trainer
-
-Pidgey
-Level: 4
 
 Oddish
 Level: 5
@@ -16979,17 +16976,14 @@ Music: Cool
 Double Battle: No
 AI: Basic Trainer
 
-Rattata Alola
+Shinx
 Level: 6
 
 Poochyena
 Level: 6
 
-Tauros
+Mankey
 Level: 7
-- Tackle
-- Work Up
-- Rage
 
 === TRAINER_WEIRFORDFOREST_BUGCATCHER_SAM ===
 Name: SAMUEL
@@ -17001,9 +16995,6 @@ Double Battle: No
 AI: Basic Trainer
 
 Wurmple
-Level: 5
-
-Cascoon
 Level: 5
 
 Venipede

@@ -1757,10 +1757,11 @@ static void PopulateSpeciesFromTrainerLocation(int matchCallId, u8 *destStr)
         {
             timeOfDay = GetTimeOfDayForEncounters(i, WILD_AREA_LAND);
             numSpecies = 0;
-            if (gWildMonHeaders[i].encounterTypes[timeOfDay].landMonsInfo)
+            const struct WildPokemonInfo *landMonsInfo = GetMapLandWildMonInfo(i, timeOfDay);
+            if (landMonsInfo)
             {
-                slot = GetLandEncounterSlotForMatchCall();
-                species[numSpecies] = gWildMonHeaders[i].encounterTypes[timeOfDay].landMonsInfo->wildPokemon[slot].species;
+                slot = GetLandEncounterSlotForMatchCall(GetMapLandWildMonArea(i, timeOfDay));
+                species[numSpecies] = landMonsInfo->wildPokemon[slot].species;
                 numSpecies++;
             }
 

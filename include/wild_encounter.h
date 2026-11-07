@@ -9,6 +9,10 @@
 
 enum WildPokemonArea {
     WILD_AREA_LAND,
+    WILD_AREA_LAND_4,
+    WILD_AREA_LAND_6,
+    WILD_AREA_LAND_8,
+    WILD_AREA_LAND_10,
     WILD_AREA_WATER,
     WILD_AREA_ROCKS,
     WILD_AREA_FISHING,
@@ -31,6 +35,11 @@ struct WildPokemonInfo
 struct WildEncounterTypes
 {
     const struct WildPokemonInfo *landMonsInfo;
+    const struct WildPokemonInfo *landMons4Info;
+    const struct WildPokemonInfo *landMons6Info;
+    const struct WildPokemonInfo *landMons8Info;
+    const struct WildPokemonInfo *landMons10Info;
+    const struct WildPokemonInfo *landMons12Info;
     const struct WildPokemonInfo *waterMonsInfo;
     const struct WildPokemonInfo *rockSmashMonsInfo;
     const struct WildPokemonInfo *fishingMonsInfo;
@@ -73,6 +82,10 @@ bool8 SetUpMassOutbreakEncounter(u8 flags);
 bool8 DoMassOutbreakEncounterTest(void);
 bool8 AreLegendariesInSootopolisPreventingEncounters(void);
 u16 GetCurrentMapWildMonHeaderId(void);
+const struct WildPokemonInfo *GetMapLandWildMonInfo(u32 headerId, enum TimeOfDay timeOfDay);
+enum WildPokemonArea GetMapLandWildMonArea(u32 headerId, enum TimeOfDay timeOfDay);
+u8 GetLandWildMonSlotCount(enum WildPokemonArea area);
+u32 ChooseLandWildMonIndex(enum WildPokemonArea area);
 bool8 CheckFeebasAtCoords(s16 x, s16 y);
 u32 ChooseWildMonIndex_Land(void);
 u32 ChooseWildMonIndex_Water(void);
@@ -81,7 +94,7 @@ u32 ChooseHiddenMonIndex(void);
 bool32 MapHasNoEncounterData(void);
 enum TimeOfDay GetTimeOfDayForEncounters(u32 headerId, enum WildPokemonArea area);
 
-u8 GetLandEncounterSlotForMatchCall(void);
+u8 GetLandEncounterSlotForMatchCall(enum WildPokemonArea area);
 u8 GetWaterEncounterSlotForMatchCall(void);
 
 #endif // GUARD_WILD_ENCOUNTER_H

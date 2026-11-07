@@ -99,7 +99,7 @@ script Weirford_Forest_MapScripts_SecondItem {
 
 script Weirford_Forest_MapScripts_ThirdItem_TM {
     lock
-    finditem(ITEM_TM01)
+    finditem(ITEM_TM09)
     release
     end
 }

@@ -439,7 +439,17 @@ static bool8 MapHasSpecies(const struct WildEncounterTypes *info, u32 headerSect
             return FALSE;
     }
 
-    if (MonListHasSpecies(info->landMonsInfo, species, NUM_LAND_MONS_ENCOUNTER_SLOTS))
+    if (MonListHasSpecies(info->landMonsInfo, species, NUM_LAND_MONS_12_ENCOUNTER_SLOTS))
+        return TRUE;
+    if (MonListHasSpecies(info->landMons4Info, species, NUM_LAND_MONS_4_ENCOUNTER_SLOTS))
+        return TRUE;
+    if (MonListHasSpecies(info->landMons6Info, species, NUM_LAND_MONS_6_ENCOUNTER_SLOTS))
+        return TRUE;
+    if (MonListHasSpecies(info->landMons8Info, species, NUM_LAND_MONS_8_ENCOUNTER_SLOTS))
+        return TRUE;
+    if (MonListHasSpecies(info->landMons10Info, species, NUM_LAND_MONS_10_ENCOUNTER_SLOTS))
+        return TRUE;
+    if (MonListHasSpecies(info->landMons12Info, species, NUM_LAND_MONS_12_ENCOUNTER_SLOTS))
         return TRUE;
     if (MonListHasSpecies(info->waterMonsInfo, species, NUM_WATER_MONS_ENCOUNTER_SLOTS))
         return TRUE;
@@ -448,7 +458,7 @@ static bool8 MapHasSpecies(const struct WildEncounterTypes *info, u32 headerSect
 #ifdef BUGFIX
     if (MonListHasSpecies(info->fishingMonsInfo, species, NUM_FISHING_MONS_ENCOUNTER_SLOTS))
 #else
-    if (MonListHasSpecies(info->fishingMonsInfo, species, NUM_LAND_MONS_ENCOUNTER_SLOTS))
+    if (MonListHasSpecies(info->fishingMonsInfo, species, NUM_LAND_MONS_12_ENCOUNTER_SLOTS))
 #endif
         return TRUE;
     if (MonListHasSpecies(info->rockSmashMonsInfo, species, NUM_ROCK_SMASH_MONS_ENCOUNTER_SLOTS))

@@ -8,14 +8,14 @@ Escape rope is free in Marts
 Running shoes don't work
 
 General
-Look at encounter rates and wild Pokemon encounters - get rid of lines from both Pokedex AND trainers - too many bird types too early on
+Look at encounter rates and wild Pokemon encounters - get rid of lines from both Pokedex AND trainers - too many bird types too early on - DONE
 Westlock NPCs and building interiors
 Fix formatting, maybe get AI to add format to all dialogue - DONE
 Look at Larch's dialogue - doesn't really fit anymore with the new story idea
 Look at dialogue for NPC who drops package
-Add "I will be keeping an eye on you" to Larch dialogue in his lab
-Add line to Rhona in between mentioning Julian and the league challenge
-Look at overall balance of Meadowvale
+Add "I will be keeping an eye on you" to Larch dialogue in his lab - DONE
+Add line to Rhona in between mentioning Julian and the league challenge  - DONE
+Look at overall balance of Meadowvale Max
 Change TM in Weirford Forest to something other than TM01
 
 Maybes
