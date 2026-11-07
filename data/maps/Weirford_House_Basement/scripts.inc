@@ -173,8 +173,10 @@ Weirford_House_Basement_ShuppetBoss_Text_3:
 
 Weirford_House_Basement_ShuppetBoss_Text_4:
 # 56 "data/maps/Weirford_House_Basement/scripts.pory"
-	.string "A sudden, cold silence fills the room.\p"
-	.string "TOBY's arm drops to the floor.$"
+	.string "A sudden, dreadful silence fills the\n"
+	.string "room.\p"
+	.string "TOBY is no longer breathing, a tiny\n"
+	.string "lifeless body on the cold floor.$"
 
 Weirford_House_Basement_ShuppetBoss_Text_5:
 # 59 "data/maps/Weirford_House_Basement/scripts.pory"
