@@ -10,7 +10,7 @@ Running shoes don't work
 General
 Look at encounter rates and wild Pokemon encounters - get rid of lines from both Pokedex AND trainers - too many bird types too early on
 Westlock NPCs and building interiors
-Fix formatting, maybe get AI to add format to all dialogue
+Fix formatting, maybe get AI to add format to all dialogue - DONE
 Look at Larch's dialogue - doesn't really fit anymore with the new story idea
 Look at dialogue for NPC who drops package
 Add "I will be keeping an eye on you" to Larch dialogue in his lab

@@ -53,7 +53,7 @@ script Weirford_House_Basement_ShuppetBoss
          0, 0, 0, 0, 0, 0, 31, 18, 20, 20, 15, 31, MOVE_SHADOW_SNEAK, MOVE_WILL_O_WISP, MOVE_GRUDGE, MOVE_ASTONISH)
 
         msgbox(format("SHUPPET settles into its Poké Ball."), MSGBOX_DEFAULT)
-        msgbox(format("A sudden, cold silence fills the room.\pTOBY's arm drops to the floor."), MSGBOX_DEFAULT)
+        msgbox(format("A sudden, dreadful silence fills the room.\pTOBY is no longer breathing, a tiny lifeless body on the cold floor."), MSGBOX_DEFAULT)
 
         subvar(VAR_PLAYER_MORALITY, 5)
         msgbox(format("The world seems a little darker."), MSGBOX_DEFAULT)
