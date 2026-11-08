@@ -67,33 +67,49 @@ Westlock_Library_Inside_EventScripts_MeetProfLarch_10:
 	goto_if_eq Westlock_Library_Inside_EventScripts_MeetProfLarch_11
 # 92 "data/maps/Westlock_Library_Inside/scripts.pory"
 	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_9, MSGBOX_DEFAULT
-# 94 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 93 "data/maps/Westlock_Library_Inside/scripts.pory"
 	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_10, MSGBOX_DEFAULT
-# 103 "data/maps/Westlock_Library_Inside/scripts.pory"
-	playse SE_PIN
-# 104 "data/maps/Westlock_Library_Inside/scripts.pory"
-	applymovement LOCALID_PROF_LARCH, Common_Movement_ExclamationMark
-# 105 "data/maps/Westlock_Library_Inside/scripts.pory"
-	waitmovement LOCALID_PROF_LARCH
-# 106 "data/maps/Westlock_Library_Inside/scripts.pory"
-	delay 30
-# 108 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 95 "data/maps/Westlock_Library_Inside/scripts.pory"
 	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_11, MSGBOX_DEFAULT
-# 124 "data/maps/Westlock_Library_Inside/scripts.pory"
-	call Westlock_Library_Inside_EventScripts_ProfLarchExit
-# 125 "data/maps/Westlock_Library_Inside/scripts.pory"
-	setflag FLAG_HIDE_PROF_LARCH
-# 126 "data/maps/Westlock_Library_Inside/scripts.pory"
-	removeobject LOCALID_PROF_LARCH
-# 127 "data/maps/Westlock_Library_Inside/scripts.pory"
-	setvar VAR_WESTLOCK_LIBRARY_STATE, 1
-# 129 "data/maps/Westlock_Library_Inside/scripts.pory"
-	setvar VAR_0x8004, QUEST_A_NEW_CHALLENGE
-# 130 "data/maps/Westlock_Library_Inside/scripts.pory"
-	setvar VAR_0x8005, QUEST_A_NEW_CHALLENGE_STAGE_LARCH_POKEDEX
-# 131 "data/maps/Westlock_Library_Inside/scripts.pory"
-	special Quest_SetStage
+# 105 "data/maps/Westlock_Library_Inside/scripts.pory"
+	closemessage
+# 107 "data/maps/Westlock_Library_Inside/scripts.pory"
+	playse SE_PIN
+# 108 "data/maps/Westlock_Library_Inside/scripts.pory"
+	applymovement LOCALID_PROF_LARCH, Common_Movement_ExclamationMark
+# 109 "data/maps/Westlock_Library_Inside/scripts.pory"
+	waitmovement LOCALID_PROF_LARCH
+# 110 "data/maps/Westlock_Library_Inside/scripts.pory"
+	delay 30
+# 112 "data/maps/Westlock_Library_Inside/scripts.pory"
+	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_12, MSGBOX_DEFAULT
+# 116 "data/maps/Westlock_Library_Inside/scripts.pory"
+	closemessage
+# 118 "data/maps/Westlock_Library_Inside/scripts.pory"
+	playse SE_PIN
+# 119 "data/maps/Westlock_Library_Inside/scripts.pory"
+	applymovement LOCALID_PROF_LARCH, Common_Movement_ExclamationMark
+# 120 "data/maps/Westlock_Library_Inside/scripts.pory"
+	waitmovement LOCALID_PROF_LARCH
+# 121 "data/maps/Westlock_Library_Inside/scripts.pory"
+	delay 30
+# 123 "data/maps/Westlock_Library_Inside/scripts.pory"
+	msgbox Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_13, MSGBOX_DEFAULT
 # 133 "data/maps/Westlock_Library_Inside/scripts.pory"
+	call Westlock_Library_Inside_EventScripts_ProfLarchExit
+# 134 "data/maps/Westlock_Library_Inside/scripts.pory"
+	setflag FLAG_HIDE_PROF_LARCH
+# 135 "data/maps/Westlock_Library_Inside/scripts.pory"
+	removeobject LOCALID_PROF_LARCH
+# 136 "data/maps/Westlock_Library_Inside/scripts.pory"
+	setvar VAR_WESTLOCK_LIBRARY_STATE, 1
+# 138 "data/maps/Westlock_Library_Inside/scripts.pory"
+	setvar VAR_0x8004, QUEST_A_NEW_CHALLENGE
+# 139 "data/maps/Westlock_Library_Inside/scripts.pory"
+	setvar VAR_0x8005, QUEST_A_NEW_CHALLENGE_STAGE_LARCH_POKEDEX
+# 140 "data/maps/Westlock_Library_Inside/scripts.pory"
+	special Quest_SetStage
+# 142 "data/maps/Westlock_Library_Inside/scripts.pory"
 	release
 	return
 
@@ -123,66 +139,34 @@ Westlock_Library_Inside_EventScripts_MeetProfLarch_11:
 
 
 Westlock_Library_Inside_EventScripts_ProfLarchExit::
-# 138 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 147 "data/maps/Westlock_Library_Inside/scripts.pory"
 	specialvar VAR_RESULT, GetPlayerFacingDirection
-# 140 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 149 "data/maps/Westlock_Library_Inside/scripts.pory"
 	compare VAR_RESULT, DIR_NORTH
 	goto_if_eq Westlock_Library_Inside_EventScripts_ProfLarchExit_2
-# 147 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 156 "data/maps/Westlock_Library_Inside/scripts.pory"
 	applymovement LOCALID_PROF_LARCH, Movement_Larch_Exit_PlayerEastOrWest
-# 148 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 157 "data/maps/Westlock_Library_Inside/scripts.pory"
 	waitmovement LOCALID_PROF_LARCH
 Westlock_Library_Inside_EventScripts_ProfLarchExit_1:
 	return
 
 Westlock_Library_Inside_EventScripts_ProfLarchExit_2:
-# 142 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 151 "data/maps/Westlock_Library_Inside/scripts.pory"
 	applymovement LOCALID_PROF_LARCH, Movement_Larch_Exit_PlayerNorth
-# 143 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 152 "data/maps/Westlock_Library_Inside/scripts.pory"
 	waitmovement LOCALID_PROF_LARCH
 	goto Westlock_Library_Inside_EventScripts_ProfLarchExit_1
 
 
-# 166 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 175 "data/maps/Westlock_Library_Inside/scripts.pory"
 Movement_Larch_Exit_PlayerNorth:
-# 168 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 177 "data/maps/Westlock_Library_Inside/scripts.pory"
 	walk_right
-# 168 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 177 "data/maps/Westlock_Library_Inside/scripts.pory"
 	walk_right
-# 169 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_down
-# 170 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_right
-# 170 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_right
-# 170 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_right
-# 171 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_down
-# 171 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_down
-# 171 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_down
-# 171 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_down
-# 172 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_left
-# 173 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_down
-# 173 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_down
-# 173 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_down
-	step_end
-
-# 176 "data/maps/Westlock_Library_Inside/scripts.pory"
-Movement_Larch_Exit_PlayerEastOrWest:
 # 178 "data/maps/Westlock_Library_Inside/scripts.pory"
 	walk_down
-# 179 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_right
-# 179 "data/maps/Westlock_Library_Inside/scripts.pory"
-	walk_right
 # 179 "data/maps/Westlock_Library_Inside/scripts.pory"
 	walk_right
 # 179 "data/maps/Westlock_Library_Inside/scripts.pory"
@@ -208,14 +192,46 @@ Movement_Larch_Exit_PlayerEastOrWest:
 	step_end
 
 # 185 "data/maps/Westlock_Library_Inside/scripts.pory"
+Movement_Larch_Exit_PlayerEastOrWest:
+# 187 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_down
+# 188 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_right
+# 188 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_right
+# 188 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_right
+# 188 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_right
+# 188 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_right
+# 189 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_down
+# 189 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_down
+# 189 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_down
+# 189 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_down
+# 190 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_left
+# 191 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_down
+# 191 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_down
+# 191 "data/maps/Westlock_Library_Inside/scripts.pory"
+	walk_down
+	step_end
+
+# 194 "data/maps/Westlock_Library_Inside/scripts.pory"
 Movement_Larch_LookLeft:
-# 186 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 195 "data/maps/Westlock_Library_Inside/scripts.pory"
 	walk_in_place_left
 	step_end
 
-# 189 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 198 "data/maps/Westlock_Library_Inside/scripts.pory"
 Movement_Larch_LookDown:
-# 190 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 199 "data/maps/Westlock_Library_Inside/scripts.pory"
 	walk_in_place_down
 	step_end
 
@@ -226,8 +242,10 @@ Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_0:
 
 Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_1:
 # 23 "data/maps/Westlock_Library_Inside/scripts.pory"
-	.string "...'And when the great storm broke,the\n"
-	.string "amber force grew so intense that th-$"
+	.string "...'...un...t...mp...red, no m...rtal ve...l may\n"
+	.string "h...ld the s...cr..d... and the s...lv..r...\l"
+	.string "without fr...ctur..g...'\p"
+	.string "$"
 
 Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_2:
 # 40 "data/maps/Westlock_Library_Inside/scripts.pory"
@@ -287,43 +305,59 @@ Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_9:
 	.string "Gah!$"
 
 Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_10:
-# 94 "data/maps/Westlock_Library_Inside/scripts.pory"
-	.string "A r-rare species, uh, in these p-parts,\n"
-	.string "indeed y-yes!\p"
-	.string "Where, did you, erm, f-find it?\p"
-	.string "On the c-canal, y-you say!\p"
-	.string "I should go and, uh, look myself, yes,\n"
-	.string "yes!\p"
-	.string "Who knows what other, uh, rare species\n"
-	.string "may be in the area, heh...\p"
-	.string "...$"
+# 93 "data/maps/Westlock_Library_Inside/scripts.pory"
+	.string "{FONT_NARROW}Your new Pokemon waits patiently. The\n"
+	.string "Professor hovers and fusses over it,\l"
+	.string "but it is absolutely focused on you.{FONT_NORMAL}$"
 
 Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_11:
-# 108 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 96 "data/maps/Westlock_Library_Inside/scripts.pory"
+	.string "Good heavens...\p"
+	.string "{PLAYER}... it's as if it has known you\n"
+	.string "for years.\p"
+	.string "A wild specimen shouldn't yield like\n"
+	.string "this. Not to an untrained hand. It's\l"
+	.string "almost... terrifyingly natural...\p"
+	.string "Wh-where did you say you found this\n"
+	.string "Pokémon?\p"
+	.string "...\p"
+	.string "The canal bank...?\p"
+	.string "... Wait... this species... this is one of\n"
+	.string "my...?\p"
+	.string "$"
+
+Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_12:
+# 113 "data/maps/Westlock_Library_Inside/scripts.pory"
+	.string "But that would mean... my satchel!\p"
+	.string "I... I mean to say, I must have left it!\n"
+	.string "Somewhere outside, yes!$"
+
+Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_13:
+# 124 "data/maps/Westlock_Library_Inside/scripts.pory"
 	.string "GOODNESS ME, would you look at the time!\n"
 	.string "I must be off, yes, yes, I must be off!\p"
-	.string "Nocturnal Pokémon are much too\n"
-	.string "unpredictable for an old scholar like\l"
-	.string "myself, heh...\p"
+	.string "I have left some rather... sensitive\n"
+	.string "apparatus unattended, yes!\p"
 	.string "...\p"
-	.string "I was not expecting your arrival, but...\n"
-	.string "Even chaotic events can be fortuitous,\l"
-	.string "yes, yes...\p"
+	.string "Keep that Pokémon close, {PLAYER}. Do\n"
+	.string "not let it out of your sight! Although\l"
+	.string "truth be told, I'm not sure you could.\p"
 	.string "Come and visit me at the lab in\n"
-	.string "Alderbrook Town.\p"
+	.string "Alderbrook Town once I have, erm...\l"
+	.string "retrieved my equipment.\p"
 	.string "We have much to discuss, and I would\n"
-	.string "like to see your Pokémon again. In a\l"
-	.string "more, controlled environment...\p"
+	.string "like to inspect your Pokémon again. In a\l"
+	.string "far more... controlled environment...\p"
 	.string "Until then, {PLAYER}, I bid you adieu!$"
 
 Westlock_Library_Inside_EventScripts_MeetProfLarch_Male::
-# 154 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 163 "data/maps/Westlock_Library_Inside/scripts.pory"
 	.string "Oh! Hello there young man! You snuck up\n"
 	.string "on me, didn't you?\p"
 	.string "My head was buried in that book.$"
 
 Westlock_Library_Inside_EventScripts_MeetProfLarch_Female::
-# 160 "data/maps/Westlock_Library_Inside/scripts.pory"
+# 169 "data/maps/Westlock_Library_Inside/scripts.pory"
 	.string "Oh! Hello there young lady! You snuck up\n"
 	.string "on me, didn't you?\p"
 	.string "My head was buried in that book.$"

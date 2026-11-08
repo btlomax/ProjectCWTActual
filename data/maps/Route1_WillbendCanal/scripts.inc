@@ -73,19 +73,19 @@ Route1_WillbendCanal_MapScripts_LarchTrigger::
 # 51 "data/maps/Route1_WillbendCanal/scripts.pory"
 	waitmovement LOCALID_BRIDGE_NPC_ROUTE1
 # 53 "data/maps/Route1_WillbendCanal/scripts.pory"
-	playse SE_DINGDONG
+	playse SE_DING_DONG
 # 55 "data/maps/Route1_WillbendCanal/scripts.pory"
 	msgbox Route1_WillbendCanal_MapScripts_LarchTrigger_Text_2, MSGBOX_DEFAULT
 # 56 "data/maps/Route1_WillbendCanal/scripts.pory"
 	closemessage
 # 58 "data/maps/Route1_WillbendCanal/scripts.pory"
-	playse SE_DINGDONG
+	playse SE_DING_DONG
 # 60 "data/maps/Route1_WillbendCanal/scripts.pory"
 	msgbox Route1_WillbendCanal_MapScripts_LarchTrigger_Text_3, MSGBOX_DEFAULT
 # 61 "data/maps/Route1_WillbendCanal/scripts.pory"
 	msgbox Route1_WillbendCanal_MapScripts_LarchTrigger_Text_4, MSGBOX_DEFAULT
 # 63 "data/maps/Route1_WillbendCanal/scripts.pory"
-	playse SE_DINGDONG
+	playse SE_DING_DONG
 # 65 "data/maps/Route1_WillbendCanal/scripts.pory"
 	msgbox Route1_WillbendCanal_MapScripts_LarchTrigger_Text_5
 # 66 "data/maps/Route1_WillbendCanal/scripts.pory"
