@@ -98,7 +98,7 @@ Weirford_Forest_MapScripts_ThirdItem_TM::
 # 101 "data/maps/Weirford_Forest/scripts.pory"
 	lock
 # 102 "data/maps/Weirford_Forest/scripts.pory"
-	finditem ITEM_TM01
+	finditem ITEM_TM09
 # 103 "data/maps/Weirford_Forest/scripts.pory"
 	release
 	end

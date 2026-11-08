@@ -50,17 +50,17 @@ script Route1_WillbendCanal_MapScripts_LarchTrigger {
     applymovement(LOCALID_BRIDGE_NPC_ROUTE1, Movement_NPCLookAround)
     waitmovement(LOCALID_BRIDGE_NPC_ROUTE1)
 
-    playse(SE_DINGDONG)
+    playse(SE_DING_DONG)
 
     msgbox(format("Wait, what...?"), MSGBOX_DEFAULT)
     closemessage
 
-    playse(SE_DINGDONG)
+    playse(SE_DING_DONG)
 
     msgbox(format("{FONT_NARROW}The man looks in the bag he's carrying. His eyes widen in shock.{FONT_NORMAL}"), MSGBOX_DEFAULT)
     msgbox(format("OH FRAK, I grabbed the wrong bag! Oh no oh no OH NO!"), MSGBOX_DEFAULT)
 
-    playse(SE_DINGDONG)
+    playse(SE_DING_DONG)
 
     msgbox(format("AHHHH!FRAK THIS, I'M OUTTA HERE!"))
     closemessage

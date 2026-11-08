@@ -20,7 +20,7 @@ script Westlock_Library_Inside_EventScripts_MeetProfLarch
     lock
 
     msgbox(format("This room is far too humid for these books. I can barely make out the text..."), MSGBOX_DEFAULT)
-    msgbox(format("...'And when the great storm broke,the amber force grew so intense that th-"), MSGBOX_DEFAULT)
+    msgbox(format("...'...un...t...mp...red, no m...rtal ve...l may h...ld the s...cr..d... and the s...lv..r... without fr...ctur..g...'\p"), MSGBOX_DEFAULT)
 
     playse(SE_PIN)
     applymovement(LOCALID_PROF_LARCH, Common_Movement_ExclamationMark)
@@ -90,36 +90,45 @@ script Westlock_Library_Inside_EventScripts_MeetProfLarch
     }
 
     msgbox(format("Gah!"), MSGBOX_DEFAULT)
+    msgbox(format("{FONT_NARROW}Your new Pokemon waits patiently. The Professor hovers and fusses over it, but it is absolutely focused on you.{FONT_NORMAL}"), MSGBOX_DEFAULT)
 
-    msgbox(format("A r-rare species, uh, in these p-parts, "
-           "indeed y-yes!\p"
-           "Where, did you, erm, f-find it?\p"
-           "On the c-canal, y-you say!\p"
-           "I should go and, uh, look myself, yes, yes!\p"
-           "Who knows what other, uh, rare "
-           "species may be in the area, heh...\p"
-           "..."), MSGBOX_DEFAULT)
+   msgbox(format(
+        "Good heavens...\p"
+        "{PLAYER}... it's as if it has known you for years.\p"
+        "A wild specimen shouldn't yield like this. Not to an untrained hand. It's almost... terrifyingly natural...\p"
+        "Wh-where did you say you found this Pokémon?\p"
+        "...\p"
+        "The canal bank...?\p"
+        "..."
+        "Wait... this species... this is one of my...?\p"
+    ), MSGBOX_DEFAULT)
+    closemessage
 
     playse(SE_PIN)
     applymovement(LOCALID_PROF_LARCH, Common_Movement_ExclamationMark)
     waitmovement(LOCALID_PROF_LARCH)
     delay(30)
 
-    msgbox(format("GOODNESS ME, would you look at the "
-           "time! I must be off, yes, yes, I must be off!\p"
-           "Nocturnal Pokémon are much too "
-           "unpredictable for an old scholar like "
-           "myself, heh...\p"
-           "...\p"
-           "I was not expecting your arrival, but... "
-           "Even chaotic events can be "
-           "fortuitous, yes, yes...\p"
-           "Come and visit me at the lab in "
-           "Alderbrook Town.\p"
-           "We have much to discuss, and I would "
-           "like to see your Pokémon again. "
-           "In a more, controlled environment...\p"
-           "Until then, {PLAYER}, I bid you adieu!"), MSGBOX_DEFAULT)
+  msgbox(format(
+        "But that would mean... my satchel!\p"
+        "I... I mean to say, I must have left it! Somewhere outside, yes!"
+    ), MSGBOX_DEFAULT)
+    closemessage
+
+    playse(SE_PIN)
+    applymovement(LOCALID_PROF_LARCH, Common_Movement_ExclamationMark)
+    waitmovement(LOCALID_PROF_LARCH)
+    delay(30)
+
+    msgbox(format(
+        "GOODNESS ME, would you look at the time! I must be off, yes, yes, I must be off!\p"
+        "I have left some rather... sensitive apparatus unattended, yes!\p"
+        "...\p"
+        "Keep that Pokémon close, {PLAYER}. Do not let it out of your sight! Although truth be told, I'm not sure you could.\p"
+        "Come and visit me at the lab in Alderbrook Town once I have, erm... retrieved my equipment.\p"
+        "We have much to discuss, and I would like to inspect your Pokémon again. In a far more... controlled environment...\p"
+        "Until then, {PLAYER}, I bid you adieu!"
+    ), MSGBOX_DEFAULT)
 
     call(Westlock_Library_Inside_EventScripts_ProfLarchExit)
     setflag(FLAG_HIDE_PROF_LARCH)
