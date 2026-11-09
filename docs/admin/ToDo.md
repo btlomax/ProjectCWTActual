@@ -9,7 +9,7 @@ Running shoes don't work
 
 General
 Look at encounter rates and wild Pokemon encounters - get rid of lines from both Pokedex AND trainers - too many bird types too early on - DONE
-Westlock NPCs and building interiors
+Westlock NPCs and building interiors - DONE
 Fix formatting, maybe get AI to add format to all dialogue - DONE
 Look at Larch's dialogue - doesn't really fit anymore with the new story idea - DONE
 Look at dialogue for NPC who drops package - DONE

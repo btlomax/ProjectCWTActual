@@ -9580,6 +9580,26 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Weirford_Jonas_House/border.bin",
       "blockdata_filepath": "data/layouts/Weirford_Jonas_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_WESTLOCK_VILLAGE_HOUSE1",
+      "name": "WestlockVillage_House1_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/WestlockVillage_House1/border.bin",
+      "blockdata_filepath": "data/layouts/WestlockVillage_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_WESTLOCK_VILLAGE_HOUSE2",
+      "name": "WestlockVillage_House2_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/WestlockVillage_House2/border.bin",
+      "blockdata_filepath": "data/layouts/WestlockVillage_House2/map.bin"
     }
   ]
 }

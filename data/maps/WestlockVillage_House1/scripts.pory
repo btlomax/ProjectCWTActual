@@ -1,0 +1,22 @@
+mapscripts WestlockVillage_House1_MapScripts {}
+
+script WestlockVillage_House1_NPC_Gentleman
+{
+    lock
+
+    msgbox(format("Zzzzzzzzzzzz..."))
+
+    release
+    end
+}
+
+script WestlockVillage_House1_NPC_Lass
+{
+    lock
+    faceplayer
+
+    msgbox(format("Have you ever know anyone to fall asleep standing up?"))
+
+    release
+    end
+}

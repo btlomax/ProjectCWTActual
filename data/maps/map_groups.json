@@ -643,7 +643,9 @@
     "Westlock_Village",
     "Westlock_Library_Inside",
     "Westlock_PokeCentre",
-    "Westlock_PokeMart"
+    "Westlock_PokeMart",
+    "WestlockVillage_House1",
+    "WestlockVillage_House2"
   ],
   "gMapGroup_Route2_Meadowvale_Farm": [
     "Route2_Meadowvale_Farm",

@@ -34,6 +34,30 @@ Westlock_Village_EventScript_ReturnToAlderbrook_1:
 	end
 
 
+Westlock_Village_EventScript_FatGuy::
+# 31 "data/maps/Westlock_Village/scripts.pory"
+	lock
+# 32 "data/maps/Westlock_Village/scripts.pory"
+	faceplayer
+# 34 "data/maps/Westlock_Village/scripts.pory"
+	msgbox Westlock_Village_EventScript_FatGuy_Text_0
+# 36 "data/maps/Westlock_Village/scripts.pory"
+	release
+	end
+
+
+Westlock_Village_EventScript_OldMan::
+# 42 "data/maps/Westlock_Village/scripts.pory"
+	lock
+# 43 "data/maps/Westlock_Village/scripts.pory"
+	faceplayer
+# 45 "data/maps/Westlock_Village/scripts.pory"
+	msgbox Westlock_Village_EventScript_OldMan_Text_0
+# 47 "data/maps/Westlock_Village/scripts.pory"
+	release
+	end
+
+
 Westlock_Village_EventScript_MainSign_Text_0:
 # 5 "data/maps/Westlock_Village/scripts.pory"
 	.string "Welcome to Westlock Village!$"
@@ -47,3 +71,16 @@ Westlock_Village_EventScript_ReturnToAlderbrook_Text_0:
 	.string "You should return to Alderbrook Town.\n"
 	.string "The Professor is waiting for you.\p"
 	.string "$"
+
+Westlock_Village_EventScript_FatGuy_Text_0:
+# 34 "data/maps/Westlock_Village/scripts.pory"
+	.string "I'm trying to get my steps in but\n"
+	.string "SOMEBODY has made it so I can only go\l"
+	.string "two steps up and two steps down...$"
+
+Westlock_Village_EventScript_OldMan_Text_0:
+# 45 "data/maps/Westlock_Village/scripts.pory"
+	.string "Oh hello child. Professor Larch once\n"
+	.string "told me, {FONT_NARROW}Life uh, finds a way.{FONT_NORMAL}But looking\l"
+	.string "at the state of my petunias, I'm not so\l"
+	.string "sure...$"

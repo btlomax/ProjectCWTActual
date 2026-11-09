@@ -1,0 +1,41 @@
+mapscripts WestlockVillage_House2_MapScripts {}
+
+script WestlockVillage_House2_NPC
+{
+    lock
+    faceplayer
+
+    if(flag(FLAG_TALKED_TO_WESTLOCK_NPC2))
+    {
+        msgbox(format("We've already talked, so I guess I'll just keep standing here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    else
+    {
+        msgbox(format("So, I'm supposed to just stand here the whole time and wait for you to come into my house and talk to me?"), MSGBOX_YESNO)
+
+        if (var(VAR_RESULT) == 1)
+        {
+            msgbox(format("Well, at least you're honest."), MSGBOX_DEFAULT)
+            setflag(FLAG_TALKED_TO_WESTLOCK_NPC2)
+
+            setvar(VAR_0x8000, ITEM_ANTIDOTE)
+            setvar(VAR_0x8001, 3)
+            call(Std_ObtainItem)
+
+            setvar(VAR_0x8000, ITEM_PARALYZE_HEAL)
+            setvar(VAR_0x8001, 3)
+            call(Std_ObtainItem)
+
+            msgbox(format("Ahhhh, I feel like a weight has been lifted off my shoulders. Or perhaps it was just those items..."))
+        }
+        else
+        {
+            msgbox(format("Huh, I guess I'll just keep standing here then."), MSGBOX_DEFAULT)
+        }
+    }
+
+    release
+    end
+}

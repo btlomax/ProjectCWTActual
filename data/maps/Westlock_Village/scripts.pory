@@ -25,3 +25,25 @@ script Westlock_Village_EventScript_ReturnToAlderbrook {
         end
     }
 }
+
+script Westlock_Village_EventScript_FatGuy
+{
+    lock
+    faceplayer
+
+    msgbox(format("I'm trying to get my steps in but SOMEBODY has made it so I can only go two steps up and two steps down..."))
+
+    release
+    end
+}
+
+script Westlock_Village_EventScript_OldMan
+{
+    lock
+    faceplayer
+
+    msgbox(format("Oh hello child. Do you know Professor Larch once told me, 'Life uh, finds a way.'\p But, looking at the state of my petunias, I'm not so sure... "))
+
+    release
+    end
+}

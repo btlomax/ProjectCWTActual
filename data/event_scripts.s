@@ -1367,3 +1367,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Weirford_House_Upstairs_2/scripts.inc"
 
 	.include "data/maps/Weirford_Jonas_House/scripts.inc"
+
+	.include "data/maps/WestlockVillage_House1/scripts.inc"
+
+	.include "data/maps/WestlockVillage_House2/scripts.inc"
