@@ -132,6 +132,7 @@ script PlayerHouse_Inside_GrandmotherAfterPokedex {
     "You can always come and see me, and tell"
     "me of your adventures!\p"),
     MSGBOX_DEFAULT)
+
     msgbox(format("{FONT_NARROW}Her hands linger on your shoulders, and you feel the weight of her gaze once more. In her eyes, the shadow of old grief gives way to a quiet, fierce strength. With a sigh, she lets go.{FONT_NORMAL}\p"))
     msgbox(format("If this is truly the path that the Fates have laid at your feet, then go with my blessing."))
     msgbox(format("Go back through Westlock to Meadowvale Farm."
@@ -142,12 +143,14 @@ script PlayerHouse_Inside_GrandmotherAfterPokedex {
     msgbox(format("{PLAYER} received the RUNNING SHOES!"), MSGBOX_DEFAULT)
     waitfanfare
     setflag(FLAG_RECEIVED_RUNNING_SHOES)
+    setflag(FLAG_SYS_B_DASH)
     msgbox(format("These will allow you to get around quicker. Hold B to run!\p"), MSGBOX_DEFAULT)
+
     msgbox(format("And take these POTIONS, too.\p"), MSGBOX_DEFAULT)
-    additem(ITEM_POTION, 3)
-    playfanfare(MUS_OBTAIN_ITEM)
-    msgbox(format("{PLAYER} received 3 POTIONS!"), MSGBOX_DEFAULT)
-    waitfanfare
+    setvar(VAR_0x8000, ITEM_POTION)
+    setvar(VAR_0x8001, 5)
+    call(Std_ObtainItem)
+
     msgbox(format("So it begins again...\p Walk worthy, {PLAYER}.\p"), MSGBOX_DEFAULT)
     msgbox(format(
            "You can always come home if you need to."

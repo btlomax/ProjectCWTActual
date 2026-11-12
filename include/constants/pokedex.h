@@ -1348,6 +1348,9 @@ enum NationalDexOrder
     F(SPHEAL) \
     F(SEALEO) \
     F(WALREIN) \
+    F(IMPIDIMP) \
+    F(MORGREM) \
+    F(GRIMMSNARL) \
     F(PORYGON) \
     HOENN_DEX_IF(P_GEN_2_CROSS_EVOS, F(PORYGON2)) \
     HOENN_DEX_IF(P_GEN_4_CROSS_EVOS, F(PORYGON_Z)) \

@@ -80,7 +80,8 @@ Westlock_Village_EventScript_FatGuy_Text_0:
 
 Westlock_Village_EventScript_OldMan_Text_0:
 # 45 "data/maps/Westlock_Village/scripts.pory"
-	.string "Oh hello child. Professor Larch once\n"
-	.string "told me, {FONT_NARROW}Life uh, finds a way.{FONT_NORMAL}But looking\l"
-	.string "at the state of my petunias, I'm not so\l"
-	.string "sure...$"
+	.string "Oh hello child. Do you know Professor\n"
+	.string "Larch once told me, 'Life uh, finds a\l"
+	.string "way.'\p"
+	.string "But, looking at the state of my\n"
+	.string "petunias, I'm not so sure...$"
