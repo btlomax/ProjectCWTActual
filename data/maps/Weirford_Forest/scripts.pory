@@ -141,7 +141,7 @@ text Weirford_Forest_MapScripts_CorpoEric_TrainerPostBattle {
 
 text Weirford_Forest_MapScripts_CorpoEric_TrainerDefeated {
     format(
-        "I only lost because you scared me!"
+        "I only lost because you scared me choom!"
     )
 }
 

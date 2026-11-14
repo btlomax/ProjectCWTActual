@@ -30,6 +30,7 @@ script Route2_Meadowvale_Farm_MapScripts_FarmhandTommy {
 
 script Route2_Meadowvale_Farm_MapScripts_FarmhandTommy_Beaten {
     addvar(VAR_ROUTE2_MEADOWVALE_FARM_STATE, 1)
+    call(Route2_Meadowvale_Farm_MapScripts_UpdateFarmBossQuest)
     msgbox(Route2_Meadowvale_Farm_MapScripts_FarmhandTommy_TrainerPostBattle, MSGBOX_AUTOCLOSE)
     end
 }
@@ -47,6 +48,7 @@ script Route2_Meadowvale_Farm_MapScripts_FarmhandGeorge {
 
 script Route2_Meadowvale_Farm_MapScripts_FarmhandGeorge_Beaten {
     addvar(VAR_ROUTE2_MEADOWVALE_FARM_STATE, 1)
+    call(Route2_Meadowvale_Farm_MapScripts_UpdateFarmBossQuest)
     msgbox(Route2_Meadowvale_Farm_MapScripts_FarmhandGeorge_TrainerPostBattle, MSGBOX_AUTOCLOSE)
     end
 }
@@ -64,6 +66,7 @@ script Route2_Meadowvale_Farm_MapScripts_FarmhandJenny {
 
 script Route2_Meadowvale_Farm_MapScripts_FarmhandJenny_Beaten {
     addvar(VAR_ROUTE2_MEADOWVALE_FARM_STATE, 1)
+    call(Route2_Meadowvale_Farm_MapScripts_UpdateFarmBossQuest)
     msgbox(Route2_Meadowvale_Farm_MapScripts_FarmhandJenny_TrainerPostBattle, MSGBOX_AUTOCLOSE)
     end
 }
@@ -81,8 +84,23 @@ script Route2_Meadowvale_Farm_MapScripts_FarmhandLucy {
 
 script Route2_Meadowvale_Farm_MapScripts_FarmhandLucy_Beaten {
     addvar(VAR_ROUTE2_MEADOWVALE_FARM_STATE, 1)
+    call(Route2_Meadowvale_Farm_MapScripts_UpdateFarmBossQuest)
     msgbox(Route2_Meadowvale_Farm_MapScripts_FarmhandLucy_TrainerPostBattle, MSGBOX_AUTOCLOSE)
     end
+}
+
+script Route2_Meadowvale_Farm_MapScripts_UpdateFarmBossQuest {
+    setvar(VAR_0x8004, QUEST_MAX_FARM_BOSS)
+    special(Quest_GetStage)
+
+    if (var(VAR_RESULT) == QUEST_MAX_FARM_BOSS_STAGE_INACTIVE) {
+        setvar(VAR_0x8004, QUEST_MAX_FARM_BOSS)
+        special(Quest_Add)
+    }
+
+    setvar(VAR_0x8004, QUEST_MAX_FARM_BOSS)
+    special(Quest_IncrementTrainerDefeats)
+    return
 }
 
 script Route2_Meadowvale_Farm_MapScripts_FirstItem{
@@ -131,7 +149,7 @@ text Route2_Meadowvale_Farm_MapScripts_FarmhandGeorge_TrainerPreBattle {
 
 text Route2_Meadowvale_Farm_MapScripts_FarmhandGeorge_TrainerDefeated {
     format(
-        "Ugh, now and I'm bored AND I have to go back to work..."
+        "Ugh! My dad's gonna be REAL mad when he finds out I lost...!"
     )
 }
 

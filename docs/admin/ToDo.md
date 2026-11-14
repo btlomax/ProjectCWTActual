@@ -20,3 +20,11 @@ Change TM in Weirford Forest to something other than TM01 - DONE
 
 Maybes
 Make Max's challenge a quest? - DONE
+
+Test 2 - 13/11
+Escape rope still free
+Look at Route 2 balance - SORTED
+Number of trainers defeated during Max quest doesn't update - FIXED but need test
+Look at Larch lab dialogue - CHANGED
+Replace Oddish with Starly on Route 2
+Encounter rates too high - REDUCED

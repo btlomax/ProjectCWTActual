@@ -25,7 +25,9 @@ script LarchLab_Inside_MapScripts_ProfessorLarch {
         end
     }
 
-    msgbox(format("Ah! {PLAYER}, welcome to my humble laboratory!"), MSGBOX_DEFAULT)
+    msgbox(format("Ah! {PLAYER}, welcome to my humble laboratory!\p"
+    "I have recovered my satche- I mean, stabilised my equipment, yes.\p"
+    "Everything is quite in order now. Perfectly routine. Nothing to see here. Nothing at all."), MSGBOX_DEFAULT)
     msgbox(format("That's Derek over there, he's my assistant.\pSay hello, Derek!"), MSGBOX_DEFAULT)
     msgbox(format("Derek: Hello!"), MSGBOX_DEFAULT)
     msgbox(format("We're over here, Derek."), MSGBOX_DEFAULT)

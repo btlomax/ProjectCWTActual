@@ -184,7 +184,8 @@ Weirford_Forest_MapScripts_CorpoEric_TrainerPostBattle::
 
 Weirford_Forest_MapScripts_CorpoEric_TrainerDefeated::
 # 142 "data/maps/Weirford_Forest/scripts.pory"
-	.string "I only lost because you scared me!$"
+	.string "I only lost because you scared me\n"
+	.string "choom!$"
 
 Weirford_Forest_MapScripts_LassLila_TrainerPreBattle::
 # 148 "data/maps/Weirford_Forest/scripts.pory"

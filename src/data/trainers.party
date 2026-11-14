@@ -16937,7 +16937,7 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Shinx
+Zigzagoon
 Level: 5
 
 === TRAINER_ROUTE2_MEADOWVALE_JENNY ===
@@ -16965,7 +16965,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Flabebe
-Level: 6
+Level: 5
 
 === TRAINER_ROUTE2_MEADOWVALEFARM_INSIDE_MAX ===
 Name: MAX
@@ -16977,7 +16977,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Shinx
-Level: 6
+Level: 5
 
 Poochyena
 Level: 6
@@ -17012,12 +17012,12 @@ AI: Basic Trainer
 Budew
 Level: 5
 
-Shinx
+Poochyena
 Level: 5
 
 === TRAINER_WEIRFORDFOREST_CORPO_ERIC ===
 Name: ERIC
-Class: Gentleman
+Class: Corpo
 Pic: Gentleman
 Gender: Male
 Music: Male
@@ -17025,11 +17025,11 @@ Double Battle: No
 AI: Basic Trainer
 
 Growlithe
-Level: 7
+Level: 6
 
 === TRAINER_WEIRFORDFOREST_ACOLYTE_LIN ===
 Name: LIN
-Class: Expert
+Class: Acolyte
 Pic: Expert M
 Gender: Male
 Music: Suspicious
@@ -17042,5 +17042,5 @@ Level: 5
 Oddish
 Level: 5
 
-Shinx
+Scraggy
 Level: 6

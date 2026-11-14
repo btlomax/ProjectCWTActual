@@ -32,7 +32,7 @@ script Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut {
     msgbox(
         format("WOOOOOO I'M PUMPED NOW! "
         "I'm gonna work up a sweat in the fields!\p"
-        "Take this HM, my kids can do it the old n"
+        "Take this HM, my kids can do it the old"
         "fashioned way! HAHAHAHA!\p")
         MSGBOX_DEFAULT
     )

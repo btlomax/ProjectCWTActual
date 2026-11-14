@@ -125,8 +125,8 @@ script Westlock_Library_Inside_EventScripts_MeetProfLarch
         "I have left some rather... sensitive apparatus unattended, yes!\p"
         "...\p"
         "Keep that Pokémon close, {PLAYER}. Do not let it out of your sight! Although truth be told, I'm not sure you could.\p"
-        "Come and visit me at the lab in Alderbrook Town once I have, erm... retrieved my equipment.\p"
-        "We have much to discuss, and I would like to inspect your Pokémon again. In a far more... controlled environment...\p"
+        "Come and visit me at the lab in Alderbrook Town once I have, erm... stabilised my erm, equipment...\p"
+        "We have much to discuss...yes...\p"
         "Until then, {PLAYER}, I bid you adieu!"
     ), MSGBOX_DEFAULT)
 

@@ -61,7 +61,7 @@ Weirford_Gym_MapScripts_MiloInteraction::
 # 46 "data/maps/Weirford_Gym/scripts.pory"
 	waitmovement LOCALID_GYMLEADER_MILO
 # 48 "data/maps/Weirford_Gym/scripts.pory"
-	msgbox Weirford_Gym_MapScripts_MiloInteraction_Text_0, MSGBOX_DEFAULT
+	msgbox Weirford_Gym_MapScripts_MiloInteraction_Text_0, MSGBOX_AUTOCLOSE
 # 49 "data/maps/Weirford_Gym/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Weirford_Gym_PlayerMoveUp
 # 50 "data/maps/Weirford_Gym/scripts.pory"

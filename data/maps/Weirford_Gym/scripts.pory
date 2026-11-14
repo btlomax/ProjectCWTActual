@@ -45,7 +45,7 @@ script Weirford_Gym_MapScripts_MiloInteraction
     applymovement(LOCALID_GYMLEADER_MILO, Common_Movement_ExclamationMark)
     waitmovement(LOCALID_GYMLEADER_MILO)
 
-    msgbox(format("Hello? Can I help you?\p"), MSGBOX_DEFAULT)
+    msgbox(format("Hello? Can I help you?\p"), MSGBOX_AUTOCLOSE)
     applymovement(OBJ_EVENT_ID_PLAYER, Weirford_Gym_PlayerMoveUp)
     applymovement(OBJ_EVENT_ID_CAMERA, Movement_CameraMoveUp)
     waitmovement(OBJ_EVENT_ID_CAMERA)

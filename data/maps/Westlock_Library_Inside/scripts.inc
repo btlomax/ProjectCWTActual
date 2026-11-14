@@ -344,10 +344,8 @@ Westlock_Library_Inside_EventScripts_MeetProfLarch_Text_13:
 	.string "truth be told, I'm not sure you could.\p"
 	.string "Come and visit me at the lab in\n"
 	.string "Alderbrook Town once I have, erm...\l"
-	.string "retrieved my equipment.\p"
-	.string "We have much to discuss, and I would\n"
-	.string "like to inspect your Pokémon again. In a\l"
-	.string "far more... controlled environment...\p"
+	.string "stabilised my erm, equipment...\p"
+	.string "We have much to discuss...yes...\p"
 	.string "Until then, {PLAYER}, I bid you adieu!$"
 
 Westlock_Library_Inside_EventScripts_MeetProfLarch_Male::

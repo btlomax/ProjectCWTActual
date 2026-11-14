@@ -35,14 +35,14 @@
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_WEIRFORD",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     },
     {
       "x": 7,
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_WEIRFORD",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],

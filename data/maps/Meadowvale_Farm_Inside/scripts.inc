@@ -68,7 +68,7 @@ Meadowvale_Farm_Inside_MapScripts_FarmbossMax_GiveCut_Text_0:
 # 33 "data/maps/Meadowvale_Farm_Inside/scripts.pory"
 	.string "WOOOOOO I'M PUMPED NOW! I'm gonna work\n"
 	.string "up a sweat in the fields!\p"
-	.string "Take this HM, my kids can do it the old n\n"
+	.string "Take this HM, my kids can do it the old\n"
 	.string "fashioned way! HAHAHAHA!\p"
 	.string "$"
 

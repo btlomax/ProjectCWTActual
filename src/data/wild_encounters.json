@@ -14989,7 +14989,7 @@
           "map": "MAP_ROUTE1_WILLBEND_CANAL",
           "base_label": "gRoute1_WillbendCanal",
           "land_mons_6": {
-            "encounter_rate": 22,
+            "encounter_rate": 18,
             "mons": [
               {
                 "min_level": 3,
@@ -15032,7 +15032,7 @@
           "map": "MAP_ROUTE2_MEADOWVALE_FARM",
           "base_label": "gRoute2_Meadowvale_Farm",
           "land_mons_6": {
-            "encounter_rate": 22,
+            "encounter_rate": 18,
             "mons": [
               {
                 "min_level": 4,
@@ -15042,7 +15042,7 @@
               {
                 "min_level": 4,
                 "max_level": 6,
-                "species": "SPECIES_ODDISH"
+                "species": "SPECIES_ROOKIDEE"
               },
               {
                 "min_level": 4,
@@ -15051,17 +15051,17 @@
               },
               {
                 "min_level": 4,
-                "max_level": 7,
+                "max_level": 6,
                 "species": "SPECIES_MANKEY"
               },
               {
                 "min_level": 4,
-                "max_level": 7,
+                "max_level": 6,
                 "species": "SPECIES_SHINX"
               },
               {
                 "min_level": 4,
-                "max_level": 7,
+                "max_level": 6,
                 "species": "SPECIES_LILLIPUP"
               }
             ]
@@ -15071,7 +15071,7 @@
           "map": "MAP_WEIRFORD_FOREST",
           "base_label": "gWeirford_Forest",
           "land_mons_8": {
-            "encounter_rate": 25,
+            "encounter_rate": 20,
             "mons": [
               {
                 "min_level": 5,
