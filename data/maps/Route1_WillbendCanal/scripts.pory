@@ -116,7 +116,7 @@ script Route1_EventScript_StarterDrop {
     msgbox(format("The quest system is now active!"), MSGBOX_DEFAULT)
     msgbox(format("Press START and select QUESTS to view your current quests."), MSGBOX_DEFAULT)
 
-    setvar(VAR_0x8004, QUEST_A_NEW_CHALLENGE)
+    setvar(VAR_0x8004, QUEST_A_NEW_BEGINNING)
     special(Quest_Add)
 
     removeobject(LOCALID_STARTER_DROP)

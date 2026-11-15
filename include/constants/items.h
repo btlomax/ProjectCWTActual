@@ -837,6 +837,8 @@ enum __attribute__((packed)) Item
     #undef ENUM_HM
     #undef TO_TMHM_NUMS
 
+    ITEM_TM_FEINT_ATTACK = ITEM_TM62,
+
     // Charms
     ITEM_OVAL_CHARM = 690,
     ITEM_SHINY_CHARM = 691,

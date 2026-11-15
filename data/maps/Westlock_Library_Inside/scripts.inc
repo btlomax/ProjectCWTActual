@@ -104,9 +104,9 @@ Westlock_Library_Inside_EventScripts_MeetProfLarch_10:
 # 136 "data/maps/Westlock_Library_Inside/scripts.pory"
 	setvar VAR_WESTLOCK_LIBRARY_STATE, 1
 # 138 "data/maps/Westlock_Library_Inside/scripts.pory"
-	setvar VAR_0x8004, QUEST_A_NEW_CHALLENGE
+	setvar VAR_0x8004, QUEST_A_NEW_BEGINNING
 # 139 "data/maps/Westlock_Library_Inside/scripts.pory"
-	setvar VAR_0x8005, QUEST_A_NEW_CHALLENGE_STAGE_LARCH_POKEDEX
+	setvar VAR_0x8005, QUEST_A_NEW_BEGINNING_STAGE_LARCH_POKEDEX
 # 140 "data/maps/Westlock_Library_Inside/scripts.pory"
 	special Quest_SetStage
 # 142 "data/maps/Westlock_Library_Inside/scripts.pory"

@@ -160,7 +160,7 @@ Route1_EventScript_StarterDrop_5:
 # 117 "data/maps/Route1_WillbendCanal/scripts.pory"
 	msgbox Route1_EventScript_StarterDrop_Text_7, MSGBOX_DEFAULT
 # 119 "data/maps/Route1_WillbendCanal/scripts.pory"
-	setvar VAR_0x8004, QUEST_A_NEW_CHALLENGE
+	setvar VAR_0x8004, QUEST_A_NEW_BEGINNING
 # 120 "data/maps/Route1_WillbendCanal/scripts.pory"
 	special Quest_Add
 # 122 "data/maps/Route1_WillbendCanal/scripts.pory"

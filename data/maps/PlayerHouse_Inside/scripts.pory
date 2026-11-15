@@ -54,8 +54,8 @@ script PlayerHouse_Inside_Dinner {
     setvar(VAR_ALDERBROOK_TOWN_STATE, 2)
     setvar(VAR_ROUTE1_STATE, 3)
 
-    setvar(VAR_0x8004, QUEST_A_NEW_CHALLENGE)
-    setvar(VAR_0x8005, QUEST_A_NEW_CHALLENGE_STAGE_TALK_TO_LARCH)
+    setvar(VAR_0x8004, QUEST_A_NEW_BEGINNING)
+    setvar(VAR_0x8005, QUEST_A_NEW_BEGINNING_STAGE_TALK_TO_LARCH)
     special(Quest_SetStage)
 
     releaseall
@@ -158,8 +158,8 @@ script PlayerHouse_Inside_GrandmotherAfterPokedex {
 
     setvar(VAR_ALDERBROOK_TOWN_STATE, 4)
 
-    setvar(VAR_0x8004, QUEST_A_NEW_CHALLENGE)
-    setvar(VAR_0x8005, QUEST_A_NEW_CHALLENGE_STAGE_BEAT_WEIRFORD_GYM)
+    setvar(VAR_0x8004, QUEST_A_NEW_BEGINNING)
+    setvar(VAR_0x8005, QUEST_A_NEW_BEGINNING_STAGE_BEAT_WEIRFORD_GYM)
     special(Quest_SetStage)
     
     releaseall

@@ -129,8 +129,8 @@ LarchLab_Inside_MapScripts_ProfessorLarch_Text_1:
 
 LarchLab_Inside_MapScripts_ProfessorLarch_Text_2:
 # 31 "data/maps/LarchLab_Inside/scripts.pory"
-	.string "That's Derek over there, he's my\n"
-	.string "assistant.\p"
+	.string "Oh look! Over there! That's Derek, he's\n"
+	.string "my assistant.\p"
 	.string "Say hello, Derek!$"
 
 LarchLab_Inside_MapScripts_ProfessorLarch_Text_3:

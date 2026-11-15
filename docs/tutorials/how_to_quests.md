@@ -161,8 +161,8 @@ current stage and does not reset its counter.
 `VAR_0x8005`.
 
 ```poryscript
-setvar(VAR_0x8004, QUEST_A_NEW_CHALLENGE)
-setvar(VAR_0x8005, QUEST_A_NEW_CHALLENGE_STAGE_TALK_TO_LARCH)
+setvar(VAR_0x8004, QUEST_A_NEW_BEGINNING)
+setvar(VAR_0x8005, QUEST_A_NEW_BEGINNING_STAGE_TALK_TO_LARCH)
 special(Quest_SetStage)
 ```
 

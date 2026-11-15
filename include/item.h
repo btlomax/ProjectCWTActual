@@ -16,9 +16,11 @@
 #define UNPACK_TM_HM_ENUM(_tmHm) CAT(ENUM_TM_HM_, _tmHm),
 enum TMHMIndex
 {
-    FOREACH_TMHM(UNPACK_TM_HM_ENUM)
+    FOREACH_TM(UNPACK_TM_HM_ENUM)
+    ENUM_TM_HM_FEINT_ATTACK = 61,
+    FOREACH_HM(UNPACK_TM_HM_ENUM)
     NUM_ALL_MACHINES,
-    NUM_TECHNICAL_MACHINES = (0 FOREACH_TM(PLUS_ONE)),
+    NUM_TECHNICAL_MACHINES = 62,
     NUM_HIDDEN_MACHINES = (0 FOREACH_HM(PLUS_ONE)),
 };
 #undef UNPACK_TM_HM_ENUM
@@ -126,6 +128,7 @@ static inline enum TMHMIndex GetItemTMHMIndex(enum Item item)
         * etc */
     FOREACH_TM(UNPACK_ITEM_TO_TM_INDEX)
     FOREACH_HM(UNPACK_ITEM_TO_HM_INDEX)
+    case ITEM_TM_FEINT_ATTACK: return ENUM_TM_HM_FEINT_ATTACK + 1;
     default:
         return 0;
     }
@@ -143,6 +146,7 @@ static inline enum Move GetItemTMHMMoveId(enum Item item)
         * etc */
     FOREACH_TM(UNPACK_ITEM_TO_TM_MOVE_ID)
     FOREACH_HM(UNPACK_ITEM_TO_HM_MOVE_ID)
+    case ITEM_TM_FEINT_ATTACK: return MOVE_FEINT_ATTACK;
     default:
         return MOVE_NONE;
     }
@@ -160,6 +164,7 @@ static inline enum Item GetTMHMItemIdFromMoveId(enum Move move)
         * etc */
     FOREACH_TM(UNPACK_TM_MOVE_TO_ITEM_ID)
     FOREACH_HM(UNPACK_HM_MOVE_TO_ITEM_ID)
+    case MOVE_FEINT_ATTACK: return ITEM_TM_FEINT_ATTACK;
     default:
         return ITEM_NONE;
     }

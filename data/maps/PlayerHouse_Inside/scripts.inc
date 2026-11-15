@@ -87,9 +87,9 @@ PlayerHouse_Inside_Dinner::
 # 55 "data/maps/PlayerHouse_Inside/scripts.pory"
 	setvar VAR_ROUTE1_STATE, 3
 # 57 "data/maps/PlayerHouse_Inside/scripts.pory"
-	setvar VAR_0x8004, QUEST_A_NEW_CHALLENGE
+	setvar VAR_0x8004, QUEST_A_NEW_BEGINNING
 # 58 "data/maps/PlayerHouse_Inside/scripts.pory"
-	setvar VAR_0x8005, QUEST_A_NEW_CHALLENGE_STAGE_TALK_TO_LARCH
+	setvar VAR_0x8005, QUEST_A_NEW_BEGINNING_STAGE_TALK_TO_LARCH
 # 59 "data/maps/PlayerHouse_Inside/scripts.pory"
 	special Quest_SetStage
 # 61 "data/maps/PlayerHouse_Inside/scripts.pory"
@@ -194,9 +194,9 @@ PlayerHouse_Inside_GrandmotherAfterPokedex::
 # 159 "data/maps/PlayerHouse_Inside/scripts.pory"
 	setvar VAR_ALDERBROOK_TOWN_STATE, 4
 # 161 "data/maps/PlayerHouse_Inside/scripts.pory"
-	setvar VAR_0x8004, QUEST_A_NEW_CHALLENGE
+	setvar VAR_0x8004, QUEST_A_NEW_BEGINNING
 # 162 "data/maps/PlayerHouse_Inside/scripts.pory"
-	setvar VAR_0x8005, QUEST_A_NEW_CHALLENGE_STAGE_BEAT_WEIRFORD_GYM
+	setvar VAR_0x8005, QUEST_A_NEW_BEGINNING_STAGE_BEAT_WEIRFORD_GYM
 # 163 "data/maps/PlayerHouse_Inside/scripts.pory"
 	special Quest_SetStage
 # 165 "data/maps/PlayerHouse_Inside/scripts.pory"
