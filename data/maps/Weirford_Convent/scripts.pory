@@ -1,1 +1,142 @@
-mapscripts Weirford_Convent_MapScripts {}
+mapscripts Weirford_Convent_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Weirford_Convent_MapScripts_OnTransition
+}
+
+script Weirford_Convent_MapScripts_OnTransition
+{
+    if (var(VAR_QUEST_A_NEW_BEGINNING_STATE) == QUEST_A_NEW_BEGINNING_STAGE_WEIRFORD_CONVENT)
+    {
+        clearflag(FLAG_WEIRFORD_CONVENT_LIN)
+        addobject(LOCALID_WEIRFORD_CONVENT_LIN)
+    }
+    else
+    {
+        setflag(FLAG_WEIRFORD_CONVENT_LIN)
+        removeobject(LOCALID_WEIRFORD_CONVENT_LIN)
+    }
+
+    end
+}
+
+script Weirford_Convent_Abbess
+{
+    lock
+
+    if (var(VAR_QUEST_A_NEW_BEGINNING_STATE) == QUEST_A_NEW_BEGINNING_STAGE_WEIRFORD_CONVENT)
+    {
+        faceplayer
+        msgbox(format("{FONT_NARROW}The old woman before you is wizened and frail, her age evident in every line of her face. Her richly adorned robes hang loosely on her frame, but her eyes are alert and sharp.{FONT_NORMAL}/p"
+        "Lin, is this the child you spoke of?" ), MSGBOX_AUTOCLOSE)
+
+        applymovement(LOCALID_WEIRFORD_CONVENT_LIN, Weirford_Convent_Lin_MovementLeft)
+        waitmovement(LOCALID_WEIRFORD_CONVENT_LIN)
+
+        msgbox(format("LIN: Yes, Abbess. This is the one."), MSGBOX_AUTOCLOSE)
+
+        applymovement(LOCALID_WEIRFORD_CONVENT_LIN, Weirford_Convent_Lin_MovementReturn)
+        waitmovement(LOCALID_WEIRFORD_CONVENT_LIN)
+
+        msgbox(format("{FONT_NARROW}The Abbess studies you carefully, her eyes sharp and discerning, taking in every detail of your appearance.{FONT_NORMAL}\p"), MSGBOX_DEFAULT)
+        msgbox(format("{FONT_NARROW}Her gaze lingers on you for a moment longer, before she seemingly makes a decision.{FONT_NORMAL}\p"), MSGBOX_DEFAULT)
+        msgbox(format("I see. Who are your parents, child?\p"
+        "...\p"
+        "You don't know? Your grandmother takes care of you? What is her name?\p"
+        "...\p"
+        "Rhona... that name wakes something in the depths of my memory, but I cannot quite place it.\p"
+        "No matter; old roots still run deep under forgotten soil. A name may fade, but blood never forgets, it merely... waits.\p"
+        "The soil has been still for an age, child. We shall see what stirs beneath it now."
+        "...\p"), MSGBOX_DEFAULT)
+
+        msgbox("Lin?", MSGBOX_DEFAULT)
+        applymovement(LOCALID_WEIRFORD_CONVENT_LIN, Weirford_Convent_Lin_MovementReturn)
+        waitmovement(LOCALID_WEIRFORD_CONVENT_LIN)
+        msgbox(format("LIN: Yes, Abbess?"), MSGBOX_AUTOCLOSE)
+
+        msgbox(format("Take your leave of the Convent. Travel the road ahead, observe the trials, offer your counsel where it is needed."), MSGBOX_AUTOCLOSE)
+        playse(SE_PIN)
+        applymovement(LOCALID_WEIRFORD_CONVENT_LIN, Common_Movement_QuestionMark)
+        waitmovement(LOCALID_WEIRFORD_CONVENT_LIN)
+        delay(30)
+
+        msgbox(format(
+            "LIN: Abbess? Surely you don't think...\p"
+            "With respect... they barely scraped past the first Gym. Any rookie could manage as much with a bit of luck, Milo isn't as formidable as-"), MSGBOX_AUTOCLOSE)
+
+        msgbox(format(
+            "Luck is a convenient name for things we do not yet understand, Lin.\p"
+            "You have spent too long behind stone walls reading of the past. Go see what is unfolding beyond them. Go pack a clean robe while you're at it; you still smell like damp moss from your little excursion in the forest. Now get on with it, the silence when you leave is one of my few remaining pleasures."
+        ), MSGBOX_DEFAULT)
+
+        msgbox(format(
+            "LIN: ...As you command, Abbess."
+        ), MSGBOX_AUTOCLOSE)
+
+        applymovement(LOCALID_WEIRFORD_CONVENT_LIN, Weirford_Convent_Lin_MovementLeave)
+        waitmovement(LOCALID_WEIRFORD_CONVENT_LIN)
+        delay(30)
+        setflag(FLAG_WEIRFORD_CONVENT_LIN)
+        removeobject(LOCALID_WEIRFORD_CONVENT_LIN)
+
+        msgbox(format("{FONT_NARROW}The Abbess waits for the sound of Lin's departing footsteps to fade, before turning her gaze back on to you{FONT_NORMAL}"
+        ), MSGBOX_DEFAULT)
+
+        msgbox(format("Ahhhh much better. Now then child, do you know where to go next? Go west back along Route 3, make your way through the mountain pass until you reach the coastal town.\p"
+        "The road ahead will test your resolve, your character and your spirit. If you truly are what you appear, you will prevail. If not, then the soil will simply remain, undisturbed."), MSGBOX_DEFAULT)
+
+        setvar(VAR_0x8004, QUEST_A_NEW_BEGINNING)
+        setvar(VAR_0x8005, QUEST_A_NEW_BEGINNING_STAGE_BEAT_GYM_TWO)
+        special(Quest_SetStage)
+
+        applymovement(LOCALID_WEIRFORD_ABBESS, Weirford_Convent_Abbess_Turn)
+        waitmovement(LOCALID_WEIRFORD_ABBESS)
+
+        release
+        end
+    }
+
+    msgbox(format("{FONT_NARROW}The old woman is seemingly locked in a trance, her eyes focused on the tablet in front of her. She does not seem to notice your presence.{FONT_NORMAL}\p"
+    ), MSGBOX_DEFAULT)
+
+    release
+    end
+}
+
+script Weirford_Convent_Lin
+{
+    lock
+    faceplayer
+
+    msgbox(format("The Abbess wants to speak with you."), MSGBOX_DEFAULT)
+
+    applymovement(LOCALID_WEIRFORD_CONVENT_LIN, Weirford_Convent_Lin_MovementDown)
+    waitmovement(LOCALID_WEIRFORD_CONVENT_LIN)
+
+    release
+    end
+}
+
+movement Weirford_Convent_Lin_MovementLeft
+{
+    face_left
+}
+
+movement Weirford_Convent_Lin_MovementReturn
+{
+    face_down
+}
+
+movement Weirford_Convent_Lin_MovementDown
+{
+    face_down
+}
+
+movement Weirford_Convent_Lin_MovementLeave
+{
+    face_down
+    walk_down * 10
+}
+
+movement Weirford_Convent_Abbess_Turn
+{
+    face_up
+}

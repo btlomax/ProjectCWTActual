@@ -11,6 +11,8 @@ static const u8 sText_ANewBeginningBeatWeirfordGymLocation[] = _("WEIRFORD TOWN"
 static const u8 sText_ANewBeginningBeatWeirfordGymDetail[] = _("Defeat the Weirford Gym Leader");
 static const u8 sText_ANewBeginningWeirfordConventLocation[] = _("WEIRFORD CONVENT");
 static const u8 sText_ANewBeginningWeirfordConventDetail[] = _("Speak with the Abbess at the Weirford Convent");
+static const u8 sText_ANewBeginningBeatGymTwoLocation[] = _("?");
+static const u8 sText_ANewBeginningBeatGymTwoDetail[] = _("Defeat the second Gym Leader");
 static const u8 sText_ANewBeginningFinalObjectiveLocation[] = _("ROUTE 1");
 static const u8 sText_ANewBeginningFinalObjectiveDetail[] = _("Complete your legendary quest");
 
@@ -48,6 +50,13 @@ static const struct QuestStageDefinition sQuestANewBeginningStages[] =
     {
         .objective = sText_ANewBeginningWeirfordConventDetail,
         .location = sText_ANewBeginningWeirfordConventLocation,
+        .objectiveType = QUEST_OBJECTIVE_NONE,
+        .target = 0,
+    },
+    [QUEST_A_NEW_BEGINNING_STAGE_BEAT_GYM_TWO] =
+    {
+        .objective = sText_ANewBeginningBeatGymTwoDetail,
+        .location = sText_ANewBeginningBeatGymTwoLocation,
         .objectiveType = QUEST_OBJECTIVE_NONE,
         .target = 0,
     },
@@ -183,7 +192,7 @@ static const struct QuestDefinition sQuestDefinitions[QUEST_COUNT] =
     {
         .title = sText_ANewBeginningTitle,
         .category = QUEST_CATEGORY_PRIMARY,
-        .stateVar = VAR_QUEST_A_NEW_CHALLENGE_STATE,
+        .stateVar = VAR_QUEST_A_NEW_BEGINNING_STATE,
         .progressVar = 0,
         .firstStage = QUEST_A_NEW_BEGINNING_STAGE_BEGIN,
         .completeStage = QUEST_A_NEW_BEGINNING_STAGE_COMPLETE,

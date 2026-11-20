@@ -271,7 +271,7 @@
 #define VAR_WESTLOCK_LIBRARY_STATE                       0x40F9 
 #define VAR_ROUTE2_MEADOWVALE_FARM_STATE                 0x40FA
 #define VAR_QUEST_TUTOR_CATCH_STATE                       0x40FB
-#define VAR_QUEST_A_NEW_CHALLENGE_STATE                   0x40FC
+#define VAR_QUEST_A_NEW_BEGINNING_STATE                   0x40FC
 #define VAR_QUEST_THE_HOUSE_IN_THE_WOODS_STATE            0x40FD
 #define VAR_WEIRFORD_HOUSE_STATE                          0x40FE
 #define VAR_PLAYER_MORALITY                               0x40FF

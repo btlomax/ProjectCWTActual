@@ -9600,16 +9600,6 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/WestlockVillage_House2/border.bin",
       "blockdata_filepath": "data/layouts/WestlockVillage_House2/map.bin"
-    },
-    {
-      "id": "LAYOUT_WEIRFORD_CONVENT_2",
-      "name": "Weirford_Convent_2_Layout",
-      "width": 15,
-      "height": 20,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_LilycoveMuseum",
-      "border_filepath": "data/layouts/Weirford_Convent_2/border.bin",
-      "blockdata_filepath": "data/layouts/Weirford_Convent_2/map.bin"
     }
   ]
 }

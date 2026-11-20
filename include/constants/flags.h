@@ -1279,7 +1279,7 @@
 #define FLAG_HIDE_WEIRFORD_TOBY_INSIDE                              0x4C1
 #define FLAG_HIDE_WEIRFORD_FOREST_ACOLYTE_LIN                       0x4C2
 #define FLAG_TALKED_TO_WESTLOCK_NPC2                                0x4C3
-#define FLAG_UNUSED_0x4C4                                           0x4C4 // Unused Flag
+#define FLAG_WEIRFORD_CONVENT_LIN                                   0x4C4 // Unused Flag
 #define FLAG_UNUSED_0x4C5                                           0x4C5 // Unused Flag
 #define FLAG_UNUSED_0x4C6                                           0x4C6 // Unused Flag
 #define FLAG_UNUSED_0x4C7                                           0x4C7 // Unused Flag
