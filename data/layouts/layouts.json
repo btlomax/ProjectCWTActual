@@ -9600,6 +9600,16 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/WestlockVillage_House2/border.bin",
       "blockdata_filepath": "data/layouts/WestlockVillage_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE4_MOUNTAIN_PASS",
+      "name": "Route4_MountainPass_Layout",
+      "width": 80,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/Route4_MountainPass/border.bin",
+      "blockdata_filepath": "data/layouts/Route4_MountainPass/map.bin"
     }
   ]
 }

@@ -25,8 +25,8 @@ script Weirford_Convent_Abbess
     if (var(VAR_QUEST_A_NEW_BEGINNING_STATE) == QUEST_A_NEW_BEGINNING_STAGE_WEIRFORD_CONVENT)
     {
         faceplayer
-        msgbox(format("{FONT_NARROW}The old woman before you is wizened and frail, her age evident in every line of her face. Her richly adorned robes hang loosely on her frame, but her eyes are alert and sharp.{FONT_NORMAL}/p"
-        "Lin, is this the child you spoke of?" ), MSGBOX_AUTOCLOSE)
+        msgbox(format("{FONT_NARROW}The old woman before you is wizened and frail, her age evident in every line of her face. Her richly adorned robes hang loosely on her frame, but her eyes are alert and sharp.{FONT_NORMAL}\p"
+        "Lin, is this the child you spoke of?"), MSGBOX_AUTOCLOSE)
 
         applymovement(LOCALID_WEIRFORD_CONVENT_LIN, Weirford_Convent_Lin_MovementLeft)
         waitmovement(LOCALID_WEIRFORD_CONVENT_LIN)
@@ -48,7 +48,7 @@ script Weirford_Convent_Abbess
         "...\p"), MSGBOX_DEFAULT)
 
         msgbox("Lin?", MSGBOX_DEFAULT)
-        applymovement(LOCALID_WEIRFORD_CONVENT_LIN, Weirford_Convent_Lin_MovementReturn)
+        applymovement(LOCALID_WEIRFORD_CONVENT_LIN, Weirford_Convent_Lin_MovementLeft)
         waitmovement(LOCALID_WEIRFORD_CONVENT_LIN)
         msgbox(format("LIN: Yes, Abbess?"), MSGBOX_AUTOCLOSE)
 
@@ -64,7 +64,8 @@ script Weirford_Convent_Abbess
 
         msgbox(format(
             "Luck is a convenient name for things we do not yet understand, Lin.\p"
-            "You have spent too long behind stone walls reading of the past. Go see what is unfolding beyond them. Go pack a clean robe while you're at it; you still smell like damp moss from your little excursion in the forest. Now get on with it, the silence when you leave is one of my few remaining pleasures."
+            "You have spent too long behind stone walls reading of the past. Go see what is unfolding beyond them. Pack a clean robe while you're at it; you still smell like damp moss from your little excursion in the forest.\p"
+            "Now get on with it, the silence when you leave is one of my few remaining pleasures.\p"
         ), MSGBOX_DEFAULT)
 
         msgbox(format(
@@ -89,6 +90,7 @@ script Weirford_Convent_Abbess
 
         applymovement(LOCALID_WEIRFORD_ABBESS, Weirford_Convent_Abbess_Turn)
         waitmovement(LOCALID_WEIRFORD_ABBESS)
+        setflag(FLAG_ROUTE3_HIKER_BLOCK)
 
         release
         end

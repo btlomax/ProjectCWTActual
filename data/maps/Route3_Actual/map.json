@@ -22,6 +22,11 @@
       "map": "MAP_WEIRFORD",
       "offset": 2,
       "direction": "right"
+    },
+    {
+      "map": "MAP_ROUTE4_MOUNTAIN_PASS",
+      "offset": 0,
+      "direction": "left"
     }
   ],
   "object_events": [
@@ -89,6 +94,48 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route3_Actual_Item_SilverPowder",
       "flag": "FLAG_ITEM_ROUTE3_SILVER_POWDER"
+    },
+    {
+      "local_id": "LOCALID_HIKER2_BLOCK",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 0,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route3_Actual_MapScripts_HikerBlock",
+      "flag": "FLAG_ROUTE3_HIKER_BLOCK"
+    },
+    {
+      "local_id": "LOCALID_HIKER3_BLOCK",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 0,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route3_Actual_MapScripts_HikerBlock",
+      "flag": "FLAG_ROUTE3_HIKER_BLOCK"
+    },
+    {
+      "local_id": "LOCALID_HIKER1_BLOCK",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 0,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route3_Actual_MapScripts_HikerBlock",
+      "flag": "FLAG_ROUTE3_HIKER_BLOCK"
     }
   ],
   "warp_events": [],

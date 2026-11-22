@@ -40,7 +40,8 @@
     "gMapGroup_Route2_Meadowvale_Farm",
     "gMapGroup_Weirford_Forest",
     "gMapGroup_Route3",
-    "gMapGroup_WeirfordTown"
+    "gMapGroup_WeirfordTown",
+    "gMapGroup_Route4MountainPass"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -670,5 +671,8 @@
     "Weirford_Convent",
     "Weirford_Gym_Downstairs",
     "Weirford_Jonas_House"
+  ],
+  "gMapGroup_Route4MountainPass": [
+    "Route4_MountainPass"
   ]
 }

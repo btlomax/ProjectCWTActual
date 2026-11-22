@@ -1,4 +1,18 @@
-mapscripts Route3_Actual_MapScripts {}
+mapscripts Route3_Actual_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Route3_Actual_MapScripts_OnTransition
+}
+
+script Route3_Actual_MapScripts_OnTransition
+{
+    if (flag(FLAG_ROUTE3_HIKER_BLOCK))
+    {
+        removeobject(LOCALID_HIKER1_BLOCK)
+        removeobject(LOCALID_HIKER2_BLOCK)
+        removeobject(LOCALID_HIKER3_BLOCK)
+    }
+
+    end
+}
 
 script Route3_Actual_MapScripts_Tim {
     trainerbattle_single(
@@ -47,6 +61,15 @@ script Route3_Actual_MapScript_RiverMan {
     }
 
     msgbox(format("Your loved ones, your Pokemon, all are fleeting."))
+    release
+    end
+}
+
+script Route3_Actual_MapScripts_HikerBlock
+{
+    lock
+    faceplayer
+    msgbox(format("There's been a landslide ahead on the mountain pass, we're clearing it but it will be some time before the route is clear.\p"), MSGBOX_DEFAULT)
     release
     end
 }

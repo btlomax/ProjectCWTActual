@@ -29,9 +29,9 @@ Weirford_Convent_Abbess::
 # 25 "data/maps/Weirford_Convent/scripts.pory"
 	compare VAR_QUEST_A_NEW_BEGINNING_STATE, QUEST_A_NEW_BEGINNING_STAGE_WEIRFORD_CONVENT
 	goto_if_eq Weirford_Convent_Abbess_2
-# 97 "data/maps/Weirford_Convent/scripts.pory"
+# 99 "data/maps/Weirford_Convent/scripts.pory"
 	msgbox Weirford_Convent_Abbess_Text_13, MSGBOX_DEFAULT
-# 100 "data/maps/Weirford_Convent/scripts.pory"
+# 102 "data/maps/Weirford_Convent/scripts.pory"
 	release
 	end
 
@@ -59,7 +59,7 @@ Weirford_Convent_Abbess_2:
 # 50 "data/maps/Weirford_Convent/scripts.pory"
 	msgbox Weirford_Convent_Abbess_Text_5, MSGBOX_DEFAULT
 # 51 "data/maps/Weirford_Convent/scripts.pory"
-	applymovement LOCALID_WEIRFORD_CONVENT_LIN, Weirford_Convent_Lin_MovementReturn
+	applymovement LOCALID_WEIRFORD_CONVENT_LIN, Weirford_Convent_Lin_MovementLeft
 # 52 "data/maps/Weirford_Convent/scripts.pory"
 	waitmovement LOCALID_WEIRFORD_CONVENT_LIN
 # 53 "data/maps/Weirford_Convent/scripts.pory"
@@ -78,100 +78,102 @@ Weirford_Convent_Abbess_2:
 	msgbox Weirford_Convent_Abbess_Text_8, MSGBOX_AUTOCLOSE
 # 65 "data/maps/Weirford_Convent/scripts.pory"
 	msgbox Weirford_Convent_Abbess_Text_9, MSGBOX_DEFAULT
-# 70 "data/maps/Weirford_Convent/scripts.pory"
+# 71 "data/maps/Weirford_Convent/scripts.pory"
 	msgbox Weirford_Convent_Abbess_Text_10, MSGBOX_AUTOCLOSE
-# 74 "data/maps/Weirford_Convent/scripts.pory"
-	applymovement LOCALID_WEIRFORD_CONVENT_LIN, Weirford_Convent_Lin_MovementLeave
 # 75 "data/maps/Weirford_Convent/scripts.pory"
-	waitmovement LOCALID_WEIRFORD_CONVENT_LIN
+	applymovement LOCALID_WEIRFORD_CONVENT_LIN, Weirford_Convent_Lin_MovementLeave
 # 76 "data/maps/Weirford_Convent/scripts.pory"
-	delay 30
+	waitmovement LOCALID_WEIRFORD_CONVENT_LIN
 # 77 "data/maps/Weirford_Convent/scripts.pory"
-	setflag FLAG_WEIRFORD_CONVENT_LIN
+	delay 30
 # 78 "data/maps/Weirford_Convent/scripts.pory"
+	setflag FLAG_WEIRFORD_CONVENT_LIN
+# 79 "data/maps/Weirford_Convent/scripts.pory"
 	removeobject LOCALID_WEIRFORD_CONVENT_LIN
-# 80 "data/maps/Weirford_Convent/scripts.pory"
+# 81 "data/maps/Weirford_Convent/scripts.pory"
 	msgbox Weirford_Convent_Abbess_Text_11, MSGBOX_DEFAULT
-# 83 "data/maps/Weirford_Convent/scripts.pory"
+# 84 "data/maps/Weirford_Convent/scripts.pory"
 	msgbox Weirford_Convent_Abbess_Text_12, MSGBOX_DEFAULT
-# 86 "data/maps/Weirford_Convent/scripts.pory"
-	setvar VAR_0x8004, QUEST_A_NEW_BEGINNING
 # 87 "data/maps/Weirford_Convent/scripts.pory"
-	setvar VAR_0x8005, QUEST_A_NEW_BEGINNING_STAGE_BEAT_GYM_TWO
+	setvar VAR_0x8004, QUEST_A_NEW_BEGINNING
 # 88 "data/maps/Weirford_Convent/scripts.pory"
+	setvar VAR_0x8005, QUEST_A_NEW_BEGINNING_STAGE_BEAT_GYM_TWO
+# 89 "data/maps/Weirford_Convent/scripts.pory"
 	special Quest_SetStage
-# 90 "data/maps/Weirford_Convent/scripts.pory"
-	applymovement LOCALID_WEIRFORD_ABBESS, Weirford_Convent_Abbess_Turn
 # 91 "data/maps/Weirford_Convent/scripts.pory"
+	applymovement LOCALID_WEIRFORD_ABBESS, Weirford_Convent_Abbess_Turn
+# 92 "data/maps/Weirford_Convent/scripts.pory"
 	waitmovement LOCALID_WEIRFORD_ABBESS
 # 93 "data/maps/Weirford_Convent/scripts.pory"
+	setflag FLAG_ROUTE3_HIKER_BLOCK
+# 95 "data/maps/Weirford_Convent/scripts.pory"
 	release
 	end
 
 
 Weirford_Convent_Lin::
-# 106 "data/maps/Weirford_Convent/scripts.pory"
+# 108 "data/maps/Weirford_Convent/scripts.pory"
 	lock
-# 107 "data/maps/Weirford_Convent/scripts.pory"
-	faceplayer
 # 109 "data/maps/Weirford_Convent/scripts.pory"
-	msgbox Weirford_Convent_Lin_Text_0, MSGBOX_DEFAULT
+	faceplayer
 # 111 "data/maps/Weirford_Convent/scripts.pory"
+	msgbox Weirford_Convent_Lin_Text_0, MSGBOX_DEFAULT
+# 113 "data/maps/Weirford_Convent/scripts.pory"
 	applymovement LOCALID_WEIRFORD_CONVENT_LIN, Weirford_Convent_Lin_MovementDown
-# 112 "data/maps/Weirford_Convent/scripts.pory"
-	waitmovement LOCALID_WEIRFORD_CONVENT_LIN
 # 114 "data/maps/Weirford_Convent/scripts.pory"
+	waitmovement LOCALID_WEIRFORD_CONVENT_LIN
+# 116 "data/maps/Weirford_Convent/scripts.pory"
 	release
 	end
 
 
-# 118 "data/maps/Weirford_Convent/scripts.pory"
-Weirford_Convent_Lin_MovementLeft:
 # 120 "data/maps/Weirford_Convent/scripts.pory"
+Weirford_Convent_Lin_MovementLeft:
+# 122 "data/maps/Weirford_Convent/scripts.pory"
 	face_left
 	step_end
 
-# 123 "data/maps/Weirford_Convent/scripts.pory"
-Weirford_Convent_Lin_MovementReturn:
 # 125 "data/maps/Weirford_Convent/scripts.pory"
+Weirford_Convent_Lin_MovementReturn:
+# 127 "data/maps/Weirford_Convent/scripts.pory"
 	face_down
 	step_end
 
-# 128 "data/maps/Weirford_Convent/scripts.pory"
-Weirford_Convent_Lin_MovementDown:
 # 130 "data/maps/Weirford_Convent/scripts.pory"
+Weirford_Convent_Lin_MovementDown:
+# 132 "data/maps/Weirford_Convent/scripts.pory"
 	face_down
 	step_end
 
-# 133 "data/maps/Weirford_Convent/scripts.pory"
-Weirford_Convent_Lin_MovementLeave:
 # 135 "data/maps/Weirford_Convent/scripts.pory"
+Weirford_Convent_Lin_MovementLeave:
+# 137 "data/maps/Weirford_Convent/scripts.pory"
 	face_down
-# 136 "data/maps/Weirford_Convent/scripts.pory"
+# 138 "data/maps/Weirford_Convent/scripts.pory"
 	walk_down
-# 136 "data/maps/Weirford_Convent/scripts.pory"
+# 138 "data/maps/Weirford_Convent/scripts.pory"
 	walk_down
-# 136 "data/maps/Weirford_Convent/scripts.pory"
+# 138 "data/maps/Weirford_Convent/scripts.pory"
 	walk_down
-# 136 "data/maps/Weirford_Convent/scripts.pory"
+# 138 "data/maps/Weirford_Convent/scripts.pory"
 	walk_down
-# 136 "data/maps/Weirford_Convent/scripts.pory"
+# 138 "data/maps/Weirford_Convent/scripts.pory"
 	walk_down
-# 136 "data/maps/Weirford_Convent/scripts.pory"
+# 138 "data/maps/Weirford_Convent/scripts.pory"
 	walk_down
-# 136 "data/maps/Weirford_Convent/scripts.pory"
+# 138 "data/maps/Weirford_Convent/scripts.pory"
 	walk_down
-# 136 "data/maps/Weirford_Convent/scripts.pory"
+# 138 "data/maps/Weirford_Convent/scripts.pory"
 	walk_down
-# 136 "data/maps/Weirford_Convent/scripts.pory"
+# 138 "data/maps/Weirford_Convent/scripts.pory"
 	walk_down
-# 136 "data/maps/Weirford_Convent/scripts.pory"
+# 138 "data/maps/Weirford_Convent/scripts.pory"
 	walk_down
 	step_end
 
-# 139 "data/maps/Weirford_Convent/scripts.pory"
-Weirford_Convent_Abbess_Turn:
 # 141 "data/maps/Weirford_Convent/scripts.pory"
+Weirford_Convent_Abbess_Turn:
+# 143 "data/maps/Weirford_Convent/scripts.pory"
 	face_up
 	step_end
 
@@ -181,8 +183,8 @@ Weirford_Convent_Abbess_Text_0:
 	.string "frail, her age evident in every line of\l"
 	.string "her face. Her richly adorned robes hang\l"
 	.string "loosely on her frame, but her eyes are\l"
-	.string "alert and sharp.{FONT_NORMAL}/p Lin, is this the child\l"
-	.string "you spoke of?$"
+	.string "alert and sharp.{FONT_NORMAL}\p"
+	.string "Lin, is this the child you spoke of?$"
 
 Weirford_Convent_Abbess_Text_1:
 # 34 "data/maps/Weirford_Convent/scripts.pory"
@@ -249,25 +251,27 @@ Weirford_Convent_Abbess_Text_9:
 	.string "do not yet understand, Lin.\p"
 	.string "You have spent too long behind stone\n"
 	.string "walls reading of the past. Go see what\l"
-	.string "is unfolding beyond them. Go pack a\l"
-	.string "clean robe while you're at it; you still\l"
-	.string "smell like damp moss from your little\l"
-	.string "excursion in the forest. Now get on with\l"
-	.string "it, the silence when you leave is one of\l"
-	.string "my few remaining pleasures.$"
+	.string "is unfolding beyond them. Pack a clean\l"
+	.string "robe while you're at it; you still smell\l"
+	.string "like damp moss from your little\l"
+	.string "excursion in the forest.\p"
+	.string "Now get on with it, the silence when you\n"
+	.string "leave is one of my few remaining\l"
+	.string "pleasures.\p"
+	.string "$"
 
 Weirford_Convent_Abbess_Text_10:
-# 71 "data/maps/Weirford_Convent/scripts.pory"
+# 72 "data/maps/Weirford_Convent/scripts.pory"
 	.string "LIN: ...As you command, Abbess.$"
 
 Weirford_Convent_Abbess_Text_11:
-# 80 "data/maps/Weirford_Convent/scripts.pory"
+# 81 "data/maps/Weirford_Convent/scripts.pory"
 	.string "{FONT_NARROW}The Abbess waits for the sound of Lin's\n"
 	.string "departing footsteps to fade, before\l"
 	.string "turning her gaze back on to you{FONT_NORMAL}$"
 
 Weirford_Convent_Abbess_Text_12:
-# 83 "data/maps/Weirford_Convent/scripts.pory"
+# 84 "data/maps/Weirford_Convent/scripts.pory"
 	.string "Ahhhh much better. Now then child, do\n"
 	.string "you know where to go next? Go west\l"
 	.string "back along Route 3, make your way\l"
@@ -280,7 +284,7 @@ Weirford_Convent_Abbess_Text_12:
 	.string "remain, undisturbed.$"
 
 Weirford_Convent_Abbess_Text_13:
-# 97 "data/maps/Weirford_Convent/scripts.pory"
+# 99 "data/maps/Weirford_Convent/scripts.pory"
 	.string "{FONT_NARROW}The old woman is seemingly locked in a\n"
 	.string "trance, her eyes focused on the tablet\l"
 	.string "in front of her. She does not seem to\l"
@@ -288,5 +292,5 @@ Weirford_Convent_Abbess_Text_13:
 	.string "$"
 
 Weirford_Convent_Lin_Text_0:
-# 109 "data/maps/Weirford_Convent/scripts.pory"
+# 111 "data/maps/Weirford_Convent/scripts.pory"
 	.string "The Abbess wants to speak with you.$"
