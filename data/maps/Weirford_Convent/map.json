@@ -16,7 +16,7 @@
   "object_events": [
     {
       "local_id": "LOCALID_WEIRFORD_ABBESS",
-      "graphics_id": "OBJ_EVENT_GFX_CONTEST_JUDGE",
+      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
       "x": 7,
       "y": 7,
       "elevation": 0,
@@ -41,6 +41,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Weirford_Convent_Lin",
       "flag": "FLAG_WEIRFORD_CONVENT_LIN"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
+      "x": 1,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Weirford_Convent_NPC2",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
+      "x": 12,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Weirford_Convent_NPC1",
+      "flag": "0"
     }
   ],
   "warp_events": [

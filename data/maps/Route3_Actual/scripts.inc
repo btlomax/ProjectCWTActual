@@ -127,7 +127,8 @@ Route3_Actual_MapScripts_HikerBlock_Text_0:
 # 72 "data/maps/Route3_Actual/scripts.pory"
 	.string "There's been a landslide ahead on the\n"
 	.string "mountain pass, we're clearing it but it\l"
-	.string "will take some time.\p"
+	.string "will be some time before the route is\l"
+	.string "clear.\p"
 	.string "$"
 
 Route3_Actual_SouthWest_Sign_Text_0:

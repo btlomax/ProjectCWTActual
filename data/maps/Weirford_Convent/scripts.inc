@@ -127,53 +127,77 @@ Weirford_Convent_Lin::
 	end
 
 
-# 120 "data/maps/Weirford_Convent/scripts.pory"
-Weirford_Convent_Lin_MovementLeft:
+Weirford_Convent_NPC1::
 # 122 "data/maps/Weirford_Convent/scripts.pory"
+	lock
+# 123 "data/maps/Weirford_Convent/scripts.pory"
+	faceplayer
+# 125 "data/maps/Weirford_Convent/scripts.pory"
+	msgbox Weirford_Convent_NPC1_Text_0, MSGBOX_DEFAULT
+# 126 "data/maps/Weirford_Convent/scripts.pory"
+	release
+	end
+
+
+Weirford_Convent_NPC2::
+# 132 "data/maps/Weirford_Convent/scripts.pory"
+	lock
+# 133 "data/maps/Weirford_Convent/scripts.pory"
+	faceplayer
+# 135 "data/maps/Weirford_Convent/scripts.pory"
+	msgbox Weirford_Convent_NPC2_Text_0
+# 137 "data/maps/Weirford_Convent/scripts.pory"
+	release
+	end
+
+
+# 141 "data/maps/Weirford_Convent/scripts.pory"
+Weirford_Convent_Lin_MovementLeft:
+# 143 "data/maps/Weirford_Convent/scripts.pory"
 	face_left
 	step_end
 
-# 125 "data/maps/Weirford_Convent/scripts.pory"
+# 146 "data/maps/Weirford_Convent/scripts.pory"
 Weirford_Convent_Lin_MovementReturn:
-# 127 "data/maps/Weirford_Convent/scripts.pory"
+# 148 "data/maps/Weirford_Convent/scripts.pory"
 	face_down
 	step_end
 
-# 130 "data/maps/Weirford_Convent/scripts.pory"
+# 151 "data/maps/Weirford_Convent/scripts.pory"
 Weirford_Convent_Lin_MovementDown:
-# 132 "data/maps/Weirford_Convent/scripts.pory"
+# 153 "data/maps/Weirford_Convent/scripts.pory"
 	face_down
 	step_end
 
-# 135 "data/maps/Weirford_Convent/scripts.pory"
+# 156 "data/maps/Weirford_Convent/scripts.pory"
 Weirford_Convent_Lin_MovementLeave:
-# 137 "data/maps/Weirford_Convent/scripts.pory"
+# 158 "data/maps/Weirford_Convent/scripts.pory"
 	face_down
-# 138 "data/maps/Weirford_Convent/scripts.pory"
+# 159 "data/maps/Weirford_Convent/scripts.pory"
 	walk_down
-# 138 "data/maps/Weirford_Convent/scripts.pory"
+# 159 "data/maps/Weirford_Convent/scripts.pory"
 	walk_down
-# 138 "data/maps/Weirford_Convent/scripts.pory"
+# 159 "data/maps/Weirford_Convent/scripts.pory"
 	walk_down
-# 138 "data/maps/Weirford_Convent/scripts.pory"
+# 159 "data/maps/Weirford_Convent/scripts.pory"
 	walk_down
-# 138 "data/maps/Weirford_Convent/scripts.pory"
+# 159 "data/maps/Weirford_Convent/scripts.pory"
 	walk_down
-# 138 "data/maps/Weirford_Convent/scripts.pory"
+# 159 "data/maps/Weirford_Convent/scripts.pory"
 	walk_down
-# 138 "data/maps/Weirford_Convent/scripts.pory"
+# 159 "data/maps/Weirford_Convent/scripts.pory"
 	walk_down
-# 138 "data/maps/Weirford_Convent/scripts.pory"
+# 159 "data/maps/Weirford_Convent/scripts.pory"
 	walk_down
-# 138 "data/maps/Weirford_Convent/scripts.pory"
+# 159 "data/maps/Weirford_Convent/scripts.pory"
 	walk_down
-# 138 "data/maps/Weirford_Convent/scripts.pory"
+# 159 "data/maps/Weirford_Convent/scripts.pory"
 	walk_down
 	step_end
 
-# 141 "data/maps/Weirford_Convent/scripts.pory"
+# 162 "data/maps/Weirford_Convent/scripts.pory"
 Weirford_Convent_Abbess_Turn:
-# 143 "data/maps/Weirford_Convent/scripts.pory"
+# 164 "data/maps/Weirford_Convent/scripts.pory"
 	face_up
 	step_end
 
@@ -294,3 +318,11 @@ Weirford_Convent_Abbess_Text_13:
 Weirford_Convent_Lin_Text_0:
 # 111 "data/maps/Weirford_Convent/scripts.pory"
 	.string "The Abbess wants to speak with you.$"
+
+Weirford_Convent_NPC1_Text_0:
+# 125 "data/maps/Weirford_Convent/scripts.pory"
+	.string "It's bloody FREEZING in here, isn't it?$"
+
+Weirford_Convent_NPC2_Text_0:
+# 135 "data/maps/Weirford_Convent/scripts.pory"
+	.string "Is this the queue for the toilets?$"

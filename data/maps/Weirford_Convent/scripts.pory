@@ -117,6 +117,27 @@ script Weirford_Convent_Lin
     end
 }
 
+script Weirford_Convent_NPC1
+{
+    lock
+    faceplayer
+
+    msgbox(format("It's bloody FREEZING in here, isn't it?"), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script Weirford_Convent_NPC2
+{
+    lock
+    faceplayer
+
+    msgbox(format("Is this the queue for the toilets?"))
+
+    release
+    end
+}
+
 movement Weirford_Convent_Lin_MovementLeft
 {
     face_left
